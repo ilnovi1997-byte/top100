@@ -2,236 +2,492 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Party Game - Top 3 & Meme</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <!-- ==================== HOME / LANDING ==================== -->
-  <main id="view-home" class="view-section home-section">
-    <div class="home-card card">
-      <h1 class="glow-text main-title">TOP 3 & MEME</h1>
-      <p class="subtitle">Il Party Game con i segreti e le risposte del gruppo</p>
-
-      <div class="home-qr-container">
-        <div class="home-qr-box">
-          <img 
-            src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https://top3-6lt6.onrender.com&bgcolor=ffffff&color=000000&margin=2" 
-            alt="Inquadra per Giocare" 
-            class="home-qr-img"
-          />
-        </div>
-        <p class="home-qr-instruction">Inquadra con la fotocamera del cellulare</p>
-        <span class="home-link-badge">top3-6lt6.onrender.com</span>
-      </div>
-
-      <div class="home-roles-grid">
-        <button class="role-select-card role-card-player" onclick="goToView('player')">
-          <span class="role-icon">📱</span>
-          <h3>Giocatore</h3>
-          <p>Usa il telefono come controller e buzzer</p>
-        </button>
-
-        <button class="role-select-card role-card-host" onclick="goToView('host')">
-          <span class="role-icon">📺</span>
-          <h3>Schermo Host</h3>
-          <p>Display TV con risposte oscurate e reveal manuale</p>
-        </button>
-
-        <button class="role-select-card role-card-regia" onclick="goToView('regia')">
-          <span class="role-icon">🎬</span>
-          <h3>Regia</h3>
-          <p>Pannello di controllo completo</p>
-        </button>
-      </div>
-    </div>
-  </main>
-
-  <!-- ==================== VISTA 1: GIOCATORE ==================== -->
-  <main id="view-player" class="view-section hidden">
-    <button class="btn-back-home" onclick="goToView('home')">🏠 Home</button>
-
-    <div id="player-login-box" class="player-container">
-      <h1 class="glow-text">BENVENUTO</h1>
-      <p class="subtitle">Inserisci il tuo nome per giocare dal telefono</p>
-      <div class="input-group">
-        <input type="text" id="player-name-input" placeholder="Il tuo nome..." maxlength="15" />
-        <button class="btn btn-primary" onclick="joinGame()">ENTRA 🎮</button>
-      </div>
-    </div>
-
-    <div id="player-game-box" class="player-container hidden">
-      <div class="player-header">
-        <span id="player-name-display" class="badge">---</span>
-        <span id="player-score-display" class="score-badge">0 PT</span>
-      </div>
-
-      <div class="buzzer-wrapper">
-        <button id="buzzer-btn" class="buzzer-btn" onclick="hitBuzzer()">
-          <span>PRENOTA!</span>
-        </button>
-      </div>
-      <p id="player-status-msg" class="status-msg">Guarda lo schermo principale...</p>
-    </div>
-  </main>
-
-  <!-- ==================== VISTA 2: SCHERMO HOST ==================== -->
-  <main id="view-host" class="view-section hidden">
-    <div class="container">
-      <header class="game-header">
-        <div class="header-left">
-          <button class="btn btn-secondary btn-sm" onclick="goToView('home')">🏠 Esci</button>
-          <div class="round-badge" id="host-round-badge">Round 1/22</div>
-        </div>
-
-        <div class="header-actions">
-          <button class="btn btn-primary btn-sm" onclick="triggerRevealAllTop3()">👁️ Rivela Tutte le Top 3</button>
-        </div>
-
-        <div class="nav-controls">
-          <button class="btn btn-secondary" onclick="prevCard()">◀ Prec</button>
-          <span id="host-card-counter">1 / 18</span>
-          <button class="btn btn-secondary" onclick="nextCard()">Succ ▶</button>
-        </div>
-      </header>
-
-      <!-- Box Coda Buzz -->
-      <div id="host-buzzer-queue-card" class="card buzzer-queue-card hidden">
-        <div class="queue-header">
-          <h3>🚨 ORDINE DI PRENOTAZIONE</h3>
-          <div class="queue-btn-actions">
-            <button class="btn btn-secondary btn-sm" onclick="triggerPassBuzzerTurn()">❌ Errata (Passa al succ)</button>
-            <button class="btn btn-secondary btn-sm" onclick="triggerBuzzerReset()">🔄 Azzera Coda</button>
-          </div>
-        </div>
-        <div id="host-buzzer-list" class="buzzer-list"></div>
-      </div>
-
-      <!-- Domanda / Storia -->
-      <div class="card question-card">
-        <h2 id="host-story">---</h2>
-      </div>
-
-      <!-- Risposte con Reveal al Click -->
-      <div class="card submission-card">
-        <div class="reveal-hint-bar">💡 Clicca su una card per rivelarla o nasconderla</div>
-        
-        <div class="answers-grid">
-          <div class="answer-box top-answer blur-hidden" id="box-ans-1" onclick="triggerToggleReveal('ans1')">
-            <span class="badge">TOP 1</span>
-            <div class="blur-overlay">🔒 Clicca per rivelare</div>
-            <p id="host-ans-1">---</p>
-          </div>
-          <div class="answer-box top-answer blur-hidden" id="box-ans-2" onclick="triggerToggleReveal('ans2')">
-            <span class="badge">TOP 2</span>
-            <div class="blur-overlay">🔒 Clicca per rivelare</div>
-            <p id="host-ans-2">---</p>
-          </div>
-          <div class="answer-box top-answer blur-hidden" id="box-ans-3" onclick="triggerToggleReveal('ans3')">
-            <span class="badge">TOP 3</span>
-            <div class="blur-overlay">🔒 Clicca per rivelare</div>
-            <p id="host-ans-3">---</p>
-          </div>
-        </div>
-
-        <!-- Risposta Meme -->
-        <div class="meme-wrapper">
-          <div class="answer-box meme-answer blur-hidden" id="box-ans-meme" onclick="triggerToggleReveal('meme')">
-            <span class="badge meme-badge">MEME / FLOP</span>
-            <div class="blur-overlay">🔒 Clicca per rivelare Risposta Meme</div>
-            <p id="host-ans-meme">---</p>
-          </div>
-        </div>
-
-        <!-- Reveal Autore -->
-        <div class="author-wrapper">
-          <div class="author-display blur-hidden" id="box-ans-author" onclick="triggerToggleReveal('author')">
-            <div class="blur-overlay">❓ Chi l'ha Scritto? (Clicca per svelare l'Autore)</div>
-            <span class="written-by">Scritto da:</span>
-            <h2 id="host-author-name" class="glow-green">---</h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="card scoreboard-card">
-        <h3>Classifica Giocatori</h3>
-        <div id="host-scoreboard" class="scoreboard-grid"></div>
-      </div>
-    </div>
-  </main>
-
-  <!-- ==================== VISTA 3: REGIA ==================== -->
-  <main id="view-regia" class="view-section hidden">
-    <div class="container">
-      <div class="regia-header">
-        <div class="regia-title-box">
-          <button class="btn btn-secondary btn-sm" onclick="goToView('home')">🏠 Esci</button>
-          <span class="regia-badge">PANNELLO REGIA</span>
-          <h2 id="regia-round-title">Round 1/22</h2>
-        </div>
-        
-        <div class="regia-controls">
-          <button class="btn btn-secondary" onclick="prevCard()">◀ Scheda Prec</button>
-          <span id="regia-card-counter" class="regia-counter">1 / 18</span>
-          <button class="btn btn-secondary" onclick="nextCard()">Scheda Succ ▶</button>
-        </div>
-      </div>
-
-      <div id="regia-buzzer-queue-card" class="card buzzer-queue-card hidden">
-        <div class="queue-header">
-          <h3>🚨 Ordine Prenotazioni in Diretta</h3>
-          <div class="queue-btn-actions">
-            <button class="btn btn-sm btn-primary" onclick="scoreCurrentBuzzWinner(1)">+1 Pt al Turno Attuale</button>
-            <button class="btn btn-sm btn-secondary" onclick="triggerPassBuzzerTurn()">Passa al Prossimo</button>
-            <button class="btn btn-sm btn-secondary" onclick="triggerBuzzerReset()">Reset</button>
-          </div>
-        </div>
-        <div id="regia-buzzer-list" class="buzzer-list"></div>
-      </div>
-
-      <!-- Spoiler Completo per Regia + Tasti Controllo Reveal -->
-      <div class="card regia-spoiler-card">
-        <div class="regia-spoiler-header">
-          <span>AUTORE DELLA SCHEDA:</span>
-          <h1 id="regia-author-name" class="glow-green">Nome Autore</h1>
-        </div>
-
-        <div class="regia-answers-list">
-          <div class="regia-ans-item">
-            <div class="regia-ans-text"><strong>Top 1:</strong> <span id="regia-ans-1">---</span></div>
-            <button class="btn btn-sm btn-secondary" id="regia-btn-ans1" onclick="triggerToggleReveal('ans1')">Mostra su TV</button>
-          </div>
-          <div class="regia-ans-item">
-            <div class="regia-ans-text"><strong>Top 2:</strong> <span id="regia-ans-2">---</span></div>
-            <button class="btn btn-sm btn-secondary" id="regia-btn-ans2" onclick="triggerToggleReveal('ans2')">Mostra su TV</button>
-          </div>
-          <div class="regia-ans-item">
-            <div class="regia-ans-text"><strong>Top 3:</strong> <span id="regia-ans-3">---</span></div>
-            <button class="btn btn-sm btn-secondary" id="regia-btn-ans3" onclick="triggerToggleReveal('ans3')">Mostra su TV</button>
-          </div>
-          <div class="regia-ans-item regia-meme-item">
-            <div class="regia-ans-text"><strong>Meme:</strong> <span id="regia-ans-meme">---</span></div>
-            <button class="btn btn-sm btn-meme" id="regia-btn-meme" onclick="triggerToggleReveal('meme')">Mostra Meme</button>
-          </div>
-        </div>
-
-        <div class="regia-actions">
-          <button class="btn btn-primary" onclick="triggerRevealAllTop3()">Rivela Tutte le Top 3 su Host</button>
-          <button class="btn btn-reveal" id="regia-btn-author" onclick="triggerToggleReveal('author')">Rivela Autore su Host</button>
-        </div>
-      </div>
-
-      <div class="card scoreboard-card">
-        <h3>Assegna / Rimuovi Punti</h3>
-        <div id="regia-scoreboard" class="scoreboard-grid"></div>
-      </div>
-    </div>
-  </main>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOP 100 - Tabellone TV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="/socket.io/socket.io.js"></script>
-  <script src="gameData.js"></script>
-  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+    .slot-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+  </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen flex flex-col justify-between overflow-x-hidden select-none">
+
+  <!-- MODAL PRINCIPALE: CONFIGURA PARTITA + QR CODE + LOBBY -->
+  <div id="lobbyModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-40 flex items-center justify-center p-6">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-5xl w-full shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- COLONNA SINISTRA: QR CODE DI ACCESSO -->
+      <div class="lg:col-span-5 flex flex-col items-center justify-center bg-slate-950/80 p-6 rounded-2xl border border-slate-800 text-center">
+        <span class="text-[10px] font-black uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full mb-3">Accedi dal Telefono</span>
+        <h2 class="text-xl font-black mb-1">INQUADRA PER ENTRARE</h2>
+        <p class="text-xs text-slate-400 mb-4">Inquadra con la fotocamera per unirti</p>
+
+        <div id="lobbyQrcode" class="flex justify-center bg-white p-3 rounded-2xl mx-auto shadow-xl mb-3"></div>
+        <div id="lobbyPhoneUrl" class="text-[11px] font-mono text-indigo-400 break-all mb-4"></div>
+
+        <div class="w-full bg-slate-900 p-3 rounded-xl border border-slate-800">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-2">
+            <span>GIOCATORI IN ATTESA</span>
+            <span id="playerCountBadge" class="bg-indigo-600 text-white px-2 py-0.5 rounded-full text-[10px]">0</span>
+          </div>
+          <div id="playersWaitingList" class="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto">
+            <span class="text-xs text-slate-600 italic">In attesa che qualcuno inquadri il QR...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLONNA DESTRA: CATEGORIA, TIMER E SQUADRE -->
+      <div class="lg:col-span-7 flex flex-col justify-between h-full">
+        <div>
+          <div class="mb-4">
+            <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-500 to-indigo-500">CONFIGURA PARTITA</h1>
+            <p class="text-slate-400 text-xs">I partecipanti saranno smistati equamente e a caso tra le squadre</p>
+          </div>
+
+          <!-- SELEZIONE CATEGORIA CON TASTO CREA NUOVA -->
+          <div class="mb-4 bg-slate-950 p-3 rounded-2xl border border-slate-800">
+            <div class="flex items-center justify-between mb-1.5">
+              <label class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">📂 Categoria Top 100</label>
+              <button onclick="openCreateCategoryModal()" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold flex items-center gap-1">
+                <span>➕ Crea Nuova</span>
+              </button>
+            </div>
+            <select id="categorySelect" class="w-full bg-slate-900 border border-slate-700 text-white font-bold text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-amber-400 cursor-pointer"></select>
+          </div>
+
+          <!-- SELEZIONE TIMER -->
+          <div class="mb-4 bg-slate-950 p-3 rounded-2xl border border-slate-800">
+            <label class="text-[11px] font-bold text-slate-400 block mb-1.5 uppercase tracking-wider">⏱️ Durata Round</label>
+            <div class="grid grid-cols-4 gap-2">
+              <button onclick="selectDuration(180, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">3 Min</button>
+              <button onclick="selectDuration(300, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300">5 Min</button>
+              <button onclick="selectDuration(600, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">10 Min</button>
+              <button onclick="selectDuration(900, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">15 Min</button>
+            </div>
+          </div>
+
+          <!-- SQUADRE -->
+          <div class="mb-4">
+            <div class="flex items-center justify-between mb-1.5">
+              <label class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">👥 Squadre Attive</label>
+              <button onclick="addTeamField()" class="text-xs text-indigo-400 font-bold hover:underline">➕ Aggiungi</button>
+            </div>
+            <div id="teamsContainer" class="space-y-2 max-h-36 overflow-y-auto pr-1"></div>
+          </div>
+        </div>
+
+        <button onclick="confirmAndStart()" class="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 text-white font-black text-base shadow-xl shadow-emerald-500/25 active:scale-98 transition flex items-center justify-center gap-2">
+          <span>MESCOLA & AVVIA PARTITA 🎲</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL: CREATORE DI TOP 100 -->
+  <div id="createCategoryModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-50 hidden flex items-center justify-center p-6">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-3xl w-full shadow-2xl flex flex-col max-h-[90vh]">
+      
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+        <div>
+          <h2 class="text-xl font-black text-amber-400">CREA UNA NUOVA TOP 100</h2>
+          <p class="text-xs text-slate-400">Inserisci titolo e incolla la lista da 1 a 100</p>
+        </div>
+        <button onclick="closeCreateCategoryModal()" class="text-slate-400 hover:text-white font-bold text-lg p-1">✕</button>
+      </div>
+
+      <div class="space-y-4 overflow-y-auto pr-2 flex-1">
+        <div>
+          <label class="text-xs font-bold text-slate-300 block mb-1">TITOLO DELLA CATEGORIA</label>
+          <input type="text" id="newCatTitle" placeholder="Es: I 100 Videogiochi Più Venduti della Storia" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm font-bold text-white focus:outline-none focus:border-amber-400">
+        </div>
+
+        <!-- FAST PASTE AREA -->
+        <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+          <div class="flex items-center justify-between mb-1">
+            <label class="text-xs font-bold text-indigo-400">INCOLLA LA LISTA ORDINATA (1 PER RIGA)</label>
+            <span class="text-[10px] text-slate-500">I numeri all'inizio (es: 1. Mario) verranno puliti da soli</span>
+          </div>
+          <textarea id="rawItemsInput" rows="10" placeholder="1. Minecraft&#10;2. Grand Theft Auto V&#10;3. Tetris&#10;...fino a 100" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-xs font-mono text-white focus:outline-none focus:border-indigo-400 leading-relaxed"></textarea>
+          
+          <div class="flex justify-between items-center mt-2">
+            <span id="lineCountDisplay" class="text-xs font-bold text-slate-400">Righe rilevate: 0</span>
+            <span class="text-[11px] text-slate-500 italic">Verranno assegnate le posizioni da 1 a 100 in ordine di riga</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-3 pt-4 border-t border-slate-800 mt-2">
+        <button onclick="closeCreateCategoryModal()" class="w-1/3 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">Annulla</button>
+        <button onclick="saveCustomCategory()" class="w-2/3 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 font-black text-sm text-white shadow-lg shadow-emerald-500/20">SALVA SU SERVER & GIOCA 💾</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HEADER TV BROADCAST -->
+  <header class="bg-slate-900/90 border-b border-slate-800 px-6 py-2.5 flex items-center justify-between shadow-lg">
+    <div class="flex items-center gap-4">
+      <div class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-rose-500">TOP 100</div>
+      <div class="h-6 w-px bg-slate-800"></div>
+      <div id="categoryDisplay" class="text-xs font-semibold text-amber-300">Caricamento Categoria...</div>
+    </div>
+
+    <!-- Timer Sincronizzato con Controlli Host -->
+    <div class="flex items-center gap-3 bg-slate-950 px-4 py-1.5 rounded-2xl border border-slate-800">
+      <div id="timerDisplay" class="text-2xl font-black text-amber-400 font-mono tracking-wider">05:00</div>
+      <div class="flex items-center gap-1">
+        <button id="timerToggleBtn" onclick="toggleTimer()" class="px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold transition">▶ Start</button>
+        <button onclick="resetTimer()" class="px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-400 transition">↺</button>
+      </div>
+    </div>
+
+    <!-- Scoreboard Squadre -->
+    <div id="scoreboardDisplay" class="flex items-center gap-3"></div>
+
+    <div class="flex items-center gap-2">
+      <button onclick="toggleFullscreen()" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-bold transition">⛶ TV</button>
+      <button onclick="openLobbyModal()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">⚙️ Nuova Partita / QR</button>
+    </div>
+  </header>
+
+  <!-- TABELLONE 10x10 ZERO-SCROLL -->
+  <main class="flex-1 p-3 flex items-center justify-center">
+    <div id="gridContainer" class="grid grid-cols-10 gap-1.5 w-full max-w-[1720px] h-[calc(100vh-100px)]"></div>
+  </main>
+
+  <!-- POPUP RIVELAZIONE -->
+  <div id="revealBanner" class="fixed inset-0 pointer-events-none z-40 flex items-center justify-center opacity-0 transition-opacity duration-300">
+    <div id="bannerCard" class="bg-slate-900/95 border-2 border-amber-400 rounded-3xl p-8 text-center shadow-2xl scale-75 transform transition duration-300 max-w-lg">
+      <div id="bannerRank" class="text-6xl font-black text-amber-400 mb-2">#72</div>
+      <div id="bannerTitle" class="text-2xl font-bold text-white mb-2">Titolo</div>
+      <div id="bannerTeam" class="text-sm font-bold text-emerald-400">+72 pt</div>
+    </div>
+  </div>
+
+  <script>
+    const socket = io();
+    let teams = [
+      { id: 't1', name: 'Squadra Rossa', color: '#ef4444', icon: '🔥', score: 0 },
+      { id: 't2', name: 'Squadra Blu', color: '#3b82f6', icon: '⚡', score: 0 }
+    ];
+    let isTimerRunning = false;
+    let selectedSeconds = 300;
+    let qrRendered = false;
+
+    const PRESET_COLORS = ['#ef4444', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316'];
+    const PRESET_ICONS = ['🔥', '⚡', '🦅', '🦁', '🚀', '👑', '🦈', '💎'];
+
+    function buildGrid() {
+      const container = document.getElementById('gridContainer');
+      container.innerHTML = '';
+      for (let i = 1; i <= 100; i++) {
+        const slot = document.createElement('div');
+        slot.id = `slot-${i}`;
+        slot.className = "slot-card bg-slate-900/80 border border-slate-800 rounded-lg flex flex-col justify-between p-1 text-center overflow-hidden";
+        slot.innerHTML = `
+          <div class="flex items-center justify-between text-[10px] font-black text-slate-500">
+            <span>#${i}</span>
+            <span class="text-[8px] opacity-40">${i}pt</span>
+          </div>
+          <div class="font-bold text-[10px] leading-tight text-slate-400 truncate px-0.5">???</div>
+          <div class="h-0.5 rounded-full bg-slate-800"></div>
+        `;
+        container.appendChild(slot);
+      }
+    }
+
+    function updateSlotUI(rank, info) {
+      const el = document.getElementById(`slot-${rank}`);
+      if (!el || !info) return;
+      el.style.borderColor = info.teamColor;
+      el.style.backgroundColor = `${info.teamColor}20`;
+      el.innerHTML = `
+        <div class="flex items-center justify-between text-[10px] font-black" style="color: ${info.teamColor}">
+          <span>#${rank}</span>
+          <span class="text-[8px] bg-slate-950/70 px-1 rounded">+${info.points}</span>
+        </div>
+        <div class="font-black text-[10px] text-white leading-tight truncate px-0.5">${info.itemName}</div>
+        <div class="text-[8px] font-semibold truncate text-slate-300" style="color: ${info.teamColor}">${info.playerName}</div>
+      `;
+    }
+
+    function renderScoreboard() {
+      const sb = document.getElementById('scoreboardDisplay');
+      sb.innerHTML = teams.map(t => {
+        const count = t.members ? t.members.length : 0;
+        return `
+          <div class="flex items-center gap-2 px-2.5 py-1 rounded-xl border" style="border-color: ${t.color}40; background-color: ${t.color}15">
+            <span class="text-sm">${t.icon}</span>
+            <div>
+              <div class="text-[9px] font-bold text-slate-400 leading-none flex items-center gap-1">
+                <span>${t.name}</span>
+                <span class="text-[8px] text-slate-500">(${count}👥)</span>
+              </div>
+              <div class="text-sm font-black text-white leading-tight">${t.score} <span class="text-[9px] font-normal text-slate-400">pt</span></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderLobbyQRCode() {
+      if (qrRendered) return;
+      const phoneUrl = `${window.location.origin}/play.html`;
+      const qrDiv = document.getElementById('lobbyQrcode');
+      qrDiv.innerHTML = "";
+      new QRCode(qrDiv, { text: phoneUrl, width: 140, height: 140 });
+      document.getElementById('lobbyPhoneUrl').innerText = phoneUrl;
+      qrRendered = true;
+    }
+
+    function updatePlayersWaitingUI(players) {
+      const listDiv = document.getElementById('playersWaitingList');
+      const countBadge = document.getElementById('playerCountBadge');
+      countBadge.innerText = players.length;
+
+      if (!players || players.length === 0) {
+        listDiv.innerHTML = `<span class="text-xs text-slate-600 italic">In attesa che qualcuno inquadri il QR...</span>`;
+        return;
+      }
+
+      listDiv.innerHTML = players.map(p => `
+        <span class="bg-slate-800 border border-slate-700 text-slate-200 text-xs font-bold px-2 py-0.5 rounded-lg flex items-center gap-1">
+          👤 ${p.name}
+        </span>
+      `).join('');
+    }
+
+    function populateCategoriesDropdown(list, selectedKey) {
+      const select = document.getElementById('categorySelect');
+      select.innerHTML = list.map(c => `
+        <option value="${c.id}" ${c.id === selectedKey ? 'selected' : ''}>
+          ${c.title} (${c.itemCount} elementi)
+        </option>
+      `).join('');
+    }
+
+    function selectDuration(sec, btn) {
+      selectedSeconds = sec;
+      document.querySelectorAll('.timer-btn').forEach(b => {
+        b.className = "timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300";
+      });
+      btn.className = "timer-btn py-2 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300";
+    }
+
+    function toggleTimer() {
+      socket.emit('timerControl', { type: isTimerRunning ? 'PAUSE' : 'START' });
+    }
+
+    function resetTimer() {
+      socket.emit('timerControl', { type: 'RESET' });
+    }
+
+    function formatTime(s) {
+      const min = Math.floor(s / 60);
+      const sec = s % 60;
+      return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+    }
+
+    // CREATORE CATEGORIE IN-SITE
+    function openCreateCategoryModal() {
+      document.getElementById('createCategoryModal').classList.remove('hidden');
+    }
+
+    function closeCreateCategoryModal() {
+      document.getElementById('createCategoryModal').classList.add('hidden');
+    }
+
+    // Monitoraggio conteggio righe in tempo reale
+    document.getElementById('rawItemsInput').addEventListener('input', function() {
+      const lines = this.value.split('\n').filter(l => l.trim().length > 0);
+      document.getElementById('lineCountDisplay').innerText = `Righe rilevate: ${lines.length} / 100`;
+      if (lines.length >= 100) {
+        document.getElementById('lineCountDisplay').classList.add('text-emerald-400');
+      } else {
+        document.getElementById('lineCountDisplay').classList.remove('text-emerald-400');
+      }
+    });
+
+    function saveCustomCategory() {
+      const title = document.getElementById('newCatTitle').value.trim();
+      const rawText = document.getElementById('rawItemsInput').value.trim();
+
+      if (!title) {
+        alert("Inserisci un titolo per la categoria!");
+        return;
+      }
+      if (!rawText) {
+        alert("Incolla o inserisci almeno qualche elemento!");
+        return;
+      }
+
+      // Estrazione e pulizia righe (es: rimuove "1. ", "1 - ", "#1 ", etc.)
+      const lines = rawText.split('\n')
+        .map(l => l.trim())
+        .filter(l => l.length > 0);
+
+      const items = lines.slice(0, 100).map((line, idx) => {
+        const cleanedName = line.replace(/^\d+[\.\-\)\s]+/, '').replace(/^#\d+[\s]+/, '').trim();
+        return {
+          rank: idx + 1,
+          name: cleanedName,
+          aliases: []
+        };
+      });
+
+      socket.emit('createCategory', {
+        title: title,
+        items: items
+      });
+    }
+
+    socket.on('categoryCreatedResult', (res) => {
+      if (res.success) {
+        alert("🎉 Nuova Top 100 creata e salvata con successo!");
+        closeCreateCategoryModal();
+        document.getElementById('newCatTitle').value = '';
+        document.getElementById('rawItemsInput').value = '';
+        document.getElementById('categorySelect').value = res.createdId;
+      } else {
+        alert(`Errore: ${res.message}`);
+      }
+    });
+
+    socket.on('categoriesUpdated', (list) => {
+      populateCategoriesDropdown(list, document.getElementById('categorySelect').value);
+    });
+
+    // Socket.io Events
+    socket.on('initSync', (data) => {
+      populateCategoriesDropdown(data.categoriesList, data.gameState.currentCategoryKey);
+      applyGameState(data.gameState);
+      updatePlayersWaitingUI(data.playersList || []);
+      renderLobbyQRCode();
+    });
+
+    socket.on('playersListUpdated', (players) => {
+      updatePlayersWaitingUI(players);
+    });
+
+    socket.on('gameState', (data) => {
+      if (data.categoriesList) populateCategoriesDropdown(data.categoriesList, data.currentCategoryKey);
+      applyGameState(data);
+    });
+
+    function applyGameState(data) {
+      document.getElementById('categoryDisplay').innerText = data.categoryTitle;
+      teams = data.teams;
+      renderScoreboard();
+      buildGrid();
+      if (data.revealed) {
+        Object.keys(data.revealed).forEach(rank => updateSlotUI(rank, data.revealed[rank]));
+      }
+      document.getElementById('timerDisplay').innerText = formatTime(data.timer.remaining);
+    }
+
+    socket.on('timerTick', (t) => {
+      isTimerRunning = t.isRunning;
+      const display = document.getElementById('timerDisplay');
+      display.innerText = formatTime(t.remaining);
+      const toggleBtn = document.getElementById('timerToggleBtn');
+      if (t.isRunning) {
+        toggleBtn.innerText = "⏸ Pausa";
+        toggleBtn.className = "px-2.5 py-1 rounded-lg bg-amber-600 hover:bg-amber-500 text-xs font-bold transition";
+        display.classList.remove('text-rose-500');
+        display.classList.add('text-amber-400');
+      } else {
+        toggleBtn.innerText = "▶ Start";
+        toggleBtn.className = "px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold transition";
+      }
+
+      if (t.remaining <= 30 && t.remaining > 0) {
+        display.classList.add('animate-pulse', 'text-rose-500');
+      }
+    });
+
+    socket.on('timerExpired', () => {
+      document.getElementById('timerDisplay').innerText = "00:00";
+      confetti({ particleCount: 100, spread: 80, origin: { y: 0.5 } });
+    });
+
+    socket.on('boardUpdated', (payload) => {
+      teams = payload.teams;
+      renderScoreboard();
+      updateSlotUI(payload.rank, payload.data);
+
+      const banner = document.getElementById('revealBanner');
+      document.getElementById('bannerRank').innerText = `#${payload.rank}`;
+      document.getElementById('bannerTitle').innerText = payload.data.itemName;
+      document.getElementById('bannerTeam').innerText = `${payload.data.teamName} (+${payload.data.points} pt)`;
+      banner.classList.remove('opacity-0');
+      confetti({ particleCount: 50, spread: 60, origin: { y: 0.6 } });
+      setTimeout(() => banner.classList.add('opacity-0'), 2200);
+    });
+
+    // Lobby Squadre
+    function renderLobbyInputs() {
+      const cont = document.getElementById('teamsContainer');
+      cont.innerHTML = teams.map((t, idx) => `
+        <div class="flex items-center gap-2 bg-slate-950 p-2 rounded-xl border border-slate-800">
+          <span class="text-base">${t.icon}</span>
+          <input type="text" value="${t.name}" onchange="updateTeamName(${idx}, this.value)" class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1 text-xs font-bold text-white">
+          <input type="color" value="${t.color}" onchange="updateTeamColor(${idx}, this.value)" class="w-7 h-7 rounded cursor-pointer bg-transparent border-0">
+          ${teams.length > 2 ? `<button onclick="removeTeamField(${idx})" class="text-rose-400 text-xs p-1">🗑️</button>` : ''}
+        </div>
+      `).join('');
+    }
+
+    function addTeamField() {
+      if (teams.length >= 8) return;
+      const idx = teams.length;
+      teams.push({
+        id: `t${Date.now()}`,
+        name: `Squadra ${idx + 1}`,
+        color: PRESET_COLORS[idx % PRESET_COLORS.length],
+        icon: PRESET_ICONS[idx % PRESET_ICONS.length],
+        score: 0,
+        members: []
+      });
+      renderLobbyInputs();
+    }
+
+    function removeTeamField(idx) {
+      if (teams.length <= 2) return;
+      teams.splice(idx, 1);
+      renderLobbyInputs();
+    }
+
+    function updateTeamName(idx, val) { teams[idx].name = val; }
+    function updateTeamColor(idx, val) { teams[idx].color = val; }
+
+    function confirmAndStart() {
+      const catKey = document.getElementById('categorySelect').value;
+      socket.emit('startGameWithConfig', {
+        categoryKey: catKey,
+        teams: teams,
+        duration: selectedSeconds
+      });
+      document.getElementById('lobbyModal').classList.add('hidden');
+    }
+
+    function openLobbyModal() {
+      document.getElementById('lobbyModal').classList.remove('hidden');
+      renderLobbyQRCode();
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
+      else document.exitFullscreen().catch(() => {});
+    }
+
+    buildGrid();
+    renderLobbyInputs();
+    setTimeout(renderLobbyQRCode, 400);
+  </script>
 </body>
 </html>

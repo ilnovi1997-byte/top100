@@ -1,7 +1,7 @@
 {
-  "name": "party-game-top3",
+  "name": "top100-game",
   "version": "1.0.0",
-  "description": "Party Game Top 3 & Meme con Controller Smartphone",
+  "description": "Party game Top 100 in tempo reale con Socket.io",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
