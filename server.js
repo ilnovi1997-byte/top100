@@ -12,7 +12,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const DATA_DIR = path.join(__dirname, "data");
 
-// Carica tutti i file .json presenti nella cartella data/
 function loadAllCategories() {
   const categories = {};
   try {
@@ -31,7 +30,7 @@ function loadAllCategories() {
           items: content.items || [],
         };
       } catch (e) {
-        console.error(`Errore nel caricamento del file ${file}:`, e);
+        console.error(`Errore caricamento ${file}:`, e);
       }
     });
   } catch (err) {
@@ -42,8 +41,7 @@ function loadAllCategories() {
 
 let availableCategories = loadAllCategories();
 let currentCategoryKey = Object.keys(availableCategories)[0] || null;
-
-let connectedPlayers = {}; // socketId -> { name, teamId, socketId }
+let connectedPlayers = {};
 
 let gameState = {
   status: "LOBBY",
@@ -70,11 +68,7 @@ let gameState = {
     },
   ],
   revealed: {},
-  timer: {
-    duration: 300,
-    remaining: 300,
-    isRunning: false,
-  },
+  timer: { duration: 300, remaining: 300, isRunning: false },
 };
 
 let timerInterval = null;
@@ -150,63 +144,79 @@ io.on("connection", (socket) => {
     socket.emit("joinedSuccess", connectedPlayers[socket.id]);
   });
 
-  // NUOVO: Salvataggio e creazione categoria direttamente dall'interfaccia
-  socket.on("createCategory", (newCategoryData) => {
+  // Richiesta dettagli categoria esistente per la modifica
+  socket.on("getCategoryForEdit", (catId) => {
+    const cat = availableCategories[catId];
+    if (cat) {
+      socket.emit("categoryDataForEdit", cat);
+    } else {
+      socket.emit("categoryDataForEdit", null);
+    }
+  });
+
+  // Salvataggio categoria (sia Nuova sia Modificata)
+  socket.on("saveCategory", (payload) => {
     try {
-      const { title, items } = newCategoryData;
+      const { id, title, items } = payload;
       if (!title || !items || items.length === 0) {
-        socket.emit("categoryCreatedResult", {
+        socket.emit("categorySaveResult", {
           success: false,
-          message: "Dati categoria non validi!",
+          message: "Dati incompleti!",
         });
         return;
       }
 
-      // Genera ID sicuro per il file (es: "I Migliori Film" -> "i-migliori-film")
+      // Se id esiste usa quello, altrimenti genera da titolo
       const fileId =
+        id ||
         title
           .toLowerCase()
           .normalize("NFD")
           .replace(/[\u0300-\u036f]/g, "")
           .replace(/[^a-z0-9]/g, "-")
           .replace(/-+/g, "-")
-          .replace(/^-|-$/g, "") || `cat-${Date.now()}`;
+          .replace(/^-|-$/g, "") ||
+        `cat-${Date.now()}`;
 
-      const payload = {
+      const catObj = {
         id: fileId,
         categoryTitle: title,
         items: items.map((it, idx) => ({
-          rank: it.rank || idx + 1,
+          rank: parseInt(it.rank, 10) || idx + 1,
           name: it.name.trim(),
-          aliases: it.aliases || [],
+          aliases: Array.isArray(it.aliases)
+            ? it.aliases.map((a) => a.trim()).filter(Boolean)
+            : [],
         })),
       };
 
       const targetPath = path.join(DATA_DIR, `${fileId}.json`);
-      fs.writeFileSync(targetPath, JSON.stringify(payload, null, 2), "utf-8");
+      fs.writeFileSync(targetPath, JSON.stringify(catObj, null, 2), "utf-8");
 
-      // Ricarica la memoria del server
+      // Ricarica categorie in memoria
       availableCategories = loadAllCategories();
       const updatedList = getCategoriesList();
 
-      socket.emit("categoryCreatedResult", {
-        success: true,
-        createdId: fileId,
-      });
+      // Se la categoria modificata è quella attiva al momento, aggiorna il titolo
+      if (gameState.currentCategoryKey === fileId) {
+        gameState.categoryTitle = catObj.categoryTitle;
+      }
+
+      socket.emit("categorySaveResult", { success: true, savedId: fileId });
       io.emit("categoriesUpdated", updatedList);
     } catch (err) {
       console.error("Errore salvataggio categoria:", err);
-      socket.emit("categoryCreatedResult", {
+      socket.emit("categorySaveResult", {
         success: false,
-        message: "Errore interno nel salvataggio su file!",
+        message: "Errore nel salvataggio del file JSON",
       });
     }
   });
 
   socket.on("startGameWithConfig", (config) => {
     const { categoryKey, teams, duration } = config;
-
     availableCategories = loadAllCategories();
+
     if (availableCategories[categoryKey]) {
       currentCategoryKey = categoryKey;
       gameState.currentCategoryKey = categoryKey;
@@ -227,10 +237,7 @@ io.on("connection", (socket) => {
 
     playersArray.forEach((p) => {
       const assignedTeam = gameState.teams.find((t) => t.id === p.teamId);
-      io.to(p.socketId).emit("assignedTeam", {
-        team: assignedTeam,
-        gameState,
-      });
+      io.to(p.socketId).emit("assignedTeam", { team: assignedTeam, gameState });
     });
 
     io.emit("gameState", {

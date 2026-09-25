@@ -20,7 +20,7 @@
   <div id="lobbyModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-40 flex items-center justify-center p-6">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-5xl w-full shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
       
-      <!-- COLONNA SINISTRA: QR CODE DI ACCESSO -->
+      <!-- COLONNA QR CODE -->
       <div class="lg:col-span-5 flex flex-col items-center justify-center bg-slate-950/80 p-6 rounded-2xl border border-slate-800 text-center">
         <span class="text-[10px] font-black uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full mb-3">Accedi dal Telefono</span>
         <h2 class="text-xl font-black mb-1">INQUADRA PER ENTRARE</h2>
@@ -40,21 +40,27 @@
         </div>
       </div>
 
-      <!-- COLONNA DESTRA: CATEGORIA, TIMER E SQUADRE -->
+      <!-- COLONNA IMPOSTAZIONI & CATEGORIE -->
       <div class="lg:col-span-7 flex flex-col justify-between h-full">
         <div>
           <div class="mb-4">
             <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-500 to-indigo-500">CONFIGURA PARTITA</h1>
-            <p class="text-slate-400 text-xs">I partecipanti saranno smistati equamente e a caso tra le squadre</p>
+            <p class="text-slate-400 text-xs">Scegli la lista o modificane una prima di iniziare</p>
           </div>
 
-          <!-- SELEZIONE CATEGORIA CON TASTO CREA NUOVA -->
+          <!-- SELEZIONE CATEGORIA CON PULSANTI CREA / MODIFICA -->
           <div class="mb-4 bg-slate-950 p-3 rounded-2xl border border-slate-800">
             <div class="flex items-center justify-between mb-1.5">
               <label class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">📂 Categoria Top 100</label>
-              <button onclick="openCreateCategoryModal()" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold flex items-center gap-1">
-                <span>➕ Crea Nuova</span>
-              </button>
+              <div class="flex items-center gap-2">
+                <button onclick="editCurrentCategory()" class="text-xs text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1">
+                  <span>✏️ Modifica Questa</span>
+                </button>
+                <span class="text-slate-700">|</span>
+                <button onclick="openCategoryEditor(null)" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold flex items-center gap-1">
+                  <span>➕ Crea Nuova</span>
+                </button>
+              </div>
             </div>
             <select id="categorySelect" class="w-full bg-slate-900 border border-slate-700 text-white font-bold text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-amber-400 cursor-pointer"></select>
           </div>
@@ -88,42 +94,66 @@
     </div>
   </div>
 
-  <!-- MODAL: CREATORE DI TOP 100 -->
-  <div id="createCategoryModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-50 hidden flex items-center justify-center p-6">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-3xl w-full shadow-2xl flex flex-col max-h-[90vh]">
+  <!-- MODAL: EDITOR COMPLETO TOP 100 (CREA / MODIFICA + ALIAS SMART) -->
+  <div id="editorModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-5xl w-full shadow-2xl flex flex-col max-h-[92vh]">
       
-      <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
         <div>
-          <h2 class="text-xl font-black text-amber-400">CREA UNA NUOVA TOP 100</h2>
-          <p class="text-xs text-slate-400">Inserisci titolo e incolla la lista da 1 a 100</p>
+          <h2 id="editorModalTitle" class="text-xl font-black text-amber-400">EDITOR TOP 100</h2>
+          <p class="text-xs text-slate-400">Modifica titoli e aggiungi alias intelligenti (separati da virgola)</p>
         </div>
-        <button onclick="closeCreateCategoryModal()" class="text-slate-400 hover:text-white font-bold text-lg p-1">✕</button>
-      </div>
-
-      <div class="space-y-4 overflow-y-auto pr-2 flex-1">
-        <div>
-          <label class="text-xs font-bold text-slate-300 block mb-1">TITOLO DELLA CATEGORIA</label>
-          <input type="text" id="newCatTitle" placeholder="Es: I 100 Videogiochi Più Venduti della Storia" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm font-bold text-white focus:outline-none focus:border-amber-400">
-        </div>
-
-        <!-- FAST PASTE AREA -->
-        <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
-          <div class="flex items-center justify-between mb-1">
-            <label class="text-xs font-bold text-indigo-400">INCOLLA LA LISTA ORDINATA (1 PER RIGA)</label>
-            <span class="text-[10px] text-slate-500">I numeri all'inizio (es: 1. Mario) verranno puliti da soli</span>
-          </div>
-          <textarea id="rawItemsInput" rows="10" placeholder="1. Minecraft&#10;2. Grand Theft Auto V&#10;3. Tetris&#10;...fino a 100" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-xs font-mono text-white focus:outline-none focus:border-indigo-400 leading-relaxed"></textarea>
-          
-          <div class="flex justify-between items-center mt-2">
-            <span id="lineCountDisplay" class="text-xs font-bold text-slate-400">Righe rilevate: 0</span>
-            <span class="text-[11px] text-slate-500 italic">Verranno assegnate le posizioni da 1 a 100 in ordine di riga</span>
-          </div>
+        <div class="flex items-center gap-2">
+          <button onclick="generateSmartAliasesForAll()" class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-xs font-black text-white shadow-md flex items-center gap-1.5">
+            <span>✨ Genera Alias Intelligenti</span>
+          </button>
+          <button onclick="closeCategoryEditor()" class="text-slate-400 hover:text-white font-bold text-xl px-2">✕</button>
         </div>
       </div>
 
-      <div class="flex gap-3 pt-4 border-t border-slate-800 mt-2">
-        <button onclick="closeCreateCategoryModal()" class="w-1/3 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">Annulla</button>
-        <button onclick="saveCustomCategory()" class="w-2/3 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 font-black text-sm text-white shadow-lg shadow-emerald-500/20">SALVA SU SERVER & GIOCA 💾</button>
+      <!-- HEADER EDITOR: TITOLO CATEGORIA & AZIONI -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
+        <div class="md:col-span-2">
+          <label class="text-[11px] font-bold text-slate-300 block mb-1">TITOLO DELLA CATEGORIA</label>
+          <input type="text" id="editorCatTitle" placeholder="Es: I 100 Film con Maggior Incasso..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-white focus:outline-none focus:border-amber-400">
+          <input type="hidden" id="editorCatId" value="">
+        </div>
+        <div class="flex items-end">
+          <button onclick="toggleFastPasteBox()" class="w-full py-2 px-3 rounded-xl border border-dashed border-slate-700 hover:border-slate-500 text-slate-300 text-xs font-bold transition">
+            📋 Mostra/Nascondi Incolla Rapido
+          </button>
+        </div>
+      </div>
+
+      <!-- BOX INCOLLA RAPIDO (A SCOMPARSA) -->
+      <div id="fastPasteBox" class="hidden mb-3 bg-slate-950 p-3 rounded-2xl border border-slate-800">
+        <div class="flex justify-between items-center mb-1">
+          <span class="text-xs font-bold text-indigo-400">Incolla qui la lista (1 per riga) per compilare i 100 elementi</span>
+          <button onclick="applyFastPaste()" class="px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold text-white">Carica nelle 100 caselle ⬇️</button>
+        </div>
+        <textarea id="fastPasteTextarea" rows="4" placeholder="1. Avatar&#10;2. Avengers Endgame..." class="w-full bg-slate-900 border border-slate-700 rounded-xl p-2 text-xs font-mono text-white"></textarea>
+      </div>
+
+      <!-- TABELLA 100 POSIZIONI SCROLLABILE -->
+      <div class="flex-1 overflow-y-auto pr-2 border border-slate-800 rounded-2xl p-2 bg-slate-950/60">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="text-slate-500 border-b border-slate-800 text-[10px] font-black">
+              <th class="py-2 px-2 w-12 text-center">RANK</th>
+              <th class="py-2 px-2 w-5/12">NOME UFFICIALE</th>
+              <th class="py-2 px-2 w-6/12">ALIAS ACCETTATI (SEPARATI DA VIRGOLA)</th>
+            </tr>
+          </thead>
+          <tbody id="editorRowsContainer" class="divide-y divide-slate-900/60">
+            <!-- 100 righe generate dinamicamente -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- BOTTONI AZIONE FOOTER -->
+      <div class="flex gap-3 pt-3 border-t border-slate-800 mt-2">
+        <button onclick="closeCategoryEditor()" class="w-1/3 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">Annulla</button>
+        <button onclick="saveCategoryFromEditor()" class="w-2/3 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 font-black text-xs text-white shadow-lg shadow-emerald-500/20">SALVA MODIFICHE SU DISCO 💾</button>
       </div>
 
     </div>
@@ -146,7 +176,6 @@
       </div>
     </div>
 
-    <!-- Scoreboard Squadre -->
     <div id="scoreboardDisplay" class="flex items-center gap-3"></div>
 
     <div class="flex items-center gap-2">
@@ -293,66 +322,191 @@
       return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
     }
 
-    // CREATORE CATEGORIE IN-SITE
-    function openCreateCategoryModal() {
-      document.getElementById('createCategoryModal').classList.remove('hidden');
+    // ==========================================
+    // LOGICA EDITOR TOP 100 & ALIAS INTELLIGENTI
+    // ==========================================
+    function editCurrentCategory() {
+      const selectedId = document.getElementById('categorySelect').value;
+      if (!selectedId) return;
+      socket.emit('getCategoryForEdit', selectedId);
     }
 
-    function closeCreateCategoryModal() {
-      document.getElementById('createCategoryModal').classList.add('hidden');
-    }
-
-    // Monitoraggio conteggio righe in tempo reale
-    document.getElementById('rawItemsInput').addEventListener('input', function() {
-      const lines = this.value.split('\n').filter(l => l.trim().length > 0);
-      document.getElementById('lineCountDisplay').innerText = `Righe rilevate: ${lines.length} / 100`;
-      if (lines.length >= 100) {
-        document.getElementById('lineCountDisplay').classList.add('text-emerald-400');
-      } else {
-        document.getElementById('lineCountDisplay').classList.remove('text-emerald-400');
-      }
+    socket.on('categoryDataForEdit', (cat) => {
+      if (cat) openCategoryEditor(cat);
+      else alert("Impossibile caricare i dati della categoria selezionata!");
     });
 
-    function saveCustomCategory() {
-      const title = document.getElementById('newCatTitle').value.trim();
-      const rawText = document.getElementById('rawItemsInput').value.trim();
+    function openCategoryEditor(catData) {
+      const modal = document.getElementById('editorModal');
+      const titleInput = document.getElementById('editorCatTitle');
+      const idInput = document.getElementById('editorCatId');
+      const modalTitle = document.getElementById('editorModalTitle');
+      const rowsContainer = document.getElementById('editorRowsContainer');
+
+      rowsContainer.innerHTML = '';
+
+      if (catData) {
+        modalTitle.innerText = `MODIFICA: ${catData.categoryTitle}`;
+        titleInput.value = catData.categoryTitle;
+        idInput.value = catData.id;
+        
+        for (let i = 1; i <= 100; i++) {
+          const item = (catData.items && catData.items[i - 1]) || { rank: i, name: '', aliases: [] };
+          addRowToEditor(i, item.name || '', (item.aliases || []).join(', '));
+        }
+      } else {
+        modalTitle.innerText = `CREA NUOVA TOP 100`;
+        titleInput.value = '';
+        idInput.value = '';
+        for (let i = 1; i <= 100; i++) {
+          addRowToEditor(i, '', '');
+        }
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function addRowToEditor(rank, name, aliasesText) {
+      const tr = document.createElement('tr');
+      tr.className = "hover:bg-slate-900/40 transition";
+      tr.innerHTML = `
+        <td class="py-1 px-2 font-black text-amber-400 text-center">#${rank}</td>
+        <td class="py-1 px-2">
+          <input type="text" data-rank="${rank}" class="row-name w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1 text-xs font-bold text-white focus:outline-none focus:border-amber-400" value="${name.replace(/"/g, '&quot;')}" placeholder="Titolo/Nome">
+        </td>
+        <td class="py-1 px-2">
+          <input type="text" data-rank="${rank}" class="row-aliases w-full bg-slate-900/70 border border-slate-800 rounded-lg px-2.5 py-1 text-xs text-slate-300 focus:outline-none focus:border-indigo-400" value="${aliasesText.replace(/"/g, '&quot;')}" placeholder="alias1, alias2, variante...">
+        </td>
+      `;
+      document.getElementById('editorRowsContainer').appendChild(tr);
+    }
+
+    function toggleFastPasteBox() {
+      const box = document.getElementById('fastPasteBox');
+      box.classList.toggle('hidden');
+    }
+
+    function applyFastPaste() {
+      const text = document.getElementById('fastPasteTextarea').value.trim();
+      if (!text) return;
+      const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+
+      const nameInputs = document.querySelectorAll('.row-name');
+      lines.forEach((line, idx) => {
+        if (idx < nameInputs.length) {
+          const cleaned = line.replace(/^\d+[\.\-\)\s]+/, '').replace(/^#\d+[\s]+/, '').trim();
+          nameInputs[idx].value = cleaned;
+        }
+      });
+      toggleFastPasteBox();
+    }
+
+    // Algoritmo di Generazione Intelligente di Alias
+    function generateSmartAliasesForItem(name) {
+      if (!name || name.trim().length === 0) return [];
+      const aliases = new Set();
+      const trimmed = name.trim();
+
+      // 1. Rimuove articoli iniziali (it, en)
+      const withoutArticle = trimmed.replace(/^(il|lo|la|i|gli|le|un|uno|una|the|a|an)\s+/i, '');
+      if (withoutArticle.toLowerCase() !== trimmed.toLowerCase()) {
+        aliases.add(withoutArticle);
+      }
+
+      // 2. Separa prima dei due punti o trattini di sottotitolo (es: "Avatar: La via dell'acqua" -> "Avatar", "La via dell'acqua")
+      if (trimmed.includes(':') || trimmed.includes(' - ')) {
+        const parts = trimmed.split(/[:\-]/);
+        if (parts[0] && parts[0].trim().length > 1) aliases.add(parts[0].trim());
+        if (parts[1] && parts[1].trim().length > 1) aliases.add(parts[1].trim());
+      }
+
+      // 3. Conversione Numeri Romani e Arabi comuni (II -> 2, III -> 3, IV -> 4, etc.)
+      const romanMap = {
+        ' II': ' 2', ' III': ' 3', ' IV': ' 4', ' V': ' 5', ' VI': ' 6', ' VII': ' 7', ' VIII': ' 8', ' IX': ' 9', ' X': ' 10',
+        ' 2': ' II', ' 3': ' III', ' 4': ' IV', ' 5': ' V', ' 6': ' VI', ' 7': ' VII', ' 8': ' VIII'
+      };
+      for (const [key, val] of Object.entries(romanMap)) {
+        if (trimmed.endsWith(key)) {
+          aliases.add(trimmed.slice(0, -key.length) + val);
+        }
+      }
+
+      // 4. Rimuove parentesi esplicative (es: "Bohemian Rhapsody (Queen)" -> "Bohemian Rhapsody")
+      if (trimmed.includes('(')) {
+        const cleanParenthesis = trimmed.replace(/\(.*?\)/g, '').trim();
+        if (cleanParenthesis.length > 0) aliases.add(cleanParenthesis);
+      }
+
+      return Array.from(aliases);
+    }
+
+    function generateSmartAliasesForAll() {
+      const rows = document.querySelectorAll('#editorRowsContainer tr');
+      let count = 0;
+
+      rows.forEach(tr => {
+        const nameInput = tr.querySelector('.row-name');
+        const aliasInput = tr.querySelector('.row-aliases');
+        const name = nameInput.value.trim();
+
+        if (name) {
+          const smartAliases = generateSmartAliasesForItem(name);
+          const currentAliases = aliasInput.value.split(',').map(a => a.trim()).filter(Boolean);
+          const combined = Array.from(new Set([...currentAliases, ...smartAliases]));
+
+          if (combined.length > currentAliases.length) {
+            aliasInput.value = combined.join(', ');
+            count++;
+          }
+        }
+      });
+
+      alert(`✨ Generazione completata! Sono stati arricchiti gli alias per ${count} elementi.`);
+    }
+
+    function saveCategoryFromEditor() {
+      const title = document.getElementById('editorCatTitle').value.trim();
+      const catId = document.getElementById('editorCatId').value.trim();
 
       if (!title) {
         alert("Inserisci un titolo per la categoria!");
         return;
       }
-      if (!rawText) {
-        alert("Incolla o inserisci almeno qualche elemento!");
+
+      const rows = document.querySelectorAll('#editorRowsContainer tr');
+      const items = [];
+
+      rows.forEach((tr, idx) => {
+        const rank = idx + 1;
+        const name = tr.querySelector('.row-name').value.trim();
+        const rawAliases = tr.querySelector('.row-aliases').value.split(',').map(a => a.trim()).filter(Boolean);
+
+        if (name) {
+          items.push({
+            rank: rank,
+            name: name,
+            aliases: rawAliases
+          });
+        }
+      });
+
+      if (items.length === 0) {
+        alert("Devi inserire almeno un elemento valido!");
         return;
       }
 
-      // Estrazione e pulizia righe (es: rimuove "1. ", "1 - ", "#1 ", etc.)
-      const lines = rawText.split('\n')
-        .map(l => l.trim())
-        .filter(l => l.length > 0);
-
-      const items = lines.slice(0, 100).map((line, idx) => {
-        const cleanedName = line.replace(/^\d+[\.\-\)\s]+/, '').replace(/^#\d+[\s]+/, '').trim();
-        return {
-          rank: idx + 1,
-          name: cleanedName,
-          aliases: []
-        };
-      });
-
-      socket.emit('createCategory', {
+      socket.emit('saveCategory', {
+        id: catId || null,
         title: title,
         items: items
       });
     }
 
-    socket.on('categoryCreatedResult', (res) => {
+    socket.on('categorySaveResult', (res) => {
       if (res.success) {
-        alert("🎉 Nuova Top 100 creata e salvata con successo!");
-        closeCreateCategoryModal();
-        document.getElementById('newCatTitle').value = '';
-        document.getElementById('rawItemsInput').value = '';
-        document.getElementById('categorySelect').value = res.createdId;
+        alert("💾 Categoria salvata con successo!");
+        closeCategoryEditor();
+        document.getElementById('categorySelect').value = res.savedId;
       } else {
         alert(`Errore: ${res.message}`);
       }
@@ -361,6 +515,10 @@
     socket.on('categoriesUpdated', (list) => {
       populateCategoriesDropdown(list, document.getElementById('categorySelect').value);
     });
+
+    function closeCategoryEditor() {
+      document.getElementById('editorModal').classList.add('hidden');
+    }
 
     // Socket.io Events
     socket.on('initSync', (data) => {
@@ -429,7 +587,6 @@
       setTimeout(() => banner.classList.add('opacity-0'), 2200);
     });
 
-    // Lobby Squadre
     function renderLobbyInputs() {
       const cont = document.getElementById('teamsContainer');
       cont.innerHTML = teams.map((t, idx) => `
