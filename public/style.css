@@ -1,0 +1,695 @@
+/* ==========================================================================
+   PARTY GAME: TOP 3 & MEME - STILE COMPLETO
+   ========================================================================== */
+
+:root {
+  --bg-color: #0d0f18;
+  --card-bg: rgba(23, 27, 41, 0.88);
+  --accent: #ff007f;
+  --accent-blue: #00f0ff;
+  --accent-yellow: #ffe600;
+  --accent-green: #00ff66;
+  --text: #f0f4fc;
+  --text-muted: #8e9bb4;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: var(--text);
+  
+  /* Sfondo con immagine e overlay scuro per leggibilità */
+  background: 
+    linear-gradient(rgba(13, 15, 24, 0.82), rgba(13, 15, 24, 0.90)),
+    url('bg.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+}
+
+/* ==================== EFFETTI CARD & GLASSMORPHISM ==================== */
+.card {
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+
+/* ==================== HOME / LANDING SELEZIONE RUOLO ==================== */
+.home-section {
+  width: 100%;
+  max-width: 780px;
+}
+
+.home-card {
+  text-align: center;
+  padding: 35px 25px;
+}
+
+.main-title {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.home-qr-container {
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-qr-box {
+  background: #fff;
+  padding: 12px;
+  border-radius: 18px;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.35);
+  border: 2px solid var(--accent-blue);
+}
+
+.home-qr-img {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+.home-qr-instruction {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.home-link-badge {
+  background: rgba(0, 240, 255, 0.15);
+  color: var(--accent-blue);
+  border: 1px solid var(--accent-blue);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.home-roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.role-select-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px 15px;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-select-card:hover {
+  transform: translateY(-5px);
+}
+
+.role-card-player:hover {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.role-card-host:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.3);
+}
+
+.role-card-regia:hover {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 20px rgba(0, 255, 102, 0.3);
+}
+
+.role-icon {
+  font-size: 2.2rem;
+}
+
+.role-select-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.role-select-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.btn-back-home {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+/* ==================== TYPOGRAPHY & GLOW ==================== */
+.glow-text {
+  font-weight: 900;
+  color: var(--accent-blue);
+  text-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+}
+
+.glow-green {
+  color: var(--accent-green);
+  text-shadow: 0 0 15px rgba(0, 255, 102, 0.6);
+}
+
+.glow-yellow {
+  color: var(--accent-yellow);
+  text-shadow: 0 0 10px rgba(255, 230, 0, 0.8);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* ==================== PULSANTI ==================== */
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--accent-blue);
+  color: #000;
+  padding: 12px 24px;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  padding: 10px 18px;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.btn-meme {
+  background: rgba(255, 230, 0, 0.15);
+  color: var(--accent-yellow);
+  border: 1px dashed var(--accent-yellow);
+  padding: 12px;
+}
+
+.btn-reveal {
+  background: rgba(0, 255, 102, 0.15);
+  color: var(--accent-green);
+  border: 1px solid var(--accent-green);
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.btn:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.btn-active-revealed {
+  background: var(--accent-green) !important;
+  color: #000 !important;
+  font-weight: 900 !important;
+}
+
+/* ==================== SCHERMO HOST ==================== */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.round-badge {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 800;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.question-card h2 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ==================== OSCURAMENTO RISPOSTE & BLUR ==================== */
+.reveal-hint-bar {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.answers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.answer-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 22px;
+  position: relative;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.answer-box:hover {
+  border-color: rgba(0, 240, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.answer-box p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* Stato Blur / Oscurato */
+.blur-hidden p,
+.blur-hidden h2,
+.blur-hidden .written-by {
+  filter: blur(14px);
+  opacity: 0.05;
+  user-select: none;
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 15, 24, 0.85);
+  backdrop-filter: blur(4px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--accent-blue);
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 10px;
+  z-index: 5;
+}
+
+.blur-hidden .blur-overlay {
+  display: flex;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background: var(--accent-blue);
+  color: #000;
+  font-weight: 900;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  z-index: 6;
+}
+
+.meme-badge {
+  background: var(--accent-yellow);
+}
+
+.meme-wrapper, .author-wrapper {
+  margin-top: 15px;
+}
+
+.meme-answer {
+  border-color: var(--accent-yellow);
+  background: rgba(255, 230, 0, 0.05);
+}
+
+.author-display {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(0, 255, 102, 0.05);
+  border: 2px dashed var(--accent-green);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.author-display:hover {
+  background: rgba(0, 255, 102, 0.1);
+}
+
+.blur-hidden.author-display {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.written-by {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ==================== CODA BUZZER ==================== */
+.buzzer-queue-card {
+  border: 2px solid var(--accent-yellow);
+  background: rgba(255, 230, 0, 0.04);
+  margin-bottom: 20px;
+}
+
+.queue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.queue-header h3 {
+  color: var(--accent-yellow);
+  font-size: 1.1rem;
+}
+
+.queue-btn-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.buzzer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.buzzer-queue-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10px 16px;
+  border-radius: 10px;
+  border-left: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.buzzer-queue-item.active-turn {
+  background: rgba(0, 255, 102, 0.1);
+  border-left: 5px solid var(--accent-green);
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
+}
+
+.queue-pos {
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--accent-blue);
+  min-width: 25px;
+}
+
+.queue-name {
+  font-weight: 800;
+  font-size: 1.15rem;
+  flex: 1;
+}
+
+.turn-badge {
+  background: var(--accent-green);
+  color: #000;
+  font-weight: 900;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 8px;
+}
+
+/* ==================== TABELLONE PUNTEGGI ==================== */
+.scoreboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.score-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.score-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.score-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.score-val {
+  font-weight: 800;
+  color: var(--accent-blue);
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ==================== CONTROLLER SMARTPHONE ==================== */
+.player-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.score-badge {
+  background: rgba(0, 240, 255, 0.2);
+  border: 1px solid var(--accent-blue);
+  color: var(--accent-blue);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 800;
+}
+
+.buzzer-wrapper {
+  margin: 30px 0;
+}
+
+.buzzer-btn {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ff3399, #cc0066 60%, #800040);
+  border: 6px solid #ff66b2;
+  box-shadow: 0 0 40px rgba(255, 0, 127, 0.7);
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 900;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.buzzer-btn:active {
+  transform: scale(0.92);
+}
+
+.buzzer-btn.disabled {
+  background: #33394a;
+  border-color: #555d73;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.status-msg {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* ==================== PANNELLO REGIA ==================== */
+.regia-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.regia-title-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.regia-badge {
+  background: var(--accent-yellow);
+  color: #000;
+  font-weight: 900;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.regia-counter {
+  font-weight: 800;
+  color: var(--accent-blue);
+  margin: 0 10px;
+}
+
+.regia-spoiler-card {
+  border: 2px solid var(--accent-green);
+}
+
+.regia-spoiler-header {
+  margin-bottom: 15px;
+}
+
+.regia-answers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.regia-ans-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.regia-ans-text {
+  flex: 1;
+}
+
+.regia-meme-item {
+  border-left: 4px solid var(--accent-yellow);
+  background: rgba(255, 230, 0, 0.08);
+}
+
+.regia-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.04); }
+}
