@@ -16,48 +16,57 @@
 </head>
 <body class="bg-slate-950 text-white min-h-screen flex flex-col justify-between overflow-x-hidden select-none">
 
-  <!-- LOBBY MODAL: IMPOSTAZIONE SQUADRE E TIMER -->
+  <!-- LOBBY DI SETUP: SCELTA CATEGORIA, TIMER E SQUADRE -->
   <div id="lobbyModal" class="fixed inset-0 bg-slate-950/95 backdrop-blur-md z-50 flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-xl w-full shadow-2xl">
-      <div class="text-center mb-6">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-7 max-w-xl w-full shadow-2xl">
+      <div class="text-center mb-5">
         <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-500 to-indigo-500">CONFIGURA PARTITA</h1>
-        <p id="lobbyCategory" class="text-slate-400 text-xs mt-1">Caricamento...</p>
+        <p class="text-slate-400 text-xs mt-1">Scegli la categoria, imposta il timer e le squadre</p>
       </div>
 
-      <!-- Selezione Durata Timer -->
-      <div class="mb-5 bg-slate-950 p-3.5 rounded-2xl border border-slate-800">
-        <label class="text-xs font-bold text-slate-400 block mb-2">DURATA TIMER ROUND</label>
+      <!-- SELETTORE CATEGORIA (Letto dai file .json in data/) -->
+      <div class="mb-4 bg-slate-950 p-3 rounded-2xl border border-slate-800">
+        <label class="text-[11px] font-bold text-amber-400 block mb-2 uppercase tracking-wider">📂 Seleziona Categoria Top 100</label>
+        <select id="categorySelect" class="w-full bg-slate-900 border border-slate-700 text-white font-bold text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-amber-400 cursor-pointer">
+          <!-- Popolato dinamicamente -->
+        </select>
+      </div>
+
+      <!-- SELETTORE DURATA TIMER -->
+      <div class="mb-4 bg-slate-950 p-3 rounded-2xl border border-slate-800">
+        <label class="text-[11px] font-bold text-slate-400 block mb-2 uppercase tracking-wider">⏱️ Durata Timer</label>
         <div class="grid grid-cols-4 gap-2">
-          <button onclick="selectDuration(180, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300 hover:border-amber-400">3 Min</button>
+          <button onclick="selectDuration(180, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">3 Min</button>
           <button onclick="selectDuration(300, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300">5 Min</button>
-          <button onclick="selectDuration(600, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300 hover:border-amber-400">10 Min</button>
-          <button onclick="selectDuration(900, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300 hover:border-amber-400">15 Min</button>
+          <button onclick="selectDuration(600, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">10 Min</button>
+          <button onclick="selectDuration(900, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">15 Min</button>
         </div>
       </div>
 
-      <!-- Configurazione Squadre -->
-      <label class="text-xs font-bold text-slate-400 block mb-2">SQUADRE</label>
-      <div id="teamsContainer" class="space-y-2.5 max-h-52 overflow-y-auto pr-1 mb-4"></div>
+      <!-- SQUADRE -->
+      <div class="mb-4">
+        <label class="text-[11px] font-bold text-slate-400 block mb-2 uppercase tracking-wider">👥 Squadre</label>
+        <div id="teamsContainer" class="space-y-2 max-h-44 overflow-y-auto pr-1 mb-2"></div>
+        <button onclick="addTeamField()" class="w-full py-2 rounded-xl border border-dashed border-slate-700 hover:border-slate-500 text-slate-400 text-xs font-bold transition">
+          ➕ Aggiungi Squadra
+        </button>
+      </div>
 
-      <button onclick="addTeamField()" class="w-full py-2.5 mb-5 rounded-xl border border-dashed border-slate-700 hover:border-slate-500 text-slate-400 text-xs font-bold transition">
-        ➕ Aggiungi Squadra
-      </button>
-
-      <button onclick="startGame()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-black text-base shadow-lg shadow-emerald-500/30 transition">
-        SALVA & AVVIA TABELLONE 🚀
+      <button onclick="confirmAndStart()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 text-white font-black text-sm shadow-lg shadow-emerald-500/25 transition">
+        INIZIA PARTITA 🚀
       </button>
     </div>
   </div>
 
-  <!-- HEADER / SCOREBOARD & TIMER BAR -->
+  <!-- HEADER TV BROADCAST -->
   <header class="bg-slate-900/90 border-b border-slate-800 px-6 py-2.5 flex items-center justify-between shadow-lg">
     <div class="flex items-center gap-4">
-      <div class="text-2xl font-black tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-rose-500">TOP 100</div>
+      <div class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-rose-500">TOP 100</div>
       <div class="h-6 w-px bg-slate-800"></div>
-      <div id="categoryDisplay" class="text-xs font-semibold text-slate-300">Caricamento...</div>
+      <div id="categoryDisplay" class="text-xs font-semibold text-amber-300">Caricamento Categoria...</div>
     </div>
 
-    <!-- TIMER LIVE CON CONTROLLI RAPIDI HOST -->
+    <!-- Timer Sincronizzato con Controlli Host -->
     <div class="flex items-center gap-3 bg-slate-950 px-4 py-1.5 rounded-2xl border border-slate-800">
       <div id="timerDisplay" class="text-2xl font-black text-amber-400 font-mono tracking-wider">05:00</div>
       <div class="flex items-center gap-1">
@@ -66,22 +75,22 @@
       </div>
     </div>
 
-    <!-- Live Teams Scoreboard -->
+    <!-- Scoreboard Squadre -->
     <div id="scoreboardDisplay" class="flex items-center gap-3"></div>
 
     <div class="flex items-center gap-2">
       <button onclick="openQRModal()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300 transition">📱 QR</button>
       <button onclick="toggleFullscreen()" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-bold transition">⛶ TV</button>
-      <button onclick="document.getElementById('lobbyModal').classList.remove('hidden')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-400">⚙️</button>
+      <button onclick="document.getElementById('lobbyModal').classList.remove('hidden')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">⚙️ Opzioni / Categoria</button>
     </div>
   </header>
 
-  <!-- GRIGLIA 10x10 TABELLONE (100 CASELLE ZERO-SCROLL) -->
+  <!-- TABELLONE 10x10 ZERO-SCROLL -->
   <main class="flex-1 p-3 flex items-center justify-center">
     <div id="gridContainer" class="grid grid-cols-10 gap-1.5 w-full max-w-[1720px] h-[calc(100vh-100px)]"></div>
   </main>
 
-  <!-- POPUP CELEBRAZIONE RISPOSTA -->
+  <!-- POPUP RIVELAZIONE -->
   <div id="revealBanner" class="fixed inset-0 pointer-events-none z-40 flex items-center justify-center opacity-0 transition-opacity duration-300">
     <div id="bannerCard" class="bg-slate-900/95 border-2 border-amber-400 rounded-3xl p-8 text-center shadow-2xl scale-75 transform transition duration-300 max-w-lg">
       <div id="bannerRank" class="text-6xl font-black text-amber-400 mb-2">#72</div>
@@ -90,14 +99,14 @@
     </div>
   </div>
 
-  <!-- QR CODE MODAL -->
+  <!-- QR MODAL -->
   <div id="qrModal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 text-center max-w-sm w-full">
       <h3 class="text-base font-bold mb-1">Inquadra dal Telefono</h3>
-      <p class="text-xs text-slate-400 mb-4">Controller giocatori live</p>
+      <p class="text-xs text-slate-400 mb-4">Accedi al controller per giocare</p>
       <div id="qrcode" class="flex justify-center bg-white p-3 rounded-2xl mx-auto w-fit mb-4"></div>
       <div id="phoneUrl" class="text-[11px] font-mono text-indigo-400 break-all mb-4"></div>
-      <button onclick="closeQRModal()" class="w-full py-2 rounded-xl bg-slate-800 font-bold text-xs">Chiudi</button>
+      <button onclick="document.getElementById('qrModal').classList.add('hidden')" class="w-full py-2 rounded-xl bg-slate-800 font-bold text-xs">Chiudi</button>
     </div>
   </div>
 
@@ -109,6 +118,7 @@
     ];
     let isTimerRunning = false;
     let selectedSeconds = 300;
+    let categoriesList = [];
 
     const PRESET_COLORS = ['#ef4444', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316'];
     const PRESET_ICONS = ['🔥', '⚡', '🦅', '🦁', '🚀', '👑', '🦈', '💎'];
@@ -160,40 +170,66 @@
       `).join('');
     }
 
-    // Gestione Durata Timer
+    function populateCategoriesDropdown(list, selectedKey) {
+      categoriesList = list;
+      const select = document.getElementById('categorySelect');
+      select.innerHTML = list.map(c => `
+        <option value="${c.id}" ${c.id === selectedKey ? 'selected' : ''}>
+          ${c.title} (${c.itemCount} elementi)
+        </option>
+      `).join('');
+    }
+
     function selectDuration(sec, btn) {
       selectedSeconds = sec;
       document.querySelectorAll('.timer-btn').forEach(b => {
-        b.className = "timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300 hover:border-amber-400";
+        b.className = "timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300";
       });
       btn.className = "timer-btn py-2 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300";
     }
 
     function toggleTimer() {
-      if (isTimerRunning) {
-        socket.emit('timerControl', { type: 'PAUSE' });
-      } else {
-        socket.emit('timerControl', { type: 'START' });
-      }
+      socket.emit('timerControl', { type: isTimerRunning ? 'PAUSE' : 'START' });
     }
 
     function resetTimer() {
       socket.emit('timerControl', { type: 'RESET' });
     }
 
-    // Formattazione mm:ss
     function formatTime(s) {
       const min = Math.floor(s / 60);
       const sec = s % 60;
       return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
     }
 
-    // Sincronizzazione Socket.io
+    // Socket.io Events
+    socket.on('initSync', (data) => {
+      populateCategoriesDropdown(data.categoriesList, data.gameState.currentCategoryKey);
+      applyGameState(data.gameState);
+    });
+
+    socket.on('gameState', (data) => {
+      if (data.categoriesList) {
+        populateCategoriesDropdown(data.categoriesList, data.currentCategoryKey);
+      }
+      applyGameState(data);
+    });
+
+    function applyGameState(data) {
+      document.getElementById('categoryDisplay').innerText = data.categoryTitle;
+      teams = data.teams;
+      renderScoreboard();
+      buildGrid();
+      if (data.revealed) {
+        Object.keys(data.revealed).forEach(rank => updateSlotUI(rank, data.revealed[rank]));
+      }
+      document.getElementById('timerDisplay').innerText = formatTime(data.timer.remaining);
+    }
+
     socket.on('timerTick', (t) => {
       isTimerRunning = t.isRunning;
       const display = document.getElementById('timerDisplay');
       display.innerText = formatTime(t.remaining);
-      
       const toggleBtn = document.getElementById('timerToggleBtn');
       if (t.isRunning) {
         toggleBtn.innerText = "⏸ Pausa";
@@ -212,20 +248,7 @@
 
     socket.on('timerExpired', () => {
       document.getElementById('timerDisplay').innerText = "00:00";
-      document.getElementById('timerDisplay').classList.add('text-rose-600');
-      confetti({ particleCount: 120, spread: 90, origin: { y: 0.5 } });
-    });
-
-    socket.on('gameState', (data) => {
-      document.getElementById('categoryDisplay').innerText = data.categoryTitle;
-      document.getElementById('lobbyCategory').innerText = `Categoria attiva: ${data.categoryTitle}`;
-      teams = data.teams;
-      renderScoreboard();
-      buildGrid();
-      if (data.revealed) {
-        Object.keys(data.revealed).forEach(rank => updateSlotUI(rank, data.revealed[rank]));
-      }
-      document.getElementById('timerDisplay').innerText = formatTime(data.timer.remaining);
+      confetti({ particleCount: 100, spread: 80, origin: { y: 0.5 } });
     });
 
     socket.on('boardUpdated', (payload) => {
@@ -233,7 +256,6 @@
       renderScoreboard();
       updateSlotUI(payload.rank, payload.data);
 
-      // Banner celebrazione
       const banner = document.getElementById('revealBanner');
       document.getElementById('bannerRank').innerText = `#${payload.rank}`;
       document.getElementById('bannerTitle').innerText = payload.data.itemName;
@@ -243,7 +265,7 @@
       setTimeout(() => banner.classList.add('opacity-0'), 2200);
     });
 
-    // Lobby Squadre
+    // Gestione Squadre Lobby
     function renderLobbyInputs() {
       const cont = document.getElementById('teamsContainer');
       cont.innerHTML = teams.map((t, idx) => `
@@ -278,9 +300,13 @@
     function updateTeamName(idx, val) { teams[idx].name = val; }
     function updateTeamColor(idx, val) { teams[idx].color = val; }
 
-    function startGame() {
-      socket.emit('setupTeams', teams);
-      socket.emit('timerControl', { type: 'SET_DURATION', seconds: selectedSeconds });
+    function confirmAndStart() {
+      const catKey = document.getElementById('categorySelect').value;
+      socket.emit('startGameWithConfig', {
+        categoryKey: catKey,
+        teams: teams,
+        duration: selectedSeconds
+      });
       document.getElementById('lobbyModal').classList.add('hidden');
     }
 
@@ -296,10 +322,6 @@
       new QRCode(qrDiv, { text: phoneUrl, width: 140, height: 140 });
       document.getElementById('phoneUrl').innerText = phoneUrl;
       document.getElementById('qrModal').classList.remove('hidden');
-    }
-
-    function closeQRModal() {
-      document.getElementById('qrModal').classList.add('hidden');
     }
 
     buildGrid();

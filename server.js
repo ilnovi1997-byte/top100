@@ -10,30 +10,54 @@ const io = new Server(server, { cors: { origin: "*" } });
 
 app.use(express.static(path.join(__dirname, "public")));
 
-// Funzione di caricamento dati dal file esterno JSON
-const DATA_FILE_PATH = path.join(__dirname, "data", "top100.json");
+const DATA_DIR = path.join(__dirname, "data");
 
-function loadTop100Data() {
+// Carica tutti i file .json presenti nella cartella data/
+function loadAllCategories() {
+  const categories = {};
   try {
-    const raw = fs.readFileSync(DATA_FILE_PATH, "utf-8");
-    return JSON.parse(raw);
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR);
+    }
+    const files = fs.readdirSync(DATA_DIR).filter((f) => f.endsWith(".json"));
+
+    files.forEach((file) => {
+      try {
+        const fullPath = path.join(DATA_DIR, file);
+        const content = JSON.parse(fs.readFileSync(fullPath, "utf-8"));
+        const key = content.id || path.basename(file, ".json");
+        categories[key] = {
+          id: key,
+          fileName: file,
+          categoryTitle: content.categoryTitle || key,
+          items: content.items || [],
+        };
+      } catch (e) {
+        console.error(`Errore nel caricamento del file ${file}:`, e);
+      }
+    });
   } catch (err) {
-    console.error("Errore nel caricamento di top100.json:", err);
-    return { categoryTitle: "Top 100", items: [] };
+    console.error("Errore lettura cartella data:", err);
   }
+  return categories;
 }
 
-let currentData = loadTop100Data();
+let availableCategories = loadAllCategories();
+let currentCategoryKey = Object.keys(availableCategories)[0] || null;
 
-// Stato di gioco
+// Stato della partita
 let gameState = {
+  currentCategoryKey: currentCategoryKey,
+  categoryTitle: currentCategoryKey
+    ? availableCategories[currentCategoryKey].categoryTitle
+    : "Nessuna Categoria",
   teams: [
     { id: "t1", name: "Squadra Rossa", color: "#ef4444", icon: "🔥", score: 0 },
     { id: "t2", name: "Squadra Blu", color: "#3b82f6", icon: "⚡", score: 0 },
   ],
   revealed: {}, // rank -> { teamId, playerName, itemName, points }
   timer: {
-    duration: 300, // secondi iniziali (default 5 min)
+    duration: 300,
     remaining: 300,
     isRunning: false,
   },
@@ -74,28 +98,49 @@ function normalizeText(str) {
     .replace(/[^a-z0-9]/g, "");
 }
 
+function getAvailableCategoriesList() {
+  return Object.values(availableCategories).map((c) => ({
+    id: c.id,
+    title: c.categoryTitle,
+    itemCount: c.items.length,
+  }));
+}
+
 io.on("connection", (socket) => {
-  // Invia lo stato globale con la categoria del file esterno
-  socket.emit("gameState", {
-    ...gameState,
-    categoryTitle: currentData.categoryTitle,
-    totalItems: currentData.items.length,
+  // Sincronizza stato e lista categorie disponibili
+  socket.emit("initSync", {
+    gameState,
+    categoriesList: getAvailableCategoriesList(),
   });
 
-  // Setup squadre
-  socket.on("setupTeams", (teamsData) => {
-    gameState.teams = teamsData.map((t) => ({ ...t, score: 0 }));
+  // Cambio categoria e setup partita da Lobby Host
+  socket.on("startGameWithConfig", (config) => {
+    const { categoryKey, teams, duration } = config;
+
+    // Ricarica categorie per prendere eventuali nuovi file inseriti
+    availableCategories = loadAllCategories();
+
+    if (availableCategories[categoryKey]) {
+      currentCategoryKey = categoryKey;
+      gameState.currentCategoryKey = categoryKey;
+      gameState.categoryTitle = availableCategories[categoryKey].categoryTitle;
+    }
+
+    gameState.teams = teams.map((t) => ({ ...t, score: 0 }));
     gameState.revealed = {};
     pauseTimer();
-    gameState.timer.remaining = gameState.timer.duration;
+
+    const sec = parseInt(duration, 10) || 300;
+    gameState.timer.duration = sec;
+    gameState.timer.remaining = sec;
+
     io.emit("gameState", {
       ...gameState,
-      categoryTitle: currentData.categoryTitle,
-      totalItems: currentData.items.length,
+      categoriesList: getAvailableCategoriesList(),
     });
   });
 
-  // Controlli Timer dall'Host
+  // Controlli Timer
   socket.on("timerControl", (action) => {
     if (action.type === "START") {
       startTimer();
@@ -105,20 +150,11 @@ io.on("connection", (socket) => {
       pauseTimer();
       gameState.timer.remaining = gameState.timer.duration;
       io.emit("timerTick", gameState.timer);
-    } else if (action.type === "SET_DURATION") {
-      const seconds = parseInt(action.seconds, 10);
-      if (!isNaN(seconds) && seconds > 0) {
-        gameState.timer.duration = seconds;
-        gameState.timer.remaining = seconds;
-        pauseTimer();
-        io.emit("timerTick", gameState.timer);
-      }
     }
   });
 
-  // Ricezione tentativo da Smartphone
+  // Ricezione Tentativo Giocatore
   socket.on("submitGuess", (payload) => {
-    // Se il timer è scaduto o in pausa, blocca i tentativi
     if (gameState.timer.remaining <= 0) {
       socket.emit("guessResult", {
         status: "LOCKED",
@@ -129,17 +165,23 @@ io.on("connection", (socket) => {
     if (!gameState.timer.isRunning) {
       socket.emit("guessResult", {
         status: "LOCKED",
-        message: "⏸️ Il timer è in pausa! Aspetta il via.",
+        message: "⏸️ Il timer è in pausa!",
       });
       return;
     }
 
     const { teamId, playerName, guess } = payload;
     const cleanGuess = normalizeText(guess || "");
-    if (!cleanGuess) return;
+    if (
+      !cleanGuess ||
+      !currentCategoryKey ||
+      !availableCategories[currentCategoryKey]
+    )
+      return;
 
-    // Match con il file JSON esterno
-    const matched = currentData.items.find((item) => {
+    const currentItems = availableCategories[currentCategoryKey].items;
+
+    const matched = currentItems.find((item) => {
       const matchName = normalizeText(item.name) === cleanGuess;
       const matchAlias =
         item.aliases &&
@@ -150,12 +192,12 @@ io.on("connection", (socket) => {
     if (!matched) {
       socket.emit("guessResult", {
         status: "WRONG",
-        message: "Nessuna corrispondenza nella Top 100!",
+        message: "Nessuna corrispondenza nella classifica!",
       });
       return;
     }
 
-    // First-come First-served
+    // Regola First-Come First-Served
     if (gameState.revealed[matched.rank]) {
       const orig = gameState.revealed[matched.rank];
       socket.emit("guessResult", {
@@ -165,7 +207,7 @@ io.on("connection", (socket) => {
       return;
     }
 
-    // Assegnazione punti = rank
+    // Punti = Posizione (#72 = 72 pt)
     const points = matched.rank;
     const teamObj = gameState.teams.find((t) => t.id === teamId);
     if (teamObj) teamObj.score += points;
@@ -190,17 +232,6 @@ io.on("connection", (socket) => {
       rank: matched.rank,
       data: gameState.revealed[matched.rank],
       teams: gameState.teams,
-    });
-  });
-
-  // Ricarica del file JSON senza riavviare Render (opzionale per l'host)
-  socket.on("reloadDataset", () => {
-    currentData = loadTop100Data();
-    gameState.revealed = {};
-    io.emit("gameState", {
-      ...gameState,
-      categoryTitle: currentData.categoryTitle,
-      totalItems: currentData.items.length,
     });
   });
 });
