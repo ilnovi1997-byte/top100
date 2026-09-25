@@ -3,60 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>TOP 100 - Controller Giocatore</title>
+  <title>TOP 100 - Controller</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="/socket.io/socket.io.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
   <style>body { font-family: 'Montserrat', sans-serif; }</style>
 </head>
-<body class="bg-slate-950 text-white min-h-screen flex flex-col p-4">
+<body class="bg-slate-950 text-white min-h-screen flex flex-col p-4 justify-between">
 
-  <!-- IDENTIFICAZIONE GIOCATORE -->
-  <div id="joinCard" class="bg-slate-900 border border-slate-800 rounded-3xl p-5 mb-4 shadow-xl">
-    <h2 class="text-sm font-black text-slate-400 mb-3 uppercase tracking-wider">Configura Giocatore</h2>
-    
-    <div class="space-y-3">
-      <div>
-        <label class="text-xs text-slate-400 mb-1 block">Tuo Nome</label>
-        <input type="text" id="playerName" placeholder="Es: Marco" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm font-bold text-white focus:outline-none focus:border-indigo-500">
-      </div>
-
-      <div>
-        <label class="text-xs text-slate-400 mb-1 block">Seleziona Squadra</label>
-        <div id="teamSelector" class="grid grid-cols-2 gap-2">
-          <!-- Popolato dinamicamente da Socket.io -->
-        </div>
-      </div>
+  <div>
+    <!-- BARRA TIMER LIVE SULLO SMARTPHONE -->
+    <div class="flex items-center justify-between bg-slate-900 border border-slate-800 rounded-2xl px-4 py-2.5 mb-3 shadow-lg">
+      <div class="text-xs font-bold text-slate-400">TEMPO RIMASTO</div>
+      <div id="phoneTimer" class="text-xl font-black font-mono text-amber-400">--:--</div>
     </div>
-  </div>
 
-  <!-- AREA DIGITAZIONE E INVIO -->
-  <div class="flex-1 flex flex-col justify-center max-w-md mx-auto w-full">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl flex flex-col gap-4">
+    <!-- SELEZIONE SQUADRA E NOME -->
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 mb-3">
+      <input type="text" id="playerName" placeholder="Tuo Nome (es: Giulia)" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-white mb-2.5 focus:outline-none focus:border-indigo-500">
+      <div id="teamSelector" class="grid grid-cols-2 gap-2"></div>
+    </div>
+
+    <!-- AREA DI GIOCO -->
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5 shadow-2xl flex flex-col gap-3">
       <div class="text-center">
-        <span class="text-xs font-black uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full">Gara Live (Nessun Turno)</span>
-        <h1 class="text-xl font-black mt-2">Indovina la Top 100</h1>
-        <p class="text-xs text-slate-400">La prima squadra che indovina prende il punteggio!</p>
+        <h2 id="catTitlePhone" class="text-xs font-black uppercase text-amber-400">TOP 100</h2>
+        <p class="text-[11px] text-slate-400">Digita la parola prima degli avversari!</p>
       </div>
 
-      <div class="relative">
-        <input type="text" id="guessInput" placeholder="Digita un titolo / nome..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="w-full bg-slate-950 border-2 border-slate-800 focus:border-indigo-500 rounded-2xl px-4 py-3.5 text-base font-bold text-white placeholder-slate-600 focus:outline-none transition">
-      </div>
+      <input type="text" id="guessInput" placeholder="Scrivi qui la risposta..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="w-full bg-slate-950 border-2 border-slate-800 focus:border-indigo-500 rounded-xl px-4 py-3 text-sm font-bold text-white placeholder-slate-600 focus:outline-none transition">
 
-      <button id="sendBtn" onclick="sendGuess()" class="w-full py-4 rounded-2xl bg-gradient-to-r from-indigo-500 to-rose-500 hover:from-indigo-400 hover:to-rose-400 font-black text-lg active:scale-95 transition shadow-lg shadow-indigo-500/25">
+      <button id="sendBtn" onclick="sendGuess()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-indigo-500 to-rose-500 hover:from-indigo-400 hover:to-rose-400 font-black text-sm active:scale-95 transition shadow-lg shadow-indigo-500/25">
         INVIA RISPOSTA ⚡
       </button>
 
-      <!-- Feedback risposte -->
-      <div id="statusMessage" class="hidden text-center p-3 rounded-xl text-xs font-bold transition"></div>
+      <div id="statusMessage" class="hidden text-center p-2.5 rounded-xl text-xs font-bold transition"></div>
     </div>
+  </div>
 
-    <!-- Storico personale -->
-    <div class="mt-4 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4">
-      <h3 class="text-xs font-bold text-slate-400 mb-2">Ultime risposte della tua squadra</h3>
-      <div id="teamHistory" class="space-y-1.5 text-xs text-slate-300">
-        <div class="text-slate-600 italic">Ancora nessuna risposta corretta...</div>
-      </div>
+  <!-- CRONOLOGIA PERSONALE -->
+  <div class="mt-3 bg-slate-900/60 border border-slate-800 rounded-2xl p-3">
+    <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Ultime prese della tua squadra</div>
+    <div id="teamHistory" class="space-y-1 text-xs text-slate-300">
+      <div class="text-slate-600 italic text-[11px]">Nessuna risposta ancora...</div>
     </div>
   </div>
 
@@ -65,9 +54,32 @@
     let selectedTeamId = null;
     let availableTeams = [];
 
+    function formatTime(s) {
+      const min = Math.floor(s / 60);
+      const sec = s % 60;
+      return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+    }
+
     socket.on('gameState', (data) => {
+      document.getElementById('catTitlePhone').innerText = data.categoryTitle;
       availableTeams = data.teams;
       renderTeams();
+      document.getElementById('phoneTimer').innerText = formatTime(data.timer.remaining);
+    });
+
+    socket.on('timerTick', (t) => {
+      const pt = document.getElementById('phoneTimer');
+      pt.innerText = formatTime(t.remaining);
+      if (t.remaining <= 30 && t.remaining > 0) {
+        pt.classList.add('text-rose-500');
+      } else {
+        pt.classList.remove('text-rose-500');
+      }
+    });
+
+    socket.on('timerExpired', () => {
+      document.getElementById('phoneTimer').innerText = "STOP!";
+      showStatus("⏳ Tempo scaduto! Gioco terminato.", "bg-rose-500/20 text-rose-400 border border-rose-500/30");
     });
 
     socket.on('boardUpdated', (payload) => {
@@ -83,16 +95,14 @@
       container.innerHTML = availableTeams.map(t => {
         const isSelected = t.id === selectedTeamId;
         return `
-          <button onclick="selectTeam('${t.id}')" class="py-2.5 px-3 rounded-xl border text-xs font-bold flex items-center justify-between transition ${isSelected ? 'ring-2 ring-white' : 'opacity-80'}" style="background-color: ${t.color}20; border-color: ${t.color}">
-            <span class="flex items-center gap-1.5">${t.icon} ${t.name}</span>
+          <button onclick="selectTeam('${t.id}')" class="py-2 px-2.5 rounded-xl border text-[11px] font-bold flex items-center justify-between transition ${isSelected ? 'ring-2 ring-white' : 'opacity-70'}" style="background-color: ${t.color}20; border-color: ${t.color}">
+            <span>${t.icon} ${t.name}</span>
             <span class="font-black">${t.score}pt</span>
           </button>
         `;
       }).join('');
 
-      if (!selectedTeamId && availableTeams.length > 0) {
-        selectTeam(availableTeams[0].id);
-      }
+      if (!selectedTeamId && availableTeams.length > 0) selectTeam(availableTeams[0].id);
     }
 
     function selectTeam(id) {
@@ -107,7 +117,7 @@
 
       if (!val) return;
       if (!selectedTeamId) {
-        showStatus('Seleziona una squadra prima di inviare!', 'bg-rose-500/20 text-rose-400 border border-rose-500/30');
+        showStatus('Seleziona una squadra!', 'bg-rose-500/20 text-rose-400 border border-rose-500/30');
         return;
       }
 
@@ -118,15 +128,12 @@
       });
 
       input.value = '';
-      input.focus();
     }
 
-    // Invio con tasto Invio da tastiera mobile
     document.getElementById('guessInput').addEventListener('keydown', (e) => {
       if (e.key === 'Enter') sendGuess();
     });
 
-    // Risposta dal server (arbitro centrale)
     socket.on('guessResult', (res) => {
       if (res.status === 'CORRECT') {
         showStatus(res.message, 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30');
@@ -139,19 +146,17 @@
 
     function showStatus(text, classes) {
       const el = document.getElementById('statusMessage');
-      el.className = `p-3 rounded-xl text-xs font-bold text-center block ${classes}`;
+      el.className = `p-2 rounded-xl text-xs font-bold text-center block ${classes}`;
       el.innerText = text;
-      setTimeout(() => {
-        el.className = 'hidden';
-      }, 3500);
+      setTimeout(() => el.className = 'hidden', 3000);
     }
 
     function addHistoryItem(rank, title, pts, player) {
       const h = document.getElementById('teamHistory');
-      if (h.innerHTML.includes('Ancora nessuna')) h.innerHTML = '';
+      if (h.innerHTML.includes('Nessuna risposta')) h.innerHTML = '';
       const div = document.createElement('div');
-      div.className = "flex items-center justify-between bg-slate-950 p-2 rounded-lg border border-slate-800";
-      div.innerHTML = `<span><strong>#${rank}</strong> ${title} <span class="text-slate-500">(${player})</span></span><span class="text-emerald-400 font-bold">+${pts} pt</span>`;
+      div.className = "flex items-center justify-between bg-slate-950 p-1.5 rounded-lg border border-slate-800 text-[11px]";
+      div.innerHTML = `<span><strong>#${rank}</strong> ${title}</span><span class="text-emerald-400 font-bold">+${pts}pt</span>`;
       h.prepend(div);
     }
   </script>
