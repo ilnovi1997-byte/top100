@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>TOP 100 - Controller Giocatore</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Montserrat', sans-serif; }</style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen flex flex-col p-4">
+
+  <!-- IDENTIFICAZIONE GIOCATORE -->
+  <div id="joinCard" class="bg-slate-900 border border-slate-800 rounded-3xl p-5 mb-4 shadow-xl">
+    <h2 class="text-sm font-black text-slate-400 mb-3 uppercase tracking-wider">Configura Giocatore</h2>
+    
+    <div class="space-y-3">
+      <div>
+        <label class="text-xs text-slate-400 mb-1 block">Tuo Nome</label>
+        <input type="text" id="playerName" placeholder="Es: Marco" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm font-bold text-white focus:outline-none focus:border-indigo-500">
+      </div>
+
+      <div>
+        <label class="text-xs text-slate-400 mb-1 block">Seleziona Squadra</label>
+        <div id="teamSelector" class="grid grid-cols-2 gap-2">
+          <!-- Popolato dinamicamente da Socket.io -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AREA DIGITAZIONE E INVIO -->
+  <div class="flex-1 flex flex-col justify-center max-w-md mx-auto w-full">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl flex flex-col gap-4">
+      <div class="text-center">
+        <span class="text-xs font-black uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full">Gara Live (Nessun Turno)</span>
+        <h1 class="text-xl font-black mt-2">Indovina la Top 100</h1>
+        <p class="text-xs text-slate-400">La prima squadra che indovina prende il punteggio!</p>
+      </div>
+
+      <div class="relative">
+        <input type="text" id="guessInput" placeholder="Digita un titolo / nome..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="w-full bg-slate-950 border-2 border-slate-800 focus:border-indigo-500 rounded-2xl px-4 py-3.5 text-base font-bold text-white placeholder-slate-600 focus:outline-none transition">
+      </div>
+
+      <button id="sendBtn" onclick="sendGuess()" class="w-full py-4 rounded-2xl bg-gradient-to-r from-indigo-500 to-rose-500 hover:from-indigo-400 hover:to-rose-400 font-black text-lg active:scale-95 transition shadow-lg shadow-indigo-500/25">
+        INVIA RISPOSTA ⚡
+      </button>
+
+      <!-- Feedback risposte -->
+      <div id="statusMessage" class="hidden text-center p-3 rounded-xl text-xs font-bold transition"></div>
+    </div>
+
+    <!-- Storico personale -->
+    <div class="mt-4 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4">
+      <h3 class="text-xs font-bold text-slate-400 mb-2">Ultime risposte della tua squadra</h3>
+      <div id="teamHistory" class="space-y-1.5 text-xs text-slate-300">
+        <div class="text-slate-600 italic">Ancora nessuna risposta corretta...</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const socket = io();
+    let selectedTeamId = null;
+    let availableTeams = [];
+
+    socket.on('gameState', (data) => {
+      availableTeams = data.teams;
+      renderTeams();
+    });
+
+    socket.on('boardUpdated', (payload) => {
+      availableTeams = payload.teams;
+      renderTeams();
+      if (payload.data.teamId === selectedTeamId) {
+        addHistoryItem(payload.rank, payload.data.itemName, payload.data.points, payload.data.playerName);
+      }
+    });
+
+    function renderTeams() {
+      const container = document.getElementById('teamSelector');
+      container.innerHTML = availableTeams.map(t => {
+        const isSelected = t.id === selectedTeamId;
+        return `
+          <button onclick="selectTeam('${t.id}')" class="py-2.5 px-3 rounded-xl border text-xs font-bold flex items-center justify-between transition ${isSelected ? 'ring-2 ring-white' : 'opacity-80'}" style="background-color: ${t.color}20; border-color: ${t.color}">
+            <span class="flex items-center gap-1.5">${t.icon} ${t.name}</span>
+            <span class="font-black">${t.score}pt</span>
+          </button>
+        `;
+      }).join('');
+
+      if (!selectedTeamId && availableTeams.length > 0) {
+        selectTeam(availableTeams[0].id);
+      }
+    }
+
+    function selectTeam(id) {
+      selectedTeamId = id;
+      renderTeams();
+    }
+
+    function sendGuess() {
+      const input = document.getElementById('guessInput');
+      const val = input.value.trim();
+      const playerName = document.getElementById('playerName').value.trim() || 'Giocatore';
+
+      if (!val) return;
+      if (!selectedTeamId) {
+        showStatus('Seleziona una squadra prima di inviare!', 'bg-rose-500/20 text-rose-400 border border-rose-500/30');
+        return;
+      }
+
+      socket.emit('submitGuess', {
+        teamId: selectedTeamId,
+        playerName: playerName,
+        guess: val
+      });
+
+      input.value = '';
+      input.focus();
+    }
+
+    // Invio con tasto Invio da tastiera mobile
+    document.getElementById('guessInput').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') sendGuess();
+    });
+
+    // Risposta dal server (arbitro centrale)
+    socket.on('guessResult', (res) => {
+      if (res.status === 'CORRECT') {
+        showStatus(res.message, 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30');
+      } else if (res.status === 'ALREADY_CLAIMED') {
+        showStatus(res.message, 'bg-amber-500/20 text-amber-400 border border-amber-500/30');
+      } else {
+        showStatus(res.message, 'bg-rose-500/20 text-rose-400 border border-rose-500/30');
+      }
+    });
+
+    function showStatus(text, classes) {
+      const el = document.getElementById('statusMessage');
+      el.className = `p-3 rounded-xl text-xs font-bold text-center block ${classes}`;
+      el.innerText = text;
+      setTimeout(() => {
+        el.className = 'hidden';
+      }, 3500);
+    }
+
+    function addHistoryItem(rank, title, pts, player) {
+      const h = document.getElementById('teamHistory');
+      if (h.innerHTML.includes('Ancora nessuna')) h.innerHTML = '';
+      const div = document.createElement('div');
+      div.className = "flex items-center justify-between bg-slate-950 p-2 rounded-lg border border-slate-800";
+      div.innerHTML = `<span><strong>#${rank}</strong> ${title} <span class="text-slate-500">(${player})</span></span><span class="text-emerald-400 font-bold">+${pts} pt</span>`;
+      h.prepend(div);
+    }
+  </script>
+</body>
+</html>
