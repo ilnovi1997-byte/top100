@@ -16,45 +16,72 @@
 </head>
 <body class="bg-slate-950 text-white min-h-screen flex flex-col justify-between overflow-x-hidden select-none">
 
-  <!-- LOBBY DI SETUP: SCELTA CATEGORIA, TIMER E SQUADRE -->
-  <div id="lobbyModal" class="fixed inset-0 bg-slate-950/95 backdrop-blur-md z-50 flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-7 max-w-xl w-full shadow-2xl">
-      <div class="text-center mb-5">
-        <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-500 to-indigo-500">CONFIGURA PARTITA</h1>
-        <p class="text-slate-400 text-xs mt-1">Scegli la categoria, imposta il timer e le squadre</p>
-      </div>
+  <!-- MODAL INIZIALE: CONFIGURAZIONE PARTITA + QR CODE + LOBBY GIOCATORI -->
+  <div id="lobbyModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-50 flex items-center justify-center p-6">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-5xl w-full shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- COLONNA SINISTRA: QR CODE D'ACCESSO IMMEDIATO -->
+      <div class="lg:col-span-5 flex flex-col items-center justify-center bg-slate-950/80 p-6 rounded-2xl border border-slate-800 text-center">
+        <span class="text-[10px] font-black uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full mb-3">Accedi dal Telefono</span>
+        <h2 class="text-xl font-black mb-1">INQUADRA PER ENTRARE</h2>
+        <p class="text-xs text-slate-400 mb-4">Inquadra con la fotocamera per unirti alla stanza</p>
 
-      <!-- SELETTORE CATEGORIA (Letto dai file .json in data/) -->
-      <div class="mb-4 bg-slate-950 p-3 rounded-2xl border border-slate-800">
-        <label class="text-[11px] font-bold text-amber-400 block mb-2 uppercase tracking-wider">📂 Seleziona Categoria Top 100</label>
-        <select id="categorySelect" class="w-full bg-slate-900 border border-slate-700 text-white font-bold text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-amber-400 cursor-pointer">
-          <!-- Popolato dinamicamente -->
-        </select>
-      </div>
+        <div id="lobbyQrcode" class="flex justify-center bg-white p-3 rounded-2xl mx-auto shadow-xl mb-3"></div>
+        <div id="lobbyPhoneUrl" class="text-[11px] font-mono text-indigo-400 break-all mb-4"></div>
 
-      <!-- SELETTORE DURATA TIMER -->
-      <div class="mb-4 bg-slate-950 p-3 rounded-2xl border border-slate-800">
-        <label class="text-[11px] font-bold text-slate-400 block mb-2 uppercase tracking-wider">⏱️ Durata Timer</label>
-        <div class="grid grid-cols-4 gap-2">
-          <button onclick="selectDuration(180, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">3 Min</button>
-          <button onclick="selectDuration(300, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300">5 Min</button>
-          <button onclick="selectDuration(600, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">10 Min</button>
-          <button onclick="selectDuration(900, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">15 Min</button>
+        <!-- LISTA GIOCATORI IN ATTESA LIVE -->
+        <div class="w-full bg-slate-900 p-3 rounded-xl border border-slate-800">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-2">
+            <span>GIOCATORI CONNESSI</span>
+            <span id="playerCountBadge" class="bg-indigo-600 text-white px-2 py-0.5 rounded-full text-[10px]">0</span>
+          </div>
+          <div id="playersWaitingList" class="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto">
+            <span class="text-xs text-slate-600 italic">In attesa che qualcuno inquadri il QR...</span>
+          </div>
         </div>
       </div>
 
-      <!-- SQUADRE -->
-      <div class="mb-4">
-        <label class="text-[11px] font-bold text-slate-400 block mb-2 uppercase tracking-wider">👥 Squadre</label>
-        <div id="teamsContainer" class="space-y-2 max-h-44 overflow-y-auto pr-1 mb-2"></div>
-        <button onclick="addTeamField()" class="w-full py-2 rounded-xl border border-dashed border-slate-700 hover:border-slate-500 text-slate-400 text-xs font-bold transition">
-          ➕ Aggiungi Squadra
+      <!-- COLONNA DESTRA: CONFIGURAZIONE SQUADRE, CATEGORIA E TIMER -->
+      <div class="lg:col-span-7 flex flex-col justify-between h-full">
+        <div>
+          <div class="mb-4">
+            <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-500 to-indigo-500">CONFIGURA PARTITA</h1>
+            <p class="text-slate-400 text-xs">I partecipanti saranno smistati equamente e a caso tra le squadre</p>
+          </div>
+
+          <!-- SELEZIONE CATEGORIA -->
+          <div class="mb-4 bg-slate-950 p-3 rounded-2xl border border-slate-800">
+            <label class="text-[11px] font-bold text-amber-400 block mb-1.5 uppercase tracking-wider">📂 Categoria Top 100</label>
+            <select id="categorySelect" class="w-full bg-slate-900 border border-slate-700 text-white font-bold text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-amber-400 cursor-pointer"></select>
+          </div>
+
+          <!-- SELEZIONE TIMER -->
+          <div class="mb-4 bg-slate-950 p-3 rounded-2xl border border-slate-800">
+            <label class="text-[11px] font-bold text-slate-400 block mb-1.5 uppercase tracking-wider">⏱️ Durata Round</label>
+            <div class="grid grid-cols-4 gap-2">
+              <button onclick="selectDuration(180, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">3 Min</button>
+              <button onclick="selectDuration(300, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300">5 Min</button>
+              <button onclick="selectDuration(600, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">10 Min</button>
+              <button onclick="selectDuration(900, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">15 Min</button>
+            </div>
+          </div>
+
+          <!-- SQUADRE -->
+          <div class="mb-4">
+            <div class="flex items-center justify-between mb-1.5">
+              <label class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">👥 Squadre Attive</label>
+              <button onclick="addTeamField()" class="text-xs text-indigo-400 font-bold hover:underline">➕ Aggiungi</button>
+            </div>
+            <div id="teamsContainer" class="space-y-2 max-h-36 overflow-y-auto pr-1"></div>
+          </div>
+        </div>
+
+        <!-- PULSANTE DI AVVIO E SHUFFLE -->
+        <button onclick="confirmAndStart()" class="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 text-white font-black text-base shadow-xl shadow-emerald-500/25 active:scale-98 transition flex items-center justify-center gap-2">
+          <span>MESCOLA & AVVIA PARTITA 🎲</span>
         </button>
       </div>
 
-      <button onclick="confirmAndStart()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 text-white font-black text-sm shadow-lg shadow-emerald-500/25 transition">
-        INIZIA PARTITA 🚀
-      </button>
     </div>
   </div>
 
@@ -79,9 +106,8 @@
     <div id="scoreboardDisplay" class="flex items-center gap-3"></div>
 
     <div class="flex items-center gap-2">
-      <button onclick="openQRModal()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300 transition">📱 QR</button>
       <button onclick="toggleFullscreen()" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-bold transition">⛶ TV</button>
-      <button onclick="document.getElementById('lobbyModal').classList.remove('hidden')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">⚙️ Opzioni / Categoria</button>
+      <button onclick="openLobbyModal()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">⚙️ Nuova Partita / QR</button>
     </div>
   </header>
 
@@ -99,17 +125,6 @@
     </div>
   </div>
 
-  <!-- QR MODAL -->
-  <div id="qrModal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 text-center max-w-sm w-full">
-      <h3 class="text-base font-bold mb-1">Inquadra dal Telefono</h3>
-      <p class="text-xs text-slate-400 mb-4">Accedi al controller per giocare</p>
-      <div id="qrcode" class="flex justify-center bg-white p-3 rounded-2xl mx-auto w-fit mb-4"></div>
-      <div id="phoneUrl" class="text-[11px] font-mono text-indigo-400 break-all mb-4"></div>
-      <button onclick="document.getElementById('qrModal').classList.add('hidden')" class="w-full py-2 rounded-xl bg-slate-800 font-bold text-xs">Chiudi</button>
-    </div>
-  </div>
-
   <script>
     const socket = io();
     let teams = [
@@ -118,7 +133,7 @@
     ];
     let isTimerRunning = false;
     let selectedSeconds = 300;
-    let categoriesList = [];
+    let qrRendered = false;
 
     const PRESET_COLORS = ['#ef4444', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316'];
     const PRESET_ICONS = ['🔥', '⚡', '🦅', '🦁', '🚀', '👑', '🦈', '💎'];
@@ -159,19 +174,52 @@
 
     function renderScoreboard() {
       const sb = document.getElementById('scoreboardDisplay');
-      sb.innerHTML = teams.map(t => `
-        <div class="flex items-center gap-2 px-2.5 py-1 rounded-xl border" style="border-color: ${t.color}40; background-color: ${t.color}15">
-          <span class="text-sm">${t.icon}</span>
-          <div>
-            <div class="text-[9px] font-bold text-slate-400 leading-none">${t.name}</div>
-            <div class="text-sm font-black text-white leading-tight">${t.score} <span class="text-[9px] font-normal text-slate-400">pt</span></div>
+      sb.innerHTML = teams.map(t => {
+        const membersCount = t.members ? t.members.length : 0;
+        return `
+          <div class="flex items-center gap-2 px-2.5 py-1 rounded-xl border" style="border-color: ${t.color}40; background-color: ${t.color}15">
+            <span class="text-sm">${t.icon}</span>
+            <div>
+              <div class="text-[9px] font-bold text-slate-400 leading-none flex items-center gap-1">
+                <span>${t.name}</span>
+                <span class="text-[8px] text-slate-500">(${membersCount}👥)</span>
+              </div>
+              <div class="text-sm font-black text-white leading-tight">${t.score} <span class="text-[9px] font-normal text-slate-400">pt</span></div>
+            </div>
           </div>
-        </div>
+        `;
+      }).join('');
+    }
+
+    // Render QR Code direttamente nella schermata iniziale
+    function renderLobbyQRCode() {
+      if (qrRendered) return;
+      const phoneUrl = `${window.location.origin}/play.html`;
+      const qrDiv = document.getElementById('lobbyQrcode');
+      qrDiv.innerHTML = "";
+      new QRCode(qrDiv, { text: phoneUrl, width: 150, height: 150 });
+      document.getElementById('lobbyPhoneUrl').innerText = phoneUrl;
+      qrRendered = true;
+    }
+
+    function updatePlayersWaitingUI(players) {
+      const listDiv = document.getElementById('playersWaitingList');
+      const countBadge = document.getElementById('playerCountBadge');
+      countBadge.innerText = players.length;
+
+      if (!players || players.length === 0) {
+        listDiv.innerHTML = `<span class="text-xs text-slate-600 italic">In attesa che qualcuno inquadri il QR...</span>`;
+        return;
+      }
+
+      listDiv.innerHTML = players.map(p => `
+        <span class="bg-slate-800 border border-slate-700 text-slate-200 text-xs font-bold px-2.5 py-1 rounded-lg flex items-center gap-1">
+          👤 ${p.name}
+        </span>
       `).join('');
     }
 
     function populateCategoriesDropdown(list, selectedKey) {
-      categoriesList = list;
       const select = document.getElementById('categorySelect');
       select.innerHTML = list.map(c => `
         <option value="${c.id}" ${c.id === selectedKey ? 'selected' : ''}>
@@ -202,16 +250,20 @@
       return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
     }
 
-    // Socket.io Events
+    // Ricezione Socket
     socket.on('initSync', (data) => {
       populateCategoriesDropdown(data.categoriesList, data.gameState.currentCategoryKey);
       applyGameState(data.gameState);
+      updatePlayersWaitingUI(data.playersList || []);
+      renderLobbyQRCode();
+    });
+
+    socket.on('playersListUpdated', (players) => {
+      updatePlayersWaitingUI(players);
     });
 
     socket.on('gameState', (data) => {
-      if (data.categoriesList) {
-        populateCategoriesDropdown(data.categoriesList, data.currentCategoryKey);
-      }
+      if (data.categoriesList) populateCategoriesDropdown(data.categoriesList, data.currentCategoryKey);
       applyGameState(data);
     });
 
@@ -286,7 +338,8 @@
         name: `Squadra ${idx + 1}`,
         color: PRESET_COLORS[idx % PRESET_COLORS.length],
         icon: PRESET_ICONS[idx % PRESET_ICONS.length],
-        score: 0
+        score: 0,
+        members: []
       });
       renderLobbyInputs();
     }
@@ -310,22 +363,19 @@
       document.getElementById('lobbyModal').classList.add('hidden');
     }
 
+    function openLobbyModal() {
+      document.getElementById('lobbyModal').classList.remove('hidden');
+      renderLobbyQRCode();
+    }
+
     function toggleFullscreen() {
       if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
       else document.exitFullscreen().catch(() => {});
     }
 
-    function openQRModal() {
-      const qrDiv = document.getElementById('qrcode');
-      const phoneUrl = `${window.location.origin}/play.html`;
-      qrDiv.innerHTML = "";
-      new QRCode(qrDiv, { text: phoneUrl, width: 140, height: 140 });
-      document.getElementById('phoneUrl').innerText = phoneUrl;
-      document.getElementById('qrModal').classList.remove('hidden');
-    }
-
     buildGrid();
     renderLobbyInputs();
+    setTimeout(renderLobbyQRCode, 400);
   </script>
 </body>
 </html>

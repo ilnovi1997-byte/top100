@@ -12,13 +12,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const DATA_DIR = path.join(__dirname, "data");
 
-// Carica tutti i file .json presenti nella cartella data/
+// Lettura dinamica categorie dalla cartella data/
 function loadAllCategories() {
   const categories = {};
   try {
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR);
-    }
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR);
     const files = fs.readdirSync(DATA_DIR).filter((f) => f.endsWith(".json"));
 
     files.forEach((file) => {
@@ -28,7 +26,6 @@ function loadAllCategories() {
         const key = content.id || path.basename(file, ".json");
         categories[key] = {
           id: key,
-          fileName: file,
           categoryTitle: content.categoryTitle || key,
           items: content.items || [],
         };
@@ -37,7 +34,7 @@ function loadAllCategories() {
       }
     });
   } catch (err) {
-    console.error("Errore lettura cartella data:", err);
+    console.error("Errore lettura directory data:", err);
   }
   return categories;
 }
@@ -45,17 +42,34 @@ function loadAllCategories() {
 let availableCategories = loadAllCategories();
 let currentCategoryKey = Object.keys(availableCategories)[0] || null;
 
-// Stato della partita
+// Stato Globale
+let connectedPlayers = {}; // socketId -> { name, teamId, socketId }
+
 let gameState = {
+  status: "LOBBY", // 'LOBBY' oppure 'PLAYING'
   currentCategoryKey: currentCategoryKey,
   categoryTitle: currentCategoryKey
     ? availableCategories[currentCategoryKey].categoryTitle
     : "Nessuna Categoria",
   teams: [
-    { id: "t1", name: "Squadra Rossa", color: "#ef4444", icon: "🔥", score: 0 },
-    { id: "t2", name: "Squadra Blu", color: "#3b82f6", icon: "⚡", score: 0 },
+    {
+      id: "t1",
+      name: "Squadra Rossa",
+      color: "#ef4444",
+      icon: "🔥",
+      score: 0,
+      members: [],
+    },
+    {
+      id: "t2",
+      name: "Squadra Blu",
+      color: "#3b82f6",
+      icon: "⚡",
+      score: 0,
+      members: [],
+    },
   ],
-  revealed: {}, // rank -> { teamId, playerName, itemName, points }
+  revealed: {},
   timer: {
     duration: 300,
     remaining: 300,
@@ -98,7 +112,7 @@ function normalizeText(str) {
     .replace(/[^a-z0-9]/g, "");
 }
 
-function getAvailableCategoriesList() {
+function getCategoriesList() {
   return Object.values(availableCategories).map((c) => ({
     id: c.id,
     title: c.categoryTitle,
@@ -106,54 +120,104 @@ function getAvailableCategoriesList() {
   }));
 }
 
-io.on("connection", (socket) => {
-  // Sincronizza stato e lista categorie disponibili
-  socket.emit("initSync", {
-    gameState,
-    categoriesList: getAvailableCategoriesList(),
+// Algoritmo di mescolamento Fisher-Yates e assegnazione bilanciata
+function distributePlayersRandomly(playerList, teams) {
+  // Svuota i membri precedenti
+  teams.forEach((t) => (t.members = []));
+
+  // Clone e shuffle dell'array dei giocatori
+  const shuffled = [...playerList].sort(() => Math.random() - 0.5);
+
+  // Round-robin: assegna uno alla volta a rotazione
+  shuffled.forEach((p, index) => {
+    const targetTeam = teams[index % teams.length];
+    targetTeam.members.push(p.name);
+    p.teamId = targetTeam.id;
   });
 
-  // Cambio categoria e setup partita da Lobby Host
+  return teams;
+}
+
+io.on("connection", (socket) => {
+  // Invio stato di sincronizzazione
+  socket.emit("initSync", {
+    gameState,
+    categoriesList: getCategoriesList(),
+    playersList: Object.values(connectedPlayers),
+    myPlayerInfo: connectedPlayers[socket.id] || null,
+  });
+
+  // Un giocatore si unisce dalla lobby dello smartphone
+  socket.on("joinGame", (name) => {
+    const cleanName = (name || "").trim() || `Ospite_${socket.id.slice(0, 4)}`;
+    connectedPlayers[socket.id] = {
+      socketId: socket.id,
+      name: cleanName,
+      teamId: null,
+    };
+
+    // Comunica all'Host la lista aggiornata di chi è connesso
+    io.emit("playersListUpdated", Object.values(connectedPlayers));
+    socket.emit("joinedSuccess", connectedPlayers[socket.id]);
+  });
+
+  // L'Host avvia la partita con configurazione, mescolamento e squadre
   socket.on("startGameWithConfig", (config) => {
     const { categoryKey, teams, duration } = config;
 
-    // Ricarica categorie per prendere eventuali nuovi file inseriti
     availableCategories = loadAllCategories();
-
     if (availableCategories[categoryKey]) {
       currentCategoryKey = categoryKey;
       gameState.currentCategoryKey = categoryKey;
       gameState.categoryTitle = availableCategories[categoryKey].categoryTitle;
     }
 
-    gameState.teams = teams.map((t) => ({ ...t, score: 0 }));
+    const initialTeams = teams.map((t) => ({ ...t, score: 0, members: [] }));
+
+    // Distribuzione casuale bilanciata dei giocatori connessi
+    const playersArray = Object.values(connectedPlayers);
+    gameState.teams = distributePlayersRandomly(playersArray, initialTeams);
+
     gameState.revealed = {};
+    gameState.status = "PLAYING";
     pauseTimer();
 
     const sec = parseInt(duration, 10) || 300;
     gameState.timer.duration = sec;
     gameState.timer.remaining = sec;
 
+    // Notifica a ciascun socket specifico la sua squadra assegnata
+    playersArray.forEach((p) => {
+      const assignedTeam = gameState.teams.find((t) => t.id === p.teamId);
+      io.to(p.socketId).emit("assignedTeam", {
+        team: assignedTeam,
+        gameState,
+      });
+    });
+
+    // Aggiornamento broadcast
     io.emit("gameState", {
       ...gameState,
-      categoriesList: getAvailableCategoriesList(),
+      categoriesList: getCategoriesList(),
+      playersList: Object.values(connectedPlayers),
     });
+
+    // Avvia automaticamente il timer all'inizio
+    startTimer();
   });
 
-  // Controlli Timer
+  // Timer controls
   socket.on("timerControl", (action) => {
-    if (action.type === "START") {
-      startTimer();
-    } else if (action.type === "PAUSE") {
-      pauseTimer();
-    } else if (action.type === "RESET") {
+    if (action.type === "START") startTimer();
+    else if (action.type === "PAUSE") pauseTimer();
+    else if (action.type === "RESET") {
       pauseTimer();
       gameState.timer.remaining = gameState.timer.duration;
       io.emit("timerTick", gameState.timer);
     }
   });
 
-  // Ricezione Tentativo Giocatore
+  // Ricezione tentativo da smartphone
   socket.on("submitGuess", (payload) => {
     if (gameState.timer.remaining <= 0) {
       socket.emit("guessResult", {
@@ -170,8 +234,11 @@ io.on("connection", (socket) => {
       return;
     }
 
-    const { teamId, playerName, guess } = payload;
-    const cleanGuess = normalizeText(guess || "");
+    const player = connectedPlayers[socket.id];
+    const teamId = player ? player.teamId : payload.teamId;
+    const playerName = player ? player.name : payload.playerName;
+
+    const cleanGuess = normalizeText(payload.guess || "");
     if (
       !cleanGuess ||
       !currentCategoryKey ||
@@ -192,12 +259,11 @@ io.on("connection", (socket) => {
     if (!matched) {
       socket.emit("guessResult", {
         status: "WRONG",
-        message: "Nessuna corrispondenza nella classifica!",
+        message: "Nessuna corrispondenza!",
       });
       return;
     }
 
-    // Regola First-Come First-Served
     if (gameState.revealed[matched.rank]) {
       const orig = gameState.revealed[matched.rank];
       socket.emit("guessResult", {
@@ -233,6 +299,12 @@ io.on("connection", (socket) => {
       data: gameState.revealed[matched.rank],
       teams: gameState.teams,
     });
+  });
+
+  // Disconnessione
+  socket.on("disconnect", () => {
+    delete connectedPlayers[socket.id];
+    io.emit("playersListUpdated", Object.values(connectedPlayers));
   });
 });
 
