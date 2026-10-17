@@ -16,95 +16,116 @@
 </head>
 <body class="bg-slate-950 text-white min-h-screen flex flex-col justify-between overflow-x-hidden select-none">
 
-  <!-- MODAL PRINCIPALE: CONFIGURA PARTITA + MODALITÀ + QR CODE -->
-  <div id="lobbyModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-40 flex items-center justify-center p-6">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-5xl w-full shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+  <!-- MODAL PRINCIPALE: CONFIGURA PARTITA -->
+  <div id="lobbyModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-40 flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 lg:p-8 max-w-5xl w-full shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
       
       <!-- COLONNA QR CODE -->
-      <div class="lg:col-span-5 flex flex-col items-center justify-center bg-slate-950/80 p-6 rounded-2xl border border-slate-800 text-center">
-        <span class="text-[10px] font-black uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full mb-3">Accedi dal Telefono</span>
-        <h2 class="text-xl font-black mb-1">INQUADRA PER ENTRARE</h2>
-        <p class="text-xs text-slate-400 mb-4">Inquadra con la fotocamera per unirti</p>
+      <div class="lg:col-span-5 flex flex-col items-center justify-center bg-slate-950/80 p-5 rounded-2xl border border-slate-800 text-center">
+        <span class="text-[10px] font-black uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full mb-2">Accedi dal Telefono</span>
+        <h2 class="text-lg font-black mb-1">INQUADRA PER ENTRARE</h2>
+        <p class="text-xs text-slate-400 mb-3">Inquadra con la fotocamera per partecipare</p>
 
-        <div id="lobbyQrcode" class="flex justify-center bg-white p-3 rounded-2xl mx-auto shadow-xl mb-3"></div>
-        <div id="lobbyPhoneUrl" class="text-[11px] font-mono text-indigo-400 break-all mb-4"></div>
+        <div id="lobbyQrcode" class="flex justify-center bg-white p-2.5 rounded-2xl mx-auto shadow-xl mb-3"></div>
+        <div id="lobbyPhoneUrl" class="text-[11px] font-mono text-indigo-400 break-all mb-3"></div>
 
         <div class="w-full bg-slate-900 p-3 rounded-xl border border-slate-800">
           <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-2">
             <span>GIOCATORI IN ATTESA</span>
             <span id="playerCountBadge" class="bg-indigo-600 text-white px-2 py-0.5 rounded-full text-[10px]">0</span>
           </div>
-          <div id="playersWaitingList" class="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto">
+          <div id="playersWaitingList" class="flex flex-wrap gap-1.5 max-h-20 overflow-y-auto">
             <span class="text-xs text-slate-600 italic">In attesa che qualcuno inquadri il QR...</span>
           </div>
         </div>
       </div>
 
-      <!-- COLONNA IMPOSTAZIONI: MODALITÀ, TIMER, CATEGORIA E SQUADRE -->
-      <div class="lg:col-span-7 flex flex-col justify-between h-full">
+      <!-- COLONNA IMPOSTAZIONI GIOCO -->
+      <div class="lg:col-span-7 flex flex-col justify-between h-full space-y-3">
         <div>
-          <div class="mb-3">
-            <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-500 to-indigo-500">CONFIGURA PARTITA</h1>
-            <p class="text-slate-400 text-xs">Scegli la modalità, la lista e le squadre</p>
+          <div class="mb-2">
+            <h1 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-500 to-indigo-500">CONFIGURA PARTITA</h1>
+            <p class="text-slate-400 text-xs">Imposta la modalità e definisci liberamente i tempi di gioco</p>
           </div>
 
-          <!-- SELEZIONE MODALITÀ DI GIOCO -->
-          <div class="mb-3 bg-slate-950 p-2.5 rounded-2xl border border-slate-800">
-            <label class="text-[11px] font-bold text-slate-400 block mb-1.5 uppercase tracking-wider">🎮 Modalità di Gioco</label>
+          <!-- 1. SCELTA MODALITÀ -->
+          <div class="bg-slate-950 p-2.5 rounded-2xl border border-slate-800 mb-2">
+            <label class="text-[10px] font-bold text-slate-400 block mb-1.5 uppercase tracking-wider">🎮 1. Modalità di Gioco</label>
             <div class="grid grid-cols-2 gap-2">
-              <button id="modeRushBtn" onclick="setGameMode('RUSH')" class="py-2.5 px-3 rounded-xl border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-xs text-left transition">
-                <div class="text-sm mb-0.5">⚡ Gara Live (Rush)</div>
-                <div class="text-[10px] font-normal text-slate-300 leading-tight">Tutti possono digitare contemporaneamente senza turni</div>
+              <button id="modeRushBtn" onclick="setGameMode('RUSH')" class="py-2 px-3 rounded-xl border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-xs text-left transition">
+                <div class="text-xs font-black">⚡ Gara Live (Rush)</div>
+                <div class="text-[9px] font-normal text-slate-300">Tutti digitano senza turni</div>
               </button>
-              <button id="modeTurnsBtn" onclick="setGameMode('TURNS')" class="py-2.5 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition">
-                <div class="text-sm mb-0.5">🔄 A Turni Alternati</div>
-                <div class="text-[10px] font-normal text-slate-400 leading-tight">Una squadra alla volta con tempo limite per turno</div>
+              <button id="modeTurnsBtn" onclick="setGameMode('TURNS')" class="py-2 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition">
+                <div class="text-xs font-black">🔄 A Turni Alternati</div>
+                <div class="text-[9px] font-normal text-slate-400">Una squadra alla volta</div>
               </button>
             </div>
           </div>
 
-          <!-- OPZIONI TIMER TURNO (Visibili solo se a turni) -->
-          <div id="turnDurationBox" class="hidden mb-3 bg-slate-950 p-2.5 rounded-2xl border border-indigo-900/40">
-            <label class="text-[10px] font-bold text-indigo-400 block mb-1 uppercase tracking-wider">⏱️ Secondi per singolo Turno</label>
-            <div class="grid grid-cols-4 gap-1.5">
-              <button onclick="setTurnDuration(15, this)" class="turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-900 text-slate-300">15s</button>
-              <button onclick="setTurnDuration(30, this)" class="turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-indigo-500 bg-indigo-500/20 text-indigo-300">30s</button>
-              <button onclick="setTurnDuration(45, this)" class="turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-900 text-slate-300">45s</button>
-              <button onclick="setTurnDuration(60, this)" class="turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-900 text-slate-300">60s</button>
-            </div>
-          </div>
-
-          <!-- SELEZIONE CATEGORIA -->
-          <div class="mb-3 bg-slate-950 p-2.5 rounded-2xl border border-slate-800">
-            <div class="flex items-center justify-between mb-1">
-              <label class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">📂 Categoria Top 100</label>
-              <div class="flex items-center gap-2">
-                <button onclick="editCurrentCategory()" class="text-xs text-amber-400 hover:text-amber-300 font-bold">✏️ Modifica</button>
-                <span class="text-slate-700">|</span>
-                <button onclick="openCategoryEditor(null)" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold">➕ Crea Nuova</button>
+          <!-- 2. DURATA TURNO (Attivo solo se a turni) -->
+          <div id="turnDurationBox" class="hidden bg-slate-950 p-2.5 rounded-2xl border border-indigo-900/50 mb-2">
+            <div class="flex items-center justify-between mb-1.5">
+              <label class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider">⏱️ Durata Singolo Turno</label>
+              <div class="flex items-center gap-1">
+                <span class="text-[10px] text-slate-400">Custom:</span>
+                <input type="number" id="customTurnSecondsInput" min="5" max="300" value="30" oninput="onCustomTurnChange(this.value)" class="w-14 bg-slate-900 border border-indigo-500 rounded-lg px-1.5 py-0.5 text-center text-xs font-mono font-bold text-white focus:outline-none">
+                <span class="text-[10px] text-slate-400">sec</span>
               </div>
             </div>
-            <select id="categorySelect" class="w-full bg-slate-900 border border-slate-700 text-white font-bold text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-amber-400"></select>
-          </div>
-
-          <!-- TIMER GENERALE PARTITA -->
-          <div class="mb-3 bg-slate-950 p-2.5 rounded-2xl border border-slate-800">
-            <label class="text-[11px] font-bold text-slate-400 block mb-1 uppercase tracking-wider">⏱️ Durata Totale Partita</label>
-            <div class="grid grid-cols-4 gap-2">
-              <button onclick="selectDuration(180, this)" class="timer-btn py-1.5 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">3 Min</button>
-              <button onclick="selectDuration(300, this)" class="timer-btn py-1.5 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300">5 Min</button>
-              <button onclick="selectDuration(600, this)" class="timer-btn py-1.5 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">10 Min</button>
-              <button onclick="selectDuration(900, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">15 Min</button>
+            <div class="grid grid-cols-6 gap-1">
+              <button onclick="setTurnDurationPreset(10, this)" class="turn-preset-btn py-1 rounded-lg text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300">10s</button>
+              <button onclick="setTurnDurationPreset(15, this)" class="turn-preset-btn py-1 rounded-lg text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300">15s</button>
+              <button onclick="setTurnDurationPreset(20, this)" class="turn-preset-btn py-1 rounded-lg text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300">20s</button>
+              <button onclick="setTurnDurationPreset(30, this)" class="turn-preset-btn py-1 rounded-lg text-[10px] font-bold border border-indigo-500 bg-indigo-500/20 text-indigo-300">30s</button>
+              <button onclick="setTurnDurationPreset(45, this)" class="turn-preset-btn py-1 rounded-lg text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300">45s</button>
+              <button onclick="setTurnDurationPreset(60, this)" class="turn-preset-btn py-1 rounded-lg text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300">60s</button>
             </div>
           </div>
 
-          <!-- SQUADRE -->
-          <div class="mb-3">
+          <!-- 3. DURATA TOTALE PARTITA (CUSTOMIZZABILE AL SECONDO) -->
+          <div class="bg-slate-950 p-2.5 rounded-2xl border border-slate-800 mb-2">
+            <div class="flex items-center justify-between mb-1.5">
+              <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">⏳ Durata Totale Round</label>
+              <!-- Input custom minuti & secondi -->
+              <div class="flex items-center gap-1">
+                <span class="text-[10px] text-slate-400">Personalizza:</span>
+                <input type="number" id="customTotalMinutesInput" min="0" max="60" value="5" oninput="onCustomTotalTimeChange()" class="w-11 bg-slate-900 border border-amber-500/80 rounded-lg px-1 py-0.5 text-center text-xs font-mono font-bold text-white focus:outline-none">
+                <span class="text-[10px] text-slate-400">m</span>
+                <input type="number" id="customTotalSecondsInput" min="0" max="59" value="0" oninput="onCustomTotalTimeChange()" class="w-11 bg-slate-900 border border-amber-500/80 rounded-lg px-1 py-0.5 text-center text-xs font-mono font-bold text-white focus:outline-none">
+                <span class="text-[10px] text-slate-400">s</span>
+              </div>
+            </div>
+            <div class="grid grid-cols-6 gap-1">
+              <button onclick="setTotalPreset(180, this)" class="total-preset-btn py-1 rounded-lg text-[10px] font-black border border-slate-700 bg-slate-900 text-slate-300">3m</button>
+              <button onclick="setTotalPreset(300, this)" class="total-preset-btn py-1 rounded-lg text-[10px] font-black border border-amber-500 bg-amber-500/20 text-amber-300">5m</button>
+              <button onclick="setTotalPreset(600, this)" class="total-preset-btn py-1 rounded-lg text-[10px] font-black border border-slate-700 bg-slate-900 text-slate-300">10m</button>
+              <button onclick="setTotalPreset(900, this)" class="total-preset-btn py-1 rounded-lg text-[10px] font-black border border-slate-700 bg-slate-900 text-slate-300">15m</button>
+              <button onclick="setTotalPreset(1200, this)" class="total-preset-btn py-1 rounded-lg text-[10px] font-black border border-slate-700 bg-slate-900 text-slate-300">20m</button>
+              <button onclick="setTotalPreset(1800, this)" class="total-preset-btn py-1 rounded-lg text-[10px] font-black border border-slate-700 bg-slate-900 text-slate-300">30m</button>
+            </div>
+          </div>
+
+          <!-- 4. CATEGORIA -->
+          <div class="bg-slate-950 p-2.5 rounded-2xl border border-slate-800 mb-2">
             <div class="flex items-center justify-between mb-1">
-              <label class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">👥 Squadre Attive</label>
+              <label class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">📂 Categoria Top 100</label>
+              <div class="flex items-center gap-2">
+                <button onclick="editCurrentCategory()" class="text-[11px] text-amber-400 hover:text-amber-300 font-bold">✏️ Modifica</button>
+                <span class="text-slate-700">|</span>
+                <button onclick="openCategoryEditor(null)" class="text-[11px] text-emerald-400 hover:text-emerald-300 font-bold">➕ Crea Nuova</button>
+              </div>
+            </div>
+            <select id="categorySelect" class="w-full bg-slate-900 border border-slate-700 text-white font-bold text-xs rounded-xl px-2.5 py-1.5 focus:outline-none focus:border-amber-400"></select>
+          </div>
+
+          <!-- 5. SQUADRE -->
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">👥 Squadre</label>
               <button onclick="addTeamField()" class="text-xs text-indigo-400 font-bold hover:underline">➕ Aggiungi</button>
             </div>
-            <div id="teamsContainer" class="space-y-1.5 max-h-28 overflow-y-auto pr-1"></div>
+            <div id="teamsContainer" class="space-y-1.5 max-h-24 overflow-y-auto pr-1"></div>
           </div>
         </div>
 
@@ -116,10 +137,9 @@
     </div>
   </div>
 
-  <!-- MODAL: EDITOR TOP 100 + ESPORTA JSON PER RENDERLO PERMANENTE -->
+  <!-- MODAL: EDITOR TOP 100 -->
   <div id="editorModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-5xl w-full shadow-2xl flex flex-col max-h-[92vh]">
-      
       <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
         <div>
           <h2 id="editorModalTitle" class="text-xl font-black text-amber-400">EDITOR TOP 100</h2>
@@ -151,7 +171,7 @@
 
       <div id="fastPasteBox" class="hidden mb-3 bg-slate-950 p-3 rounded-2xl border border-slate-800">
         <div class="flex justify-between items-center mb-1">
-          <span class="text-xs font-bold text-indigo-400">Incolla qui per compilare in blocco</span>
+          <span class="text-xs font-bold text-indigo-400">Incolla qui la lista per compilare</span>
           <button onclick="applyFastPaste()" class="px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold text-white">Applica</button>
         </div>
         <textarea id="fastPasteTextarea" rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-2 text-xs font-mono text-white"></textarea>
@@ -174,11 +194,10 @@
         <button onclick="closeCategoryEditor()" class="w-1/3 py-2.5 rounded-xl bg-slate-800 text-xs font-bold text-slate-300">Annulla</button>
         <button onclick="saveCategoryFromEditor()" class="w-2/3 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 font-black text-xs text-white">SALVA SU SERVER 💾</button>
       </div>
-
     </div>
   </div>
 
-  <!-- HEADER TV BROADCAST -->
+  <!-- HEADER BROADCAST TV -->
   <header class="bg-slate-900/90 border-b border-slate-800 px-6 py-2.5 flex items-center justify-between shadow-lg">
     <div class="flex items-center gap-4">
       <div class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-rose-500">TOP 100</div>
@@ -189,7 +208,7 @@
       </div>
     </div>
 
-    <!-- BOX TURNO ATTIVO (Visibile solo in modalità a turni) -->
+    <!-- BOX TURNO ATTIVO -->
     <div id="turnHeaderBox" class="hidden flex items-center gap-3 bg-slate-950 px-4 py-1.5 rounded-2xl border border-indigo-500/40">
       <span class="text-xs text-slate-400 font-bold uppercase">TURNO:</span>
       <div id="activeTeamBadge" class="flex items-center gap-1.5 font-black text-sm px-2.5 py-0.5 rounded-lg">
@@ -200,7 +219,7 @@
       <button onclick="skipTurn()" class="text-[10px] bg-slate-800 hover:bg-slate-700 px-2 py-1 rounded font-bold text-slate-300">Salta ⏭️</button>
     </div>
 
-    <!-- Timer Globale -->
+    <!-- TIMER GLOBALE -->
     <div class="flex items-center gap-3 bg-slate-950 px-4 py-1.5 rounded-2xl border border-slate-800">
       <div id="timerDisplay" class="text-2xl font-black text-amber-400 font-mono tracking-wider">05:00</div>
       <div class="flex items-center gap-1">
@@ -239,8 +258,8 @@
     ];
     let selectedMode = 'RUSH';
     let isTimerRunning = false;
-    let selectedSeconds = 300;
-    let selectedTurnDuration = 30;
+    let selectedTotalSeconds = 300; // default 5 min
+    let selectedTurnSeconds = 30;   // default 30 sec
     let qrRendered = false;
 
     const PRESET_COLORS = ['#ef4444', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316'];
@@ -253,22 +272,58 @@
       const turnBox = document.getElementById('turnDurationBox');
 
       if (mode === 'RUSH') {
-        rushBtn.className = "py-2.5 px-3 rounded-xl border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-xs text-left transition";
-        turnsBtn.className = "py-2.5 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition";
+        rushBtn.className = "py-2 px-3 rounded-xl border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-xs text-left transition";
+        turnsBtn.className = "py-2 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition";
         turnBox.classList.add('hidden');
       } else {
-        turnsBtn.className = "py-2.5 px-3 rounded-xl border border-indigo-500 bg-indigo-500/20 text-indigo-300 font-black text-xs text-left transition";
-        rushBtn.className = "py-2.5 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition";
+        turnsBtn.className = "py-2 px-3 rounded-xl border border-indigo-500 bg-indigo-500/20 text-indigo-300 font-black text-xs text-left transition";
+        rushBtn.className = "py-2 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition";
         turnBox.classList.remove('hidden');
       }
     }
 
-    function setTurnDuration(sec, btn) {
-      selectedTurnDuration = sec;
-      document.querySelectorAll('.turn-timer-btn').forEach(b => {
-        b.className = "turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-900 text-slate-300";
+    // GESTIONE DURATA TURNO CUSTOM & PRESET
+    function setTurnDurationPreset(sec, btn) {
+      selectedTurnSeconds = sec;
+      document.getElementById('customTurnSecondsInput').value = sec;
+      document.querySelectorAll('.turn-preset-btn').forEach(b => {
+        b.className = "turn-preset-btn py-1 rounded-lg text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300";
       });
-      btn.className = "turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-indigo-500 bg-indigo-500/20 text-indigo-300";
+      btn.className = "turn-preset-btn py-1 rounded-lg text-[10px] font-bold border border-indigo-500 bg-indigo-500/20 text-indigo-300";
+    }
+
+    function onCustomTurnChange(val) {
+      const sec = parseInt(val, 10);
+      if (!isNaN(sec) && sec > 0) {
+        selectedTurnSeconds = sec;
+        document.querySelectorAll('.turn-preset-btn').forEach(b => {
+          b.className = "turn-preset-btn py-1 rounded-lg text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300";
+        });
+      }
+    }
+
+    // GESTIONE DURATA TOTALE CUSTOM & PRESET
+    function setTotalPreset(sec, btn) {
+      selectedTotalSeconds = sec;
+      const m = Math.floor(sec / 60);
+      const s = sec % 60;
+      document.getElementById('customTotalMinutesInput').value = m;
+      document.getElementById('customTotalSecondsInput').value = s;
+
+      document.querySelectorAll('.total-preset-btn').forEach(b => {
+        b.className = "total-preset-btn py-1 rounded-lg text-[10px] font-black border border-slate-700 bg-slate-900 text-slate-300";
+      });
+      btn.className = "total-preset-btn py-1 rounded-lg text-[10px] font-black border border-amber-500 bg-amber-500/20 text-amber-300";
+    }
+
+    function onCustomTotalTimeChange() {
+      const m = parseInt(document.getElementById('customTotalMinutesInput').value, 10) || 0;
+      const s = parseInt(document.getElementById('customTotalSecondsInput').value, 10) || 0;
+      selectedTotalSeconds = (m * 60) + s;
+
+      document.querySelectorAll('.total-preset-btn').forEach(b => {
+        b.className = "total-preset-btn py-1 rounded-lg text-[10px] font-black border border-slate-700 bg-slate-900 text-slate-300";
+      });
     }
 
     function buildGrid() {
@@ -360,14 +415,6 @@
       `).join('');
     }
 
-    function selectDuration(sec, btn) {
-      selectedSeconds = sec;
-      document.querySelectorAll('.timer-btn').forEach(b => {
-        b.className = "timer-btn py-1.5 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300";
-      });
-      btn.className = "timer-btn py-1.5 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300";
-    }
-
     function toggleTimer() {
       socket.emit('timerControl', { type: isTimerRunning ? 'PAUSE' : 'START' });
     }
@@ -386,7 +433,7 @@
       return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
     }
 
-    // ================= EDITOR E DOWNLOAD JSON =================
+    // ================= EDITOR CATEGORIE =================
     function editCurrentCategory() {
       const selectedId = document.getElementById('categorySelect').value;
       if (!selectedId) return;
@@ -479,7 +526,6 @@
       alert(`✨ Generati e arricchiti alias per ${count} posizioni!`);
     }
 
-    // Scarica file JSON sul computer/telefono per renderlo permanente su GitHub
     function downloadJsonFile() {
       const title = document.getElementById('editorCatTitle').value.trim() || 'Top 100 Custom';
       const fileId = document.getElementById('editorCatId').value.trim() || title.toLowerCase().replace(/[^a-z0-9]/g, '-');
@@ -489,9 +535,7 @@
       rows.forEach((tr, idx) => {
         const name = tr.querySelector('.row-name').value.trim();
         const aliases = tr.querySelector('.row-aliases').value.split(',').map(a => a.trim()).filter(Boolean);
-        if (name) {
-          items.push({ rank: idx + 1, name, aliases });
-        }
+        if (name) items.push({ rank: idx + 1, name, aliases });
       });
 
       const jsonStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify({
@@ -663,12 +707,17 @@
 
     function confirmAndStart() {
       const catKey = document.getElementById('categorySelect').value;
+      
+      // Assicura che i secondi totali e del turno siano sempre validi
+      const totalSec = selectedTotalSeconds > 0 ? selectedTotalSeconds : 300;
+      const turnSec = selectedTurnSeconds > 0 ? selectedTurnSeconds : 30;
+
       socket.emit('startGameWithConfig', {
         categoryKey: catKey,
         teams: teams,
-        duration: selectedSeconds,
+        duration: totalSec,
         mode: selectedMode,
-        turnDuration: selectedTurnDuration
+        turnDuration: turnSec
       });
       document.getElementById('lobbyModal').classList.add('hidden');
     }

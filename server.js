@@ -30,7 +30,7 @@ function loadAllCategories() {
           items: content.items || [],
         };
       } catch (e) {
-        console.error(`Errore caricamento \${file}:`, e);
+        console.error(`Errore caricamento ${file}:`, e);
       }
     });
   } catch (err) {
@@ -45,7 +45,7 @@ let connectedPlayers = {};
 
 let gameState = {
   status: "LOBBY",
-  mode: "RUSH", // 'RUSH' (gara simultanea) o 'TURNS' (a turni)
+  mode: "RUSH", // 'RUSH' o 'TURNS'
   currentCategoryKey: currentCategoryKey,
   categoryTitle: currentCategoryKey
     ? availableCategories[currentCategoryKey].categoryTitle
@@ -69,9 +69,9 @@ let gameState = {
     },
   ],
   revealed: {},
-  activeTeamIndex: 0, // indice squadra di turno
+  activeTeamIndex: 0,
   turnTimer: {
-    duration: 30, // secondi per ogni singolo turno
+    duration: 30,
     remaining: 30,
   },
   timer: {
@@ -96,7 +96,7 @@ function startTimer() {
     let tickGlobal = false;
     let tickTurn = false;
 
-    // Timer Globale
+    // Timer Globale di Gioco
     if (gameState.timer.remaining > 0) {
       gameState.timer.remaining--;
       tickGlobal = true;
@@ -106,12 +106,11 @@ function startTimer() {
       return;
     }
 
-    // Timer di Turno (se in modalità a turni)
+    // Timer di Turno Singolo (se in modalità a turni)
     if (gameState.mode === "TURNS") {
       if (gameState.turnTimer.remaining > 0) {
         gameState.turnTimer.remaining--;
       } else {
-        // Tempo turno scaduto: passa alla squadra successiva
         passToNextTurn("Tempo scaduto!");
       }
       tickTurn = true;
@@ -194,7 +193,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("joinGame", (name) => {
-    const cleanName = (name || "").trim() || `Ospite_\${socket.id.slice(0, 4)}`;
+    const cleanName = (name || "").trim() || `Ospite_${socket.id.slice(0, 4)}`;
     connectedPlayers[socket.id] = {
       socketId: socket.id,
       name: cleanName,
@@ -227,8 +226,8 @@ io.on("connection", (socket) => {
           .replace(/[\u0300-\u036f]/g, "")
           .replace(/[^a-z0-9]/g, "-")
           .replace(/-+/g, "-")
-          .replace(/^-|-$/g, "") ||
-        `cat-\${Date.now()}`;
+          .replace(/^-|-\$/g, "") ||
+        `cat-${Date.now()}`;
 
       const catObj = {
         id: fileId,
@@ -242,7 +241,7 @@ io.on("connection", (socket) => {
         })),
       };
 
-      const targetPath = path.join(DATA_DIR, `\${fileId}.json`);
+      const targetPath = path.join(DATA_DIR, `${fileId}.json`);
       fs.writeFileSync(targetPath, JSON.stringify(catObj, null, 2), "utf-8");
 
       availableCategories = loadAllCategories();
@@ -286,14 +285,18 @@ io.on("connection", (socket) => {
     gameState.status = "PLAYING";
     gameState.activeTeamIndex = 0;
 
-    const turnSec = parseInt(turnDuration, 10) || 30;
+    // Assegna la durata del turno personalizzata scelta dall'Host
+    const turnSec =
+      parseInt(turnDuration, 10) > 0 ? parseInt(turnDuration, 10) : 30;
     gameState.turnTimer.duration = turnSec;
     gameState.turnTimer.remaining = turnSec;
 
     pauseTimer();
-    const sec = parseInt(duration, 10) || 300;
-    gameState.timer.duration = sec;
-    gameState.timer.remaining = sec;
+
+    // Assegna la durata totale personalizzata scelta dall'Host
+    const totalSec = parseInt(duration, 10) > 0 ? parseInt(duration, 10) : 300;
+    gameState.timer.duration = totalSec;
+    gameState.timer.remaining = totalSec;
 
     playersArray.forEach((p) => {
       const assignedTeam = gameState.teams.find((t) => t.id === p.teamId);
@@ -331,7 +334,6 @@ io.on("connection", (socket) => {
     }
   });
 
-  // Ricezione tentativo da Smartphone
   socket.on("submitGuess", (payload) => {
     if (gameState.timer.remaining <= 0) {
       socket.emit("guessResult", {
@@ -353,11 +355,10 @@ io.on("connection", (socket) => {
     const playerName = player ? player.name : payload.playerName;
     const activeTeam = getActiveTeam();
 
-    // REGOLA DEI TURNI: se è a turni e non tocca alla squadra del giocatore, blocca l'invio
     if (gameState.mode === "TURNS" && teamId !== activeTeam.id) {
       socket.emit("guessResult", {
         status: "LOCKED",
-        message: `⛔ Non è il tuo turno! Tocca a: \${activeTeam.name}`,
+        message: `⛔ Non è il tuo turno! Tocca a: ${activeTeam.name}`,
       });
       return;
     }
@@ -379,33 +380,29 @@ io.on("connection", (socket) => {
       return matchName || matchAlias;
     });
 
-    // Risposta Errata
     if (!matched) {
       socket.emit("guessResult", {
         status: "WRONG",
         message: "Nessuna corrispondenza!",
       });
-      // Se in modalità a turni, lo sbaglio fa passare il turno
       if (gameState.mode === "TURNS") {
-        passToNextTurn(`\${activeTeam.name} ha sbagliato risposta!`);
+        passToNextTurn(`${activeTeam.name} ha sbagliato!`);
       }
       return;
     }
 
-    // Risposta già presa
     if (gameState.revealed[matched.rank]) {
       const orig = gameState.revealed[matched.rank];
       socket.emit("guessResult", {
         status: "ALREADY_CLAIMED",
-        message: `⚠️ #\${matched.rank} già presa da \${orig.teamName}! 0 pt.`,
+        message: `⚠️ #${matched.rank} già presa da ${orig.teamName}! 0 pt.`,
       });
       if (gameState.mode === "TURNS") {
-        passToNextTurn(`Posizione già presa! Turno passato.`);
+        passToNextTurn(`Posizione già presa!`);
       }
       return;
     }
 
-    // Risposta Corretta
     const points = matched.rank;
     const teamObj = gameState.teams.find((t) => t.id === teamId);
     if (teamObj) teamObj.score += points;
@@ -432,9 +429,8 @@ io.on("connection", (socket) => {
       teams: gameState.teams,
     });
 
-    // In modalità a turni, dopo aver indovinato il turno passa alla squadra successiva
     if (gameState.mode === "TURNS") {
-      passToNextTurn(`\${activeTeam.name} ha indovinato #\${matched.rank}!`);
+      passToNextTurn(`${activeTeam.name} ha indovinato #${matched.rank}!`);
     }
   });
 
@@ -446,5 +442,5 @@ io.on("connection", (socket) => {
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-  console.log(`Server attivo sulla porta \${PORT}`);
+  console.log(`Server attivo sulla porta ${PORT}`);
 });
