@@ -30,7 +30,7 @@ function loadAllCategories() {
           items: content.items || [],
         };
       } catch (e) {
-        console.error(`Errore caricamento ${file}:`, e);
+        console.error(`Errore caricamento \${file}:`, e);
       }
     });
   } catch (err) {
@@ -45,6 +45,7 @@ let connectedPlayers = {};
 
 let gameState = {
   status: "LOBBY",
+  mode: "RUSH", // 'RUSH' (gara simultanea) o 'TURNS' (a turni)
   currentCategoryKey: currentCategoryKey,
   categoryTitle: currentCategoryKey
     ? availableCategories[currentCategoryKey].categoryTitle
@@ -68,34 +69,92 @@ let gameState = {
     },
   ],
   revealed: {},
-  timer: { duration: 300, remaining: 300, isRunning: false },
+  activeTeamIndex: 0, // indice squadra di turno
+  turnTimer: {
+    duration: 30, // secondi per ogni singolo turno
+    remaining: 30,
+  },
+  timer: {
+    duration: 300,
+    remaining: 300,
+    isRunning: false,
+  },
 };
 
-let timerInterval = null;
+let mainTimerInterval = null;
 
 function startTimer() {
-  if (timerInterval || gameState.timer.remaining <= 0) return;
+  if (mainTimerInterval || gameState.timer.remaining <= 0) return;
   gameState.timer.isRunning = true;
-  io.emit("timerTick", gameState.timer);
+  io.emit("timerTick", {
+    global: gameState.timer,
+    turn: gameState.turnTimer,
+    activeTeamId: getActiveTeam().id,
+  });
 
-  timerInterval = setInterval(() => {
+  mainTimerInterval = setInterval(() => {
+    let tickGlobal = false;
+    let tickTurn = false;
+
+    // Timer Globale
     if (gameState.timer.remaining > 0) {
       gameState.timer.remaining--;
-      io.emit("timerTick", gameState.timer);
+      tickGlobal = true;
     } else {
       pauseTimer();
       io.emit("timerExpired");
+      return;
+    }
+
+    // Timer di Turno (se in modalità a turni)
+    if (gameState.mode === "TURNS") {
+      if (gameState.turnTimer.remaining > 0) {
+        gameState.turnTimer.remaining--;
+      } else {
+        // Tempo turno scaduto: passa alla squadra successiva
+        passToNextTurn("Tempo scaduto!");
+      }
+      tickTurn = true;
+    }
+
+    if (tickGlobal || tickTurn) {
+      io.emit("timerTick", {
+        global: gameState.timer,
+        turn: gameState.turnTimer,
+        activeTeamId: getActiveTeam().id,
+      });
     }
   }, 1000);
 }
 
 function pauseTimer() {
-  if (timerInterval) {
-    clearInterval(timerInterval);
-    timerInterval = null;
+  if (mainTimerInterval) {
+    clearInterval(mainTimerInterval);
+    mainTimerInterval = null;
   }
   gameState.timer.isRunning = false;
-  io.emit("timerTick", gameState.timer);
+  io.emit("timerTick", {
+    global: gameState.timer,
+    turn: gameState.turnTimer,
+    activeTeamId: getActiveTeam().id,
+  });
+}
+
+function getActiveTeam() {
+  if (!gameState.teams || gameState.teams.length === 0) return { id: null };
+  return gameState.teams[gameState.activeTeamIndex % gameState.teams.length];
+}
+
+function passToNextTurn(reasonMessage = null) {
+  gameState.activeTeamIndex =
+    (gameState.activeTeamIndex + 1) % gameState.teams.length;
+  gameState.turnTimer.remaining = gameState.turnTimer.duration;
+
+  io.emit("turnChanged", {
+    activeTeam: getActiveTeam(),
+    reason: reasonMessage,
+    turnTimer: gameState.turnTimer,
+  });
 }
 
 function normalizeText(str) {
@@ -131,10 +190,11 @@ io.on("connection", (socket) => {
     categoriesList: getCategoriesList(),
     playersList: Object.values(connectedPlayers),
     myPlayerInfo: connectedPlayers[socket.id] || null,
+    activeTeam: getActiveTeam(),
   });
 
   socket.on("joinGame", (name) => {
-    const cleanName = (name || "").trim() || `Ospite_${socket.id.slice(0, 4)}`;
+    const cleanName = (name || "").trim() || `Ospite_\${socket.id.slice(0, 4)}`;
     connectedPlayers[socket.id] = {
       socketId: socket.id,
       name: cleanName,
@@ -144,17 +204,10 @@ io.on("connection", (socket) => {
     socket.emit("joinedSuccess", connectedPlayers[socket.id]);
   });
 
-  // Richiesta dettagli categoria esistente per la modifica
   socket.on("getCategoryForEdit", (catId) => {
-    const cat = availableCategories[catId];
-    if (cat) {
-      socket.emit("categoryDataForEdit", cat);
-    } else {
-      socket.emit("categoryDataForEdit", null);
-    }
+    socket.emit("categoryDataForEdit", availableCategories[catId] || null);
   });
 
-  // Salvataggio categoria (sia Nuova sia Modificata)
   socket.on("saveCategory", (payload) => {
     try {
       const { id, title, items } = payload;
@@ -166,7 +219,6 @@ io.on("connection", (socket) => {
         return;
       }
 
-      // Se id esiste usa quello, altrimenti genera da titolo
       const fileId =
         id ||
         title
@@ -176,7 +228,7 @@ io.on("connection", (socket) => {
           .replace(/[^a-z0-9]/g, "-")
           .replace(/-+/g, "-")
           .replace(/^-|-$/g, "") ||
-        `cat-${Date.now()}`;
+        `cat-\${Date.now()}`;
 
       const catObj = {
         id: fileId,
@@ -190,31 +242,33 @@ io.on("connection", (socket) => {
         })),
       };
 
-      const targetPath = path.join(DATA_DIR, `${fileId}.json`);
+      const targetPath = path.join(DATA_DIR, `\${fileId}.json`);
       fs.writeFileSync(targetPath, JSON.stringify(catObj, null, 2), "utf-8");
 
-      // Ricarica categorie in memoria
       availableCategories = loadAllCategories();
       const updatedList = getCategoriesList();
 
-      // Se la categoria modificata è quella attiva al momento, aggiorna il titolo
       if (gameState.currentCategoryKey === fileId) {
         gameState.categoryTitle = catObj.categoryTitle;
       }
 
-      socket.emit("categorySaveResult", { success: true, savedId: fileId });
+      socket.emit("categorySaveResult", {
+        success: true,
+        savedId: fileId,
+        categoryObj: catObj,
+      });
       io.emit("categoriesUpdated", updatedList);
     } catch (err) {
-      console.error("Errore salvataggio categoria:", err);
+      console.error("Errore salvataggio:", err);
       socket.emit("categorySaveResult", {
         success: false,
-        message: "Errore nel salvataggio del file JSON",
+        message: "Errore durante la scrittura su file.",
       });
     }
   });
 
   socket.on("startGameWithConfig", (config) => {
-    const { categoryKey, teams, duration } = config;
+    const { categoryKey, teams, duration, mode, turnDuration } = config;
     availableCategories = loadAllCategories();
 
     if (availableCategories[categoryKey]) {
@@ -223,27 +277,38 @@ io.on("connection", (socket) => {
       gameState.categoryTitle = availableCategories[categoryKey].categoryTitle;
     }
 
+    gameState.mode = mode || "RUSH";
     const initialTeams = teams.map((t) => ({ ...t, score: 0, members: [] }));
     const playersArray = Object.values(connectedPlayers);
     gameState.teams = distributePlayersRandomly(playersArray, initialTeams);
 
     gameState.revealed = {};
     gameState.status = "PLAYING";
-    pauseTimer();
+    gameState.activeTeamIndex = 0;
 
+    const turnSec = parseInt(turnDuration, 10) || 30;
+    gameState.turnTimer.duration = turnSec;
+    gameState.turnTimer.remaining = turnSec;
+
+    pauseTimer();
     const sec = parseInt(duration, 10) || 300;
     gameState.timer.duration = sec;
     gameState.timer.remaining = sec;
 
     playersArray.forEach((p) => {
       const assignedTeam = gameState.teams.find((t) => t.id === p.teamId);
-      io.to(p.socketId).emit("assignedTeam", { team: assignedTeam, gameState });
+      io.to(p.socketId).emit("assignedTeam", {
+        team: assignedTeam,
+        gameState,
+        activeTeam: getActiveTeam(),
+      });
     });
 
     io.emit("gameState", {
       ...gameState,
       categoriesList: getCategoriesList(),
       playersList: Object.values(connectedPlayers),
+      activeTeam: getActiveTeam(),
     });
 
     startTimer();
@@ -255,10 +320,18 @@ io.on("connection", (socket) => {
     else if (action.type === "RESET") {
       pauseTimer();
       gameState.timer.remaining = gameState.timer.duration;
-      io.emit("timerTick", gameState.timer);
+      gameState.turnTimer.remaining = gameState.turnTimer.duration;
+      io.emit("timerTick", {
+        global: gameState.timer,
+        turn: gameState.turnTimer,
+        activeTeamId: getActiveTeam().id,
+      });
+    } else if (action.type === "SKIP_TURN") {
+      if (gameState.mode === "TURNS") passToNextTurn("Turno saltato dall'Host");
     }
   });
 
+  // Ricezione tentativo da Smartphone
   socket.on("submitGuess", (payload) => {
     if (gameState.timer.remaining <= 0) {
       socket.emit("guessResult", {
@@ -278,6 +351,16 @@ io.on("connection", (socket) => {
     const player = connectedPlayers[socket.id];
     const teamId = player ? player.teamId : payload.teamId;
     const playerName = player ? player.name : payload.playerName;
+    const activeTeam = getActiveTeam();
+
+    // REGOLA DEI TURNI: se è a turni e non tocca alla squadra del giocatore, blocca l'invio
+    if (gameState.mode === "TURNS" && teamId !== activeTeam.id) {
+      socket.emit("guessResult", {
+        status: "LOCKED",
+        message: `⛔ Non è il tuo turno! Tocca a: \${activeTeam.name}`,
+      });
+      return;
+    }
 
     const cleanGuess = normalizeText(payload.guess || "");
     if (
@@ -288,7 +371,6 @@ io.on("connection", (socket) => {
       return;
 
     const currentItems = availableCategories[currentCategoryKey].items;
-
     const matched = currentItems.find((item) => {
       const matchName = normalizeText(item.name) === cleanGuess;
       const matchAlias =
@@ -297,23 +379,33 @@ io.on("connection", (socket) => {
       return matchName || matchAlias;
     });
 
+    // Risposta Errata
     if (!matched) {
       socket.emit("guessResult", {
         status: "WRONG",
         message: "Nessuna corrispondenza!",
       });
+      // Se in modalità a turni, lo sbaglio fa passare il turno
+      if (gameState.mode === "TURNS") {
+        passToNextTurn(`\${activeTeam.name} ha sbagliato risposta!`);
+      }
       return;
     }
 
+    // Risposta già presa
     if (gameState.revealed[matched.rank]) {
       const orig = gameState.revealed[matched.rank];
       socket.emit("guessResult", {
         status: "ALREADY_CLAIMED",
-        message: `⚠️ #${matched.rank} già presa da ${orig.teamName} (${orig.playerName})! 0 pt.`,
+        message: `⚠️ #\${matched.rank} già presa da \${orig.teamName}! 0 pt.`,
       });
+      if (gameState.mode === "TURNS") {
+        passToNextTurn(`Posizione già presa! Turno passato.`);
+      }
       return;
     }
 
+    // Risposta Corretta
     const points = matched.rank;
     const teamObj = gameState.teams.find((t) => t.id === teamId);
     if (teamObj) teamObj.score += points;
@@ -339,6 +431,11 @@ io.on("connection", (socket) => {
       data: gameState.revealed[matched.rank],
       teams: gameState.teams,
     });
+
+    // In modalità a turni, dopo aver indovinato il turno passa alla squadra successiva
+    if (gameState.mode === "TURNS") {
+      passToNextTurn(`\${activeTeam.name} ha indovinato #\${matched.rank}!`);
+    }
   });
 
   socket.on("disconnect", () => {
@@ -349,5 +446,5 @@ io.on("connection", (socket) => {
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-  console.log(`Server attivo sulla porta ${PORT}`);
+  console.log(`Server attivo sulla porta \${PORT}`);
 });

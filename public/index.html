@@ -16,7 +16,7 @@
 </head>
 <body class="bg-slate-950 text-white min-h-screen flex flex-col justify-between overflow-x-hidden select-none">
 
-  <!-- MODAL PRINCIPALE: CONFIGURA PARTITA + QR CODE + LOBBY -->
+  <!-- MODAL PRINCIPALE: CONFIGURA PARTITA + MODALITÀ + QR CODE -->
   <div id="lobbyModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-40 flex items-center justify-center p-6">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-5xl w-full shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
       
@@ -40,53 +40,75 @@
         </div>
       </div>
 
-      <!-- COLONNA IMPOSTAZIONI & CATEGORIE -->
+      <!-- COLONNA IMPOSTAZIONI: MODALITÀ, TIMER, CATEGORIA E SQUADRE -->
       <div class="lg:col-span-7 flex flex-col justify-between h-full">
         <div>
-          <div class="mb-4">
+          <div class="mb-3">
             <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-500 to-indigo-500">CONFIGURA PARTITA</h1>
-            <p class="text-slate-400 text-xs">Scegli la lista o modificane una prima di iniziare</p>
+            <p class="text-slate-400 text-xs">Scegli la modalità, la lista e le squadre</p>
           </div>
 
-          <!-- SELEZIONE CATEGORIA CON PULSANTI CREA / MODIFICA -->
-          <div class="mb-4 bg-slate-950 p-3 rounded-2xl border border-slate-800">
-            <div class="flex items-center justify-between mb-1.5">
+          <!-- SELEZIONE MODALITÀ DI GIOCO -->
+          <div class="mb-3 bg-slate-950 p-2.5 rounded-2xl border border-slate-800">
+            <label class="text-[11px] font-bold text-slate-400 block mb-1.5 uppercase tracking-wider">🎮 Modalità di Gioco</label>
+            <div class="grid grid-cols-2 gap-2">
+              <button id="modeRushBtn" onclick="setGameMode('RUSH')" class="py-2.5 px-3 rounded-xl border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-xs text-left transition">
+                <div class="text-sm mb-0.5">⚡ Gara Live (Rush)</div>
+                <div class="text-[10px] font-normal text-slate-300 leading-tight">Tutti possono digitare contemporaneamente senza turni</div>
+              </button>
+              <button id="modeTurnsBtn" onclick="setGameMode('TURNS')" class="py-2.5 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition">
+                <div class="text-sm mb-0.5">🔄 A Turni Alternati</div>
+                <div class="text-[10px] font-normal text-slate-400 leading-tight">Una squadra alla volta con tempo limite per turno</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- OPZIONI TIMER TURNO (Visibili solo se a turni) -->
+          <div id="turnDurationBox" class="hidden mb-3 bg-slate-950 p-2.5 rounded-2xl border border-indigo-900/40">
+            <label class="text-[10px] font-bold text-indigo-400 block mb-1 uppercase tracking-wider">⏱️ Secondi per singolo Turno</label>
+            <div class="grid grid-cols-4 gap-1.5">
+              <button onclick="setTurnDuration(15, this)" class="turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-900 text-slate-300">15s</button>
+              <button onclick="setTurnDuration(30, this)" class="turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-indigo-500 bg-indigo-500/20 text-indigo-300">30s</button>
+              <button onclick="setTurnDuration(45, this)" class="turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-900 text-slate-300">45s</button>
+              <button onclick="setTurnDuration(60, this)" class="turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-900 text-slate-300">60s</button>
+            </div>
+          </div>
+
+          <!-- SELEZIONE CATEGORIA -->
+          <div class="mb-3 bg-slate-950 p-2.5 rounded-2xl border border-slate-800">
+            <div class="flex items-center justify-between mb-1">
               <label class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">📂 Categoria Top 100</label>
               <div class="flex items-center gap-2">
-                <button onclick="editCurrentCategory()" class="text-xs text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1">
-                  <span>✏️ Modifica Questa</span>
-                </button>
+                <button onclick="editCurrentCategory()" class="text-xs text-amber-400 hover:text-amber-300 font-bold">✏️ Modifica</button>
                 <span class="text-slate-700">|</span>
-                <button onclick="openCategoryEditor(null)" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold flex items-center gap-1">
-                  <span>➕ Crea Nuova</span>
-                </button>
+                <button onclick="openCategoryEditor(null)" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold">➕ Crea Nuova</button>
               </div>
             </div>
-            <select id="categorySelect" class="w-full bg-slate-900 border border-slate-700 text-white font-bold text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-amber-400 cursor-pointer"></select>
+            <select id="categorySelect" class="w-full bg-slate-900 border border-slate-700 text-white font-bold text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-amber-400"></select>
           </div>
 
-          <!-- SELEZIONE TIMER -->
-          <div class="mb-4 bg-slate-950 p-3 rounded-2xl border border-slate-800">
-            <label class="text-[11px] font-bold text-slate-400 block mb-1.5 uppercase tracking-wider">⏱️ Durata Round</label>
+          <!-- TIMER GENERALE PARTITA -->
+          <div class="mb-3 bg-slate-950 p-2.5 rounded-2xl border border-slate-800">
+            <label class="text-[11px] font-bold text-slate-400 block mb-1 uppercase tracking-wider">⏱️ Durata Totale Partita</label>
             <div class="grid grid-cols-4 gap-2">
-              <button onclick="selectDuration(180, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">3 Min</button>
-              <button onclick="selectDuration(300, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300">5 Min</button>
-              <button onclick="selectDuration(600, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">10 Min</button>
+              <button onclick="selectDuration(180, this)" class="timer-btn py-1.5 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">3 Min</button>
+              <button onclick="selectDuration(300, this)" class="timer-btn py-1.5 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300">5 Min</button>
+              <button onclick="selectDuration(600, this)" class="timer-btn py-1.5 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">10 Min</button>
               <button onclick="selectDuration(900, this)" class="timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300">15 Min</button>
             </div>
           </div>
 
           <!-- SQUADRE -->
-          <div class="mb-4">
-            <div class="flex items-center justify-between mb-1.5">
+          <div class="mb-3">
+            <div class="flex items-center justify-between mb-1">
               <label class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">👥 Squadre Attive</label>
               <button onclick="addTeamField()" class="text-xs text-indigo-400 font-bold hover:underline">➕ Aggiungi</button>
             </div>
-            <div id="teamsContainer" class="space-y-2 max-h-36 overflow-y-auto pr-1"></div>
+            <div id="teamsContainer" class="space-y-1.5 max-h-28 overflow-y-auto pr-1"></div>
           </div>
         </div>
 
-        <button onclick="confirmAndStart()" class="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 text-white font-black text-base shadow-xl shadow-emerald-500/25 active:scale-98 transition flex items-center justify-center gap-2">
+        <button onclick="confirmAndStart()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 text-white font-black text-sm shadow-xl shadow-emerald-500/25 active:scale-98 transition flex items-center justify-center gap-2">
           <span>MESCOLA & AVVIA PARTITA 🎲</span>
         </button>
       </div>
@@ -94,47 +116,47 @@
     </div>
   </div>
 
-  <!-- MODAL: EDITOR COMPLETO TOP 100 (CREA / MODIFICA + ALIAS SMART) -->
+  <!-- MODAL: EDITOR TOP 100 + ESPORTA JSON PER RENDERLO PERMANENTE -->
   <div id="editorModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-5xl w-full shadow-2xl flex flex-col max-h-[92vh]">
       
       <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
         <div>
           <h2 id="editorModalTitle" class="text-xl font-black text-amber-400">EDITOR TOP 100</h2>
-          <p class="text-xs text-slate-400">Modifica titoli e aggiungi alias intelligenti (separati da virgola)</p>
+          <p class="text-xs text-slate-400">Modifica titoli e genera alias automatici</p>
         </div>
         <div class="flex items-center gap-2">
+          <button onclick="downloadJsonFile()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300 border border-slate-700 flex items-center gap-1.5">
+            <span>📥 Esporta JSON</span>
+          </button>
           <button onclick="generateSmartAliasesForAll()" class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-xs font-black text-white shadow-md flex items-center gap-1.5">
-            <span>✨ Genera Alias Intelligenti</span>
+            <span>✨ Genera Alias</span>
           </button>
           <button onclick="closeCategoryEditor()" class="text-slate-400 hover:text-white font-bold text-xl px-2">✕</button>
         </div>
       </div>
 
-      <!-- HEADER EDITOR: TITOLO CATEGORIA & AZIONI -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
         <div class="md:col-span-2">
           <label class="text-[11px] font-bold text-slate-300 block mb-1">TITOLO DELLA CATEGORIA</label>
-          <input type="text" id="editorCatTitle" placeholder="Es: I 100 Film con Maggior Incasso..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-white focus:outline-none focus:border-amber-400">
+          <input type="text" id="editorCatTitle" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-white focus:outline-none focus:border-amber-400">
           <input type="hidden" id="editorCatId" value="">
         </div>
         <div class="flex items-end">
           <button onclick="toggleFastPasteBox()" class="w-full py-2 px-3 rounded-xl border border-dashed border-slate-700 hover:border-slate-500 text-slate-300 text-xs font-bold transition">
-            📋 Mostra/Nascondi Incolla Rapido
+            📋 Incolla Rapido (100 righe)
           </button>
         </div>
       </div>
 
-      <!-- BOX INCOLLA RAPIDO (A SCOMPARSA) -->
       <div id="fastPasteBox" class="hidden mb-3 bg-slate-950 p-3 rounded-2xl border border-slate-800">
         <div class="flex justify-between items-center mb-1">
-          <span class="text-xs font-bold text-indigo-400">Incolla qui la lista (1 per riga) per compilare i 100 elementi</span>
-          <button onclick="applyFastPaste()" class="px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold text-white">Carica nelle 100 caselle ⬇️</button>
+          <span class="text-xs font-bold text-indigo-400">Incolla qui per compilare in blocco</span>
+          <button onclick="applyFastPaste()" class="px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold text-white">Applica</button>
         </div>
-        <textarea id="fastPasteTextarea" rows="4" placeholder="1. Avatar&#10;2. Avengers Endgame..." class="w-full bg-slate-900 border border-slate-700 rounded-xl p-2 text-xs font-mono text-white"></textarea>
+        <textarea id="fastPasteTextarea" rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-2 text-xs font-mono text-white"></textarea>
       </div>
 
-      <!-- TABELLA 100 POSIZIONI SCROLLABILE -->
       <div class="flex-1 overflow-y-auto pr-2 border border-slate-800 rounded-2xl p-2 bg-slate-950/60">
         <table class="w-full text-left text-xs border-collapse">
           <thead>
@@ -144,16 +166,13 @@
               <th class="py-2 px-2 w-6/12">ALIAS ACCETTATI (SEPARATI DA VIRGOLA)</th>
             </tr>
           </thead>
-          <tbody id="editorRowsContainer" class="divide-y divide-slate-900/60">
-            <!-- 100 righe generate dinamicamente -->
-          </tbody>
+          <tbody id="editorRowsContainer" class="divide-y divide-slate-900/60"></tbody>
         </table>
       </div>
 
-      <!-- BOTTONI AZIONE FOOTER -->
       <div class="flex gap-3 pt-3 border-t border-slate-800 mt-2">
-        <button onclick="closeCategoryEditor()" class="w-1/3 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">Annulla</button>
-        <button onclick="saveCategoryFromEditor()" class="w-2/3 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 font-black text-xs text-white shadow-lg shadow-emerald-500/20">SALVA MODIFICHE SU DISCO 💾</button>
+        <button onclick="closeCategoryEditor()" class="w-1/3 py-2.5 rounded-xl bg-slate-800 text-xs font-bold text-slate-300">Annulla</button>
+        <button onclick="saveCategoryFromEditor()" class="w-2/3 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 font-black text-xs text-white">SALVA SU SERVER 💾</button>
       </div>
 
     </div>
@@ -164,10 +183,24 @@
     <div class="flex items-center gap-4">
       <div class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-rose-500">TOP 100</div>
       <div class="h-6 w-px bg-slate-800"></div>
-      <div id="categoryDisplay" class="text-xs font-semibold text-amber-300">Caricamento Categoria...</div>
+      <div>
+        <div id="categoryDisplay" class="text-xs font-semibold text-amber-300">Caricamento Categoria...</div>
+        <div id="modeBadge" class="text-[9px] font-black uppercase text-indigo-400">MODALITÀ: GARA LIVE</div>
+      </div>
     </div>
 
-    <!-- Timer Sincronizzato con Controlli Host -->
+    <!-- BOX TURNO ATTIVO (Visibile solo in modalità a turni) -->
+    <div id="turnHeaderBox" class="hidden flex items-center gap-3 bg-slate-950 px-4 py-1.5 rounded-2xl border border-indigo-500/40">
+      <span class="text-xs text-slate-400 font-bold uppercase">TURNO:</span>
+      <div id="activeTeamBadge" class="flex items-center gap-1.5 font-black text-sm px-2.5 py-0.5 rounded-lg">
+        <span id="activeTeamIcon">🔥</span>
+        <span id="activeTeamName">Squadra</span>
+      </div>
+      <div id="turnTimerDisplay" class="text-lg font-mono font-black text-amber-400 bg-slate-900 px-2 py-0.5 rounded-md">30s</div>
+      <button onclick="skipTurn()" class="text-[10px] bg-slate-800 hover:bg-slate-700 px-2 py-1 rounded font-bold text-slate-300">Salta ⏭️</button>
+    </div>
+
+    <!-- Timer Globale -->
     <div class="flex items-center gap-3 bg-slate-950 px-4 py-1.5 rounded-2xl border border-slate-800">
       <div id="timerDisplay" class="text-2xl font-black text-amber-400 font-mono tracking-wider">05:00</div>
       <div class="flex items-center gap-1">
@@ -180,7 +213,7 @@
 
     <div class="flex items-center gap-2">
       <button onclick="toggleFullscreen()" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-bold transition">⛶ TV</button>
-      <button onclick="openLobbyModal()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">⚙️ Nuova Partita / QR</button>
+      <button onclick="openLobbyModal()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">⚙️ Opzioni / QR</button>
     </div>
   </header>
 
@@ -204,12 +237,39 @@
       { id: 't1', name: 'Squadra Rossa', color: '#ef4444', icon: '🔥', score: 0 },
       { id: 't2', name: 'Squadra Blu', color: '#3b82f6', icon: '⚡', score: 0 }
     ];
+    let selectedMode = 'RUSH';
     let isTimerRunning = false;
     let selectedSeconds = 300;
+    let selectedTurnDuration = 30;
     let qrRendered = false;
 
     const PRESET_COLORS = ['#ef4444', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316'];
     const PRESET_ICONS = ['🔥', '⚡', '🦅', '🦁', '🚀', '👑', '🦈', '💎'];
+
+    function setGameMode(mode) {
+      selectedMode = mode;
+      const rushBtn = document.getElementById('modeRushBtn');
+      const turnsBtn = document.getElementById('modeTurnsBtn');
+      const turnBox = document.getElementById('turnDurationBox');
+
+      if (mode === 'RUSH') {
+        rushBtn.className = "py-2.5 px-3 rounded-xl border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-xs text-left transition";
+        turnsBtn.className = "py-2.5 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition";
+        turnBox.classList.add('hidden');
+      } else {
+        turnsBtn.className = "py-2.5 px-3 rounded-xl border border-indigo-500 bg-indigo-500/20 text-indigo-300 font-black text-xs text-left transition";
+        rushBtn.className = "py-2.5 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition";
+        turnBox.classList.remove('hidden');
+      }
+    }
+
+    function setTurnDuration(sec, btn) {
+      selectedTurnDuration = sec;
+      document.querySelectorAll('.turn-timer-btn').forEach(b => {
+        b.className = "turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-slate-700 bg-slate-900 text-slate-300";
+      });
+      btn.className = "turn-timer-btn py-1.5 rounded-lg text-xs font-bold border border-indigo-500 bg-indigo-500/20 text-indigo-300";
+    }
 
     function buildGrid() {
       const container = document.getElementById('gridContainer');
@@ -303,9 +363,9 @@
     function selectDuration(sec, btn) {
       selectedSeconds = sec;
       document.querySelectorAll('.timer-btn').forEach(b => {
-        b.className = "timer-btn py-2 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300";
+        b.className = "timer-btn py-1.5 rounded-xl text-xs font-black border border-slate-700 bg-slate-900 text-slate-300";
       });
-      btn.className = "timer-btn py-2 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300";
+      btn.className = "timer-btn py-1.5 rounded-xl text-xs font-black border border-amber-500 bg-amber-500/20 text-amber-300";
     }
 
     function toggleTimer() {
@@ -316,15 +376,17 @@
       socket.emit('timerControl', { type: 'RESET' });
     }
 
+    function skipTurn() {
+      socket.emit('timerControl', { type: 'SKIP_TURN' });
+    }
+
     function formatTime(s) {
       const min = Math.floor(s / 60);
       const sec = s % 60;
       return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
     }
 
-    // ==========================================
-    // LOGICA EDITOR TOP 100 & ALIAS INTELLIGENTI
-    // ==========================================
+    // ================= EDITOR E DOWNLOAD JSON =================
     function editCurrentCategory() {
       const selectedId = document.getElementById('categorySelect').value;
       if (!selectedId) return;
@@ -333,7 +395,7 @@
 
     socket.on('categoryDataForEdit', (cat) => {
       if (cat) openCategoryEditor(cat);
-      else alert("Impossibile caricare i dati della categoria selezionata!");
+      else alert("Impossibile caricare la categoria!");
     });
 
     function openCategoryEditor(catData) {
@@ -342,14 +404,12 @@
       const idInput = document.getElementById('editorCatId');
       const modalTitle = document.getElementById('editorModalTitle');
       const rowsContainer = document.getElementById('editorRowsContainer');
-
       rowsContainer.innerHTML = '';
 
       if (catData) {
         modalTitle.innerText = `MODIFICA: ${catData.categoryTitle}`;
         titleInput.value = catData.categoryTitle;
         idInput.value = catData.id;
-        
         for (let i = 1; i <= 100; i++) {
           const item = (catData.items && catData.items[i - 1]) || { rank: i, name: '', aliases: [] };
           addRowToEditor(i, item.name || '', (item.aliases || []).join(', '));
@@ -358,11 +418,8 @@
         modalTitle.innerText = `CREA NUOVA TOP 100`;
         titleInput.value = '';
         idInput.value = '';
-        for (let i = 1; i <= 100; i++) {
-          addRowToEditor(i, '', '');
-        }
+        for (let i = 1; i <= 100; i++) addRowToEditor(i, '', '');
       }
-
       modal.classList.remove('hidden');
     }
 
@@ -372,134 +429,99 @@
       tr.innerHTML = `
         <td class="py-1 px-2 font-black text-amber-400 text-center">#${rank}</td>
         <td class="py-1 px-2">
-          <input type="text" data-rank="${rank}" class="row-name w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1 text-xs font-bold text-white focus:outline-none focus:border-amber-400" value="${name.replace(/"/g, '&quot;')}" placeholder="Titolo/Nome">
+          <input type="text" class="row-name w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1 text-xs font-bold text-white focus:outline-none focus:border-amber-400" value="${name.replace(/"/g, '&quot;')}" placeholder="Titolo/Nome">
         </td>
         <td class="py-1 px-2">
-          <input type="text" data-rank="${rank}" class="row-aliases w-full bg-slate-900/70 border border-slate-800 rounded-lg px-2.5 py-1 text-xs text-slate-300 focus:outline-none focus:border-indigo-400" value="${aliasesText.replace(/"/g, '&quot;')}" placeholder="alias1, alias2, variante...">
+          <input type="text" class="row-aliases w-full bg-slate-900/70 border border-slate-800 rounded-lg px-2.5 py-1 text-xs text-slate-300 focus:outline-none focus:border-indigo-400" value="${aliasesText.replace(/"/g, '&quot;')}" placeholder="alias1, alias2...">
         </td>
       `;
       document.getElementById('editorRowsContainer').appendChild(tr);
     }
 
     function toggleFastPasteBox() {
-      const box = document.getElementById('fastPasteBox');
-      box.classList.toggle('hidden');
+      document.getElementById('fastPasteBox').classList.toggle('hidden');
     }
 
     function applyFastPaste() {
       const text = document.getElementById('fastPasteTextarea').value.trim();
       if (!text) return;
       const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
-
       const nameInputs = document.querySelectorAll('.row-name');
       lines.forEach((line, idx) => {
         if (idx < nameInputs.length) {
-          const cleaned = line.replace(/^\d+[\.\-\)\s]+/, '').replace(/^#\d+[\s]+/, '').trim();
-          nameInputs[idx].value = cleaned;
+          nameInputs[idx].value = line.replace(/^\d+[\.\-\)\s]+/, '').replace(/^#\d+[\s]+/, '').trim();
         }
       });
       toggleFastPasteBox();
     }
 
-    // Algoritmo di Generazione Intelligente di Alias
-    function generateSmartAliasesForItem(name) {
-      if (!name || name.trim().length === 0) return [];
-      const aliases = new Set();
-      const trimmed = name.trim();
-
-      // 1. Rimuove articoli iniziali (it, en)
-      const withoutArticle = trimmed.replace(/^(il|lo|la|i|gli|le|un|uno|una|the|a|an)\s+/i, '');
-      if (withoutArticle.toLowerCase() !== trimmed.toLowerCase()) {
-        aliases.add(withoutArticle);
-      }
-
-      // 2. Separa prima dei due punti o trattini di sottotitolo (es: "Avatar: La via dell'acqua" -> "Avatar", "La via dell'acqua")
-      if (trimmed.includes(':') || trimmed.includes(' - ')) {
-        const parts = trimmed.split(/[:\-]/);
-        if (parts[0] && parts[0].trim().length > 1) aliases.add(parts[0].trim());
-        if (parts[1] && parts[1].trim().length > 1) aliases.add(parts[1].trim());
-      }
-
-      // 3. Conversione Numeri Romani e Arabi comuni (II -> 2, III -> 3, IV -> 4, etc.)
-      const romanMap = {
-        ' II': ' 2', ' III': ' 3', ' IV': ' 4', ' V': ' 5', ' VI': ' 6', ' VII': ' 7', ' VIII': ' 8', ' IX': ' 9', ' X': ' 10',
-        ' 2': ' II', ' 3': ' III', ' 4': ' IV', ' 5': ' V', ' 6': ' VI', ' 7': ' VII', ' 8': ' VIII'
-      };
-      for (const [key, val] of Object.entries(romanMap)) {
-        if (trimmed.endsWith(key)) {
-          aliases.add(trimmed.slice(0, -key.length) + val);
-        }
-      }
-
-      // 4. Rimuove parentesi esplicative (es: "Bohemian Rhapsody (Queen)" -> "Bohemian Rhapsody")
-      if (trimmed.includes('(')) {
-        const cleanParenthesis = trimmed.replace(/\(.*?\)/g, '').trim();
-        if (cleanParenthesis.length > 0) aliases.add(cleanParenthesis);
-      }
-
-      return Array.from(aliases);
-    }
-
     function generateSmartAliasesForAll() {
       const rows = document.querySelectorAll('#editorRowsContainer tr');
       let count = 0;
-
       rows.forEach(tr => {
         const nameInput = tr.querySelector('.row-name');
         const aliasInput = tr.querySelector('.row-aliases');
         const name = nameInput.value.trim();
-
         if (name) {
-          const smartAliases = generateSmartAliasesForItem(name);
-          const currentAliases = aliasInput.value.split(',').map(a => a.trim()).filter(Boolean);
-          const combined = Array.from(new Set([...currentAliases, ...smartAliases]));
-
-          if (combined.length > currentAliases.length) {
-            aliasInput.value = combined.join(', ');
+          const aliases = new Set(aliasInput.value.split(',').map(a => a.trim()).filter(Boolean));
+          const withoutArticle = name.replace(/^(il|lo|la|i|gli|le|un|uno|una|the|a|an)\s+/i, '');
+          if (withoutArticle.toLowerCase() !== name.toLowerCase()) aliases.add(withoutArticle);
+          if (name.includes(':') || name.includes(' - ')) {
+            const parts = name.split(/[:\-]/);
+            if (parts[0]) aliases.add(parts[0].trim());
+          }
+          if (aliases.size > 0) {
+            aliasInput.value = Array.from(aliases).join(', ');
             count++;
           }
         }
       });
+      alert(`✨ Generati e arricchiti alias per ${count} posizioni!`);
+    }
 
-      alert(`✨ Generazione completata! Sono stati arricchiti gli alias per ${count} elementi.`);
+    // Scarica file JSON sul computer/telefono per renderlo permanente su GitHub
+    function downloadJsonFile() {
+      const title = document.getElementById('editorCatTitle').value.trim() || 'Top 100 Custom';
+      const fileId = document.getElementById('editorCatId').value.trim() || title.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      const rows = document.querySelectorAll('#editorRowsContainer tr');
+      const items = [];
+
+      rows.forEach((tr, idx) => {
+        const name = tr.querySelector('.row-name').value.trim();
+        const aliases = tr.querySelector('.row-aliases').value.split(',').map(a => a.trim()).filter(Boolean);
+        if (name) {
+          items.push({ rank: idx + 1, name, aliases });
+        }
+      });
+
+      const jsonStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify({
+        id: fileId,
+        categoryTitle: title,
+        items: items
+      }, null, 2));
+
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", jsonStr);
+      downloadAnchor.setAttribute("download", `${fileId}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
     }
 
     function saveCategoryFromEditor() {
       const title = document.getElementById('editorCatTitle').value.trim();
       const catId = document.getElementById('editorCatId').value.trim();
-
-      if (!title) {
-        alert("Inserisci un titolo per la categoria!");
-        return;
-      }
+      if (!title) return alert("Inserisci un titolo per la categoria!");
 
       const rows = document.querySelectorAll('#editorRowsContainer tr');
       const items = [];
-
       rows.forEach((tr, idx) => {
-        const rank = idx + 1;
         const name = tr.querySelector('.row-name').value.trim();
-        const rawAliases = tr.querySelector('.row-aliases').value.split(',').map(a => a.trim()).filter(Boolean);
-
-        if (name) {
-          items.push({
-            rank: rank,
-            name: name,
-            aliases: rawAliases
-          });
-        }
+        const aliases = tr.querySelector('.row-aliases').value.split(',').map(a => a.trim()).filter(Boolean);
+        if (name) items.push({ rank: idx + 1, name, aliases });
       });
 
-      if (items.length === 0) {
-        alert("Devi inserire almeno un elemento valido!");
-        return;
-      }
-
-      socket.emit('saveCategory', {
-        id: catId || null,
-        title: title,
-        items: items
-      });
+      socket.emit('saveCategory', { id: catId || null, title, items });
     }
 
     socket.on('categorySaveResult', (res) => {
@@ -507,9 +529,7 @@
         alert("💾 Categoria salvata con successo!");
         closeCategoryEditor();
         document.getElementById('categorySelect').value = res.savedId;
-      } else {
-        alert(`Errore: ${res.message}`);
-      }
+      } else alert(`Errore: ${res.message}`);
     });
 
     socket.on('categoriesUpdated', (list) => {
@@ -520,7 +540,7 @@
       document.getElementById('editorModal').classList.add('hidden');
     }
 
-    // Socket.io Events
+    // ================= EVENTI SOCKET.IO =================
     socket.on('initSync', (data) => {
       populateCategoriesDropdown(data.categoriesList, data.gameState.currentCategoryKey);
       applyGameState(data.gameState);
@@ -539,6 +559,12 @@
 
     function applyGameState(data) {
       document.getElementById('categoryDisplay').innerText = data.categoryTitle;
+      document.getElementById('modeBadge').innerText = data.mode === 'TURNS' ? 'MODALITÀ: A TURNI ALTERNATI' : 'MODALITÀ: GARA LIVE (RUSH)';
+      
+      const turnBox = document.getElementById('turnHeaderBox');
+      if (data.mode === 'TURNS') turnBox.classList.remove('hidden');
+      else turnBox.classList.add('hidden');
+
       teams = data.teams;
       renderScoreboard();
       buildGrid();
@@ -546,25 +572,38 @@
         Object.keys(data.revealed).forEach(rank => updateSlotUI(rank, data.revealed[rank]));
       }
       document.getElementById('timerDisplay').innerText = formatTime(data.timer.remaining);
+
+      if (data.activeTeam) updateTurnUI(data.activeTeam);
     }
 
+    function updateTurnUI(activeTeam) {
+      const badge = document.getElementById('activeTeamBadge');
+      document.getElementById('activeTeamIcon').innerText = activeTeam.icon;
+      document.getElementById('activeTeamName').innerText = activeTeam.name;
+      badge.style.backgroundColor = `${activeTeam.color}25`;
+      badge.style.color = activeTeam.color;
+    }
+
+    socket.on('turnChanged', (data) => {
+      updateTurnUI(data.activeTeam);
+      document.getElementById('turnTimerDisplay').innerText = `${data.turnTimer.remaining}s`;
+    });
+
     socket.on('timerTick', (t) => {
-      isTimerRunning = t.isRunning;
-      const display = document.getElementById('timerDisplay');
-      display.innerText = formatTime(t.remaining);
+      isTimerRunning = t.global.isRunning;
+      document.getElementById('timerDisplay').innerText = formatTime(t.global.remaining);
+      
       const toggleBtn = document.getElementById('timerToggleBtn');
-      if (t.isRunning) {
+      if (t.global.isRunning) {
         toggleBtn.innerText = "⏸ Pausa";
         toggleBtn.className = "px-2.5 py-1 rounded-lg bg-amber-600 hover:bg-amber-500 text-xs font-bold transition";
-        display.classList.remove('text-rose-500');
-        display.classList.add('text-amber-400');
       } else {
         toggleBtn.innerText = "▶ Start";
         toggleBtn.className = "px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold transition";
       }
 
-      if (t.remaining <= 30 && t.remaining > 0) {
-        display.classList.add('animate-pulse', 'text-rose-500');
+      if (t.turn) {
+        document.getElementById('turnTimerDisplay').innerText = `${t.turn.remaining}s`;
       }
     });
 
@@ -590,11 +629,11 @@
     function renderLobbyInputs() {
       const cont = document.getElementById('teamsContainer');
       cont.innerHTML = teams.map((t, idx) => `
-        <div class="flex items-center gap-2 bg-slate-950 p-2 rounded-xl border border-slate-800">
-          <span class="text-base">${t.icon}</span>
-          <input type="text" value="${t.name}" onchange="updateTeamName(${idx}, this.value)" class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1 text-xs font-bold text-white">
-          <input type="color" value="${t.color}" onchange="updateTeamColor(${idx}, this.value)" class="w-7 h-7 rounded cursor-pointer bg-transparent border-0">
-          ${teams.length > 2 ? `<button onclick="removeTeamField(${idx})" class="text-rose-400 text-xs p-1">🗑️</button>` : ''}
+        <div class="flex items-center gap-2 bg-slate-950 p-1.5 rounded-xl border border-slate-800">
+          <span class="text-sm">${t.icon}</span>
+          <input type="text" value="${t.name}" onchange="updateTeamName(${idx}, this.value)" class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-2 py-0.5 text-xs font-bold text-white">
+          <input type="color" value="${t.color}" onchange="updateTeamColor(${idx}, this.value)" class="w-6 h-6 rounded cursor-pointer bg-transparent border-0">
+          ${teams.length > 2 ? `<button onclick="removeTeamField(\${idx})" class="text-rose-400 text-xs p-1">🗑️</button>` : ''}
         </div>
       `).join('');
     }
@@ -627,7 +666,9 @@
       socket.emit('startGameWithConfig', {
         categoryKey: catKey,
         teams: teams,
-        duration: selectedSeconds
+        duration: selectedSeconds,
+        mode: selectedMode,
+        turnDuration: selectedTurnDuration
       });
       document.getElementById('lobbyModal').classList.add('hidden');
     }

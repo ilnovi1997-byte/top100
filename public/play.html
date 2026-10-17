@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>TOP 100 - Controller Giocatore</title>
+  <title>TOP 100 - Controller</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -12,38 +12,36 @@
 </head>
 <body class="bg-slate-950 text-white min-h-screen flex flex-col p-4 justify-between">
 
-  <!-- SCHERMATA 1: INSERIMENTO NOME PER LA SALA D'ATTESA -->
+  <!-- ENTRATA IN LOBBY -->
   <div id="joinScreen" class="flex-1 flex flex-col justify-center max-w-sm mx-auto w-full">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 text-center shadow-2xl">
       <div class="text-3xl mb-2">👋</div>
       <h1 class="text-xl font-black mb-1">Entra in Partita</h1>
-      <p class="text-xs text-slate-400 mb-5">Inserisci il tuo nome. L'Host ti assegnerà casualmente a una squadra!</p>
-
-      <input type="text" id="nameInput" placeholder="Il tuo nome (es: Luca)" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm font-bold text-white text-center mb-4 focus:outline-none focus:border-indigo-500">
-
+      <p class="text-xs text-slate-400 mb-5">Inserisci il tuo nome per partecipare</p>
+      <input type="text" id="nameInput" placeholder="Tuo Nome (es: Marco)" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm font-bold text-white text-center mb-4 focus:outline-none focus:border-indigo-500">
       <button onclick="joinLobby()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-indigo-500 to-rose-500 font-black text-sm active:scale-95 transition shadow-lg shadow-indigo-500/25">
         ENTRA IN STANZA 🚀
       </button>
     </div>
   </div>
 
-  <!-- SCHERMATA 2: ATTESA DEL VIA DALL'HOST -->
+  <!-- SALA D'ATTESA -->
   <div id="waitingScreen" class="hidden flex-1 flex flex-col justify-center items-center text-center max-w-sm mx-auto w-full">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl w-full">
       <div class="animate-spin text-3xl mb-3">⏳</div>
       <h2 class="text-lg font-black mb-1">Sei in sala d'attesa!</h2>
       <p id="playerNameDisplay" class="text-sm font-bold text-indigo-400 mb-3">Nome</p>
       <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs text-slate-400">
-        Guarda lo schermo principale: non appena l'Host preme <strong>"Mescola & Avvia"</strong>, scoprirai la tua squadra!
+        In attesa che l'Host avvii la partita dallo schermo principale...
       </div>
     </div>
   </div>
 
-  <!-- SCHERMATA 3: CONTROLLER DI GIOCO ATTIVO -->
+  <!-- CONTROLLER ATTIVO -->
   <div id="gameScreen" class="hidden flex-1 flex flex-col justify-between max-w-md mx-auto w-full">
     <div>
-      <!-- BADGE SQUADRA ASSEGNATA + TIMER -->
-      <div class="flex items-center justify-between bg-slate-900 border border-slate-800 rounded-2xl px-4 py-3 mb-3 shadow-lg">
+      <!-- HEADER SMARTPHONE: SQUADRA + TIMER GLOBALE -->
+      <div class="flex items-center justify-between bg-slate-900 border border-slate-800 rounded-2xl px-4 py-3 mb-2 shadow-lg">
         <div class="flex items-center gap-2">
           <span id="myTeamIcon" class="text-xl">🔥</span>
           <div>
@@ -52,16 +50,23 @@
           </div>
         </div>
         <div class="text-right">
-          <div class="text-[9px] font-bold text-slate-400 uppercase leading-none">TEMPO</div>
+          <div class="text-[9px] font-bold text-slate-400 uppercase leading-none">TEMPO ROUND</div>
           <div id="phoneTimer" class="text-lg font-black font-mono text-amber-400">05:00</div>
         </div>
+      </div>
+
+      <!-- BANNER TURNO ATTIVO (Se modalità a turni) -->
+      <div id="phoneTurnBanner" class="hidden mb-3 p-2.5 rounded-2xl border text-center transition">
+        <div class="text-[10px] uppercase font-bold text-slate-400">STATO TURNO</div>
+        <div id="phoneTurnStatusText" class="text-sm font-black mt-0.5">È IL TUO TURNO!</div>
+        <div id="phoneTurnTimerText" class="text-xs font-mono font-bold text-amber-400 mt-0.5">Tempo rimanente: 30s</div>
       </div>
 
       <!-- AREA DIGITAZIONE -->
       <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5 shadow-2xl flex flex-col gap-3">
         <div class="text-center">
           <h2 id="catTitlePhone" class="text-xs font-black uppercase text-amber-400">TOP 100</h2>
-          <p class="text-[11px] text-slate-400">Digita la parola prima delle altre squadre!</p>
+          <p id="subInstruction" class="text-[11px] text-slate-400">Indovina una posizione della classifica!</p>
         </div>
 
         <input type="text" id="guessInput" placeholder="Scrivi qui la risposta..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="w-full bg-slate-950 border-2 border-slate-800 focus:border-indigo-500 rounded-xl px-4 py-3 text-sm font-bold text-white placeholder-slate-600 focus:outline-none transition">
@@ -74,7 +79,7 @@
       </div>
     </div>
 
-    <!-- CRONOLOGIA RISPOSTE DELLA PROPRIA SQUADRA -->
+    <!-- CRONOLOGIA PERSONALE SQUADRA -->
     <div class="mt-3 bg-slate-900/60 border border-slate-800 rounded-2xl p-3">
       <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Ultime prese dalla tua squadra</div>
       <div id="teamHistory" class="space-y-1 text-xs text-slate-300">
@@ -87,6 +92,8 @@
     const socket = io();
     let myPlayer = null;
     let myAssignedTeam = null;
+    let currentMode = 'RUSH';
+    let isMyTurn = true;
 
     function joinLobby() {
       const name = document.getElementById('nameInput').value.trim();
@@ -105,14 +112,14 @@
       document.getElementById('playerNameDisplay').innerText = `Giocatore: ${player.name}`;
     });
 
-    // Ricezione assegnazione squadra casuale e avvio interfaccia di gioco
     socket.on('assignedTeam', (data) => {
       myAssignedTeam = data.team;
+      currentMode = data.gameState.mode;
+
       document.getElementById('waitingScreen').classList.add('hidden');
       document.getElementById('joinScreen').classList.add('hidden');
       document.getElementById('gameScreen').classList.remove('hidden');
 
-      // Imposta badge squadra e colore
       document.getElementById('myTeamIcon').innerText = myAssignedTeam.icon;
       const teamNameEl = document.getElementById('myTeamName');
       teamNameEl.innerText = myAssignedTeam.name;
@@ -120,7 +127,62 @@
 
       document.getElementById('catTitlePhone').innerText = data.gameState.categoryTitle;
 
+      if (currentMode === 'TURNS') {
+        document.getElementById('phoneTurnBanner').classList.remove('hidden');
+        checkMyTurn(data.activeTeam);
+      } else {
+        document.getElementById('phoneTurnBanner').classList.add('hidden');
+        enableInput();
+      }
+
       confetti({ particleCount: 70, spread: 60, origin: { y: 0.7 } });
+    });
+
+    function checkMyTurn(activeTeam) {
+      if (!myAssignedTeam) return;
+      const banner = document.getElementById('phoneTurnBanner');
+      const statusText = document.getElementById('phoneTurnStatusText');
+
+      if (activeTeam.id === myAssignedTeam.id) {
+        isMyTurn = true;
+        banner.className = "mb-3 p-2.5 rounded-2xl border border-emerald-500 bg-emerald-500/20 text-center";
+        statusText.innerText = "🟢 È IL TURNO DELLA TUA SQUADRA!";
+        statusText.className = "text-sm font-black text-emerald-400";
+        enableInput();
+      } else {
+        isMyTurn = false;
+        banner.className = "mb-3 p-2.5 rounded-2xl border border-slate-800 bg-slate-900/80 text-center";
+        statusText.innerText = `⏳ Turno avversario: ${activeTeam.name}`;
+        statusText.className = "text-sm font-black text-slate-400";
+        disableInput();
+      }
+    }
+
+    function enableInput() {
+      const input = document.getElementById('guessInput');
+      const btn = document.getElementById('sendBtn');
+      input.disabled = false;
+      input.placeholder = "Scrivi qui la risposta...";
+      btn.disabled = false;
+      btn.classList.remove('opacity-40', 'cursor-not-allowed');
+    }
+
+    function disableInput() {
+      const input = document.getElementById('guessInput');
+      const btn = document.getElementById('sendBtn');
+      input.disabled = true;
+      input.placeholder = "Aspetta il tuo turno...";
+      btn.disabled = true;
+      btn.classList.add('opacity-40', 'cursor-not-allowed');
+    }
+
+    socket.on('turnChanged', (data) => {
+      if (currentMode === 'TURNS') {
+        checkMyTurn(data.activeTeam);
+        if (data.reason) {
+          showStatus(data.reason, "bg-indigo-500/20 text-indigo-300 border border-indigo-500/30");
+        }
+      }
     });
 
     function formatTime(s) {
@@ -131,28 +193,30 @@
 
     socket.on('timerTick', (t) => {
       const pt = document.getElementById('phoneTimer');
-      if (pt) {
-        pt.innerText = formatTime(t.remaining);
-        if (t.remaining <= 30 && t.remaining > 0) pt.classList.add('text-rose-500');
-        else pt.classList.remove('text-rose-500');
+      if (pt) pt.innerText = formatTime(t.global.remaining);
+
+      if (t.turn && currentMode === 'TURNS') {
+        document.getElementById('phoneTurnTimerText').innerText = `Tempo rimanente turno: ${t.turn.remaining}s`;
       }
     });
 
     socket.on('timerExpired', () => {
-      const pt = document.getElementById('phoneTimer');
-      if (pt) pt.innerText = "STOP!";
-      showStatus("⏳ Tempo scaduto! Round terminato.", "bg-rose-500/20 text-rose-400 border border-rose-500/30");
+      document.getElementById('phoneTimer').innerText = "STOP!";
+      showStatus("⏳ Tempo scaduto! Partita terminata.", "bg-rose-500/20 text-rose-400 border border-rose-500/30");
+      disableInput();
     });
 
     function sendGuess() {
+      if (currentMode === 'TURNS' && !isMyTurn) {
+        showStatus("Aspetta il tuo turno!", "bg-rose-500/20 text-rose-400 border border-rose-500/30");
+        return;
+      }
+
       const input = document.getElementById('guessInput');
       const val = input.value.trim();
       if (!val) return;
 
-      socket.emit('submitGuess', {
-        guess: val
-      });
-
+      socket.emit('submitGuess', { guess: val });
       input.value = '';
     }
 
@@ -188,7 +252,7 @@
       if (h.innerHTML.includes('Nessuna risposta')) h.innerHTML = '';
       const div = document.createElement('div');
       div.className = "flex items-center justify-between bg-slate-950 p-1.5 rounded-lg border border-slate-800 text-[11px]";
-      div.innerHTML = `<span><strong>#${rank}</strong> ${title} <span class="text-slate-500">(${player})</span></span><span class="text-emerald-400 font-bold">+${pts}pt</span>`;
+      div.innerHTML = `<span><strong>#${rank}</strong> ${title}</span><span class="text-emerald-400 font-bold">+${pts}pt</span>`;
       h.prepend(div);
     }
   </script>
