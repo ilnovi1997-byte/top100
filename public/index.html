@@ -229,9 +229,8 @@
 
     <div id="scoreboardDisplay" class="flex items-center gap-3"></div>
 
-    <!-- TASTI AZIONE HOST: INIZIALI, FULLSCREEN, OPZIONI -->
+    <!-- TASTI AZIONE HOST -->
     <div class="flex items-center gap-2">
-      <!-- PULSANTE TOGGLE INIZIALI -->
       <button id="initialsBtn" onclick="toggleInitials()" class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 hover:border-amber-400 text-xs font-bold text-slate-300 transition flex items-center gap-1.5">
         <span>💡 Iniziali</span>
         <span id="initialsStatusBadge" class="text-[9px] bg-slate-900 px-1 rounded text-slate-400">OFF</span>
@@ -333,7 +332,6 @@
       });
     }
 
-    // Costruisce la griglia 10x10 tenendo conto di caselle scoperte e delle iniziali
     function buildGrid() {
       const container = document.getElementById('gridContainer');
       container.innerHTML = '';
@@ -352,22 +350,23 @@
       }
     }
 
+    // MOSTRA SOLO LA LETTERA INIZIALE PULITA
     function renderCoveredSlot(el, rank) {
       const initial = initialsMap[rank];
       const hasInitial = isShowingInitials && initial;
 
-      el.style.borderColor = hasInitial ? '#f59e0b55' : '#1e293b';
-      el.style.backgroundColor = hasInitial ? '#78350f15' : 'rgba(15, 23, 42, 0.8)';
+      el.style.borderColor = hasInitial ? '#f59e0b66' : '#1e293b';
+      el.style.backgroundColor = hasInitial ? '#78350f20' : 'rgba(15, 23, 42, 0.8)';
 
       el.innerHTML = `
         <div class="flex items-center justify-between text-[10px] font-black ${hasInitial ? 'text-amber-400' : 'text-slate-500'}">
           <span>#${rank}</span>
           <span class="text-[8px] opacity-40">${rank}pt</span>
         </div>
-        <div class="font-bold text-[10px] leading-tight truncate px-0.5 ${hasInitial ? 'text-amber-300 font-mono font-black tracking-wider' : 'text-slate-400'}">
-          ${hasInitial ? `[ ${initial}... ]` : '???'}
+        <div class="font-black text-sm leading-tight text-center truncate px-0.5 ${hasInitial ? 'text-amber-300 font-mono tracking-wider' : 'text-slate-500 text-xs'}">
+          ${hasInitial ? initial : '???'}
         </div>
-        <div class="h-0.5 rounded-full ${hasInitial ? 'bg-amber-500/50' : 'bg-slate-800'}"></div>
+        <div class="h-0.5 rounded-full ${hasInitial ? 'bg-amber-500/60' : 'bg-slate-800'}"></div>
       `;
     }
 
@@ -390,7 +389,6 @@
       renderRevealedSlot(el, rank, info);
     }
 
-    // Toggle Iniziali da parte dell'Host
     function toggleInitials() {
       socket.emit('toggleInitials');
     }
@@ -728,7 +726,7 @@
     socket.on('boardUpdated', (payload) => {
       teams = payload.teams;
       revealed[payload.rank] = payload.data;
-      delete initialsMap[payload.rank]; // Rimuove l'iniziale poiché la posizione è stata rivelata
+      delete initialsMap[payload.rank];
       renderScoreboard();
       updateSlotUI(payload.rank, payload.data);
 
