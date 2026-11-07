@@ -12,7 +12,7 @@
 </head>
 <body class="bg-slate-950 text-white min-h-screen flex flex-col p-4 justify-between">
 
-  <!-- SCHERMATA 1: INSERIMENTO NOME PER LA SALA D'ATTESA -->
+  <!-- ENTRATA IN LOBBY -->
   <div id="joinScreen" class="flex-1 flex flex-col justify-center max-w-sm mx-auto w-full">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 text-center shadow-2xl">
       <div class="text-3xl mb-2">👋</div>
@@ -27,14 +27,13 @@
     </div>
   </div>
 
-  <!-- SCHERMATA 2: SALA D'ATTESA (HOST ASSEGNA LA SQUADRA O MESCOLA) -->
+  <!-- SALA D'ATTESA -->
   <div id="waitingScreen" class="hidden flex-1 flex flex-col justify-center items-center text-center max-w-sm mx-auto w-full">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl w-full">
       <div class="animate-spin text-3xl mb-3">⏳</div>
       <h2 class="text-lg font-black mb-1">Sei in sala d'attesa!</h2>
       <p id="playerNameDisplay" class="text-sm font-bold text-indigo-400 mb-3">Nome</p>
       
-      <!-- Preview squadra se l'host assegna prima del via -->
       <div id="preAssignedBadge" class="hidden mb-3 p-2.5 rounded-xl border text-xs font-bold transition">
         <span>Assegnato a: </span>
         <span id="preAssignedName">Squadra</span>
@@ -46,32 +45,45 @@
     </div>
   </div>
 
-  <!-- SCHERMATA 3: CONTROLLER DI GIOCO ATTIVO -->
+  <!-- CONTROLLER DI GIOCO ATTIVO -->
   <div id="gameScreen" class="hidden flex-1 flex flex-col justify-between max-w-md mx-auto w-full">
     <div>
-      <!-- HEADER SMARTPHONE: SQUADRA ASSEGNATA + TIMER GLOBALE -->
-      <div class="flex items-center justify-between bg-slate-900 border border-slate-800 rounded-2xl px-4 py-3 mb-2 shadow-lg">
-        <div class="flex items-center gap-2">
-          <span id="myTeamIcon" class="text-xl">🔥</span>
-          <div>
-            <div class="text-[9px] font-bold text-slate-400 uppercase leading-none">LA TUA SQUADRA</div>
-            <div id="myTeamName" class="text-xs font-black leading-tight text-white">Squadra Rossa</div>
+      <!-- HEADER CON SQUADRA, PUNTEGGIO PERSONALE E TIMER -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl px-4 py-2.5 mb-2 shadow-lg">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-2 mb-2">
+          <div class="flex items-center gap-2">
+            <span id="myTeamIcon" class="text-xl">🔥</span>
+            <div>
+              <div class="text-[9px] font-bold text-slate-400 uppercase leading-none">LA TUA SQUADRA</div>
+              <div id="myTeamName" class="text-xs font-black leading-tight text-white">Squadra Rossa</div>
+            </div>
+          </div>
+          <div class="text-right">
+            <div class="text-[9px] font-bold text-slate-400 uppercase leading-none">TEMPO ROUND</div>
+            <div id="phoneTimer" class="text-base font-black font-mono text-amber-400">05:00</div>
           </div>
         </div>
-        <div class="text-right">
-          <div class="text-[9px] font-bold text-slate-400 uppercase leading-none">TEMPO ROUND</div>
-          <div id="phoneTimer" class="text-lg font-black font-mono text-amber-400">05:00</div>
+
+        <!-- Box punteggio personale del giocatore -->
+        <div class="flex items-center justify-between text-xs font-bold bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800">
+          <span class="text-slate-400 flex items-center gap-1.5">
+            <span>👤</span>
+            <span id="phonePlayerName">Giocatore</span>
+          </span>
+          <span class="text-amber-400 font-black">
+            I tuoi punti: <span id="myPersonalScore" class="text-white text-sm">0</span> pt
+          </span>
         </div>
       </div>
 
-      <!-- BANNER STATO TURNO (SOLO MODALITÀ A TURNI) -->
-      <div id="phoneTurnBanner" class="hidden mb-3 p-2.5 rounded-2xl border text-center transition">
+      <!-- BANNER TURNO ATTIVO -->
+      <div id="phoneTurnBanner" class="hidden mb-2.5 p-2 rounded-2xl border text-center transition">
         <div class="text-[10px] uppercase font-bold text-slate-400">STATO TURNO</div>
         <div id="phoneTurnStatusText" class="text-sm font-black mt-0.5">È IL TUO TURNO!</div>
         <div id="phoneTurnTimerText" class="text-xs font-mono font-bold text-amber-400 mt-0.5">Tempo rimanente: 30s</div>
       </div>
 
-      <!-- AREA DIGITAZIONE RISPOSTA -->
+      <!-- AREA DIGITAZIONE -->
       <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5 shadow-2xl flex flex-col gap-3">
         <div class="text-center">
           <h2 id="catTitlePhone" class="text-xs font-black uppercase text-amber-400">TOP 100</h2>
@@ -88,7 +100,7 @@
       </div>
     </div>
 
-    <!-- CRONOLOGIA DELLE RISPOSTE DELLA PROPRIA SQUADRA -->
+    <!-- CRONOLOGIA DELLA PROPRIA SQUADRA -->
     <div class="mt-3 bg-slate-900/60 border border-slate-800 rounded-2xl p-3">
       <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Ultime prese dalla tua squadra</div>
       <div id="teamHistory" class="space-y-1 text-xs text-slate-300">
@@ -101,6 +113,7 @@
     const socket = io();
     let myPlayer = null;
     let myAssignedTeam = null;
+    let myScore = 0;
     let currentMode = 'RUSH';
     let isMyTurn = true;
 
@@ -116,12 +129,14 @@
 
     socket.on('joinedSuccess', (player) => {
       myPlayer = player;
+      myScore = player.score || 0;
       document.getElementById('joinScreen').classList.add('hidden');
       document.getElementById('waitingScreen').classList.remove('hidden');
       document.getElementById('playerNameDisplay').innerText = `Giocatore: ${player.name}`;
+      document.getElementById('phonePlayerName').innerText = player.name;
+      document.getElementById('myPersonalScore').innerText = myScore;
     });
 
-    // Se l'host assegna o sposta manualmente il giocatore mentre è in attesa o in gioco
     socket.on('teamAssignmentChanged', (team) => {
       myAssignedTeam = team;
       const preBadge = document.getElementById('preAssignedBadge');
@@ -134,7 +149,6 @@
         preBadge.style.color = team.color;
         preName.innerText = `${team.icon} ${team.name}`;
 
-        // Se la partita è già avviata, aggiorna anche la schermata di gioco
         document.getElementById('myTeamIcon').innerText = team.icon;
         const teamNameEl = document.getElementById('myTeamName');
         teamNameEl.innerText = team.name;
@@ -144,10 +158,10 @@
       }
     });
 
-    // Avvio effettivo della partita da parte dell'Host
     socket.on('assignedTeam', (data) => {
       myAssignedTeam = data.team;
       currentMode = data.gameState.mode;
+      myScore = data.playerScore || 0;
 
       document.getElementById('waitingScreen').classList.add('hidden');
       document.getElementById('joinScreen').classList.add('hidden');
@@ -160,6 +174,7 @@
         teamNameEl.style.color = myAssignedTeam.color;
       }
 
+      document.getElementById('myPersonalScore').innerText = myScore;
       document.getElementById('catTitlePhone').innerText = data.gameState.categoryTitle;
 
       if (currentMode === 'TURNS') {
@@ -180,13 +195,13 @@
 
       if (activeTeam.id === myAssignedTeam.id) {
         isMyTurn = true;
-        banner.className = "mb-3 p-2.5 rounded-2xl border border-emerald-500 bg-emerald-500/20 text-center";
+        banner.className = "mb-2.5 p-2 rounded-2xl border border-emerald-500 bg-emerald-500/20 text-center";
         statusText.innerText = "🟢 È IL TURNO DELLA TUA SQUADRA!";
         statusText.className = "text-sm font-black text-emerald-400";
         enableInput();
       } else {
         isMyTurn = false;
-        banner.className = "mb-3 p-2.5 rounded-2xl border border-slate-800 bg-slate-900/80 text-center";
+        banner.className = "mb-2.5 p-2 rounded-2xl border border-slate-800 bg-slate-900/80 text-center";
         statusText.innerText = `⏳ Turno avversario: ${activeTeam.name}`;
         statusText.className = "text-sm font-black text-slate-400";
         disableInput();
@@ -262,6 +277,10 @@
 
     socket.on('guessResult', (res) => {
       if (res.status === 'CORRECT') {
+        if (res.playerScore !== undefined) {
+          myScore = res.playerScore;
+          document.getElementById('myPersonalScore').innerText = myScore;
+        }
         showStatus(res.message, 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30');
       } else if (res.status === 'ALREADY_CLAIMED') {
         showStatus(res.message, 'bg-amber-500/20 text-amber-400 border border-amber-500/30');
@@ -271,6 +290,14 @@
     });
 
     socket.on('boardUpdated', (payload) => {
+      if (payload.playersList) {
+        const me = payload.playersList.find(p => p.socketId === socket.id);
+        if (me && me.score !== undefined) {
+          myScore = me.score;
+          document.getElementById('myPersonalScore').innerText = myScore;
+        }
+      }
+
       if (myAssignedTeam && payload.data.teamId === myAssignedTeam.id) {
         addHistoryItem(payload.rank, payload.data.itemName, payload.data.points, payload.data.playerName);
       }

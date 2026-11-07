@@ -41,7 +41,7 @@ function loadAllCategories() {
 
 let availableCategories = loadAllCategories();
 let currentCategoryKey = Object.keys(availableCategories)[0] || null;
-let connectedPlayers = {}; // socketId -> { socketId, name, teamId }
+let connectedPlayers = {}; // socketId -> { socketId, name, teamId, score }
 
 let gameState = {
   status: "LOBBY",
@@ -215,20 +215,17 @@ io.on("connection", (socket) => {
       socketId: socket.id,
       name: cleanName,
       teamId: null,
+      score: 0,
     };
     io.emit("playersListUpdated", Object.values(connectedPlayers));
     socket.emit("joinedSuccess", connectedPlayers[socket.id]);
   });
 
-  // Assegnazione manuale di un singolo giocatore a una squadra
   socket.on("assignPlayerToTeam", ({ socketId, teamId }) => {
     if (connectedPlayers[socketId]) {
       connectedPlayers[socketId].teamId = teamId || null;
-
-      // Notifica al giocatore la sua squadra aggiornata
       const targetTeam = gameState.teams.find((t) => t.id === teamId);
       io.to(socketId).emit("teamAssignmentChanged", targetTeam || null);
-
       io.emit("playersListUpdated", Object.values(connectedPlayers));
     }
   });
@@ -304,7 +301,6 @@ io.on("connection", (socket) => {
     });
   });
 
-  // Avvio partita con supporto sia per assegnazione manuale che shuffle
   socket.on("startGameWithConfig", (config) => {
     const { categoryKey, teams, duration, mode, turnDuration, shuffleTeams } =
       config;
@@ -320,14 +316,14 @@ io.on("connection", (socket) => {
     let finalTeams = teams.map((t) => ({ ...t, score: 0, members: [] }));
     const playersArray = Object.values(connectedPlayers);
 
+    // Reset punteggi individuali dei giocatori
+    playersArray.forEach((p) => (p.score = 0));
+
     if (shuffleTeams) {
-      // Se l'host ha scelto il mescolamento automatico
       finalTeams = distributePlayersRandomly(playersArray, finalTeams);
     } else {
-      // Usa le assegnazioni manuali impostate dall'Host
       playersArray.forEach((p) => {
         let team = finalTeams.find((t) => t.id === p.teamId);
-        // Se qualcuno non era stato assegnato, assegnalo alla squadra con meno membri
         if (!team) {
           finalTeams.sort((a, b) => a.members.length - b.members.length);
           team = finalTeams[0];
@@ -359,6 +355,7 @@ io.on("connection", (socket) => {
         team: assignedTeam,
         gameState,
         activeTeam: getActiveTeam(),
+        playerScore: p.score,
       });
     });
 
@@ -463,11 +460,17 @@ io.on("connection", (socket) => {
     const teamObj = gameState.teams.find((t) => t.id === teamId);
     if (teamObj) teamObj.score += points;
 
+    // Assegna i punti al singolo giocatore
+    if (player) {
+      player.score = (player.score || 0) + points;
+    }
+
     gameState.revealed[matched.rank] = {
       teamId,
       teamColor: teamObj ? teamObj.color : "#6366f1",
       teamName: teamObj ? teamObj.name : "Squadra",
       playerName: playerName || "Anonimo",
+      playerSocketId: socket.id,
       itemName: matched.name,
       points,
     };
@@ -476,13 +479,16 @@ io.on("connection", (socket) => {
       status: "CORRECT",
       rank: matched.rank,
       points,
+      playerScore: player ? player.score : points,
       message: `🎉 Preso! Posizione #${matched.rank} (+${points} pt)`,
     });
 
+    // Notifica a tutti i dispositivi i tabelloni aggiornati, i punteggi squadra e la classifica giocatori
     io.emit("boardUpdated", {
       rank: matched.rank,
       data: gameState.revealed[matched.rank],
       teams: gameState.teams,
+      playersList: Object.values(connectedPlayers),
     });
 
     if (gameState.mode === "TURNS") {
