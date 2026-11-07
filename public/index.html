@@ -12,21 +12,39 @@
   <style>
     body { font-family: 'Montserrat', sans-serif; }
     .slot-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    @keyframes floatEmoji {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.4); opacity: 0; }
+    }
+    .emoji-floater {
+      position: fixed;
+      bottom: -40px;
+      font-size: 38px;
+      pointer-events: none;
+      z-index: 60;
+      animation: floatEmoji 3.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+    .frenzy-active {
+      box-shadow: inset 0 0 45px rgba(239, 68, 68, 0.45);
+      border-color: #ef4444 !important;
+    }
   </style>
 </head>
-<body class="bg-slate-950 text-white min-h-screen flex flex-col justify-between overflow-x-hidden select-none">
+<body id="tvBody" class="bg-slate-950 text-white min-h-screen flex flex-col justify-between overflow-x-hidden select-none transition-all duration-500">
 
-  <!-- MODAL PRINCIPALE: CONFIGURA PARTITA -->
+  <!-- CONTENITORE EMOJI REAZIONI LIVE -->
+  <div id="emojiContainer" class="fixed inset-0 pointer-events-none z-50 overflow-hidden"></div>
+
+  <!-- MODAL PRINCIPALE: CONFIGURA PARTITA & CHICCHE -->
   <div id="lobbyModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-40 flex items-center justify-center p-4 overflow-y-auto">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 lg:p-8 max-w-6xl w-full shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-6 my-auto">
       
-      <!-- COLONNA QR CODE & GIOCATORI CONNESSI -->
+      <!-- QR CODE & PARTECIPANTI -->
       <div class="lg:col-span-4 flex flex-col justify-between bg-slate-950/80 p-5 rounded-2xl border border-slate-800">
         <div class="text-center">
           <span class="text-[10px] font-black uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full mb-2 inline-block">Accedi dal Telefono</span>
           <h2 class="text-lg font-black mb-1">INQUADRA PER ENTRARE</h2>
           <p class="text-xs text-slate-400 mb-3">Tutti i partecipanti compariranno qui</p>
-
           <div id="lobbyQrcode" class="flex justify-center bg-white p-2.5 rounded-2xl mx-auto shadow-xl mb-3"></div>
           <div id="lobbyPhoneUrl" class="text-[11px] font-mono text-indigo-400 break-all mb-3"></div>
         </div>
@@ -42,25 +60,21 @@
         </div>
       </div>
 
-      <!-- COLONNA IMPOSTAZIONI & GESTIONE SQUADRE -->
+      <!-- IMPOSTAZIONI, REGOLE & CHICCHE -->
       <div class="lg:col-span-8 flex flex-col justify-between space-y-3">
         <div>
           <div class="mb-2">
             <h1 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-500 to-indigo-500">CONFIGURA PARTITA</h1>
-            <p class="text-slate-400 text-xs">Assegna manualmente i membri o mescola casualmente</p>
+            <p class="text-slate-400 text-xs">Imposta le modalità e attiva le chicche per lo show</p>
           </div>
 
-          <!-- MODALITÀ & TEMPI -->
+          <!-- MODALITÀ E TEMPI -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
             <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
               <label class="text-[10px] font-bold text-slate-400 block mb-1 uppercase tracking-wider">🎮 Modalità</label>
               <div class="grid grid-cols-2 gap-1.5">
-                <button id="modeRushBtn" onclick="setGameMode('RUSH')" class="py-1.5 px-2 rounded-lg border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-xs text-left">
-                  ⚡ Gara Live
-                </button>
-                <button id="modeTurnsBtn" onclick="setGameMode('TURNS')" class="py-1.5 px-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500">
-                  🔄 A Turni
-                </button>
+                <button id="modeRushBtn" onclick="setGameMode('RUSH')" class="py-1.5 px-2 rounded-lg border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-xs text-left">⚡ Gara Live</button>
+                <button id="modeTurnsBtn" onclick="setGameMode('TURNS')" class="py-1.5 px-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500">🔄 A Turni</button>
               </div>
             </div>
 
@@ -102,6 +116,37 @@
             </div>
           </div>
 
+          <!-- SELETTORE CHICCHE (LE 6 PROPOSTE ATTIVABILI) -->
+          <div class="bg-slate-950 p-2.5 rounded-xl border border-amber-500/30 mb-2">
+            <label class="text-[10px] font-black text-amber-400 block mb-1.5 uppercase tracking-wider">✨ Seleziona Chicche di Gioco (ON/OFF)</label>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+                <input type="checkbox" id="chkEmoji" checked class="w-3.5 h-3.5 accent-amber-500">
+                <span>💬 Reazioni Emoji TV</span>
+              </label>
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+                <input type="checkbox" id="chkSpecial" checked class="w-3.5 h-3.5 accent-amber-500">
+                <span>✨ Slot Oro & 💣 Bomba</span>
+              </label>
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+                <input type="checkbox" id="chkFastFlip" checked class="w-3.5 h-3.5 accent-amber-500">
+                <span>🔄 Fast Flip Finale</span>
+              </label>
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+                <input type="checkbox" id="chkHaptics" checked class="w-3.5 h-3.5 accent-amber-500">
+                <span>📳 Vibrazione Aptica</span>
+              </label>
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+                <input type="checkbox" id="chkAwards" checked class="w-3.5 h-3.5 accent-amber-500">
+                <span>🎖️ Pagelle & Titoli</span>
+              </label>
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+                <input type="checkbox" id="chkFrenzy" checked class="w-3.5 h-3.5 accent-amber-500">
+                <span>🚨 Frenzy Last 60s (x2)</span>
+              </label>
+            </div>
+          </div>
+
           <!-- Categoria -->
           <div class="bg-slate-950 p-2 rounded-xl border border-slate-800 mb-2">
             <div class="flex items-center justify-between mb-1">
@@ -121,12 +166,12 @@
               <label class="text-[11px] font-bold text-slate-300 uppercase tracking-wider">👥 Squadre & Membri Assegnati</label>
               <button onclick="addTeamField()" class="text-xs text-indigo-400 font-bold hover:underline">➕ Aggiungi Squadra</button>
             </div>
-            <div id="teamsContainer" class="space-y-2.5 max-h-48 overflow-y-auto pr-1"></div>
+            <div id="teamsContainer" class="space-y-2 max-h-36 overflow-y-auto pr-1"></div>
           </div>
         </div>
 
         <!-- PULSANTI DI AVVIO -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
           <button onclick="confirmAndStart(false)" class="w-full py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 text-white font-black text-sm shadow-xl shadow-emerald-500/25 active:scale-98 transition flex items-center justify-center gap-1.5">
             <span>AVVIA CON QUESTE SQUADRE 🚀</span>
           </button>
@@ -136,6 +181,28 @@
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <!-- MODAL: PAGELLE & TITOLI IRONICI -->
+  <div id="awardsModal" class="fixed inset-0 bg-slate-950/95 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-lg w-full shadow-2xl flex flex-col">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">🎖️</span>
+          <div>
+            <h2 class="text-lg font-black text-amber-400">PAGELLE DI FINE PARTITA</h2>
+            <p class="text-[11px] text-slate-400">I riconoscimenti ufficiali del salotto</p>
+          </div>
+        </div>
+        <button onclick="closeAwardsModal()" class="text-slate-400 hover:text-white font-bold text-xl px-2">✕</button>
+      </div>
+
+      <div id="awardsContainer" class="space-y-2.5 my-2"></div>
+
+      <div class="pt-3 border-t border-slate-800 mt-2">
+        <button onclick="closeAwardsModal()" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">Chiudi</button>
+      </div>
     </div>
   </div>
 
@@ -153,9 +220,7 @@
         <button onclick="closePlayersLeaderboard()" class="text-slate-400 hover:text-white font-bold text-xl px-2">✕</button>
       </div>
 
-      <div id="playersLeaderboardList" class="flex-1 overflow-y-auto space-y-2 pr-1">
-        <!-- Generato dinamicamente -->
-      </div>
+      <div id="playersLeaderboardList" class="flex-1 overflow-y-auto space-y-2 pr-1"></div>
 
       <div class="pt-3 border-t border-slate-800 mt-2">
         <button onclick="closePlayersLeaderboard()" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">Chiudi</button>
@@ -230,7 +295,10 @@
       <div class="h-6 w-px bg-slate-800"></div>
       <div>
         <div id="categoryDisplay" class="text-xs font-semibold text-amber-300">Caricamento Categoria...</div>
-        <div id="modeBadge" class="text-[9px] font-black uppercase text-indigo-400">MODALITÀ: GARA LIVE</div>
+        <div class="flex items-center gap-2">
+          <span id="modeBadge" class="text-[9px] font-black uppercase text-indigo-400">MODALITÀ: GARA LIVE</span>
+          <span id="frenzyBadge" class="hidden text-[9px] font-black uppercase bg-rose-600 text-white px-1.5 py-0.2 rounded animate-pulse">🚨 FRENZY x2</span>
+        </div>
       </div>
     </div>
 
@@ -256,9 +324,13 @@
 
     <div id="scoreboardDisplay" class="flex items-center gap-3"></div>
 
-    <!-- TASTI AZIONE HOST: CLASSIFICA GIOCATORI, INIZIALI, TV, OPZIONI -->
+    <!-- TASTI AZIONE HOST: FAST FLIP, CLASSIFICA, INIZIALI, OPZIONI -->
     <div class="flex items-center gap-2">
-      <!-- PULSANTE CLASSIFICA INDIVIDUALE -->
+      <!-- FAST FLIP FINALE -->
+      <button id="fastFlipBtn" onclick="triggerFastFlip()" class="hidden px-2.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-black text-white transition flex items-center gap-1 shadow-md shadow-indigo-500/30">
+        <span>🔄 Svela Mancanti</span>
+      </button>
+
       <button onclick="openPlayersLeaderboard()" class="px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-xs font-black text-amber-300 transition flex items-center gap-1.5">
         <span>🏆 Giocatori</span>
       </button>
@@ -307,6 +379,17 @@
     const PRESET_COLORS = ['#ef4444', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316'];
     const PRESET_ICONS = ['🔥', '⚡', '🦅', '🦁', '🚀', '👑', '🦈', '💎'];
 
+    // Chicca 1: Ricezione e rendering emoji volanti sulla TV
+    socket.on('reactionTriggered', (data) => {
+      const container = document.getElementById('emojiContainer');
+      const floater = document.createElement('div');
+      floater.className = 'emoji-floater';
+      floater.innerText = data.emoji;
+      floater.style.left = `${Math.floor(Math.random() * 80) + 10}vw`;
+      container.appendChild(floater);
+      setTimeout(() => floater.remove(), 3200);
+    });
+
     function setGameMode(mode) {
       selectedMode = mode;
       const rushBtn = document.getElementById('modeRushBtn');
@@ -351,9 +434,9 @@
       document.getElementById('customTotalSecondsInput').value = s;
 
       document.querySelectorAll('.total-preset-btn').forEach(b => {
-        b.className = "total-preset-btn py-0.5 rounded text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300";
+        b.className = "total-preset-btn py-0.5 rounded text-[10px] font-black border border-slate-700 bg-slate-900 text-slate-300";
       });
-      btn.className = "total-preset-btn py-0.5 rounded text-[10px] font-bold border border-amber-500 bg-amber-500/20 text-amber-300";
+      btn.className = "total-preset-btn py-0.5 rounded text-[10px] font-black border border-amber-500 bg-amber-500/20 text-amber-300";
     }
 
     function onCustomTotalTimeChange() {
@@ -362,7 +445,7 @@
       selectedTotalSeconds = (m * 60) + s;
 
       document.querySelectorAll('.total-preset-btn').forEach(b => {
-        b.className = "total-preset-btn py-0.5 rounded text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300";
+        b.className = "total-preset-btn py-0.5 rounded text-[10px] font-black border border-slate-700 bg-slate-900 text-slate-300";
       });
     }
 
@@ -403,17 +486,33 @@
       `;
     }
 
+    // Chicca 2: Rendering slot speciali (Dorato ✨ e Bomba 💣)
     function renderRevealedSlot(el, rank, info) {
-      el.style.borderColor = info.teamColor;
-      el.style.backgroundColor = `${info.teamColor}20`;
+      let specialBadge = '';
+      if (info.slotType === 'GOLDEN') {
+        el.style.borderColor = '#fbbf24';
+        el.style.backgroundColor = 'rgba(245, 158, 11, 0.25)';
+        specialBadge = '✨ x2';
+      } else if (info.slotType === 'BOMB') {
+        el.style.borderColor = '#ef4444';
+        el.style.backgroundColor = 'rgba(239, 68, 68, 0.25)';
+        specialBadge = '💣 -30';
+      } else if (info.isMissed) {
+        el.style.borderColor = '#475569';
+        el.style.backgroundColor = 'rgba(51, 65, 85, 0.4)';
+      } else {
+        el.style.borderColor = info.teamColor;
+        el.style.backgroundColor = `${info.teamColor}20`;
+      }
+
       el.innerHTML = `
-        <div class="flex items-center justify-between text-[10px] font-black" style="color: ${info.teamColor}">
+        <div class="flex items-center justify-between text-[10px] font-black" style="color: ${info.isMissed ? '#94a3b8' : (info.slotType === 'GOLDEN' ? '#fbbf24' : (info.slotType === 'BOMB' ? '#ef4444' : info.teamColor))}">
           <span>#${rank}</span>
-          <span class="text-[8px] bg-slate-950/70 px-1 rounded">+${info.points}</span>
+          <span class="text-[8px] bg-slate-950/70 px-1 rounded">${specialBadge || (info.isMissed ? '0pt' : '+' + info.points)}</span>
         </div>
-        <div class="font-black text-[10px] text-white leading-tight truncate px-0.5">${info.itemName}</div>
-        <div class="text-[8px] font-semibold truncate text-slate-300" style="color: ${info.teamColor}">
-          ${info.playerName}
+        <div class="font-black text-[10px] ${info.isMissed ? 'text-slate-400' : 'text-white'} leading-tight truncate px-0.5">${info.itemName}</div>
+        <div class="text-[8px] font-semibold truncate" style="color: ${info.isMissed ? '#64748b' : info.teamColor}">
+          ${info.isMissed ? 'Non indovinato' : info.playerName}
         </div>
       `;
     }
@@ -477,7 +576,48 @@
       }).join('');
     }
 
-    // ================= CLASSIFICA INDIVIDUALE GIOCATORI =================
+    // Chicca 3: Fast Flip Finale animato a cascata
+    function triggerFastFlip() {
+      socket.emit('requestFastFlip');
+      document.getElementById('fastFlipBtn').classList.add('hidden');
+    }
+
+    socket.on('fastFlipTriggered', (remainingItems) => {
+      let delay = 0;
+      remainingItems.forEach((item) => {
+        setTimeout(() => {
+          revealed[item.rank] = { itemName: item.itemName, isMissed: true, points: 0 };
+          const el = document.getElementById(`slot-${item.rank}`);
+          if (el) renderRevealedSlot(el, item.rank, revealed[item.rank]);
+        }, delay);
+        delay += 60; // 60ms di stacco per ogni casella
+      });
+    });
+
+    // Chicca 5: Pagelle e Titoli di Fine Partita
+    function openAwardsModal(awards) {
+      if (!awards || awards.length === 0) return;
+      const container = document.getElementById('awardsContainer');
+      container.innerHTML = awards.map(a => `
+        <div class="flex items-center justify-between bg-slate-950 p-3 rounded-2xl border border-slate-800">
+          <div>
+            <div class="font-black text-sm text-amber-400">${a.title}</div>
+            <div class="text-[10px] text-slate-400">${a.desc}</div>
+          </div>
+          <div class="text-right">
+            <span class="text-xs font-black text-white bg-indigo-600/30 border border-indigo-500/40 px-2.5 py-1 rounded-lg">
+              ${a.winner}
+            </span>
+          </div>
+        </div>
+      `).join('');
+      document.getElementById('awardsModal').classList.remove('hidden');
+    }
+
+    function closeAwardsModal() {
+      document.getElementById('awardsModal').classList.add('hidden');
+    }
+
     function openPlayersLeaderboard() {
       renderPlayersLeaderboardUI();
       document.getElementById('playersLeaderboardModal').classList.remove('hidden');
@@ -490,13 +630,11 @@
     function renderPlayersLeaderboardUI() {
       const listContainer = document.getElementById('playersLeaderboardList');
       if (!playersList || playersList.length === 0) {
-        listContainer.innerHTML = `<div class="text-xs text-slate-500 italic p-4 text-center">Nessun giocatore registrato al momento</div>`;
+        listContainer.innerHTML = `<div class="text-xs text-slate-500 italic p-4 text-center">Nessun giocatore registrato</div>`;
         return;
       }
 
-      // Ordina i giocatori dal punteggio più alto al più basso
       const sortedPlayers = [...playersList].sort((a, b) => (b.score || 0) - (a.score || 0));
-
       const medals = ['🥇', '🥈', '🥉'];
 
       listContainer.innerHTML = sortedPlayers.map((p, idx) => {
@@ -563,7 +701,6 @@
       }
     }
 
-    // GESTIONE SQUADRE CON SCELTA MANUALE DEI MEMBRI
     function renderLobbyInputs() {
       const cont = document.getElementById('teamsContainer');
       cont.innerHTML = teams.map((t, idx) => {
@@ -873,6 +1010,7 @@
       document.getElementById('turnTimerDisplay').innerText = `${data.turnTimer.remaining}s`;
     });
 
+    // Chicca 6: Frenzy Last 60s
     socket.on('timerTick', (t) => {
       isTimerRunning = t.global.isRunning;
       document.getElementById('timerDisplay').innerText = formatTime(t.global.remaining);
@@ -889,11 +1027,29 @@
       if (t.turn) {
         document.getElementById('turnTimerDisplay').innerText = `${t.turn.remaining}s`;
       }
+
+      // Attiva / Disattiva grafica Frenzy Last 60s
+      const frenzyBadge = document.getElementById('frenzyBadge');
+      const tvBody = document.getElementById('tvBody');
+      if (t.isFrenzy) {
+        frenzyBadge.classList.remove('hidden');
+        tvBody.classList.add('frenzy-active');
+      } else {
+        frenzyBadge.classList.add('hidden');
+        tvBody.classList.remove('frenzy-active');
+      }
     });
 
-    socket.on('timerExpired', () => {
+    socket.on('timerExpired', (payload) => {
       document.getElementById('timerDisplay').innerText = "00:00";
-      confetti({ particleCount: 100, spread: 80, origin: { y: 0.5 } });
+      document.getElementById('tvBody').classList.remove('frenzy-active');
+      document.getElementById('frenzyBadge').classList.add('hidden');
+      document.getElementById('fastFlipBtn').classList.remove('hidden');
+      confetti({ particleCount: 120, spread: 90, origin: { y: 0.5 } });
+
+      if (payload && payload.awards) {
+        setTimeout(() => openAwardsModal(payload.awards), 1800);
+      }
     });
 
     socket.on('boardUpdated', (payload) => {
@@ -910,13 +1066,25 @@
       }
 
       const banner = document.getElementById('revealBanner');
+      const bCard = document.getElementById('bannerCard');
       document.getElementById('bannerRank').innerText = `#${payload.rank}`;
       document.getElementById('bannerTitle').innerText = payload.data.itemName;
-      document.getElementById('bannerTeam').innerText = `${payload.data.teamName} (+${payload.data.points} pt)`;
+
+      if (payload.data.slotType === 'GOLDEN') {
+        bCard.style.borderColor = '#fbbf24';
+        document.getElementById('bannerTeam').innerText = `✨ SLOT DORATO (+${payload.data.points} pt) - ${payload.data.teamName}`;
+      } else if (payload.data.slotType === 'BOMB') {
+        bCard.style.borderColor = '#ef4444';
+        document.getElementById('bannerTeam').innerText = `💣 BOMBA (${payload.data.points} pt) - ${payload.data.teamName}`;
+      } else {
+        bCard.style.borderColor = '#f59e0b';
+        document.getElementById('bannerTeam').innerText = `${payload.data.teamName} (+${payload.data.points} pt)`;
+      }
+
       document.getElementById('bannerPlayer').innerText = `Indovinato da: ${payload.data.playerName}`;
       banner.classList.remove('opacity-0');
       confetti({ particleCount: 50, spread: 60, origin: { y: 0.6 } });
-      setTimeout(() => banner.classList.add('opacity-0'), 2200);
+      setTimeout(() => banner.classList.add('opacity-0'), 2400);
     });
 
     function confirmAndStart(shuffleTeams = false) {
@@ -924,13 +1092,24 @@
       const totalSec = selectedTotalSeconds > 0 ? selectedTotalSeconds : 300;
       const turnSec = selectedTurnSeconds > 0 ? selectedTurnSeconds : 30;
 
+      // Legge i toggle delle 6 chicche selezionate dall'Host
+      const options = {
+        emojiReactions: document.getElementById('chkEmoji').checked,
+        specialSlots: document.getElementById('chkSpecial').checked,
+        fastFlip: document.getElementById('chkFastFlip').checked,
+        haptics: document.getElementById('chkHaptics').checked,
+        finalAwards: document.getElementById('chkAwards').checked,
+        frenzy60: document.getElementById('chkFrenzy').checked
+      };
+
       socket.emit('startGameWithConfig', {
         categoryKey: catKey,
         teams: teams,
         duration: totalSec,
         mode: selectedMode,
         turnDuration: turnSec,
-        shuffleTeams: shuffleTeams
+        shuffleTeams: shuffleTeams,
+        options: options
       });
       document.getElementById('lobbyModal').classList.add('hidden');
     }

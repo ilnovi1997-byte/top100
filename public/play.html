@@ -48,7 +48,7 @@
   <!-- CONTROLLER DI GIOCO ATTIVO -->
   <div id="gameScreen" class="hidden flex-1 flex flex-col justify-between max-w-md mx-auto w-full">
     <div>
-      <!-- HEADER CON SQUADRA, PUNTEGGIO PERSONALE E TIMER -->
+      <!-- HEADER SMARTPHONE: SQUADRA, PUNTI E FRENZY -->
       <div class="bg-slate-900 border border-slate-800 rounded-2xl px-4 py-2.5 mb-2 shadow-lg">
         <div class="flex items-center justify-between border-b border-slate-800 pb-2 mb-2">
           <div class="flex items-center gap-2">
@@ -60,11 +60,13 @@
           </div>
           <div class="text-right">
             <div class="text-[9px] font-bold text-slate-400 uppercase leading-none">TEMPO ROUND</div>
-            <div id="phoneTimer" class="text-base font-black font-mono text-amber-400">05:00</div>
+            <div class="flex items-center gap-1.5 justify-end">
+              <span id="phoneFrenzyBadge" class="hidden text-[8px] bg-rose-600 text-white font-black px-1 rounded animate-pulse">x2</span>
+              <div id="phoneTimer" class="text-base font-black font-mono text-amber-400">05:00</div>
+            </div>
           </div>
         </div>
 
-        <!-- Box punteggio personale del giocatore -->
         <div class="flex items-center justify-between text-xs font-bold bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800">
           <span class="text-slate-400 flex items-center gap-1.5">
             <span>👤</span>
@@ -100,11 +102,24 @@
       </div>
     </div>
 
-    <!-- CRONOLOGIA DELLA PROPRIA SQUADRA -->
-    <div class="mt-3 bg-slate-900/60 border border-slate-800 rounded-2xl p-3">
-      <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Ultime prese dalla tua squadra</div>
-      <div id="teamHistory" class="space-y-1 text-xs text-slate-300">
-        <div class="text-slate-600 italic text-[11px]">Nessuna risposta ancora...</div>
+    <!-- SEZIONE INFERIORE: REAZIONI EMOJI LIVE + CRONOLOGIA -->
+    <div class="space-y-2 mt-2">
+      <!-- BARRA REAZIONI EMOJI VOLANTI SULLA TV -->
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-2 flex items-center justify-around shadow-lg">
+        <button onclick="triggerEmojiReaction('🔥')" class="text-2xl p-1.5 active:scale-125 transition">🔥</button>
+        <button onclick="triggerEmojiReaction('💀')" class="text-2xl p-1.5 active:scale-125 transition">💀</button>
+        <button onclick="triggerEmojiReaction('🤡')" class="text-2xl p-1.5 active:scale-125 transition">🤡</button>
+        <button onclick="triggerEmojiReaction('👀')" class="text-2xl p-1.5 active:scale-125 transition">👀</button>
+        <button onclick="triggerEmojiReaction('😱')" class="text-2xl p-1.5 active:scale-125 transition">😱</button>
+        <button onclick="triggerEmojiReaction('🎉')" class="text-2xl p-1.5 active:scale-125 transition">🎉</button>
+      </div>
+
+      <!-- CRONOLOGIA DELLA PROPRIA SQUADRA -->
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-2.5">
+        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Ultime prese dalla tua squadra</div>
+        <div id="teamHistory" class="space-y-1 text-xs text-slate-300">
+          <div class="text-slate-600 italic text-[11px]">Nessuna risposta ancora...</div>
+        </div>
       </div>
     </div>
   </div>
@@ -116,6 +131,20 @@
     let myScore = 0;
     let currentMode = 'RUSH';
     let isMyTurn = true;
+    let hapticsEnabled = true;
+
+    // Chicca 4: Funzione Vibrazione Aptica Hardware
+    function triggerHaptic(pattern) {
+      if (hapticsEnabled && window.navigator && window.navigator.vibrate) {
+        try { window.navigator.vibrate(pattern); } catch (e) {}
+      }
+    }
+
+    // Chicca 1: Invio Reazione Emoji allo Schermo TV
+    function triggerEmojiReaction(emoji) {
+      socket.emit('sendReaction', emoji);
+      triggerHaptic(40);
+    }
 
     function joinLobby() {
       const name = document.getElementById('nameInput').value.trim();
@@ -162,6 +191,7 @@
       myAssignedTeam = data.team;
       currentMode = data.gameState.mode;
       myScore = data.playerScore || 0;
+      hapticsEnabled = data.gameState.options ? data.gameState.options.haptics : true;
 
       document.getElementById('waitingScreen').classList.add('hidden');
       document.getElementById('joinScreen').classList.add('hidden');
@@ -186,6 +216,7 @@
       }
 
       confetti({ particleCount: 70, spread: 60, origin: { y: 0.7 } });
+      triggerHaptic([100, 50, 100]);
     });
 
     function checkMyTurn(activeTeam) {
@@ -199,6 +230,7 @@
         statusText.innerText = "🟢 È IL TURNO DELLA TUA SQUADRA!";
         statusText.className = "text-sm font-black text-emerald-400";
         enableInput();
+        triggerHaptic(80);
       } else {
         isMyTurn = false;
         banner.className = "mb-2.5 p-2 rounded-2xl border border-slate-800 bg-slate-900/80 text-center";
@@ -245,6 +277,10 @@
       const pt = document.getElementById('phoneTimer');
       if (pt) pt.innerText = formatTime(t.global.remaining);
 
+      const frenzyBadge = document.getElementById('phoneFrenzyBadge');
+      if (t.isFrenzy) frenzyBadge.classList.remove('hidden');
+      else frenzyBadge.classList.add('hidden');
+
       if (t.turn && currentMode === 'TURNS') {
         document.getElementById('phoneTurnTimerText').innerText = `Tempo rimanente turno: ${t.turn.remaining}s`;
       }
@@ -255,11 +291,13 @@
       if (pt) pt.innerText = "STOP!";
       showStatus("⏳ Tempo scaduto! Partita terminata.", "bg-rose-500/20 text-rose-400 border border-rose-500/30");
       disableInput();
+      triggerHaptic([200, 100, 200]);
     });
 
     function sendGuess() {
       if (currentMode === 'TURNS' && !isMyTurn) {
         showStatus("Aspetta il tuo turno!", "bg-rose-500/20 text-rose-400 border border-rose-500/30");
+        triggerHaptic([80, 50, 80]);
         return;
       }
 
@@ -281,11 +319,23 @@
           myScore = res.playerScore;
           document.getElementById('myPersonalScore').innerText = myScore;
         }
-        showStatus(res.message, 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30');
+
+        if (res.slotType === 'GOLDEN') {
+          showStatus(res.message, 'bg-amber-500/30 text-amber-300 border border-amber-500/60');
+          triggerHaptic([100, 50, 100, 50, 200]);
+        } else if (res.slotType === 'BOMB') {
+          showStatus(res.message, 'bg-rose-600/30 text-rose-300 border border-rose-600/60');
+          triggerHaptic([300, 100, 300]);
+        } else {
+          showStatus(res.message, 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30');
+          triggerHaptic(120);
+        }
       } else if (res.status === 'ALREADY_CLAIMED') {
         showStatus(res.message, 'bg-amber-500/20 text-amber-400 border border-amber-500/30');
+        triggerHaptic([80, 60, 80]);
       } else {
         showStatus(res.message, 'bg-rose-500/20 text-rose-400 border border-rose-500/30');
+        triggerHaptic(200);
       }
     });
 
@@ -299,7 +349,7 @@
       }
 
       if (myAssignedTeam && payload.data.teamId === myAssignedTeam.id) {
-        addHistoryItem(payload.rank, payload.data.itemName, payload.data.points, payload.data.playerName);
+        addHistoryItem(payload.rank, payload.data.itemName, payload.data.points, payload.data.playerName, payload.data.slotType);
       }
     });
 
@@ -307,15 +357,20 @@
       const el = document.getElementById('statusMessage');
       el.className = `p-2 rounded-xl text-xs font-bold text-center block ${classes}`;
       el.innerText = text;
-      setTimeout(() => el.className = 'hidden', 3000);
+      setTimeout(() => el.className = 'hidden', 3200);
     }
 
-    function addHistoryItem(rank, title, pts, player) {
+    function addHistoryItem(rank, title, pts, player, slotType) {
       const h = document.getElementById('teamHistory');
       if (h.innerHTML.includes('Nessuna risposta')) h.innerHTML = '';
       const div = document.createElement('div');
       div.className = "flex items-center justify-between bg-slate-950 p-1.5 rounded-lg border border-slate-800 text-[11px]";
-      div.innerHTML = `<span><strong>#${rank}</strong> ${title} <span class="text-slate-500">(${player})</span></span><span class="text-emerald-400 font-bold">+${pts}pt</span>`;
+      
+      let badge = `<span class="text-emerald-400 font-bold">+${pts}pt</span>`;
+      if (slotType === 'GOLDEN') badge = `<span class="text-amber-400 font-black">✨ +${pts}pt</span>`;
+      if (slotType === 'BOMB') badge = `<span class="text-rose-400 font-black">💣 ${pts}pt</span>`;
+
+      div.innerHTML = `<span><strong>#${rank}</strong> ${title} <span class="text-slate-500">(${player})</span></span>${badge}`;
       h.prepend(div);
     }
   </script>

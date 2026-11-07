@@ -41,7 +41,7 @@ function loadAllCategories() {
 
 let availableCategories = loadAllCategories();
 let currentCategoryKey = Object.keys(availableCategories)[0] || null;
-let connectedPlayers = {}; // socketId -> { socketId, name, teamId, score }
+let connectedPlayers = {}; // socketId -> { socketId, name, teamId, score, stats }
 
 let gameState = {
   status: "LOBBY",
@@ -71,15 +71,20 @@ let gameState = {
   revealed: {},
   showInitials: false,
   activeTeamIndex: 0,
-  turnTimer: {
-    duration: 30,
-    remaining: 30,
+  turnTimer: { duration: 30, remaining: 30 },
+  timer: { duration: 300, remaining: 300, isRunning: false },
+  // Opzioni Chicche (Toggles)
+  options: {
+    emojiReactions: true,
+    specialSlots: true,
+    fastFlip: true,
+    haptics: true,
+    finalAwards: true,
+    frenzy60: true,
   },
-  timer: {
-    duration: 300,
-    remaining: 300,
-    isRunning: false,
-  },
+  goldenSlots: [],
+  bombSlots: [],
+  gameStartTime: null,
 };
 
 let mainTimerInterval = null;
@@ -108,6 +113,7 @@ function startTimer() {
     global: gameState.timer,
     turn: gameState.turnTimer,
     activeTeamId: getActiveTeam().id,
+    isFrenzy: isFrenzyActive(),
   });
 
   mainTimerInterval = setInterval(() => {
@@ -119,7 +125,9 @@ function startTimer() {
       tickGlobal = true;
     } else {
       pauseTimer();
-      io.emit("timerExpired");
+      io.emit("timerExpired", {
+        awards: gameState.options.finalAwards ? calculateAwards() : null,
+      });
       return;
     }
 
@@ -137,6 +145,7 @@ function startTimer() {
         global: gameState.timer,
         turn: gameState.turnTimer,
         activeTeamId: getActiveTeam().id,
+        isFrenzy: isFrenzyActive(),
       });
     }
   }, 1000);
@@ -152,7 +161,17 @@ function pauseTimer() {
     global: gameState.timer,
     turn: gameState.turnTimer,
     activeTeamId: getActiveTeam().id,
+    isFrenzy: isFrenzyActive(),
   });
+}
+
+function isFrenzyActive() {
+  return (
+    gameState.options.frenzy60 &&
+    gameState.timer.remaining <= 60 &&
+    gameState.timer.remaining > 0 &&
+    gameState.timer.isRunning
+  );
 }
 
 function getActiveTeam() {
@@ -199,6 +218,72 @@ function distributePlayersRandomly(playerList, teams) {
   return teams;
 }
 
+// Calcolo delle Pagelle & Titoli Ironici
+function calculateAwards() {
+  const players = Object.values(connectedPlayers);
+  if (players.length === 0) return [];
+
+  const awards = [];
+
+  // 1. Il Cecchino: rank più alto numericamente (posizione più difficile)
+  let bestSniper = { name: "Nessuno", rank: 0 };
+  Object.keys(gameState.revealed).forEach((r) => {
+    const rankNum = parseInt(r, 10);
+    if (rankNum > bestSniper.rank) {
+      bestSniper = {
+        name: gameState.revealed[r].playerName,
+        rank: rankNum,
+        title: gameState.revealed[r].itemName,
+      };
+    }
+  });
+  if (bestSniper.rank > 0) {
+    awards.push({
+      title: "🎯 Il Cecchino",
+      desc: `Ha scovato la posizione più remota: #${bestSniper.rank} (${bestSniper.title})`,
+      winner: bestSniper.name,
+    });
+  }
+
+  // 2. L'Avvoltoio: più risposte nei primi 20 secondi
+  const vulture = [...players].sort(
+    (a, b) => (b.stats?.earlyGuesses || 0) - (a.stats?.earlyGuesses || 0),
+  )[0];
+  if (vulture && (vulture.stats?.earlyGuesses || 0) > 0) {
+    awards.push({
+      title: "🦅 L'Avvoltoio",
+      desc: `Più veloce di tutti nei primi 20 secondi (${vulture.stats.earlyGuesses} prese)`,
+      winner: vulture.name,
+    });
+  }
+
+  // 3. Raffica a Vuoto: più errori totali
+  const spammer = [...players].sort(
+    (a, b) => (b.stats?.wrongGuesses || 0) - (a.stats?.wrongGuesses || 0),
+  )[0];
+  if (spammer && (spammer.stats?.wrongGuesses || 0) > 0) {
+    awards.push({
+      title: "🤡 Raffica a Vuoto",
+      desc: `Record assoluto di tentativi a vuoto (${spammer.stats.wrongGuesses} errori)`,
+      winner: spammer.name,
+    });
+  }
+
+  // 4. L'Eterno Secondo: chi ha provato più volte risposte appena rubate
+  const eternalSecond = [...players].sort(
+    (a, b) => (b.stats?.stolenTries || 0) - (a.stats?.stolenTries || 0),
+  )[0];
+  if (eternalSecond && (eternalSecond.stats?.stolenTries || 0) > 0) {
+    awards.push({
+      title: "🐢 L'Eterno Secondo",
+      desc: `Beffato più volte sul filo del rasoio (${eternalSecond.stats.stolenTries} risposte già prese)`,
+      winner: eternalSecond.name,
+    });
+  }
+
+  return awards;
+}
+
 io.on("connection", (socket) => {
   socket.emit("initSync", {
     gameState,
@@ -216,6 +301,7 @@ io.on("connection", (socket) => {
       name: cleanName,
       teamId: null,
       score: 0,
+      stats: { wrongGuesses: 0, stolenTries: 0, earlyGuesses: 0 },
     };
     io.emit("playersListUpdated", Object.values(connectedPlayers));
     socket.emit("joinedSuccess", connectedPlayers[socket.id]);
@@ -227,6 +313,13 @@ io.on("connection", (socket) => {
       const targetTeam = gameState.teams.find((t) => t.id === teamId);
       io.to(socketId).emit("teamAssignmentChanged", targetTeam || null);
       io.emit("playersListUpdated", Object.values(connectedPlayers));
+    }
+  });
+
+  // Chicca 1: Reazioni Emoji Volanti inviate da smartphone
+  socket.on("sendReaction", (emoji) => {
+    if (gameState.options.emojiReactions) {
+      io.emit("reactionTriggered", { emoji, id: Date.now() + Math.random() });
     }
   });
 
@@ -253,7 +346,7 @@ io.on("connection", (socket) => {
           .replace(/[\u0300-\u036f]/g, "")
           .replace(/[^a-z0-9]/g, "-")
           .replace(/-+/g, "-")
-          .replace(/^-|-\$/g, "") ||
+          .replace(/^-|-$/g, "") ||
         `cat-${Date.now()}`;
 
       const catObj = {
@@ -301,9 +394,33 @@ io.on("connection", (socket) => {
     });
   });
 
+  // Chicca 3: Fast Flip - Richiesta di rivelazione di tutti gli elementi mancanti
+  socket.on("requestFastFlip", () => {
+    if (
+      !gameState.options.fastFlip ||
+      !currentCategoryKey ||
+      !availableCategories[currentCategoryKey]
+    )
+      return;
+    const remaining = [];
+    availableCategories[currentCategoryKey].items.forEach((it) => {
+      if (!gameState.revealed[it.rank]) {
+        remaining.push({ rank: it.rank, itemName: it.name });
+      }
+    });
+    io.emit("fastFlipTriggered", remaining);
+  });
+
   socket.on("startGameWithConfig", (config) => {
-    const { categoryKey, teams, duration, mode, turnDuration, shuffleTeams } =
-      config;
+    const {
+      categoryKey,
+      teams,
+      duration,
+      mode,
+      turnDuration,
+      shuffleTeams,
+      options,
+    } = config;
     availableCategories = loadAllCategories();
 
     if (availableCategories[categoryKey]) {
@@ -313,11 +430,15 @@ io.on("connection", (socket) => {
     }
 
     gameState.mode = mode || "RUSH";
+    gameState.options = { ...gameState.options, ...(options || {}) };
+
     let finalTeams = teams.map((t) => ({ ...t, score: 0, members: [] }));
     const playersArray = Object.values(connectedPlayers);
 
-    // Reset punteggi individuali dei giocatori
-    playersArray.forEach((p) => (p.score = 0));
+    playersArray.forEach((p) => {
+      p.score = 0;
+      p.stats = { wrongGuesses: 0, stolenTries: 0, earlyGuesses: 0 };
+    });
 
     if (shuffleTeams) {
       finalTeams = distributePlayersRandomly(playersArray, finalTeams);
@@ -338,6 +459,19 @@ io.on("connection", (socket) => {
     gameState.showInitials = false;
     gameState.status = "PLAYING";
     gameState.activeTeamIndex = 0;
+    gameState.gameStartTime = Date.now();
+
+    // Chicca 2: Selezione casuale degli Slot Speciali (Dorati & Bomba)
+    if (gameState.options.specialSlots) {
+      const ranksPool = Array.from({ length: 100 }, (_, i) => i + 1).sort(
+        () => Math.random() - 0.5,
+      );
+      gameState.goldenSlots = [ranksPool[0], ranksPool[1]]; // 2 slot dorati
+      gameState.bombSlots = [ranksPool[2]]; // 1 slot bomba
+    } else {
+      gameState.goldenSlots = [];
+      gameState.bombSlots = [];
+    }
 
     const turnSec =
       parseInt(turnDuration, 10) > 0 ? parseInt(turnDuration, 10) : 30;
@@ -381,6 +515,7 @@ io.on("connection", (socket) => {
         global: gameState.timer,
         turn: gameState.turnTimer,
         activeTeamId: getActiveTeam().id,
+        isFrenzy: isFrenzyActive(),
       });
     } else if (action.type === "SKIP_TURN") {
       if (gameState.mode === "TURNS") passToNextTurn("Turno saltato dall'Host");
@@ -434,35 +569,61 @@ io.on("connection", (socket) => {
     });
 
     if (!matched) {
+      if (player && player.stats) player.stats.wrongGuesses++;
       socket.emit("guessResult", {
         status: "WRONG",
         message: "Nessuna corrispondenza!",
       });
-      if (gameState.mode === "TURNS") {
+      if (gameState.mode === "TURNS")
         passToNextTurn(`${activeTeam.name} ha sbagliato!`);
-      }
       return;
     }
 
     if (gameState.revealed[matched.rank]) {
+      if (player && player.stats) player.stats.stolenTries++;
       const orig = gameState.revealed[matched.rank];
       socket.emit("guessResult", {
         status: "ALREADY_CLAIMED",
         message: `⚠️ #${matched.rank} già presa da ${orig.teamName}! 0 pt.`,
       });
-      if (gameState.mode === "TURNS") {
-        passToNextTurn(`Posizione già presa!`);
-      }
+      if (gameState.mode === "TURNS") passToNextTurn(`Posizione già presa!`);
       return;
     }
 
-    const points = matched.rank;
-    const teamObj = gameState.teams.find((t) => t.id === teamId);
-    if (teamObj) teamObj.score += points;
+    // Calcolo Punteggio con Chicche: Slot Speciali & Frenzy Last 60s
+    let points = matched.rank;
+    let slotType = "NORMAL";
 
-    // Assegna i punti al singolo giocatore
+    if (gameState.options.specialSlots) {
+      if (gameState.goldenSlots.includes(matched.rank)) {
+        points *= 2; // Raddoppio slot dorato
+        slotType = "GOLDEN";
+      } else if (gameState.bombSlots.includes(matched.rank)) {
+        points = -30; // Penalità bomba
+        slotType = "BOMB";
+      }
+    }
+
+    // Moltiplicatore Frenzy x2 se attivo negli ultimi 60s (solo se non era già una bomba)
+    if (isFrenzyActive() && slotType !== "BOMB") {
+      points *= 2;
+    }
+
+    // Statistica per "L'Avvoltoio": risposta nei primi 20 secondi dall'inizio
+    if (
+      gameState.gameStartTime &&
+      Date.now() - gameState.gameStartTime <= 20000
+    ) {
+      if (player && player.stats) player.stats.earlyGuesses++;
+    }
+
+    const teamObj = gameState.teams.find((t) => t.id === teamId);
+    if (teamObj) {
+      teamObj.score = Math.max(0, teamObj.score + points);
+    }
+
     if (player) {
-      player.score = (player.score || 0) + points;
+      player.score = Math.max(0, (player.score || 0) + points);
     }
 
     gameState.revealed[matched.rank] = {
@@ -473,17 +634,24 @@ io.on("connection", (socket) => {
       playerSocketId: socket.id,
       itemName: matched.name,
       points,
+      slotType,
     };
+
+    let resultMessage = `🎉 Preso! Posizione #${matched.rank} (+${points} pt)`;
+    if (slotType === "GOLDEN")
+      resultMessage = `✨ SLOT DORATO! Posizione #${matched.rank} RADDOPPIATA (+${points} pt)!`;
+    if (slotType === "BOMB")
+      resultMessage = `💣 BOOM! Posizione #${matched.rank} era una BOMBA (${points} pt)!`;
 
     socket.emit("guessResult", {
       status: "CORRECT",
       rank: matched.rank,
       points,
+      slotType,
       playerScore: player ? player.score : points,
-      message: `🎉 Preso! Posizione #${matched.rank} (+${points} pt)`,
+      message: resultMessage,
     });
 
-    // Notifica a tutti i dispositivi i tabelloni aggiornati, i punteggi squadra e la classifica giocatori
     io.emit("boardUpdated", {
       rank: matched.rank,
       data: gameState.revealed[matched.rank],
@@ -492,7 +660,7 @@ io.on("connection", (socket) => {
     });
 
     if (gameState.mode === "TURNS") {
-      passToNextTurn(`${activeTeam.name} ha indovinato #${matched.rank}!`);
+      passToNextTurn(`${activeTeam.name} ha svelato #${matched.rank}!`);
     }
   });
 
