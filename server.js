@@ -41,11 +41,11 @@ function loadAllCategories() {
 
 let availableCategories = loadAllCategories();
 let currentCategoryKey = Object.keys(availableCategories)[0] || null;
-let connectedPlayers = {};
+let connectedPlayers = {}; // socketId -> { socketId, name, teamId }
 
 let gameState = {
   status: "LOBBY",
-  mode: "RUSH", // 'RUSH' o 'TURNS'
+  mode: "RUSH",
   currentCategoryKey: currentCategoryKey,
   categoryTitle: currentCategoryKey
     ? availableCategories[currentCategoryKey].categoryTitle
@@ -69,7 +69,7 @@ let gameState = {
     },
   ],
   revealed: {},
-  showInitials: false, // Flag per mostrare o nascondere le iniziali
+  showInitials: false,
   activeTeamIndex: 0,
   turnTimer: {
     duration: 30,
@@ -84,7 +84,6 @@ let gameState = {
 
 let mainTimerInterval = null;
 
-// Calcola la mappa delle iniziali per le sole posizioni ancora non indovinate
 function getInitialsMap() {
   if (
     !gameState.showInitials ||
@@ -194,7 +193,7 @@ function distributePlayersRandomly(playerList, teams) {
   const shuffled = [...playerList].sort(() => Math.random() - 0.5);
   shuffled.forEach((p, index) => {
     const targetTeam = teams[index % teams.length];
-    targetTeam.members.push(p.name);
+    targetTeam.members.push({ socketId: p.socketId, name: p.name });
     p.teamId = targetTeam.id;
   });
   return teams;
@@ -219,6 +218,19 @@ io.on("connection", (socket) => {
     };
     io.emit("playersListUpdated", Object.values(connectedPlayers));
     socket.emit("joinedSuccess", connectedPlayers[socket.id]);
+  });
+
+  // Assegnazione manuale di un singolo giocatore a una squadra
+  socket.on("assignPlayerToTeam", ({ socketId, teamId }) => {
+    if (connectedPlayers[socketId]) {
+      connectedPlayers[socketId].teamId = teamId || null;
+
+      // Notifica al giocatore la sua squadra aggiornata
+      const targetTeam = gameState.teams.find((t) => t.id === teamId);
+      io.to(socketId).emit("teamAssignmentChanged", targetTeam || null);
+
+      io.emit("playersListUpdated", Object.values(connectedPlayers));
+    }
   });
 
   socket.on("getCategoryForEdit", (catId) => {
@@ -284,7 +296,6 @@ io.on("connection", (socket) => {
     }
   });
 
-  // Tasto Host: Mostra / Nascondi Iniziali
   socket.on("toggleInitials", () => {
     gameState.showInitials = !gameState.showInitials;
     io.emit("initialsToggled", {
@@ -293,8 +304,10 @@ io.on("connection", (socket) => {
     });
   });
 
+  // Avvio partita con supporto sia per assegnazione manuale che shuffle
   socket.on("startGameWithConfig", (config) => {
-    const { categoryKey, teams, duration, mode, turnDuration } = config;
+    const { categoryKey, teams, duration, mode, turnDuration, shuffleTeams } =
+      config;
     availableCategories = loadAllCategories();
 
     if (availableCategories[categoryKey]) {
@@ -304,12 +317,29 @@ io.on("connection", (socket) => {
     }
 
     gameState.mode = mode || "RUSH";
-    const initialTeams = teams.map((t) => ({ ...t, score: 0, members: [] }));
+    let finalTeams = teams.map((t) => ({ ...t, score: 0, members: [] }));
     const playersArray = Object.values(connectedPlayers);
-    gameState.teams = distributePlayersRandomly(playersArray, initialTeams);
 
+    if (shuffleTeams) {
+      // Se l'host ha scelto il mescolamento automatico
+      finalTeams = distributePlayersRandomly(playersArray, finalTeams);
+    } else {
+      // Usa le assegnazioni manuali impostate dall'Host
+      playersArray.forEach((p) => {
+        let team = finalTeams.find((t) => t.id === p.teamId);
+        // Se qualcuno non era stato assegnato, assegnalo alla squadra con meno membri
+        if (!team) {
+          finalTeams.sort((a, b) => a.members.length - b.members.length);
+          team = finalTeams[0];
+          p.teamId = team.id;
+        }
+        team.members.push({ socketId: p.socketId, name: p.name });
+      });
+    }
+
+    gameState.teams = finalTeams;
     gameState.revealed = {};
-    gameState.showInitials = false; // Reset iniziali a inizio partita
+    gameState.showInitials = false;
     gameState.status = "PLAYING";
     gameState.activeTeamIndex = 0;
 
