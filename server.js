@@ -69,6 +69,7 @@ let gameState = {
     },
   ],
   revealed: {},
+  showInitials: false, // Flag per mostrare o nascondere le iniziali
   activeTeamIndex: 0,
   turnTimer: {
     duration: 30,
@@ -83,6 +84,24 @@ let gameState = {
 
 let mainTimerInterval = null;
 
+// Calcola la mappa delle iniziali per le sole posizioni ancora non indovinate
+function getInitialsMap() {
+  if (
+    !gameState.showInitials ||
+    !currentCategoryKey ||
+    !availableCategories[currentCategoryKey]
+  )
+    return {};
+  const map = {};
+  availableCategories[currentCategoryKey].items.forEach((it) => {
+    if (!gameState.revealed[it.rank]) {
+      const clean = it.name.trim();
+      map[it.rank] = clean.charAt(0).toUpperCase();
+    }
+  });
+  return map;
+}
+
 function startTimer() {
   if (mainTimerInterval || gameState.timer.remaining <= 0) return;
   gameState.timer.isRunning = true;
@@ -96,7 +115,6 @@ function startTimer() {
     let tickGlobal = false;
     let tickTurn = false;
 
-    // Timer Globale di Gioco
     if (gameState.timer.remaining > 0) {
       gameState.timer.remaining--;
       tickGlobal = true;
@@ -106,7 +124,6 @@ function startTimer() {
       return;
     }
 
-    // Timer di Turno Singolo (se in modalità a turni)
     if (gameState.mode === "TURNS") {
       if (gameState.turnTimer.remaining > 0) {
         gameState.turnTimer.remaining--;
@@ -190,6 +207,7 @@ io.on("connection", (socket) => {
     playersList: Object.values(connectedPlayers),
     myPlayerInfo: connectedPlayers[socket.id] || null,
     activeTeam: getActiveTeam(),
+    initialsMap: getInitialsMap(),
   });
 
   socket.on("joinGame", (name) => {
@@ -266,6 +284,15 @@ io.on("connection", (socket) => {
     }
   });
 
+  // Tasto Host: Mostra / Nascondi Iniziali
+  socket.on("toggleInitials", () => {
+    gameState.showInitials = !gameState.showInitials;
+    io.emit("initialsToggled", {
+      showInitials: gameState.showInitials,
+      initialsMap: getInitialsMap(),
+    });
+  });
+
   socket.on("startGameWithConfig", (config) => {
     const { categoryKey, teams, duration, mode, turnDuration } = config;
     availableCategories = loadAllCategories();
@@ -282,18 +309,16 @@ io.on("connection", (socket) => {
     gameState.teams = distributePlayersRandomly(playersArray, initialTeams);
 
     gameState.revealed = {};
+    gameState.showInitials = false; // Reset iniziali a inizio partita
     gameState.status = "PLAYING";
     gameState.activeTeamIndex = 0;
 
-    // Assegna la durata del turno personalizzata scelta dall'Host
     const turnSec =
       parseInt(turnDuration, 10) > 0 ? parseInt(turnDuration, 10) : 30;
     gameState.turnTimer.duration = turnSec;
     gameState.turnTimer.remaining = turnSec;
 
     pauseTimer();
-
-    // Assegna la durata totale personalizzata scelta dall'Host
     const totalSec = parseInt(duration, 10) > 0 ? parseInt(duration, 10) : 300;
     gameState.timer.duration = totalSec;
     gameState.timer.remaining = totalSec;
@@ -312,6 +337,7 @@ io.on("connection", (socket) => {
       categoriesList: getCategoriesList(),
       playersList: Object.values(connectedPlayers),
       activeTeam: getActiveTeam(),
+      initialsMap: getInitialsMap(),
     });
 
     startTimer();

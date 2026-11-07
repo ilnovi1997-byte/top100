@@ -63,7 +63,7 @@
             </div>
           </div>
 
-          <!-- 2. DURATA TURNO (Attivo solo se a turni) -->
+          <!-- 2. DURATA TURNO -->
           <div id="turnDurationBox" class="hidden bg-slate-950 p-2.5 rounded-2xl border border-indigo-900/50 mb-2">
             <div class="flex items-center justify-between mb-1.5">
               <label class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider">⏱️ Durata Singolo Turno</label>
@@ -83,11 +83,10 @@
             </div>
           </div>
 
-          <!-- 3. DURATA TOTALE PARTITA (CUSTOMIZZABILE AL SECONDO) -->
+          <!-- 3. DURATA TOTALE -->
           <div class="bg-slate-950 p-2.5 rounded-2xl border border-slate-800 mb-2">
             <div class="flex items-center justify-between mb-1.5">
               <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">⏳ Durata Totale Round</label>
-              <!-- Input custom minuti & secondi -->
               <div class="flex items-center gap-1">
                 <span class="text-[10px] text-slate-400">Personalizza:</span>
                 <input type="number" id="customTotalMinutesInput" min="0" max="60" value="5" oninput="onCustomTotalTimeChange()" class="w-11 bg-slate-900 border border-amber-500/80 rounded-lg px-1 py-0.5 text-center text-xs font-mono font-bold text-white focus:outline-none">
@@ -230,7 +229,14 @@
 
     <div id="scoreboardDisplay" class="flex items-center gap-3"></div>
 
+    <!-- TASTI AZIONE HOST: INIZIALI, FULLSCREEN, OPZIONI -->
     <div class="flex items-center gap-2">
+      <!-- PULSANTE TOGGLE INIZIALI -->
+      <button id="initialsBtn" onclick="toggleInitials()" class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 hover:border-amber-400 text-xs font-bold text-slate-300 transition flex items-center gap-1.5">
+        <span>💡 Iniziali</span>
+        <span id="initialsStatusBadge" class="text-[9px] bg-slate-900 px-1 rounded text-slate-400">OFF</span>
+      </button>
+
       <button onclick="toggleFullscreen()" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-bold transition">⛶ TV</button>
       <button onclick="openLobbyModal()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">⚙️ Opzioni / QR</button>
     </div>
@@ -256,10 +262,13 @@
       { id: 't1', name: 'Squadra Rossa', color: '#ef4444', icon: '🔥', score: 0 },
       { id: 't2', name: 'Squadra Blu', color: '#3b82f6', icon: '⚡', score: 0 }
     ];
+    let revealed = {};
+    let initialsMap = {};
+    let isShowingInitials = false;
     let selectedMode = 'RUSH';
     let isTimerRunning = false;
-    let selectedTotalSeconds = 300; // default 5 min
-    let selectedTurnSeconds = 30;   // default 30 sec
+    let selectedTotalSeconds = 300;
+    let selectedTurnSeconds = 30;
     let qrRendered = false;
 
     const PRESET_COLORS = ['#ef4444', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316'];
@@ -282,7 +291,6 @@
       }
     }
 
-    // GESTIONE DURATA TURNO CUSTOM & PRESET
     function setTurnDurationPreset(sec, btn) {
       selectedTurnSeconds = sec;
       document.getElementById('customTurnSecondsInput').value = sec;
@@ -302,7 +310,6 @@
       }
     }
 
-    // GESTIONE DURATA TOTALE CUSTOM & PRESET
     function setTotalPreset(sec, btn) {
       selectedTotalSeconds = sec;
       const m = Math.floor(sec / 60);
@@ -326,6 +333,7 @@
       });
     }
 
+    // Costruisce la griglia 10x10 tenendo conto di caselle scoperte e delle iniziali
     function buildGrid() {
       const container = document.getElementById('gridContainer');
       container.innerHTML = '';
@@ -333,21 +341,37 @@
         const slot = document.createElement('div');
         slot.id = `slot-${i}`;
         slot.className = "slot-card bg-slate-900/80 border border-slate-800 rounded-lg flex flex-col justify-between p-1 text-center overflow-hidden";
-        slot.innerHTML = `
-          <div class="flex items-center justify-between text-[10px] font-black text-slate-500">
-            <span>#${i}</span>
-            <span class="text-[8px] opacity-40">${i}pt</span>
-          </div>
-          <div class="font-bold text-[10px] leading-tight text-slate-400 truncate px-0.5">???</div>
-          <div class="h-0.5 rounded-full bg-slate-800"></div>
-        `;
+
+        if (revealed[i]) {
+          renderRevealedSlot(slot, i, revealed[i]);
+        } else {
+          renderCoveredSlot(slot, i);
+        }
+
         container.appendChild(slot);
       }
     }
 
-    function updateSlotUI(rank, info) {
-      const el = document.getElementById(`slot-${rank}`);
-      if (!el || !info) return;
+    function renderCoveredSlot(el, rank) {
+      const initial = initialsMap[rank];
+      const hasInitial = isShowingInitials && initial;
+
+      el.style.borderColor = hasInitial ? '#f59e0b55' : '#1e293b';
+      el.style.backgroundColor = hasInitial ? '#78350f15' : 'rgba(15, 23, 42, 0.8)';
+
+      el.innerHTML = `
+        <div class="flex items-center justify-between text-[10px] font-black ${hasInitial ? 'text-amber-400' : 'text-slate-500'}">
+          <span>#${rank}</span>
+          <span class="text-[8px] opacity-40">${rank}pt</span>
+        </div>
+        <div class="font-bold text-[10px] leading-tight truncate px-0.5 ${hasInitial ? 'text-amber-300 font-mono font-black tracking-wider' : 'text-slate-400'}">
+          ${hasInitial ? `[ ${initial}... ]` : '???'}
+        </div>
+        <div class="h-0.5 rounded-full ${hasInitial ? 'bg-amber-500/50' : 'bg-slate-800'}"></div>
+      `;
+    }
+
+    function renderRevealedSlot(el, rank, info) {
       el.style.borderColor = info.teamColor;
       el.style.backgroundColor = `${info.teamColor}20`;
       el.innerHTML = `
@@ -358,6 +382,47 @@
         <div class="font-black text-[10px] text-white leading-tight truncate px-0.5">${info.itemName}</div>
         <div class="text-[8px] font-semibold truncate text-slate-300" style="color: ${info.teamColor}">${info.playerName}</div>
       `;
+    }
+
+    function updateSlotUI(rank, info) {
+      const el = document.getElementById(`slot-${rank}`);
+      if (!el || !info) return;
+      renderRevealedSlot(el, rank, info);
+    }
+
+    // Toggle Iniziali da parte dell'Host
+    function toggleInitials() {
+      socket.emit('toggleInitials');
+    }
+
+    socket.on('initialsToggled', (data) => {
+      isShowingInitials = data.showInitials;
+      initialsMap = data.initialsMap || {};
+      updateInitialsBtnUI();
+      refreshBoardSlots();
+    });
+
+    function updateInitialsBtnUI() {
+      const btn = document.getElementById('initialsBtn');
+      const badge = document.getElementById('initialsStatusBadge');
+      if (isShowingInitials) {
+        btn.className = "px-3 py-1.5 rounded-lg border border-amber-500 bg-amber-500/20 text-xs font-black text-amber-300 transition flex items-center gap-1.5 shadow-md shadow-amber-500/20";
+        badge.innerText = "ON";
+        badge.className = "text-[9px] bg-amber-500 text-slate-950 font-black px-1 rounded";
+      } else {
+        btn.className = "px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 hover:border-amber-400 text-xs font-bold text-slate-300 transition flex items-center gap-1.5";
+        badge.innerText = "OFF";
+        badge.className = "text-[9px] bg-slate-900 px-1 rounded text-slate-400";
+      }
+    }
+
+    function refreshBoardSlots() {
+      for (let i = 1; i <= 100; i++) {
+        const el = document.getElementById(`slot-${i}`);
+        if (el && !revealed[i]) {
+          renderCoveredSlot(el, i);
+        }
+      }
     }
 
     function renderScoreboard() {
@@ -587,6 +652,9 @@
     // ================= EVENTI SOCKET.IO =================
     socket.on('initSync', (data) => {
       populateCategoriesDropdown(data.categoriesList, data.gameState.currentCategoryKey);
+      isShowingInitials = data.gameState.showInitials;
+      initialsMap = data.initialsMap || {};
+      updateInitialsBtnUI();
       applyGameState(data.gameState);
       updatePlayersWaitingUI(data.playersList || []);
       renderLobbyQRCode();
@@ -598,6 +666,9 @@
 
     socket.on('gameState', (data) => {
       if (data.categoriesList) populateCategoriesDropdown(data.categoriesList, data.currentCategoryKey);
+      isShowingInitials = data.showInitials;
+      initialsMap = data.initialsMap || {};
+      updateInitialsBtnUI();
       applyGameState(data);
     });
 
@@ -610,11 +681,9 @@
       else turnBox.classList.add('hidden');
 
       teams = data.teams;
+      revealed = data.revealed || {};
       renderScoreboard();
       buildGrid();
-      if (data.revealed) {
-        Object.keys(data.revealed).forEach(rank => updateSlotUI(rank, data.revealed[rank]));
-      }
       document.getElementById('timerDisplay').innerText = formatTime(data.timer.remaining);
 
       if (data.activeTeam) updateTurnUI(data.activeTeam);
@@ -658,6 +727,8 @@
 
     socket.on('boardUpdated', (payload) => {
       teams = payload.teams;
+      revealed[payload.rank] = payload.data;
+      delete initialsMap[payload.rank]; // Rimuove l'iniziale poiché la posizione è stata rivelata
       renderScoreboard();
       updateSlotUI(payload.rank, payload.data);
 
@@ -677,7 +748,7 @@
           <span class="text-sm">${t.icon}</span>
           <input type="text" value="${t.name}" onchange="updateTeamName(${idx}, this.value)" class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-2 py-0.5 text-xs font-bold text-white">
           <input type="color" value="${t.color}" onchange="updateTeamColor(${idx}, this.value)" class="w-6 h-6 rounded cursor-pointer bg-transparent border-0">
-          ${teams.length > 2 ? `<button onclick="removeTeamField(\${idx})" class="text-rose-400 text-xs p-1">🗑️</button>` : ''}
+          ${teams.length > 2 ? `<button onclick="removeTeamField(${idx})" class="text-rose-400 text-xs p-1">🗑️</button>` : ''}
         </div>
       `).join('');
     }
@@ -707,8 +778,6 @@
 
     function confirmAndStart() {
       const catKey = document.getElementById('categorySelect').value;
-      
-      // Assicura che i secondi totali e del turno siano sempre validi
       const totalSec = selectedTotalSeconds > 0 ? selectedTotalSeconds : 300;
       const turnSec = selectedTurnSeconds > 0 ? selectedTurnSeconds : 30;
 
