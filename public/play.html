@@ -12,7 +12,7 @@
 </head>
 <body class="bg-slate-950 text-white min-h-screen flex flex-col p-4 justify-between select-none">
 
-  <!-- SCHERMATA 1: INSERIMENTO NOME -->
+  <!-- ENTRATA IN LOBBY -->
   <div id="joinScreen" class="flex-1 flex flex-col justify-center max-w-sm mx-auto w-full">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 text-center shadow-2xl">
       <div class="text-3xl mb-2">👋</div>
@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <!-- SCHERMATA 2: SALA D'ATTESA -->
+  <!-- SALA D'ATTESA -->
   <div id="waitingScreen" class="hidden flex-1 flex flex-col justify-center items-center text-center max-w-sm mx-auto w-full">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl w-full">
       <div class="animate-spin text-3xl mb-3">⏳</div>
@@ -40,24 +40,24 @@
       </div>
 
       <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs text-slate-400">
-        L'Host sta organizzando le squadre. Se chiudi la schermata potrai rientrare quando vuoi!
+        L'Host sta avviando la partita. Se chiudi la schermata potrai rientrare quando vuoi!
       </div>
 
       <button onclick="leaveSession()" class="mt-4 text-[10px] text-slate-500 hover:text-rose-400 underline">Cambia Nome / Esci</button>
     </div>
   </div>
 
-  <!-- SCHERMATA 3: CONTROLLER DI GIOCO ATTIVO -->
+  <!-- CONTROLLER DI GIOCO ATTIVO -->
   <div id="gameScreen" class="hidden flex-1 flex flex-col justify-between max-w-md mx-auto w-full">
     <div>
-      <!-- HEADER SMARTPHONE: SQUADRA, PUNTI E FRENZY -->
+      <!-- HEADER SMARTPHONE: INFO GIOCATORE / SQUADRA, PUNTI E FRENZY -->
       <div class="bg-slate-900 border border-slate-800 rounded-2xl px-4 py-2.5 mb-2 shadow-lg">
         <div class="flex items-center justify-between border-b border-slate-800 pb-2 mb-2">
           <div class="flex items-center gap-2">
-            <span id="myTeamIcon" class="text-xl">🔥</span>
+            <span id="headerIcon" class="text-xl">👤</span>
             <div>
-              <div class="text-[9px] font-bold text-slate-400 uppercase leading-none">LA TUA SQUADRA</div>
-              <div id="myTeamName" class="text-xs font-black leading-tight text-white">Squadra Rossa</div>
+              <div id="headerSubtitle" class="text-[9px] font-bold text-slate-400 uppercase leading-none">IL TUO PROFILO</div>
+              <div id="headerTitle" class="text-xs font-black leading-tight text-white">Giocatore</div>
             </div>
           </div>
           <div class="text-right">
@@ -71,7 +71,7 @@
 
         <div class="flex items-center justify-between text-xs font-bold bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800">
           <span class="text-slate-400 flex items-center gap-1.5 truncate">
-            <span>👤</span>
+            <span id="playerAvatarIcon">👤</span>
             <span id="phonePlayerName">Giocatore</span>
           </span>
           <div class="flex items-center gap-2">
@@ -119,7 +119,7 @@
       </div>
 
       <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-2.5">
-        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Ultime prese dalla tua squadra</div>
+        <div id="historyLabel" class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Ultime risposte indovinate</div>
         <div id="teamHistory" class="space-y-1 text-xs text-slate-300">
           <div class="text-slate-600 italic text-[11px]">Nessuna risposta ancora...</div>
         </div>
@@ -133,17 +133,16 @@
     let myPlayer = null;
     let myAssignedTeam = null;
     let myScore = 0;
+    let currentFormat = 'TEAMS';
     let currentMode = 'RUSH';
     let isMyTurn = true;
     let hapticsEnabled = true;
 
-    // Controllo automatico sessione esistente
     if (myPlayerId) {
       socket.emit('reconnectPlayer', { playerId: myPlayerId });
     }
 
     socket.on('sessionNotFound', () => {
-      // Se il server è stato riavviato e l'ID non esiste più, mostra la schermata di registrazione
       localStorage.removeItem('top100_playerId');
       document.getElementById('joinScreen').classList.remove('hidden');
       document.getElementById('waitingScreen').classList.add('hidden');
@@ -154,29 +153,25 @@
       myPlayer = data.player;
       myAssignedTeam = data.team;
       myScore = data.player.score || 0;
-      currentMode = data.gameState.mode;
+      currentFormat = data.gameState.format || 'TEAMS';
+      currentMode = data.gameState.mode || 'RUSH';
       hapticsEnabled = data.gameState.options ? data.gameState.options.haptics : true;
 
       document.getElementById('joinScreen').classList.add('hidden');
       document.getElementById('playerNameDisplay').innerText = `Giocatore: ${myPlayer.name}`;
       document.getElementById('phonePlayerName').innerText = myPlayer.name;
+      document.getElementById('playerAvatarIcon').innerText = myPlayer.icon || '👤';
       document.getElementById('myPersonalScore').innerText = myScore;
       document.getElementById('catTitlePhone').innerText = data.gameState.categoryTitle;
 
       if (data.gameState.status === 'PLAYING') {
         document.getElementById('waitingScreen').classList.add('hidden');
         document.getElementById('gameScreen').classList.remove('hidden');
-
-        if (myAssignedTeam) {
-          document.getElementById('myTeamIcon').innerText = myAssignedTeam.icon;
-          const teamNameEl = document.getElementById('myTeamName');
-          teamNameEl.innerText = myAssignedTeam.name;
-          teamNameEl.style.color = myAssignedTeam.color;
-        }
+        updateHeaderUI();
 
         if (currentMode === 'TURNS') {
           document.getElementById('phoneTurnBanner').classList.remove('hidden');
-          checkMyTurn(data.activeTeam);
+          checkMyTurn(data.activeEntity);
         } else {
           document.getElementById('phoneTurnBanner').classList.add('hidden');
           enableInput();
@@ -184,7 +179,7 @@
       } else {
         document.getElementById('waitingScreen').classList.remove('hidden');
         document.getElementById('gameScreen').classList.add('hidden');
-        if (myAssignedTeam) {
+        if (currentFormat === 'TEAMS' && myAssignedTeam) {
           const preBadge = document.getElementById('preAssignedBadge');
           preBadge.classList.remove('hidden');
           preBadge.style.backgroundColor = `${myAssignedTeam.color}20`;
@@ -194,6 +189,29 @@
         }
       }
     });
+
+    function updateHeaderUI() {
+      const hSub = document.getElementById('headerSubtitle');
+      const hTitle = document.getElementById('headerTitle');
+      const hIcon = document.getElementById('headerIcon');
+      const histLabel = document.getElementById('historyLabel');
+
+      if (currentFormat === 'SOLO') {
+        hSub.innerText = "PROFILO GIOCATORE";
+        hTitle.innerText = myPlayer ? myPlayer.name : "Giocatore";
+        hTitle.style.color = myPlayer ? myPlayer.color : "#ffffff";
+        hIcon.innerText = myPlayer ? myPlayer.icon : "👤";
+        histLabel.innerText = "I TUOI PUNTI INDOVINATI";
+      } else {
+        hSub.innerText = "LA TUA SQUADRA";
+        if (myAssignedTeam) {
+          hTitle.innerText = myAssignedTeam.name;
+          hTitle.style.color = myAssignedTeam.color;
+          hIcon.innerText = myAssignedTeam.icon;
+        }
+        histLabel.innerText = "ULTIME PRESE DALLA SQUADRA";
+      }
+    }
 
     function triggerHaptic(pattern) {
       if (hapticsEnabled && window.navigator && window.navigator.vibrate) {
@@ -229,6 +247,7 @@
       document.getElementById('waitingScreen').classList.remove('hidden');
       document.getElementById('playerNameDisplay').innerText = `Giocatore: ${player.name}`;
       document.getElementById('phonePlayerName').innerText = player.name;
+      document.getElementById('playerAvatarIcon').innerText = player.icon || '👤';
       document.getElementById('myPersonalScore').innerText = myScore;
     });
 
@@ -237,17 +256,13 @@
       const preBadge = document.getElementById('preAssignedBadge');
       const preName = document.getElementById('preAssignedName');
 
-      if (team) {
+      if (team && currentFormat === 'TEAMS') {
         preBadge.classList.remove('hidden');
         preBadge.style.backgroundColor = `${team.color}20`;
         preBadge.style.borderColor = team.color;
         preBadge.style.color = team.color;
         preName.innerText = `${team.icon} ${team.name}`;
-
-        document.getElementById('myTeamIcon').innerText = team.icon;
-        const teamNameEl = document.getElementById('myTeamName');
-        teamNameEl.innerText = team.name;
-        teamNameEl.style.color = team.color;
+        updateHeaderUI();
       } else {
         preBadge.classList.add('hidden');
       }
@@ -255,7 +270,8 @@
 
     socket.on('assignedTeam', (data) => {
       myAssignedTeam = data.team;
-      currentMode = data.gameState.mode;
+      currentFormat = data.gameState.format || 'TEAMS';
+      currentMode = data.gameState.mode || 'RUSH';
       myScore = data.playerScore || 0;
       hapticsEnabled = data.gameState.options ? data.gameState.options.haptics : true;
 
@@ -263,19 +279,13 @@
       document.getElementById('joinScreen').classList.add('hidden');
       document.getElementById('gameScreen').classList.remove('hidden');
 
-      if (myAssignedTeam) {
-        document.getElementById('myTeamIcon').innerText = myAssignedTeam.icon;
-        const teamNameEl = document.getElementById('myTeamName');
-        teamNameEl.innerText = myAssignedTeam.name;
-        teamNameEl.style.color = myAssignedTeam.color;
-      }
-
+      updateHeaderUI();
       document.getElementById('myPersonalScore').innerText = myScore;
       document.getElementById('catTitlePhone').innerText = data.gameState.categoryTitle;
 
       if (currentMode === 'TURNS') {
         document.getElementById('phoneTurnBanner').classList.remove('hidden');
-        checkMyTurn(data.activeTeam);
+        checkMyTurn(data.activeEntity);
       } else {
         document.getElementById('phoneTurnBanner').classList.add('hidden');
         enableInput();
@@ -285,22 +295,29 @@
       triggerHaptic([100, 50, 100]);
     });
 
-    function checkMyTurn(activeTeam) {
-      if (!myAssignedTeam || !activeTeam) return;
+    function checkMyTurn(activeEntity) {
+      if (!activeEntity) return;
       const banner = document.getElementById('phoneTurnBanner');
       const statusText = document.getElementById('phoneTurnStatusText');
 
-      if (activeTeam.id === myAssignedTeam.id) {
+      let isCurrentTurn = false;
+      if (currentFormat === 'SOLO') {
+        isCurrentTurn = (activeEntity.id === myPlayerId);
+      } else {
+        isCurrentTurn = (myAssignedTeam && activeEntity.id === myAssignedTeam.id);
+      }
+
+      if (isCurrentTurn) {
         isMyTurn = true;
         banner.className = "mb-2.5 p-2 rounded-2xl border border-emerald-500 bg-emerald-500/20 text-center";
-        statusText.innerText = "🟢 È IL TURNO DELLA TUA SQUADRA!";
+        statusText.innerText = "🟢 È IL TUO TURNO!";
         statusText.className = "text-sm font-black text-emerald-400";
         enableInput();
         triggerHaptic(80);
       } else {
         isMyTurn = false;
         banner.className = "mb-2.5 p-2 rounded-2xl border border-slate-800 bg-slate-900/80 text-center";
-        statusText.innerText = `⏳ Turno avversario: ${activeTeam.name}`;
+        statusText.innerText = `⏳ In attesa di: ${activeEntity.name}`;
         statusText.className = "text-sm font-black text-slate-400";
         disableInput();
       }
@@ -326,7 +343,7 @@
 
     socket.on('turnChanged', (data) => {
       if (currentMode === 'TURNS') {
-        checkMyTurn(data.activeTeam);
+        checkMyTurn(data.activeEntity);
         if (data.reason) {
           showStatus(data.reason, "bg-indigo-500/20 text-indigo-300 border border-indigo-500/30");
         }
@@ -414,7 +431,10 @@
         }
       }
 
-      if (myAssignedTeam && payload.data.teamId === myAssignedTeam.id) {
+      const isRelevant = (currentFormat === 'SOLO' && payload.data.playerId === myPlayerId) ||
+                         (currentFormat === 'TEAMS' && myAssignedTeam && payload.data.teamId === myAssignedTeam.id);
+
+      if (isRelevant) {
         addHistoryItem(payload.rank, payload.data.itemName, payload.data.points, payload.data.playerName, payload.data.slotType);
       }
     });

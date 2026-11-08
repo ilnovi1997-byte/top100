@@ -12,6 +12,31 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const DATA_DIR = path.join(__dirname, "data");
 
+const PRESET_COLORS = [
+  "#ef4444",
+  "#3b82f6",
+  "#10b981",
+  "#f59e0b",
+  "#8b5cf6",
+  "#ec4899",
+  "#06b6d4",
+  "#f97316",
+  "#84cc16",
+  "#a855f7",
+];
+const PRESET_ICONS = [
+  "🦁",
+  "⚡",
+  "🦅",
+  "🔥",
+  "🚀",
+  "👑",
+  "🦈",
+  "💎",
+  "🎯",
+  "🐺",
+];
+
 function loadAllCategories() {
   const categories = {};
   try {
@@ -42,13 +67,13 @@ function loadAllCategories() {
 let availableCategories = loadAllCategories();
 let currentCategoryKey = Object.keys(availableCategories)[0] || null;
 
-// Gestione giocatori persistenti: playerId -> playerObj
-let connectedPlayers = {}; // playerId -> { playerId, socketId, name, teamId, score, stats, isOnline }
+let connectedPlayers = {}; // playerId -> { playerId, socketId, name, teamId, color, icon, score, isOnline, stats }
 let socketToPlayerId = {}; // socket.id -> playerId
 
 let gameState = {
   status: "LOBBY",
-  mode: "RUSH",
+  format: "TEAMS", // 'TEAMS' oppure 'SOLO'
+  mode: "RUSH", // 'RUSH' oppure 'TURNS'
   currentCategoryKey: currentCategoryKey,
   categoryTitle: currentCategoryKey
     ? availableCategories[currentCategoryKey].categoryTitle
@@ -73,7 +98,7 @@ let gameState = {
   ],
   revealed: {},
   showInitials: false,
-  activeTeamIndex: 0,
+  activeEntityIndex: 0, // indice squadra di turno (in TEAMS) o giocatore di turno (in SOLO)
   turnTimer: { duration: 30, remaining: 30 },
   timer: { duration: 300, remaining: 300, isRunning: false },
   options: {
@@ -114,7 +139,7 @@ function startTimer() {
   io.emit("timerTick", {
     global: gameState.timer,
     turn: gameState.turnTimer,
-    activeTeamId: getActiveTeam().id,
+    activeEntity: getActiveTurnEntity(),
     isFrenzy: isFrenzyActive(),
   });
 
@@ -146,7 +171,7 @@ function startTimer() {
       io.emit("timerTick", {
         global: gameState.timer,
         turn: gameState.turnTimer,
-        activeTeamId: getActiveTeam().id,
+        activeEntity: getActiveTurnEntity(),
         isFrenzy: isFrenzyActive(),
       });
     }
@@ -162,7 +187,7 @@ function pauseTimer() {
   io.emit("timerTick", {
     global: gameState.timer,
     turn: gameState.turnTimer,
-    activeTeamId: getActiveTeam().id,
+    activeEntity: getActiveTurnEntity(),
     isFrenzy: isFrenzyActive(),
   });
 }
@@ -176,18 +201,45 @@ function isFrenzyActive() {
   );
 }
 
-function getActiveTeam() {
-  if (!gameState.teams || gameState.teams.length === 0) return { id: null };
-  return gameState.teams[gameState.activeTeamIndex % gameState.teams.length];
+function getActiveTurnEntity() {
+  if (gameState.format === "SOLO") {
+    const players = Object.values(connectedPlayers);
+    if (players.length === 0) return { id: null, name: "Nessuno" };
+    const p = players[gameState.activeEntityIndex % players.length];
+    return {
+      id: p.playerId,
+      name: p.name,
+      color: p.color,
+      icon: p.icon,
+      isPlayer: true,
+    };
+  } else {
+    if (!gameState.teams || gameState.teams.length === 0)
+      return { id: null, name: "Nessuna Squadra" };
+    const t =
+      gameState.teams[gameState.activeEntityIndex % gameState.teams.length];
+    return {
+      id: t.id,
+      name: t.name,
+      color: t.color,
+      icon: t.icon,
+      isPlayer: false,
+    };
+  }
 }
 
 function passToNextTurn(reasonMessage = null) {
-  gameState.activeTeamIndex =
-    (gameState.activeTeamIndex + 1) % gameState.teams.length;
+  const total =
+    gameState.format === "SOLO"
+      ? Object.keys(connectedPlayers).length
+      : gameState.teams.length;
+  if (total > 0) {
+    gameState.activeEntityIndex = (gameState.activeEntityIndex + 1) % total;
+  }
   gameState.turnTimer.remaining = gameState.turnTimer.duration;
 
   io.emit("turnChanged", {
-    activeTeam: getActiveTeam(),
+    activeEntity: getActiveTurnEntity(),
     reason: reasonMessage,
     turnTimer: gameState.turnTimer,
   });
@@ -239,7 +291,7 @@ function calculateAwards() {
   if (bestSniper.rank > 0) {
     awards.push({
       title: "🎯 Il Cecchino",
-      desc: `Ha scovato la posizione più remota: #${bestSniper.rank} (${bestSniper.title})`,
+      desc: `Posizione più remota: #${bestSniper.rank} (${bestSniper.title})`,
       winner: bestSniper.name,
     });
   }
@@ -250,7 +302,7 @@ function calculateAwards() {
   if (vulture && (vulture.stats?.earlyGuesses || 0) > 0) {
     awards.push({
       title: "🦅 L'Avvoltoio",
-      desc: `Più veloce di tutti nei primi 20 secondi (${vulture.stats.earlyGuesses} prese)`,
+      desc: `Più veloce nei primi 20s (${vulture.stats.earlyGuesses} prese)`,
       winner: vulture.name,
     });
   }
@@ -261,7 +313,7 @@ function calculateAwards() {
   if (spammer && (spammer.stats?.wrongGuesses || 0) > 0) {
     awards.push({
       title: "🤡 Raffica a Vuoto",
-      desc: `Record assoluto di tentativi a vuoto (${spammer.stats.wrongGuesses} errori)`,
+      desc: `Record tentativi errati (${spammer.stats.wrongGuesses} errori)`,
       winner: spammer.name,
     });
   }
@@ -272,7 +324,7 @@ function calculateAwards() {
   if (eternalSecond && (eternalSecond.stats?.stolenTries || 0) > 0) {
     awards.push({
       title: "🐢 L'Eterno Secondo",
-      desc: `Beffato più volte sul filo del rasoio (${eternalSecond.stats.stolenTries} risposte già prese)`,
+      desc: `Beffato più volte (${eternalSecond.stats.stolenTries} già prese)`,
       winner: eternalSecond.name,
     });
   }
@@ -285,11 +337,10 @@ io.on("connection", (socket) => {
     gameState,
     categoriesList: getCategoriesList(),
     playersList: Object.values(connectedPlayers),
-    activeTeam: getActiveTeam(),
+    activeEntity: getActiveTurnEntity(),
     initialsMap: getInitialsMap(),
   });
 
-  // RICONNESSIONE GIOCATORE ESISTENTE
   socket.on("reconnectPlayer", (data) => {
     const { playerId } = data;
     if (playerId && connectedPlayers[playerId]) {
@@ -298,13 +349,16 @@ io.on("connection", (socket) => {
       player.isOnline = true;
       socketToPlayerId[socket.id] = playerId;
 
-      const assignedTeam = gameState.teams.find((t) => t.id === player.teamId);
+      const assignedTeam =
+        gameState.format === "TEAMS"
+          ? gameState.teams.find((t) => t.id === player.teamId)
+          : null;
 
       socket.emit("sessionRestored", {
         player,
         team: assignedTeam || null,
         gameState,
-        activeTeam: getActiveTeam(),
+        activeEntity: getActiveTurnEntity(),
       });
 
       io.emit("playersListUpdated", Object.values(connectedPlayers));
@@ -313,7 +367,6 @@ io.on("connection", (socket) => {
     }
   });
 
-  // PRIMA REGISTRAZIONE GIOCATORE
   socket.on("joinGame", (payload) => {
     const { playerId, name } = payload;
     const effectivePlayerId =
@@ -322,11 +375,17 @@ io.on("connection", (socket) => {
     const cleanName =
       (name || "").trim() || `Ospite_${effectivePlayerId.slice(-4)}`;
 
+    const playerIndex = Object.keys(connectedPlayers).length;
+    const assignedColor = PRESET_COLORS[playerIndex % PRESET_COLORS.length];
+    const assignedIcon = PRESET_ICONS[playerIndex % PRESET_ICONS.length];
+
     connectedPlayers[effectivePlayerId] = {
       playerId: effectivePlayerId,
       socketId: socket.id,
       name: cleanName,
       teamId: null,
+      color: assignedColor,
+      icon: assignedIcon,
       score: 0,
       isOnline: true,
       stats: { wrongGuesses: 0, stolenTries: 0, earlyGuesses: 0 },
@@ -337,7 +396,6 @@ io.on("connection", (socket) => {
     socket.emit("joinedSuccess", connectedPlayers[effectivePlayerId]);
   });
 
-  // Assegnazione manuale team da parte dell'Host (usa playerId)
   socket.on("assignPlayerToTeam", ({ playerId, teamId }) => {
     if (connectedPlayers[playerId]) {
       connectedPlayers[playerId].teamId = teamId || null;
@@ -447,6 +505,7 @@ io.on("connection", (socket) => {
   socket.on("startGameWithConfig", (config) => {
     const {
       categoryKey,
+      format,
       teams,
       duration,
       mode,
@@ -462,36 +521,44 @@ io.on("connection", (socket) => {
       gameState.categoryTitle = availableCategories[categoryKey].categoryTitle;
     }
 
+    gameState.format = format || "TEAMS"; // 'TEAMS' o 'SOLO'
     gameState.mode = mode || "RUSH";
     gameState.options = { ...gameState.options, ...(options || {}) };
 
-    let finalTeams = teams.map((t) => ({ ...t, score: 0, members: [] }));
     const playersArray = Object.values(connectedPlayers);
-
-    playersArray.forEach((p) => {
+    playersArray.forEach((p, idx) => {
       p.score = 0;
+      p.color = PRESET_COLORS[idx % PRESET_COLORS.length];
+      p.icon = PRESET_ICONS[idx % PRESET_ICONS.length];
       p.stats = { wrongGuesses: 0, stolenTries: 0, earlyGuesses: 0 };
     });
 
-    if (shuffleTeams) {
-      finalTeams = distributePlayersRandomly(playersArray, finalTeams);
+    if (gameState.format === "TEAMS") {
+      let finalTeams = teams.map((t) => ({ ...t, score: 0, members: [] }));
+      if (shuffleTeams) {
+        finalTeams = distributePlayersRandomly(playersArray, finalTeams);
+      } else {
+        playersArray.forEach((p) => {
+          let team = finalTeams.find((t) => t.id === p.teamId);
+          if (!team) {
+            finalTeams.sort((a, b) => a.members.length - b.members.length);
+            team = finalTeams[0];
+            p.teamId = team.id;
+          }
+          team.members.push({ playerId: p.playerId, name: p.name });
+        });
+      }
+      gameState.teams = finalTeams;
     } else {
-      playersArray.forEach((p) => {
-        let team = finalTeams.find((t) => t.id === p.teamId);
-        if (!team) {
-          finalTeams.sort((a, b) => a.members.length - b.members.length);
-          team = finalTeams[0];
-          p.teamId = team.id;
-        }
-        team.members.push({ playerId: p.playerId, name: p.name });
-      });
+      // In modalità SOLO azzera i teamId
+      playersArray.forEach((p) => (p.teamId = null));
+      gameState.teams = [];
     }
 
-    gameState.teams = finalTeams;
     gameState.revealed = {};
     gameState.showInitials = false;
     gameState.status = "PLAYING";
-    gameState.activeTeamIndex = 0;
+    gameState.activeEntityIndex = 0;
     gameState.gameStartTime = Date.now();
 
     if (gameState.options.specialSlots) {
@@ -516,12 +583,15 @@ io.on("connection", (socket) => {
     gameState.timer.remaining = totalSec;
 
     playersArray.forEach((p) => {
-      const assignedTeam = gameState.teams.find((t) => t.id === p.teamId);
+      const assignedTeam =
+        gameState.format === "TEAMS"
+          ? gameState.teams.find((t) => t.id === p.teamId)
+          : null;
       if (p.socketId) {
         io.to(p.socketId).emit("assignedTeam", {
           team: assignedTeam,
           gameState,
-          activeTeam: getActiveTeam(),
+          activeEntity: getActiveTurnEntity(),
           playerScore: p.score,
         });
       }
@@ -531,7 +601,7 @@ io.on("connection", (socket) => {
       ...gameState,
       categoriesList: getCategoriesList(),
       playersList: Object.values(connectedPlayers),
-      activeTeam: getActiveTeam(),
+      activeEntity: getActiveTurnEntity(),
       initialsMap: getInitialsMap(),
     });
 
@@ -548,7 +618,7 @@ io.on("connection", (socket) => {
       io.emit("timerTick", {
         global: gameState.timer,
         turn: gameState.turnTimer,
-        activeTeamId: getActiveTeam().id,
+        activeEntity: getActiveTurnEntity(),
         isFrenzy: isFrenzyActive(),
       });
     } else if (action.type === "SKIP_TURN") {
@@ -574,16 +644,27 @@ io.on("connection", (socket) => {
 
     const playerId = socketToPlayerId[socket.id] || payload.playerId;
     const player = connectedPlayers[playerId];
-    const teamId = player ? player.teamId : payload.teamId;
     const playerName = player ? player.name : payload.playerName || "Anonimo";
-    const activeTeam = getActiveTeam();
+    const activeEntity = getActiveTurnEntity();
 
-    if (gameState.mode === "TURNS" && teamId !== activeTeam.id) {
-      socket.emit("guessResult", {
-        status: "LOCKED",
-        message: `⛔ Non è il tuo turno! Tocca a: ${activeTeam.name}`,
-      });
-      return;
+    // Controllo turni (singolo o a squadre)
+    if (gameState.mode === "TURNS") {
+      if (gameState.format === "SOLO" && playerId !== activeEntity.id) {
+        socket.emit("guessResult", {
+          status: "LOCKED",
+          message: `⛔ Non è il tuo turno! Tocca a: ${activeEntity.name}`,
+        });
+        return;
+      } else if (
+        gameState.format === "TEAMS" &&
+        player?.teamId !== activeEntity.id
+      ) {
+        socket.emit("guessResult", {
+          status: "LOCKED",
+          message: `⛔ Non è il turno della tua squadra! Tocca a: ${activeEntity.name}`,
+        });
+        return;
+      }
     }
 
     const cleanGuess = normalizeText(payload.guess || "");
@@ -610,7 +691,7 @@ io.on("connection", (socket) => {
         message: "Nessuna corrispondenza!",
       });
       if (gameState.mode === "TURNS")
-        passToNextTurn(`${activeTeam.name} ha sbagliato!`);
+        passToNextTurn(`${activeEntity.name} ha sbagliato!`);
       return;
     }
 
@@ -619,7 +700,7 @@ io.on("connection", (socket) => {
       const orig = gameState.revealed[matched.rank];
       socket.emit("guessResult", {
         status: "ALREADY_CLAIMED",
-        message: `⚠️ #${matched.rank} già presa da ${orig.teamName}! 0 pt.`,
+        message: `⚠️ #${matched.rank} già presa da ${orig.playerName}! 0 pt.`,
       });
       if (gameState.mode === "TURNS") passToNextTurn(`Posizione già presa!`);
       return;
@@ -649,19 +730,28 @@ io.on("connection", (socket) => {
       if (player && player.stats) player.stats.earlyGuesses++;
     }
 
-    const teamObj = gameState.teams.find((t) => t.id === teamId);
-    if (teamObj) {
-      teamObj.score = Math.max(0, teamObj.score + points);
+    // Accredito squadra (se A Squadre)
+    let teamColor = player?.color || "#6366f1";
+    let teamName = "";
+
+    if (gameState.format === "TEAMS" && player?.teamId) {
+      const teamObj = gameState.teams.find((t) => t.id === player.teamId);
+      if (teamObj) {
+        teamObj.score = Math.max(0, teamObj.score + points);
+        teamColor = teamObj.color;
+        teamName = teamObj.name;
+      }
     }
 
+    // Accredito al singolo giocatore
     if (player) {
       player.score = Math.max(0, (player.score || 0) + points);
     }
 
     gameState.revealed[matched.rank] = {
-      teamId,
-      teamColor: teamObj ? teamObj.color : "#6366f1",
-      teamName: teamObj ? teamObj.name : "Squadra",
+      teamId: player?.teamId || null,
+      teamColor: teamColor,
+      teamName: teamName,
       playerName: playerName,
       playerId: playerId,
       itemName: matched.name,
@@ -692,11 +782,10 @@ io.on("connection", (socket) => {
     });
 
     if (gameState.mode === "TURNS") {
-      passToNextTurn(`${activeTeam.name} ha svelato #${matched.rank}!`);
+      passToNextTurn(`${activeEntity.name} ha svelato #${matched.rank}!`);
     }
   });
 
-  // DISCONNESSIONE SOFT: non elimina il giocatore per permettere il rientro
   socket.on("disconnect", () => {
     const pId = socketToPlayerId[socket.id];
     if (pId && connectedPlayers[pId]) {
