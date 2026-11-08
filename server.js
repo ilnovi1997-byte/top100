@@ -41,7 +41,10 @@ function loadAllCategories() {
 
 let availableCategories = loadAllCategories();
 let currentCategoryKey = Object.keys(availableCategories)[0] || null;
-let connectedPlayers = {}; // socketId -> { socketId, name, teamId, score, stats }
+
+// Gestione giocatori persistenti: playerId -> playerObj
+let connectedPlayers = {}; // playerId -> { playerId, socketId, name, teamId, score, stats, isOnline }
+let socketToPlayerId = {}; // socket.id -> playerId
 
 let gameState = {
   status: "LOBBY",
@@ -73,7 +76,6 @@ let gameState = {
   activeTeamIndex: 0,
   turnTimer: { duration: 30, remaining: 30 },
   timer: { duration: 300, remaining: 300, isRunning: false },
-  // Opzioni Chicche (Toggles)
   options: {
     emojiReactions: true,
     specialSlots: true,
@@ -212,20 +214,17 @@ function distributePlayersRandomly(playerList, teams) {
   const shuffled = [...playerList].sort(() => Math.random() - 0.5);
   shuffled.forEach((p, index) => {
     const targetTeam = teams[index % teams.length];
-    targetTeam.members.push({ socketId: p.socketId, name: p.name });
+    targetTeam.members.push({ playerId: p.playerId, name: p.name });
     p.teamId = targetTeam.id;
   });
   return teams;
 }
 
-// Calcolo delle Pagelle & Titoli Ironici
 function calculateAwards() {
   const players = Object.values(connectedPlayers);
   if (players.length === 0) return [];
-
   const awards = [];
 
-  // 1. Il Cecchino: rank più alto numericamente (posizione più difficile)
   let bestSniper = { name: "Nessuno", rank: 0 };
   Object.keys(gameState.revealed).forEach((r) => {
     const rankNum = parseInt(r, 10);
@@ -245,7 +244,6 @@ function calculateAwards() {
     });
   }
 
-  // 2. L'Avvoltoio: più risposte nei primi 20 secondi
   const vulture = [...players].sort(
     (a, b) => (b.stats?.earlyGuesses || 0) - (a.stats?.earlyGuesses || 0),
   )[0];
@@ -257,7 +255,6 @@ function calculateAwards() {
     });
   }
 
-  // 3. Raffica a Vuoto: più errori totali
   const spammer = [...players].sort(
     (a, b) => (b.stats?.wrongGuesses || 0) - (a.stats?.wrongGuesses || 0),
   )[0];
@@ -269,7 +266,6 @@ function calculateAwards() {
     });
   }
 
-  // 4. L'Eterno Secondo: chi ha provato più volte risposte appena rubate
   const eternalSecond = [...players].sort(
     (a, b) => (b.stats?.stolenTries || 0) - (a.stats?.stolenTries || 0),
   )[0];
@@ -289,34 +285,72 @@ io.on("connection", (socket) => {
     gameState,
     categoriesList: getCategoriesList(),
     playersList: Object.values(connectedPlayers),
-    myPlayerInfo: connectedPlayers[socket.id] || null,
     activeTeam: getActiveTeam(),
     initialsMap: getInitialsMap(),
   });
 
-  socket.on("joinGame", (name) => {
-    const cleanName = (name || "").trim() || `Ospite_${socket.id.slice(0, 4)}`;
-    connectedPlayers[socket.id] = {
+  // RICONNESSIONE GIOCATORE ESISTENTE
+  socket.on("reconnectPlayer", (data) => {
+    const { playerId } = data;
+    if (playerId && connectedPlayers[playerId]) {
+      const player = connectedPlayers[playerId];
+      player.socketId = socket.id;
+      player.isOnline = true;
+      socketToPlayerId[socket.id] = playerId;
+
+      const assignedTeam = gameState.teams.find((t) => t.id === player.teamId);
+
+      socket.emit("sessionRestored", {
+        player,
+        team: assignedTeam || null,
+        gameState,
+        activeTeam: getActiveTeam(),
+      });
+
+      io.emit("playersListUpdated", Object.values(connectedPlayers));
+    } else {
+      socket.emit("sessionNotFound");
+    }
+  });
+
+  // PRIMA REGISTRAZIONE GIOCATORE
+  socket.on("joinGame", (payload) => {
+    const { playerId, name } = payload;
+    const effectivePlayerId =
+      playerId ||
+      `p_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+    const cleanName =
+      (name || "").trim() || `Ospite_${effectivePlayerId.slice(-4)}`;
+
+    connectedPlayers[effectivePlayerId] = {
+      playerId: effectivePlayerId,
       socketId: socket.id,
       name: cleanName,
       teamId: null,
       score: 0,
+      isOnline: true,
       stats: { wrongGuesses: 0, stolenTries: 0, earlyGuesses: 0 },
     };
+    socketToPlayerId[socket.id] = effectivePlayerId;
+
     io.emit("playersListUpdated", Object.values(connectedPlayers));
-    socket.emit("joinedSuccess", connectedPlayers[socket.id]);
+    socket.emit("joinedSuccess", connectedPlayers[effectivePlayerId]);
   });
 
-  socket.on("assignPlayerToTeam", ({ socketId, teamId }) => {
-    if (connectedPlayers[socketId]) {
-      connectedPlayers[socketId].teamId = teamId || null;
+  // Assegnazione manuale team da parte dell'Host (usa playerId)
+  socket.on("assignPlayerToTeam", ({ playerId, teamId }) => {
+    if (connectedPlayers[playerId]) {
+      connectedPlayers[playerId].teamId = teamId || null;
       const targetTeam = gameState.teams.find((t) => t.id === teamId);
-      io.to(socketId).emit("teamAssignmentChanged", targetTeam || null);
+
+      const pSocketId = connectedPlayers[playerId].socketId;
+      if (pSocketId) {
+        io.to(pSocketId).emit("teamAssignmentChanged", targetTeam || null);
+      }
       io.emit("playersListUpdated", Object.values(connectedPlayers));
     }
   });
 
-  // Chicca 1: Reazioni Emoji Volanti inviate da smartphone
   socket.on("sendReaction", (emoji) => {
     if (gameState.options.emojiReactions) {
       io.emit("reactionTriggered", { emoji, id: Date.now() + Math.random() });
@@ -394,7 +428,6 @@ io.on("connection", (socket) => {
     });
   });
 
-  // Chicca 3: Fast Flip - Richiesta di rivelazione di tutti gli elementi mancanti
   socket.on("requestFastFlip", () => {
     if (
       !gameState.options.fastFlip ||
@@ -450,7 +483,7 @@ io.on("connection", (socket) => {
           team = finalTeams[0];
           p.teamId = team.id;
         }
-        team.members.push({ socketId: p.socketId, name: p.name });
+        team.members.push({ playerId: p.playerId, name: p.name });
       });
     }
 
@@ -461,13 +494,12 @@ io.on("connection", (socket) => {
     gameState.activeTeamIndex = 0;
     gameState.gameStartTime = Date.now();
 
-    // Chicca 2: Selezione casuale degli Slot Speciali (Dorati & Bomba)
     if (gameState.options.specialSlots) {
       const ranksPool = Array.from({ length: 100 }, (_, i) => i + 1).sort(
         () => Math.random() - 0.5,
       );
-      gameState.goldenSlots = [ranksPool[0], ranksPool[1]]; // 2 slot dorati
-      gameState.bombSlots = [ranksPool[2]]; // 1 slot bomba
+      gameState.goldenSlots = [ranksPool[0], ranksPool[1]];
+      gameState.bombSlots = [ranksPool[2]];
     } else {
       gameState.goldenSlots = [];
       gameState.bombSlots = [];
@@ -485,12 +517,14 @@ io.on("connection", (socket) => {
 
     playersArray.forEach((p) => {
       const assignedTeam = gameState.teams.find((t) => t.id === p.teamId);
-      io.to(p.socketId).emit("assignedTeam", {
-        team: assignedTeam,
-        gameState,
-        activeTeam: getActiveTeam(),
-        playerScore: p.score,
-      });
+      if (p.socketId) {
+        io.to(p.socketId).emit("assignedTeam", {
+          team: assignedTeam,
+          gameState,
+          activeTeam: getActiveTeam(),
+          playerScore: p.score,
+        });
+      }
     });
 
     io.emit("gameState", {
@@ -538,9 +572,10 @@ io.on("connection", (socket) => {
       return;
     }
 
-    const player = connectedPlayers[socket.id];
+    const playerId = socketToPlayerId[socket.id] || payload.playerId;
+    const player = connectedPlayers[playerId];
     const teamId = player ? player.teamId : payload.teamId;
-    const playerName = player ? player.name : payload.playerName;
+    const playerName = player ? player.name : payload.playerName || "Anonimo";
     const activeTeam = getActiveTeam();
 
     if (gameState.mode === "TURNS" && teamId !== activeTeam.id) {
@@ -590,26 +625,23 @@ io.on("connection", (socket) => {
       return;
     }
 
-    // Calcolo Punteggio con Chicche: Slot Speciali & Frenzy Last 60s
     let points = matched.rank;
     let slotType = "NORMAL";
 
     if (gameState.options.specialSlots) {
       if (gameState.goldenSlots.includes(matched.rank)) {
-        points *= 2; // Raddoppio slot dorato
+        points *= 2;
         slotType = "GOLDEN";
       } else if (gameState.bombSlots.includes(matched.rank)) {
-        points = -30; // Penalità bomba
+        points = -30;
         slotType = "BOMB";
       }
     }
 
-    // Moltiplicatore Frenzy x2 se attivo negli ultimi 60s (solo se non era già una bomba)
     if (isFrenzyActive() && slotType !== "BOMB") {
       points *= 2;
     }
 
-    // Statistica per "L'Avvoltoio": risposta nei primi 20 secondi dall'inizio
     if (
       gameState.gameStartTime &&
       Date.now() - gameState.gameStartTime <= 20000
@@ -630,8 +662,8 @@ io.on("connection", (socket) => {
       teamId,
       teamColor: teamObj ? teamObj.color : "#6366f1",
       teamName: teamObj ? teamObj.name : "Squadra",
-      playerName: playerName || "Anonimo",
-      playerSocketId: socket.id,
+      playerName: playerName,
+      playerId: playerId,
       itemName: matched.name,
       points,
       slotType,
@@ -664,9 +696,14 @@ io.on("connection", (socket) => {
     }
   });
 
+  // DISCONNESSIONE SOFT: non elimina il giocatore per permettere il rientro
   socket.on("disconnect", () => {
-    delete connectedPlayers[socket.id];
-    io.emit("playersListUpdated", Object.values(connectedPlayers));
+    const pId = socketToPlayerId[socket.id];
+    if (pId && connectedPlayers[pId]) {
+      connectedPlayers[pId].isOnline = false;
+      delete socketToPlayerId[socket.id];
+      io.emit("playersListUpdated", Object.values(connectedPlayers));
+    }
   });
 });
 

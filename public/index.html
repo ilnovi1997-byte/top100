@@ -25,21 +25,21 @@
       animation: floatEmoji 3.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
     }
     .frenzy-active {
-      box-shadow: inset 0 0 45px rgba(239, 68, 68, 0.45);
+      box-shadow: inset 0 0 50px rgba(239, 68, 68, 0.45);
       border-color: #ef4444 !important;
     }
   </style>
 </head>
 <body id="tvBody" class="bg-slate-950 text-white min-h-screen flex flex-col justify-between overflow-x-hidden select-none transition-all duration-500">
 
-  <!-- CONTENITORE EMOJI REAZIONI LIVE -->
+  <!-- CONTENITORE EMOJI VOLANTI SULLA TV -->
   <div id="emojiContainer" class="fixed inset-0 pointer-events-none z-50 overflow-hidden"></div>
 
-  <!-- MODAL PRINCIPALE: CONFIGURA PARTITA & CHICCHE -->
+  <!-- MODAL PRINCIPALE: LOBBY & CONFIGURAZIONE -->
   <div id="lobbyModal" class="fixed inset-0 bg-slate-950/98 backdrop-blur-md z-40 flex items-center justify-center p-4 overflow-y-auto">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 lg:p-8 max-w-6xl w-full shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-6 my-auto">
       
-      <!-- QR CODE & PARTECIPANTI -->
+      <!-- COLONNA QR CODE & GIOCATORI -->
       <div class="lg:col-span-4 flex flex-col justify-between bg-slate-950/80 p-5 rounded-2xl border border-slate-800">
         <div class="text-center">
           <span class="text-[10px] font-black uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full mb-2 inline-block">Accedi dal Telefono</span>
@@ -60,12 +60,12 @@
         </div>
       </div>
 
-      <!-- IMPOSTAZIONI, REGOLE & CHICCHE -->
+      <!-- COLONNA IMPOSTAZIONI, REGOLE & SQUADRE -->
       <div class="lg:col-span-8 flex flex-col justify-between space-y-3">
         <div>
           <div class="mb-2">
             <h1 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-500 to-indigo-500">CONFIGURA PARTITA</h1>
-            <p class="text-slate-400 text-xs">Imposta le modalità e attiva le chicche per lo show</p>
+            <p class="text-slate-400 text-xs">Imposta le modalità, assegna i membri o mescola casualmente</p>
           </div>
 
           <!-- MODALITÀ E TEMPI -->
@@ -116,7 +116,7 @@
             </div>
           </div>
 
-          <!-- SELETTORE CHICCHE (LE 6 PROPOSTE ATTIVABILI) -->
+          <!-- SELETTORE CHICCHE (LE 6 PROPOSTE) -->
           <div class="bg-slate-950 p-2.5 rounded-xl border border-amber-500/30 mb-2">
             <label class="text-[10px] font-black text-amber-400 block mb-1.5 uppercase tracking-wider">✨ Seleziona Chicche di Gioco (ON/OFF)</label>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -379,7 +379,6 @@
     const PRESET_COLORS = ['#ef4444', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316'];
     const PRESET_ICONS = ['🔥', '⚡', '🦅', '🦁', '🚀', '👑', '🦈', '💎'];
 
-    // Chicca 1: Ricezione e rendering emoji volanti sulla TV
     socket.on('reactionTriggered', (data) => {
       const container = document.getElementById('emojiContainer');
       const floater = document.createElement('div');
@@ -486,7 +485,6 @@
       `;
     }
 
-    // Chicca 2: Rendering slot speciali (Dorato ✨ e Bomba 💣)
     function renderRevealedSlot(el, rank, info) {
       let specialBadge = '';
       if (info.slotType === 'GOLDEN') {
@@ -576,7 +574,6 @@
       }).join('');
     }
 
-    // Chicca 3: Fast Flip Finale animato a cascata
     function triggerFastFlip() {
       socket.emit('requestFastFlip');
       document.getElementById('fastFlipBtn').classList.add('hidden');
@@ -590,11 +587,10 @@
           const el = document.getElementById(`slot-${item.rank}`);
           if (el) renderRevealedSlot(el, item.rank, revealed[item.rank]);
         }, delay);
-        delay += 60; // 60ms di stacco per ogni casella
+        delay += 60;
       });
     });
 
-    // Chicca 5: Pagelle e Titoli di Fine Partita
     function openAwardsModal(awards) {
       if (!awards || awards.length === 0) return;
       const container = document.getElementById('awardsContainer');
@@ -701,6 +697,7 @@
       }
     }
 
+    // Gestione Squadre con playerId persistente
     function renderLobbyInputs() {
       const cont = document.getElementById('teamsContainer');
       cont.innerHTML = teams.map((t, idx) => {
@@ -721,8 +718,8 @@
                 <select onchange="assignPlayer(this.value, '${t.id}')" class="bg-slate-900 border border-slate-700 rounded text-[10px] text-indigo-300 px-1.5 py-0.5 focus:outline-none">
                   <option value="">➕ Assegna Giocatore...</option>
                   ${playersList.map(p => `
-                    <option value="${p.socketId}" ${p.teamId === t.id ? 'disabled' : ''}>
-                      ${p.name} ${p.teamId ? (p.teamId === t.id ? '(già qui)' : '(in altra squadra)') : '(libero)'}
+                    <option value="${p.playerId}" ${p.teamId === t.id ? 'disabled' : ''}>
+                      ${p.name} ${p.isOnline ? '' : '(offline)'} ${p.teamId ? (p.teamId === t.id ? '(già qui)' : '(in altra squadra)') : '(libero)'}
                     </option>
                   `).join('')}
                 </select>
@@ -733,7 +730,7 @@
                 ${teamMembers.map(m => `
                   <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold border" style="background-color: ${t.color}20; border-color: ${t.color}60; color: ${t.color}">
                     <span>${m.name}</span>
-                    <button onclick="unassignPlayer('${m.socketId}')" class="hover:text-white ml-0.5">✕</button>
+                    <button onclick="unassignPlayer('${m.playerId}')" class="hover:text-white ml-0.5">✕</button>
                   </span>
                 `).join('')}
               </div>
@@ -743,13 +740,13 @@
       }).join('');
     }
 
-    function assignPlayer(socketId, teamId) {
-      if (!socketId) return;
-      socket.emit('assignPlayerToTeam', { socketId, teamId });
+    function assignPlayer(playerId, teamId) {
+      if (!playerId) return;
+      socket.emit('assignPlayerToTeam', { playerId, teamId });
     }
 
-    function unassignPlayer(socketId) {
-      socket.emit('assignPlayerToTeam', { socketId, teamId: null });
+    function unassignPlayer(playerId) {
+      socket.emit('assignPlayerToTeam', { playerId, teamId: null });
     }
 
     function addTeamField() {
@@ -770,7 +767,7 @@
       if (teams.length <= 2) return;
       const removedId = teams[idx].id;
       playersList.forEach(p => {
-        if (p.teamId === removedId) unassignPlayer(p.socketId);
+        if (p.teamId === removedId) unassignPlayer(p.playerId);
       });
       teams.splice(idx, 1);
       renderLobbyInputs();
@@ -1010,7 +1007,6 @@
       document.getElementById('turnTimerDisplay').innerText = `${data.turnTimer.remaining}s`;
     });
 
-    // Chicca 6: Frenzy Last 60s
     socket.on('timerTick', (t) => {
       isTimerRunning = t.global.isRunning;
       document.getElementById('timerDisplay').innerText = formatTime(t.global.remaining);
@@ -1028,7 +1024,6 @@
         document.getElementById('turnTimerDisplay').innerText = `${t.turn.remaining}s`;
       }
 
-      // Attiva / Disattiva grafica Frenzy Last 60s
       const frenzyBadge = document.getElementById('frenzyBadge');
       const tvBody = document.getElementById('tvBody');
       if (t.isFrenzy) {
@@ -1092,7 +1087,6 @@
       const totalSec = selectedTotalSeconds > 0 ? selectedTotalSeconds : 300;
       const turnSec = selectedTurnSeconds > 0 ? selectedTurnSeconds : 30;
 
-      // Legge i toggle delle 6 chicche selezionate dall'Host
       const options = {
         emojiReactions: document.getElementById('chkEmoji').checked,
         specialSlots: document.getElementById('chkSpecial').checked,
