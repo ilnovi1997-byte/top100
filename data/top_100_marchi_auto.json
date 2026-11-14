@@ -1,0 +1,515 @@
+{
+  "categoryId": "marchi_auto",
+  "title": "I 100 marchi di automobili più venduti e noti",
+  "description": "Indovina le case automobilistiche più famose della storia.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Toyota",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Volkswagen",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Ford",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Honda",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Hyundai",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Nissan",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Chevrolet",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Kia",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Mercedes-Benz",
+      "aliases": [
+        "Mercedes"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "BMW",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Audi",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Renault",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Peugeot",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Fiat",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Suzuki",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Maruti Suzuki",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Jeep",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Mazda",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Volvo",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Lexus",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Subaru",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Tesla",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Skoda",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Mitsubishi",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Land Rover",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Porsche",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Ferrari",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Lamborghini",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Maserati",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Alfa Romeo",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Lancia",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Seat",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Dacia",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Opel",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Vauxhall",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Citroën",
+      "aliases": [
+        "Citroen"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "Chrysler",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Dodge",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Ram",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "GMC",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Buick",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Cadillac",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Lincoln",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Acura",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Infiniti",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Genesis",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Mini",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Smart",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Jaguar",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Aston Martin",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Bentley",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Rolls-Royce",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "McLaren",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Bugatti",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Pagani",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Koenigsegg",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Lotus",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "MG",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Rover",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Saab",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Isuzu",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Daihatsu",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "SsangYong",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Tata",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Mahindra",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "BYD",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Geely",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Changan",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Chery",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Great Wall",
+      "aliases": [
+        "GWM"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "Haval",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "SAIC",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Dongfeng",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "FAW",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "BAIC",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Nio",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Xpeng",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Li Auto",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Rivian",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Lucid",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Polestar",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Cupra",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Abarth",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Alpine",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "DS Automobiles",
+      "aliases": [
+        "DS"
+      ]
+    },
+    {
+      "rank": 86,
+      "answer": "Datsun",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Holden",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Lada",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "GAZ",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "UAZ",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Proton",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Perodua",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "VinFast",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Fisker",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "DeLorean",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Hummer",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Pontiac",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Saturn",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Oldsmobile",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Plymouth",
+      "aliases": []
+    }
+  ]
+}

@@ -1,0 +1,511 @@
+{
+  "categoryId": "siti_web",
+  "title": "I 100 siti web più visitati al mondo",
+  "description": "Indovina i domini e le piattaforme online con il maggior traffico internet globale.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Google",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "YouTube",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Facebook",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Instagram",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Twitter",
+      "aliases": [
+        "X"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Wikipedia",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Yahoo",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Baidu",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Yandex",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "WhatsApp",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Amazon",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Netflix",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "TikTok",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Reddit",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "LinkedIn",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Bing",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Twitch",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Discord",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Pinterest",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Zoom",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "eBay",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Quora",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Microsoft",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Live",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Naver",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "VK",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Samsung",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Apple",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Booking",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "BBC",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "CNN",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "ESPN",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Fandom",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "IMDb",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "GitHub",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "OpenAI",
+      "aliases": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "Canva",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "AliExpress",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Rakuten",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "PayPal",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Walmart",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Bilibili",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "DuckDuckGo",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Forbes",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Indeed",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "MSN",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Office",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Patreon",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "QQ",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Roblox",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Spotify",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Stack Overflow",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Taobao",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Telegram",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Temu",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "The Guardian",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "TripAdvisor",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Tumblr",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Upwork",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Weibo",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "WordPress",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Zillow",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Weather",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "CNET",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "NYTimes",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Globo",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Al Jazeera",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Reuters",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Bloomberg",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Business Insider",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "The Washington Post",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Fox News",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Hulu",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Disney Plus",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "HBO Max",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Paramount Plus",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Prime Video",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Vimeo",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Dailymotion",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "SoundCloud",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Apple Music",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Tinder",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Badoo",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Bumble",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "OkCupid",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Match",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Realtor",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Trulia",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Chase",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Bank of America",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Wells Fargo",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Capital One",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "American Express",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Citi",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Fidelity",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Vanguard",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Robinhood",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Coinbase",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Binance",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Kraken",
+      "aliases": []
+    }
+  ]
+}

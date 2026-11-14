@@ -1,0 +1,531 @@
+{
+  "categoryId": "piatti_italiani",
+  "title": "I 100 piatti e ricette italiane più famosi",
+  "description": "Indovina le ricette, i dolci e le preparazioni italiane più celebri e consumate nel mondo.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Pizza Margherita",
+      "aliases": [
+        "Pizza"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Spaghetti alla Carbonara",
+      "aliases": [
+        "Carbonara"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Lasagne al forno",
+      "aliases": [
+        "Lasagne"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Tiramisù",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Risotto alla Milanese",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Tortellini in brodo",
+      "aliases": [
+        "Tortellini"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Tagliatelle al ragù",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Gnocchi di patate",
+      "aliases": [
+        "Gnocchi"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Arancini",
+      "aliases": [
+        "Arancine"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Cotoletta alla Milanese",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Bistecca alla Fiorentina",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Pesto alla Genovese",
+      "aliases": [
+        "Pesto"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Focaccia",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Melanzane alla Parmigiana",
+      "aliases": [
+        "Parmigiana"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Spaghetti alle vongole",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Bucatini all'Amatriciana",
+      "aliases": [
+        "Amatriciana"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Cacio e pepe",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Orecchiette alle cime di rapa",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Polenta",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Ossobuco",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Caprese",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Bruschetta",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Cannoli siciliani",
+      "aliases": [
+        "Cannoli"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Panettone",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Pandoro",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Ravioli",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Ribollita",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Saltimbocca alla Romana",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Vitello tonnato",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Porchetta",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Fritto misto",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Zeppole",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Panna cotta",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Pasta e fagioli",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Minestrone",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Spaghetti aglio, olio e peperoncino",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Pasta alla Norma",
+      "aliases": [
+        "Norma"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Trofie al pesto",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Polpette al sugo",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Insalata di mare",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Baccalà alla Vicentina",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Cacciucco",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Farinata",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Piadina romagnola",
+      "aliases": [
+        "Piadina"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Supplì",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Olive all'ascolana",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Taralli",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Cantucci",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Babà",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Sfogliatella",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Crostata",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Strudel",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Zabaione",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Gelato",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Granita",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Cassata siciliana",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Castagnaccio",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Pandolce",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Panforte",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Torrone",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Spaghetti allo scoglio",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Linguine all'astice",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Impepata di cozze",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Carpaccio",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Bresaola, rucola e grana",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Torta rustica",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Torta pasqualina",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Torta della nonna",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Pizzoccheri",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Canederli",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Agnolotti",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Cappelletti",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Passatelli",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Tajarin",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Pasta al forno",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Timballo",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Pollo alla cacciatora",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Abbacchio scottadito",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Coniglio alla ligure",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Trippa alla romana",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Coda alla vaccinara",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Pajata",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Zuppa di pesce",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Alici marinate",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Baccalà mantecato",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Sarde in saor",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Caponata",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Peperonata",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Zucchine alla scapece",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Carciofi alla giudia",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Carciofi alla romana",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Puntarelle",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Brodetto",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Gubana",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Seadas",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Placeholder 96",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Placeholder 97",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Placeholder 98",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Placeholder 99",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Placeholder 100",
+      "aliases": []
+    }
+  ]
+}

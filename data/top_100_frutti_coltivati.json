@@ -1,0 +1,523 @@
+{
+  "categoryId": "frutti_coltivati",
+  "title": "I 100 frutti più coltivati e consumati al mondo",
+  "description": "Indovina la frutta e le bacche più note a livello globale.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Banana",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Mela",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Uva",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Arancia",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Anguria",
+      "aliases": [
+        "Cocomero"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Mango",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Melone",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Ananas",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Pesca",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Limone",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Fragola",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Prugna",
+      "aliases": [
+        "Susina"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Pompelmo",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Kiwi",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Avocado",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Papaya",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Ciliegia",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Cocco",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Mirtillo",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Lampone",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Mora",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Mandarino",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Fico",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Melagrana",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Dattero",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Albicocca",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Litchi",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Maracuja",
+      "aliases": [
+        "Passion fruit"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Guava",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Caco",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Nespola",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Fico d'India",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Mela cotogna",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Ribes",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Uva spina",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Gelso",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Clementina",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Lime",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Cedro",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Bergamotto",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Mapo",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Kumquat",
+      "aliases": [
+        "Mandarino cinese"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Tamarindo",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Carambola",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Rambutan",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Mangostano",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Durian",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Jackfruit",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Pitaya",
+      "aliases": [
+        "Dragon fruit"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Cantalupo",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Pomelo",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Mandarancio",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Chinotto",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Ribes nero",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Mirtillo rosso",
+      "aliases": [
+        "Cranberry"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Sorba",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Corbezzolo",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Amarena",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Visciola",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Giuggiola",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Carruba",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Bacche di Goji",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Açai",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Baobab",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Cacao",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Camu camu",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Alchechengi",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Feijoa",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Tamarillo",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Kiwano",
+      "aliases": [
+        "Melone cornuto"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "Salak",
+      "aliases": [
+        "Frutto del serpente"
+      ]
+    },
+    {
+      "rank": 72,
+      "answer": "Cherimoya",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Guanabana",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Sapote",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Mamey",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Atemoya",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Langsat",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Longan",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Caimito",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Bilimbi",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Jabuticaba",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Cupuaçu",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Lucuma",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Pecana",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Noce di macadamia",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Mandorla",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Nocciola",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Noce",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Pistacchio",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Castagna",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Pinolo",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Anacardio",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Arachide",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Mora di gelso",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Mirtillo siberiano",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Sambuco",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Prugnolo",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Uva ursina",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Lampone giallo",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Nocciolina",
+      "aliases": []
+    }
+  ]
+}

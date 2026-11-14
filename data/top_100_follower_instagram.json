@@ -1,0 +1,732 @@
+{
+  "categoryId": "follower_instagram",
+  "title": "I 100 profili Instagram con più follower",
+  "description": "Indovina le celebrità, gli atleti e i brand più seguiti sul social network.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Instagram",
+      "aliases": [
+        "@instagram"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Cristiano Ronaldo",
+      "aliases": [
+        "CR7",
+        "@cristiano"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Lionel Messi",
+      "aliases": [
+        "Messi",
+        "@leomessi"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Selena Gomez",
+      "aliases": [
+        "@selenagomez"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Kylie Jenner",
+      "aliases": [
+        "@kyliejenner"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Dwayne Johnson",
+      "aliases": [
+        "The Rock",
+        "@therock"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Ariana Grande",
+      "aliases": [
+        "@arianagrande"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Kim Kardashian",
+      "aliases": [
+        "@kimkardashian"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Beyoncé",
+      "aliases": [
+        "Beyonce",
+        "@beyonce"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Khloé Kardashian",
+      "aliases": [
+        "Khloe Kardashian",
+        "@khloekardashian"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Nike",
+      "aliases": [
+        "@nike"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Justin Bieber",
+      "aliases": [
+        "@justinbieber"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Kendall Jenner",
+      "aliases": [
+        "@kendalljenner"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Taylor Swift",
+      "aliases": [
+        "@taylorswift"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "National Geographic",
+      "aliases": [
+        "Nat Geo",
+        "@natgeo"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Virat Kohli",
+      "aliases": [
+        "@virat.kohli"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Jennifer Lopez",
+      "aliases": [
+        "JLo",
+        "@jlo"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Nicki Minaj",
+      "aliases": [
+        "@nickiminaj"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "Kourtney Kardashian",
+      "aliases": [
+        "@kourtneykardash"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Miley Cyrus",
+      "aliases": [
+        "@mileycyrus"
+      ]
+    },
+    {
+      "rank": 21,
+      "answer": "Katy Perry",
+      "aliases": [
+        "@katyperry"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "Zendaya",
+      "aliases": [
+        "@zendaya"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Kevin Hart",
+      "aliases": [
+        "@kevinhart4real"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Real Madrid",
+      "aliases": [
+        "Real Madrid CF",
+        "@realmadrid"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Cardi B",
+      "aliases": [
+        "@iamcardib"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "LeBron James",
+      "aliases": [
+        "@kingjames"
+      ]
+    },
+    {
+      "rank": 27,
+      "answer": "Demi Lovato",
+      "aliases": [
+        "@ddlovato"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Rihanna",
+      "aliases": [
+        "@badgalriri"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Chris Brown",
+      "aliases": [
+        "@chrisbrownofficial"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "Ellen DeGeneres",
+      "aliases": [
+        "@theellenshow"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "Drake",
+      "aliases": [
+        "@champagnepapi"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "FC Barcelona",
+      "aliases": [
+        "Barcellona",
+        "@fcbarcelona"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "Billie Eilish",
+      "aliases": [
+        "@billieeilish"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "UEFA Champions League",
+      "aliases": [
+        "Champions League",
+        "@championsleague"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Gal Gadot",
+      "aliases": [
+        "@gal_gadot"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Dua Lipa",
+      "aliases": [
+        "@dualipa"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "NASA",
+      "aliases": [
+        "@nasa"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Lisa",
+      "aliases": [
+        "Lisa Blackpink",
+        "@lalalalisa_m"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "Priyanka Chopra",
+      "aliases": [
+        "@priyankachopra"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "Snoop Dogg",
+      "aliases": [
+        "@snoopdogg"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Shakira",
+      "aliases": [
+        "@shakira"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "David Beckham",
+      "aliases": [
+        "@davidbeckham"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Kylian Mbappé",
+      "aliases": [
+        "Kylian Mbappe",
+        "@k.mbappe"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "Shraddha Kapoor",
+      "aliases": [
+        "@shraddhakapoor"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Victoria's Secret",
+      "aliases": [
+        "@victoriassecret"
+      ]
+    },
+    {
+      "rank": 46,
+      "answer": "Shawn Mendes",
+      "aliases": [
+        "@shawnmendes"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "Gigi Hadid",
+      "aliases": [
+        "@gigihadid"
+      ]
+    },
+    {
+      "rank": 48,
+      "answer": "Tom Holland",
+      "aliases": [
+        "@tomholland2013"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Emma Watson",
+      "aliases": [
+        "@emmawatson"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Alia Bhatt",
+      "aliases": [
+        "@aliaabhatt"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "9GAG",
+      "aliases": [
+        "@9gag"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "Ronaldinho",
+      "aliases": [
+        "@ronaldinho"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Camila Cabello",
+      "aliases": [
+        "@camila_cabello"
+      ]
+    },
+    {
+      "rank": 54,
+      "answer": "Justin Timberlake",
+      "aliases": [
+        "@justintimberlake"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Maluma",
+      "aliases": [
+        "@maluma"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Marvel Entertainment",
+      "aliases": [
+        "Marvel",
+        "@marvel"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "Deepika Padukone",
+      "aliases": [
+        "@deepikapadukone"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "Neymar",
+      "aliases": [
+        "Neymar Jr",
+        "@neymarjr"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "Zlatan Ibrahimović",
+      "aliases": [
+        "Ibrahimovic",
+        "@iamzlatanibrahimovic"
+      ]
+    },
+    {
+      "rank": 60,
+      "answer": "50 Cent",
+      "aliases": [
+        "@50cent"
+      ]
+    },
+    {
+      "rank": 61,
+      "answer": "Will Smith",
+      "aliases": [
+        "@willsmith"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "Marvel Studios",
+      "aliases": [
+        "@marvelstudios"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "Cara Delevingne",
+      "aliases": [
+        "@caradelevingne"
+      ]
+    },
+    {
+      "rank": 64,
+      "answer": "J Balvin",
+      "aliases": [
+        "@jbalvin"
+      ]
+    },
+    {
+      "rank": 65,
+      "answer": "Chris Hemsworth",
+      "aliases": [
+        "@chrishemsworth"
+      ]
+    },
+    {
+      "rank": 66,
+      "answer": "Neha Kakkar",
+      "aliases": [
+        "@nehakakkar"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "Katrina Kaif",
+      "aliases": [
+        "@katrinakaif"
+      ]
+    },
+    {
+      "rank": 68,
+      "answer": "Zach King",
+      "aliases": [
+        "@zachking"
+      ]
+    },
+    {
+      "rank": 69,
+      "answer": "Juventus",
+      "aliases": [
+        "Juve",
+        "@juventus"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "Jacqueline Fernandez",
+      "aliases": [
+        "@jacquelinef143"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "Akshay Kumar",
+      "aliases": [
+        "@akshaykumar"
+      ]
+    },
+    {
+      "rank": 72,
+      "answer": "Anitta",
+      "aliases": [
+        "@anitta"
+      ]
+    },
+    {
+      "rank": 73,
+      "answer": "Lele Pons",
+      "aliases": [
+        "@lelepons"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "E! News",
+      "aliases": [
+        "@enews"
+      ]
+    },
+    {
+      "rank": 75,
+      "answer": "Vogue",
+      "aliases": [
+        "@voguemagazine"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "Stephen Curry",
+      "aliases": [
+        "Steph Curry",
+        "@stephencurry30"
+      ]
+    },
+    {
+      "rank": 77,
+      "answer": "Huda Beauty",
+      "aliases": [
+        "@hudabeauty"
+      ]
+    },
+    {
+      "rank": 78,
+      "answer": "Salman Khan",
+      "aliases": [
+        "@beingsalmankhan"
+      ]
+    },
+    {
+      "rank": 79,
+      "answer": "Bad Bunny",
+      "aliases": [
+        "@badbunnypr"
+      ]
+    },
+    {
+      "rank": 80,
+      "answer": "Paulo Dybala",
+      "aliases": [
+        "Dybala",
+        "@paulodybala"
+      ]
+    },
+    {
+      "rank": 81,
+      "answer": "Niana Guerrero",
+      "aliases": [
+        "@nianaguerrero"
+      ]
+    },
+    {
+      "rank": 82,
+      "answer": "Karol G",
+      "aliases": [
+        "@karolg"
+      ]
+    },
+    {
+      "rank": 83,
+      "answer": "Urvashi Rautela",
+      "aliases": [
+        "@urvashirautela"
+      ]
+    },
+    {
+      "rank": 84,
+      "answer": "Disha Patani",
+      "aliases": [
+        "@dishapatani"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "BLACKPINK",
+      "aliases": [
+        "@blackpinkofficial"
+      ]
+    },
+    {
+      "rank": 86,
+      "answer": "Manchester United",
+      "aliases": [
+        "Man U",
+        "@manchesterunited"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "NBA",
+      "aliases": [
+        "@nba"
+      ]
+    },
+    {
+      "rank": 88,
+      "answer": "Chris Evans",
+      "aliases": [
+        "@chrisevans"
+      ]
+    },
+    {
+      "rank": 89,
+      "answer": "Tom Cruise",
+      "aliases": [
+        "@tomcruise"
+      ]
+    },
+    {
+      "rank": 90,
+      "answer": "Leonardo DiCaprio",
+      "aliases": [
+        "@leonardodicaprio"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "Lady Gaga",
+      "aliases": [
+        "@ladygaga"
+      ]
+    },
+    {
+      "rank": 92,
+      "answer": "Paul Pogba",
+      "aliases": [
+        "Pogba",
+        "@paulpogba"
+      ]
+    },
+    {
+      "rank": 93,
+      "answer": "Sergio Ramos",
+      "aliases": [
+        "@sergioramos"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "Antoine Griezmann",
+      "aliases": [
+        "Griezmann",
+        "@antogriezmann"
+      ]
+    },
+    {
+      "rank": 95,
+      "answer": "James Rodriguez",
+      "aliases": [
+        "@jamesrodriguez10"
+      ]
+    },
+    {
+      "rank": 96,
+      "answer": "Gareth Bale",
+      "aliases": [
+        "@garethbale11"
+      ]
+    },
+    {
+      "rank": 97,
+      "answer": "Luis Suárez",
+      "aliases": [
+        "Luis Suarez",
+        "@luissuarez9"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Jennie",
+      "aliases": [
+        "Jennie Blackpink",
+        "@jennierubyjane"
+      ]
+    },
+    {
+      "rank": 99,
+      "answer": "Jisoo",
+      "aliases": [
+        "Jisoo Blackpink",
+        "@sooyaaa__"
+      ]
+    },
+    {
+      "rank": 100,
+      "answer": "Rose",
+      "aliases": [
+        "Rose Blackpink",
+        "@roses_are_rosie"
+      ]
+    }
+  ]
+}

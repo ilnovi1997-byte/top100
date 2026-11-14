@@ -1,0 +1,521 @@
+{
+  "categoryId": "sport_praticati",
+  "title": "Gli 100 sport più praticati al mondo",
+  "description": "Indovina le discipline sportive con il maggior numero di appassionati e praticanti a livello globale.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Calcio",
+      "aliases": [
+        "Football"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Cricket",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Basket",
+      "aliases": [
+        "Pallacanestro"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Hockey su prato",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Tennis",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Pallavolo",
+      "aliases": [
+        "Volleyball"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Tennistavolo",
+      "aliases": [
+        "Ping Pong"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Baseball",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Football americano",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Rugby",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Golf",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Atletica leggera",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Nuoto",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Ginnastica",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Ciclismo",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Badminton",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Pugilato",
+      "aliases": [
+        "Boxe"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "MMA",
+      "aliases": [
+        "Arti marziali miste"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "Judo",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Karate",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Taekwondo",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Lotta libera",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Scherma",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Sollevamento pesi",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Motociclismo",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Automobilismo",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Formula 1",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Pallanuoto",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Tuffi",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Sci alpino",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Sci di fondo",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Biathlon",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Salto con gli sci",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Pattinaggio di figura",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Pattinaggio di velocità",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Hockey su ghiaccio",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Bob",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Slittino",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Skeleton",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Snowboard",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Surf",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Vela",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Canottaggio",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Canoa/Kayak",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Equitazione",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Tiro con l'arco",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Tiro a segno",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Pentathlon moderno",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Triathlon",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Pallamano",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Padel",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Squash",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Racquetball",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Biliardo",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Snooker",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Freccette",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Bowling",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Bocce",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Curling",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Polo",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Kitesurf",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Windsurf",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Sci nautico",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Wakeboard",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Paracadutismo",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Deltaplano",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Parapendio",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Alpinismo",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Arrampicata sportiva",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Bouldering",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Parkour",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Skateboard",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "BMX",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Motocross",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Rally",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Karting",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Motonautica",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Pallacanestro 3x3",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Beach volley",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Calcio a 5",
+      "aliases": [
+        "Futsal"
+      ]
+    },
+    {
+      "rank": 81,
+      "answer": "Beach soccer",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Football australiano",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Hurling",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Calcio gaelico",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Sepak takraw",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Kabaddi",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Sumo",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Kendo",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Aikido",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Jujitsu",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Krav Maga",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Muay Thai",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Kickboxing",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Savate",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Sambo",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Wushu",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Tai Chi",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Capoeira",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Palla tamburello",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Ultimate Frisbee",
+      "aliases": []
+    }
+  ]
+}

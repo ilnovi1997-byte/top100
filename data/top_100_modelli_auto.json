@@ -1,0 +1,515 @@
+{
+  "categoryId": "modelli_auto",
+  "title": "I 100 singoli modelli di auto più venduti della storia",
+  "description": "Indovina i modelli di automobili con i maggiori volumi di vendita a livello mondiale.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Toyota Corolla",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Volkswagen Golf",
+      "aliases": [
+        "Golf"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Ford F-Series",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Volkswagen Maggiolino",
+      "aliases": [
+        "Beetle"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Honda Civic",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Volkswagen Passat",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Honda Accord",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Ford Model T",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Peugeot 206",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Chevrolet Impala",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Volkswagen Polo",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Volkswagen Jetta",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Opel Corsa",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Ford Fiesta",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Renault Clio",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Opel Astra",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Ford Focus",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Chevrolet Silverado",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Toyota Camry",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "BMW Serie 3",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Honda CR-V",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Toyota RAV4",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Hyundai Elantra",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Toyota Yaris",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Tesla Model 3",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Tesla Model Y",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Ford Mustang",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Mini",
+      "aliases": [
+        "Mini Cooper"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Fiat 500",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Fiat Punto",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Fiat Panda",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Renault Megane",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Peugeot 208",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Chevrolet Cruze",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Mazda 3",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Suzuki Swift",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Volkswagen Tiguan",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Nissan Qashqai",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Dacia Sandero",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Kia Sportage",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Hyundai Tucson",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Honda Fit",
+      "aliases": [
+        "Jazz"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Audi A4",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Audi A3",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Mercedes Classe C",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Mercedes Classe E",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "BMW Serie 5",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Skoda Octavia",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Seat Ibiza",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Peugeot 308",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Nissan Sentra",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Toyota Hilux",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Ford Escort",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Chevrolet Cavalier",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Lada Riva",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Dodge Ram",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Honda HR-V",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Ford Ranger",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Jeep Wrangler",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Jeep Grand Cherokee",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Chevrolet Malibu",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Subaru Impreza",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Subaru Forester",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Nissan Altima",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Toyota Land Cruiser",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Mitsubishi Lancer",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Fiat Uno",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Renault Twingo",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Citroen 2CV",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Citroen C3",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Peugeot 205",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Peugeot 207",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Opel Kadett",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Ford Taurus",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Toyota Prius",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Volkswagen Transporter",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Chevrolet Spark",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Hyundai Accent",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Kia Rio",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Hyundai Sonata",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Dacia Duster",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Fiat 124",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Volvo 200 Series",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Land Rover Defender",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Range Rover",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Porsche 911",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Chevrolet Corvette",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Chevrolet Camaro",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Dodge Charger",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Dodge Challenger",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Pontiac Firebird",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Nissan Skyline",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Nissan GTR",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Toyota Supra",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Mazda MX-5",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Volkswagen Santana",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Wuling Hongguang",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Haval H6",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Baojun 510",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Nissan Leaf",
+      "aliases": []
+    }
+  ]
+}

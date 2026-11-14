@@ -1,0 +1,513 @@
+{
+  "categoryId": "cocktail_iba",
+  "title": "I 100 cocktail ufficiali più ordinati",
+  "description": "Indovina le bevande miscelate più popolari e storiche preparate nei bar di tutto il mondo.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Margarita",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Negroni",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Old Fashioned",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Martini",
+      "aliases": [
+        "Dry Martini"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Manhattan",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Daiquiri",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Whiskey Sour",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Espresso Martini",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Aperol Spritz",
+      "aliases": [
+        "Spritz"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Cosmopolitan",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Mojito",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Gimlet",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Moscow Mule",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Boulevardier",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Caipirinha",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Pina Colada",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Mai Tai",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Bloody Mary",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "French 75",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Paloma",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Penicillin",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Pisco Sour",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Amaretto Sour",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Bellini",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Black Russian",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "White Russian",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Americano",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Aviation",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Bramble",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Dark 'n' Stormy",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Vesper",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Mimosa",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Tom Collins",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Corpse Reviver #2",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Sidecar",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Irish Coffee",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Mint Julep",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Gin Fizz",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Martinez",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Vieux Carré",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Zombie",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Clover Club",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Southside",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Aperol Betty",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Blood and Sand",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Cuba Libre",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Tequila Sunrise",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Long Island Iced Tea",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Sex on the Beach",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Pornstar Martini",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Rusty Nail",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Grasshopper",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Sazerac",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Hanky Panky",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Mary Pickford",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Yellow Bird",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Golden Dream",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Harvey Wallbanger",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Sea Breeze",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Blue Lagoon",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "B52",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Kamikaze",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Lemon Drop",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Alexander",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Godfather",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Godmother",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "French Connection",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "White Lady",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "John Collins",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Tuxedo",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Derby",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Between the Sheets",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Planter's Punch",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Paradise",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Porto Flip",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Champagne Cocktail",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Kir",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Kir Royale",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Horse's Neck",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Black Velvet",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Pimm's Cup",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Gin Tonic",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Vodka Tonic",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Rum & Cola",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Vodka Lemon",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Vodka Red Bull",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Screwdriver",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Cape Codder",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Greyhound",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Salty Dog",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Black and Tan",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Michelada",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Sangria",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Mulled Wine",
+      "aliases": [
+        "Vin Brulè"
+      ]
+    },
+    {
+      "rank": 95,
+      "answer": "Eggnog",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Hot Toddy",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Batida",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Ti' Punch",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Macuà",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Placeholder 100",
+      "aliases": []
+    }
+  ]
+}

@@ -1,0 +1,600 @@
+{
+  "categoryId": "manga_venduti",
+  "title": "I 100 manga più venduti della storia",
+  "description": "Indovina i fumetti giapponesi che hanno registrato il maggior numero di copie in circolazione.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "One Piece",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Golgo 13",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Detective Conan",
+      "aliases": [
+        "Conan"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Dragon Ball",
+      "aliases": [
+        "DB",
+        "Dragonball"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Doraemon",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Naruto",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Slam Dunk",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "KochiKame",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Demon Slayer",
+      "aliases": [
+        "Kimetsu no Yaiba"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Bleach",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Le bizzarre avventure di JoJo",
+      "aliases": [
+        "JoJo",
+        "JoJo's Bizarre Adventure"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "L'attacco dei giganti",
+      "aliases": [
+        "Attack on Titan",
+        "AOT",
+        "Shingeki no Kyojin"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Astro Boy",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Ken il guerriero",
+      "aliases": [
+        "Hokuto no Ken",
+        "Fist of the North Star"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Baki the Grappler",
+      "aliases": [
+        "Baki"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "My Hero Academia",
+      "aliases": [
+        "MHA"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Jujutsu Kaisen",
+      "aliases": [
+        "JJK"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Hunter x Hunter",
+      "aliases": [
+        "HxH"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "Touch",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Hajime no Ippo",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Kinnikuman",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Vagabond",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Fullmetal Alchemist",
+      "aliases": [
+        "FMA"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Kenshin samurai vagabondo",
+      "aliases": [
+        "Rurouni Kenshin",
+        "Kenshin"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Capitan Tsubasa",
+      "aliases": [
+        "Holly e Benji",
+        "Captain Tsubasa"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "Fairy Tail",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Tokyo Revengers",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Gintama",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Tokyo Ghoul",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Berserk",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Yu degli spettri",
+      "aliases": [
+        "YuYu Hakusho"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Haikyu!!",
+      "aliases": [
+        "Haikyu"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "Inuyasha",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Sailor Moon",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Nana",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Devilman",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "City Hunter",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Death Note",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Shaman King",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Fruits Basket",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Yu-Gi-Oh!",
+      "aliases": [
+        "Yugioh"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Ranma 1/2",
+      "aliases": [
+        "Ranma"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Kuroko's Basketball",
+      "aliases": [
+        "Kuroko no Basket"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "Assassination Classroom",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "The Seven Deadly Sins",
+      "aliases": [
+        "Nanatsu no Taizai"
+      ]
+    },
+    {
+      "rank": 46,
+      "answer": "Il principe del tennis",
+      "aliases": [
+        "The Prince of Tennis"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "Great Teacher Onizuka",
+      "aliases": [
+        "GTO"
+      ]
+    },
+    {
+      "rank": 48,
+      "answer": "Initial D",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Crayon Shin-chan",
+      "aliases": [
+        "Shin-chan"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Black Jack",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Yowamushi Pedal",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Arrivare a te",
+      "aliases": [
+        "Kimi ni Todoke"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Sword Art Online",
+      "aliases": [
+        "SAO"
+      ]
+    },
+    {
+      "rank": 54,
+      "answer": "Lamù",
+      "aliases": [
+        "Urusei Yatsura"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Cardcaptor Sakura",
+      "aliases": [
+        "Pesca la tua carta Sakura"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Gantz",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "D.Gray-man",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Chihayafuru",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Black Clover",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "One-Punch Man",
+      "aliases": [
+        "OPM"
+      ]
+    },
+    {
+      "rank": 61,
+      "answer": "Magi: The Labyrinth of Magic",
+      "aliases": [
+        "Magi"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "Toriko",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Nisekoi",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Dr. Stone",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Food Wars!",
+      "aliases": [
+        "Shokugeki no Soma",
+        "Food Wars"
+      ]
+    },
+    {
+      "rank": 66,
+      "answer": "Spy x Family",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Chainsaw Man",
+      "aliases": [
+        "CSM"
+      ]
+    },
+    {
+      "rank": 68,
+      "answer": "Kaiju No. 8",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Blue Lock",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Oshi no Ko",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Fire Force",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Soul Eater",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "The Promised Neverland",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Boruto",
+      "aliases": [
+        "Boruto: Naruto Next Generations"
+      ]
+    },
+    {
+      "rank": 75,
+      "answer": "Beelzebub",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Sket Dance",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Hellsing",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Vinland Saga",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Golden Kamuy",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Dorohedoro",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Monster",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "20th Century Boys",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Pluto",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Akira",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Ghost in the Shell",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Kiseiju - L'ospite indesiderato",
+      "aliases": [
+        "Parasyte"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "Uzumaki",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Buonanotte, Punpun",
+      "aliases": [
+        "Oyasumi Punpun"
+      ]
+    },
+    {
+      "rank": 89,
+      "answer": "Kaguya-sama: Love is War",
+      "aliases": [
+        "Kaguya-sama"
+      ]
+    },
+    {
+      "rank": 90,
+      "answer": "Komi Can't Communicate",
+      "aliases": [
+        "Komi-san"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "Rent-a-Girlfriend",
+      "aliases": [
+        "Kanojo Okarishimasu"
+      ]
+    },
+    {
+      "rank": 92,
+      "answer": "The Quintessential Quintuplets",
+      "aliases": [
+        "Gotoubun no Hanayome"
+      ]
+    },
+    {
+      "rank": 93,
+      "answer": "Horimiya",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Wotakoi",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "My Dress-Up Darling",
+      "aliases": [
+        "Sono Bisque Doll"
+      ]
+    },
+    {
+      "rank": 96,
+      "answer": "Frieren - Oltre la fine del viaggio",
+      "aliases": [
+        "Frieren",
+        "Sousou no Frieren"
+      ]
+    },
+    {
+      "rank": 97,
+      "answer": "I diari della speziale",
+      "aliases": [
+        "The Apothecary Diaries",
+        "Kusuriya no Hitorigoto"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Mushoku Tensei",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Vita da Slime",
+      "aliases": [
+        "That Time I Got Reincarnated as a Slime",
+        "TenSura"
+      ]
+    },
+    {
+      "rank": 100,
+      "answer": "Overlord",
+      "aliases": []
+    }
+  ]
+}

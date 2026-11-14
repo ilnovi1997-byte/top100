@@ -1,0 +1,738 @@
+{
+  "categoryId": "supereroi_popolari",
+  "title": "I 100 supereroi dei fumetti più popolari",
+  "description": "Indovina i 100 personaggi dei fumetti (Marvel, DC, Image, Bonelli, Manga) più noti.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Superman",
+      "aliases": [
+        "Clark Kent",
+        "Kal-El"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Batman",
+      "aliases": [
+        "Bruce Wayne"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Spider-Man",
+      "aliases": [
+        "Peter Parker",
+        "Uomo Ragno"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Wonder Woman",
+      "aliases": [
+        "Diana Prince"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Iron Man",
+      "aliases": [
+        "Tony Stark"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Capitan America",
+      "aliases": [
+        "Captain America",
+        "Steve Rogers"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Wolverine",
+      "aliases": [
+        "Logan",
+        "James Howlett"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Thor",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Hulk",
+      "aliases": [
+        "L'incredibile Hulk",
+        "Bruce Banner"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Flash",
+      "aliases": [
+        "The Flash",
+        "Barry Allen",
+        "Wally West"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Lanterna Verde",
+      "aliases": [
+        "Green Lantern",
+        "Hal Jordan"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Acquaman",
+      "aliases": [
+        "Aquaman",
+        "Arthur Curry"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Freccia Verde",
+      "aliases": [
+        "Green Arrow",
+        "Oliver Queen"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Deadpool",
+      "aliases": [
+        "Wade Wilson"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Daredevil",
+      "aliases": [
+        "Matt Murdock",
+        "Diavolo Custode"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Punitore",
+      "aliases": [
+        "The Punisher",
+        "Frank Castle"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Dottor Strange",
+      "aliases": [
+        "Doctor Strange",
+        "Stephen Strange"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Pantera Nera",
+      "aliases": [
+        "Black Panther",
+        "T'Challa"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "Vedova Nera",
+      "aliases": [
+        "Black Widow",
+        "Natasha Romanoff"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Occhio di Falco",
+      "aliases": [
+        "Hawkeye",
+        "Clint Barton"
+      ]
+    },
+    {
+      "rank": 21,
+      "answer": "Capitan Marvel",
+      "aliases": [
+        "Captain Marvel",
+        "Carol Danvers"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "Ant-Man",
+      "aliases": [
+        "Scott Lang",
+        "Hank Pym"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Wasp",
+      "aliases": [
+        "Janet van Dyne",
+        "Hope van Dyne"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Cyborg",
+      "aliases": [
+        "Victor Stone"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Shazam!",
+      "aliases": [
+        "Captain Marvel",
+        "Billy Batson"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "Nightwing",
+      "aliases": [
+        "Dick Grayson",
+        "Robin"
+      ]
+    },
+    {
+      "rank": 27,
+      "answer": "Robin",
+      "aliases": [
+        "Tim Drake",
+        "Damian Wayne",
+        "Jason Todd"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Batgirl",
+      "aliases": [
+        "Barbara Gordon"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Supergirl",
+      "aliases": [
+        "Kara Zor-El"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "Martian Manhunter",
+      "aliases": [
+        "J'onn J'onzz"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "Ghost Rider",
+      "aliases": [
+        "Johnny Blaze"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Ciclope",
+      "aliases": [
+        "Cyclops",
+        "Scott Summers"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "Jean Grey",
+      "aliases": [
+        "Fenice",
+        "Marvel Girl"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Tempesta",
+      "aliases": [
+        "Storm",
+        "Ororo Munroe"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Bestia",
+      "aliases": [
+        "Beast",
+        "Hank McCoy"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Angelo",
+      "aliases": [
+        "Angel",
+        "Warren Worthington III"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "Uomo Ghiaccio",
+      "aliases": [
+        "Iceman",
+        "Bobby Drake"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Rogue",
+      "aliases": [
+        "Anna Marie"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "Gambit",
+      "aliases": [
+        "Remy LeBeau"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "Colosso",
+      "aliases": [
+        "Colossus",
+        "Piotr Rasputin"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Nightcrawler",
+      "aliases": [
+        "Kurt Wagner"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Kitty Pryde",
+      "aliases": [
+        "Shadowcat",
+        "Ariel",
+        "Sprite"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Emma Frost",
+      "aliases": [
+        "Regina Bianca"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "Magneto",
+      "aliases": [
+        "Max Eisenhardt",
+        "Erik Lehnsherr"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Professor X",
+      "aliases": [
+        "Charles Xavier"
+      ]
+    },
+    {
+      "rank": 46,
+      "answer": "Scarlet Witch",
+      "aliases": [
+        "Wanda Maximoff"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "Quicksilver",
+      "aliases": [
+        "Pietro Maximoff"
+      ]
+    },
+    {
+      "rank": 48,
+      "answer": "Visione",
+      "aliases": [
+        "The Vision"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Falcon",
+      "aliases": [
+        "Sam Wilson"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Soldato d'Inverno",
+      "aliases": [
+        "Winter Soldier",
+        "Bucky Barnes"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "Macchina da Guerra",
+      "aliases": [
+        "War Machine",
+        "James Rhodes"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "She-Hulk",
+      "aliases": [
+        "Jennifer Walters"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Luke Cage",
+      "aliases": [
+        "Power Man",
+        "Carl Lucas"
+      ]
+    },
+    {
+      "rank": 54,
+      "answer": "Pugno d'Acciaio",
+      "aliases": [
+        "Iron Fist",
+        "Danny Rand"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Jessica Jones",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Namor",
+      "aliases": [
+        "Sub-Mariner"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "Mister Fantastic",
+      "aliases": [
+        "Reed Richards"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "Donna Invisibile",
+      "aliases": [
+        "Invisible Woman",
+        "Sue Storm"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "Torcia Umana",
+      "aliases": [
+        "Human Torch",
+        "Johnny Storm"
+      ]
+    },
+    {
+      "rank": 60,
+      "answer": "La Cosa",
+      "aliases": [
+        "The Thing",
+        "Ben Grimm"
+      ]
+    },
+    {
+      "rank": 61,
+      "answer": "Silver Surfer",
+      "aliases": [
+        "Norrin Radd"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "Star-Lord",
+      "aliases": [
+        "Peter Quill"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "Gamora",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Drax il Distruttore",
+      "aliases": [
+        "Drax"
+      ]
+    },
+    {
+      "rank": 65,
+      "answer": "Rocket Raccoon",
+      "aliases": [
+        "Rocket"
+      ]
+    },
+    {
+      "rank": 66,
+      "answer": "Groot",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Nova",
+      "aliases": [
+        "Richard Rider"
+      ]
+    },
+    {
+      "rank": 68,
+      "answer": "Miles Morales",
+      "aliases": [
+        "Spider-Man (Miles Morales)"
+      ]
+    },
+    {
+      "rank": 69,
+      "answer": "Spider-Gwen",
+      "aliases": [
+        "Gwen Stacy",
+        "Ghost-Spider"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "Venom",
+      "aliases": [
+        "Eddie Brock"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "Spawn",
+      "aliases": [
+        "Al Simmons"
+      ]
+    },
+    {
+      "rank": 72,
+      "answer": "Hellboy",
+      "aliases": [
+        "Anung Un Rama"
+      ]
+    },
+    {
+      "rank": 73,
+      "answer": "Invincible",
+      "aliases": [
+        "Mark Grayson"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "Kick-Ass",
+      "aliases": [
+        "Dave Lizewski"
+      ]
+    },
+    {
+      "rank": 75,
+      "answer": "Le Tartarughe Ninja",
+      "aliases": [
+        "TMNT",
+        "Teenage Mutant Ninja Turtles"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "Leonardo",
+      "aliases": [
+        "Leo (TMNT)"
+      ]
+    },
+    {
+      "rank": 77,
+      "answer": "Donatello",
+      "aliases": [
+        "Donnie (TMNT)"
+      ]
+    },
+    {
+      "rank": 78,
+      "answer": "Raffaello",
+      "aliases": [
+        "Raph (TMNT)"
+      ]
+    },
+    {
+      "rank": 79,
+      "answer": "Michelangelo",
+      "aliases": [
+        "Mikey (TMNT)"
+      ]
+    },
+    {
+      "rank": 80,
+      "answer": "Rorschach",
+      "aliases": [
+        "Walter Kovacs"
+      ]
+    },
+    {
+      "rank": 81,
+      "answer": "Dottor Manhattan",
+      "aliases": [
+        "Doctor Manhattan",
+        "Jon Osterman"
+      ]
+    },
+    {
+      "rank": 82,
+      "answer": "Gufo Notturno",
+      "aliases": [
+        "Nite Owl",
+        "Dan Dreiberg"
+      ]
+    },
+    {
+      "rank": 83,
+      "answer": "Spettro di Seta",
+      "aliases": [
+        "Silk Spectre",
+        "Laurie Juspeczyk"
+      ]
+    },
+    {
+      "rank": 84,
+      "answer": "Ozymandias",
+      "aliases": [
+        "Adrian Veidt"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Il Comico",
+      "aliases": [
+        "The Comedian",
+        "Edward Blake"
+      ]
+    },
+    {
+      "rank": 86,
+      "answer": "V",
+      "aliases": [
+        "V per Vendetta"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "Zagor",
+      "aliases": [
+        "Lo Spirito con la Scure"
+      ]
+    },
+    {
+      "rank": 88,
+      "answer": "Tex",
+      "aliases": [
+        "Tex Willer"
+      ]
+    },
+    {
+      "rank": 89,
+      "answer": "Diabolik",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Dylan Dog",
+      "aliases": [
+        "L'Indagatore dell'Incubo"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "Nathan Never",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Martin Mystère",
+      "aliases": [
+        "Martin Mystere",
+        "Il Detective dell'Impossibile"
+      ]
+    },
+    {
+      "rank": 93,
+      "answer": "Mister No",
+      "aliases": [
+        "Jerry Drake"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "Corto Maltese",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Savage Dragon",
+      "aliases": [
+        "Kurr"
+      ]
+    },
+    {
+      "rank": 96,
+      "answer": "Judge Dredd",
+      "aliases": [
+        "Giudice Dredd"
+      ]
+    },
+    {
+      "rank": 97,
+      "answer": "Saitama",
+      "aliases": [
+        "One-Punch Man"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Goku",
+      "aliases": [
+        "Son Goku"
+      ]
+    },
+    {
+      "rank": 99,
+      "answer": "Vegeta",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Naruto Uzumaki",
+      "aliases": [
+        "Naruto"
+      ]
+    }
+  ]
+}

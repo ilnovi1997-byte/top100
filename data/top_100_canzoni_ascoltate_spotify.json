@@ -1,0 +1,749 @@
+{
+  "categoryId": "canzoni_ascoltate_spotify",
+  "title": "Le 100 canzoni più ascoltate di sempre su Spotify",
+  "description": "Indovina i brani musicali che hanno accumulato il maggior numero di stream mondiali sulla piattaforma.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Blinding Lights",
+      "aliases": [
+        "The Weeknd"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Shape of You",
+      "aliases": [
+        "Ed Sheeran"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Someone You Loved",
+      "aliases": [
+        "Lewis Capaldi"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Sunflower",
+      "aliases": [
+        "Post Malone",
+        "Swae Lee"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "As It Was",
+      "aliases": [
+        "Harry Styles"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Starboy",
+      "aliases": [
+        "The Weeknd",
+        "Daft Punk"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "One Dance",
+      "aliases": [
+        "Drake",
+        "Wizkid",
+        "Kyla"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Stay",
+      "aliases": [
+        "The Kid Laroi",
+        "Justin Bieber"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Dance Monkey",
+      "aliases": [
+        "Tones and I"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Believer",
+      "aliases": [
+        "Imagine Dragons"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Perfect",
+      "aliases": [
+        "Ed Sheeran"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Heat Waves",
+      "aliases": [
+        "Glass Animals"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Closer",
+      "aliases": [
+        "The Chainsmokers",
+        "Halsey"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Sweater Weather",
+      "aliases": [
+        "The Neighbourhood"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Señorita",
+      "aliases": [
+        "Senorita",
+        "Shawn Mendes",
+        "Camila Cabello"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Bad Guy",
+      "aliases": [
+        "Billie Eilish"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Thinking Out Loud",
+      "aliases": [
+        "Ed Sheeran"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Photograph",
+      "aliases": [
+        "Ed Sheeran"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "Rockstar",
+      "aliases": [
+        "Post Malone",
+        "21 Savage"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Watermelon Sugar",
+      "aliases": [
+        "Harry Styles"
+      ]
+    },
+    {
+      "rank": 21,
+      "answer": "Lucid Dreams",
+      "aliases": [
+        "Juice WRLD"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "Don't Start Now",
+      "aliases": [
+        "Dua Lipa"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Lovely",
+      "aliases": [
+        "Billie Eilish",
+        "Khalid"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Say You Won't Let Go",
+      "aliases": [
+        "James Arthur"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Havana",
+      "aliases": [
+        "Camila Cabello",
+        "Young Thug"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "Yellow",
+      "aliases": [
+        "Coldplay"
+      ]
+    },
+    {
+      "rank": 27,
+      "answer": "Something Just Like This",
+      "aliases": [
+        "The Chainsmokers",
+        "Coldplay"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Shallow",
+      "aliases": [
+        "Lady Gaga",
+        "Bradley Cooper"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Let Me Love You",
+      "aliases": [
+        "DJ Snake",
+        "Justin Bieber"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "All of Me",
+      "aliases": [
+        "John Legend"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "Take Me to Church",
+      "aliases": [
+        "Hozier"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Circles",
+      "aliases": [
+        "Post Malone"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "SAD!",
+      "aliases": [
+        "Sad",
+        "XXXTentacion"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Bohemian Rhapsody",
+      "aliases": [
+        "Queen"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Love Yourself",
+      "aliases": [
+        "Justin Bieber"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Without Me",
+      "aliases": [
+        "Eminem"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "Lean On",
+      "aliases": [
+        "Major Lazer",
+        "DJ Snake",
+        "MO"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Drivers License",
+      "aliases": [
+        "Olivia Rodrigo"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "In the End",
+      "aliases": [
+        "Linkin Park"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "Counting Stars",
+      "aliases": [
+        "OneRepublic"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Thunder",
+      "aliases": [
+        "Imagine Dragons"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Unforgettable",
+      "aliases": [
+        "French Montana",
+        "Swae Lee"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Despacito",
+      "aliases": [
+        "Luis Fonsi",
+        "Daddy Yankee"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "7 Rings",
+      "aliases": [
+        "Ariana Grande"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Good 4 U",
+      "aliases": [
+        "Olivia Rodrigo"
+      ]
+    },
+    {
+      "rank": 46,
+      "answer": "Lose Yourself",
+      "aliases": [
+        "Eminem"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "Wake Me Up",
+      "aliases": [
+        "Avicii"
+      ]
+    },
+    {
+      "rank": 48,
+      "answer": "Smells Like Teen Spirit",
+      "aliases": [
+        "Nirvana"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Do I Wanna Know?",
+      "aliases": [
+        "Arctic Monkeys",
+        "Do I Wanna Know"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "I Like It",
+      "aliases": [
+        "Cardi B",
+        "Bad Bunny",
+        "J Balvin"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "Stressed Out",
+      "aliases": [
+        "Twenty One Pilots"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "Treat You Better",
+      "aliases": [
+        "Shawn Mendes"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Creep",
+      "aliases": [
+        "Radiohead"
+      ]
+    },
+    {
+      "rank": 54,
+      "answer": "Sicko Mode",
+      "aliases": [
+        "Travis Scott"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Riptide",
+      "aliases": [
+        "Vance Joy"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Mr. Brightside",
+      "aliases": [
+        "The Killers",
+        "Mr Brightside"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "Sweet Child O' Mine",
+      "aliases": [
+        "Guns N' Roses",
+        "Sweet Child O Mine"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "Can't Stop the Feeling!",
+      "aliases": [
+        "Justin Timberlake",
+        "Can't Stop The Feeling"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "Cheap Thrills",
+      "aliases": [
+        "Sia"
+      ]
+    },
+    {
+      "rank": 60,
+      "answer": "Radioactive",
+      "aliases": [
+        "Imagine Dragons"
+      ]
+    },
+    {
+      "rank": 61,
+      "answer": "I Took a Pill in Ibiza",
+      "aliases": [
+        "Mike Posner"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "See You Again",
+      "aliases": [
+        "Wiz Khalifa",
+        "Charlie Puth"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "Stitches",
+      "aliases": [
+        "Shawn Mendes"
+      ]
+    },
+    {
+      "rank": 64,
+      "answer": "Tusa",
+      "aliases": [
+        "Karol G",
+        "Nicki Minaj"
+      ]
+    },
+    {
+      "rank": 65,
+      "answer": "Roses",
+      "aliases": [
+        "SAINt JHN",
+        "Imanbek"
+      ]
+    },
+    {
+      "rank": 66,
+      "answer": "Dakiti",
+      "aliases": [
+        "Bad Bunny",
+        "Jhay Cortez"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "Faded",
+      "aliases": [
+        "Alan Walker"
+      ]
+    },
+    {
+      "rank": 68,
+      "answer": "Let It Go",
+      "aliases": [
+        "James Bay"
+      ]
+    },
+    {
+      "rank": 69,
+      "answer": "Hey, Soul Sister",
+      "aliases": [
+        "Train",
+        "Hey Soul Sister"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "Let Her Go",
+      "aliases": [
+        "Passenger"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "Sorry",
+      "aliases": [
+        "Justin Bieber"
+      ]
+    },
+    {
+      "rank": 72,
+      "answer": "Peaches",
+      "aliases": [
+        "Justin Bieber"
+      ]
+    },
+    {
+      "rank": 73,
+      "answer": "We Don't Talk Anymore",
+      "aliases": [
+        "Charlie Puth",
+        "Selena Gomez"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "Eastside",
+      "aliases": [
+        "Benny Blanco",
+        "Halsey",
+        "Khalid"
+      ]
+    },
+    {
+      "rank": 75,
+      "answer": "The Box",
+      "aliases": [
+        "Roddy Ricch"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "Dynamite",
+      "aliases": [
+        "BTS"
+      ]
+    },
+    {
+      "rank": 77,
+      "answer": "Butter",
+      "aliases": [
+        "BTS"
+      ]
+    },
+    {
+      "rank": 78,
+      "answer": "My Universe",
+      "aliases": [
+        "Coldplay",
+        "BTS"
+      ]
+    },
+    {
+      "rank": 79,
+      "answer": "Levitating",
+      "aliases": [
+        "Dua Lipa"
+      ]
+    },
+    {
+      "rank": 80,
+      "answer": "Positions",
+      "aliases": [
+        "Ariana Grande"
+      ]
+    },
+    {
+      "rank": 81,
+      "answer": "No Role Modelz",
+      "aliases": [
+        "J. Cole",
+        "No Role Models"
+      ]
+    },
+    {
+      "rank": 82,
+      "answer": "Mood",
+      "aliases": [
+        "24kGoldn",
+        "Iann Dior"
+      ]
+    },
+    {
+      "rank": 83,
+      "answer": "Industry Baby",
+      "aliases": [
+        "Lil Nas X",
+        "Jack Harlow"
+      ]
+    },
+    {
+      "rank": 84,
+      "answer": "Montero (Call Me By Your Name)",
+      "aliases": [
+        "Montero",
+        "Lil Nas X"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Save Your Tears",
+      "aliases": [
+        "The Weeknd"
+      ]
+    },
+    {
+      "rank": 86,
+      "answer": "Kiss Me More",
+      "aliases": [
+        "Doja Cat",
+        "SZA"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "Good Days",
+      "aliases": [
+        "SZA"
+      ]
+    },
+    {
+      "rank": 88,
+      "answer": "Die For You",
+      "aliases": [
+        "The Weeknd"
+      ]
+    },
+    {
+      "rank": 89,
+      "answer": "Cruel Summer",
+      "aliases": [
+        "Taylor Swift"
+      ]
+    },
+    {
+      "rank": 90,
+      "answer": "Anti-Hero",
+      "aliases": [
+        "Taylor Swift"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "Blank Space",
+      "aliases": [
+        "Taylor Swift"
+      ]
+    },
+    {
+      "rank": 92,
+      "answer": "Flowers",
+      "aliases": [
+        "Miley Cyrus"
+      ]
+    },
+    {
+      "rank": 93,
+      "answer": "Vampire",
+      "aliases": [
+        "Olivia Rodrigo"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "Kill Bill",
+      "aliases": [
+        "SZA"
+      ]
+    },
+    {
+      "rank": 95,
+      "answer": "Boy's a Liar Pt. 2",
+      "aliases": [
+        "PinkPantheress",
+        "Ice Spice",
+        "Boy's a liar"
+      ]
+    },
+    {
+      "rank": 96,
+      "answer": "Paint The Town Red",
+      "aliases": [
+        "Doja Cat"
+      ]
+    },
+    {
+      "rank": 97,
+      "answer": "Greedy",
+      "aliases": [
+        "Tate McRae"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Water",
+      "aliases": [
+        "Tyla"
+      ]
+    },
+    {
+      "rank": 99,
+      "answer": "Daylight",
+      "aliases": [
+        "David Kushner"
+      ]
+    },
+    {
+      "rank": 100,
+      "answer": "Calm Down",
+      "aliases": [
+        "Rema",
+        "Selena Gomez"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "categoryId": "brand_valore",
+  "title": "I 100 brand commerciali di maggior valore al mondo",
+  "description": "Indovina i marchi globali con la più alta stima economica.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Apple",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Microsoft",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Amazon",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Google",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Samsung",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Toyota",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Mercedes-Benz",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Coca-Cola",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Nike",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "BMW",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "McDonald's",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Tesla",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Disney",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Louis Vuitton",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Cisco",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Instagram",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Oracle",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "SAP",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "IBM",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Intel",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Porsche",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Honda",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Chanel",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Pepsi",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Hermès",
+      "aliases": [
+        "Hermes"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "Sony",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "JP Morgan",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Audi",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Home Depot",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Starbucks",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Ikea",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Walmart",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Gucci",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "L'Oréal",
+      "aliases": [
+        "Loreal"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Netflix",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Salesforce",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Visa",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Mastercard",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Ferrari",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Hyundai",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "UPS",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Zara",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Volkswagen",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Ford",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Nescafé",
+      "aliases": [
+        "Nescafe"
+      ]
+    },
+    {
+      "rank": 46,
+      "answer": "Pampers",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Gillette",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Adidas",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Siemens",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "LVMH",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "H&M",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Rolex",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "MasterCard",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "HP",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "FedEx",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Danone",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Dell",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Nissan",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Chevrolet",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "KFC",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Kellogg's",
+      "aliases": [
+        "Kelloggs"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "Panasonic",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Sprite",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Colgate",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Cartier",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Red Bull",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Lego",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Sony PlayStation",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Nintendo",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Nintendo Switch",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Huawei",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Dior",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Tiffany & Co.",
+      "aliases": [
+        "Tiffany"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "Burger King",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Subway",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Uber",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Spotify",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Chevron",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "ExxonMobil",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Shell",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Johnson & Johnson",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Pfizer",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Novartis",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Roche",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Bayer",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Lipton",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Heinz",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Nestle",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Prada",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Armani",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Ralph Lauren",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Calvin Klein",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Victoria's Secret",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Monster",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Fanta",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Dove",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Nivea",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Avon",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Placeholder 99",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Placeholder 100",
+      "aliases": []
+    }
+  ]
+}

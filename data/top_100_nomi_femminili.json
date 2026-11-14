@@ -1,0 +1,507 @@
+{
+  "categoryId": "nomi_femminili",
+  "title": "I 100 nomi propri femminili più diffusi in Italia",
+  "description": "Indovina i nomi femminili italiani con il maggior numero di residenti storici.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Maria",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Anna",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Giuseppina",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Rosa",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Angela",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Giovanna",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Teresa",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Lucia",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Carmela",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Caterina",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Francesca",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Antonella",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Rita",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Marta",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Paola",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Elena",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Silvia",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Giulia",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Laura",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Chiara",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Concetta",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Filomena",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Rosaria",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Antonietta",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Vincenza",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Carla",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Elisabetta",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Marina",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Daniela",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Roberta",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Eleonora",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Alessia",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Martina",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Sara",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Valentina",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Cinzia",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Alessandra",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Monica",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Ilaria",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Michela",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Elisa",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Giorgia",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Irene",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Valeria",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Patrizia",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Stefania",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Simona",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Emanuela",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Tiziana",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Loredana",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Beatrice",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Alice",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Sofia",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Vittoria",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Ginevra",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Aurora",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Ludovica",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Camilla",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Noemi",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Miriam",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Emma",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Arianna",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Luisa",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Margherita",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Bianca",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Gabriella",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Agnese",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Graziella",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Franca",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Ester",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Matilde",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Carlotta",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Adele",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Veronica",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Erica",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Sabrina",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Serena",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Nadia",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Katia",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Rossella",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Clara",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Gemma",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Diana",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Carmen",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Silvana",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Bruna",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Ines",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Anita",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Ada",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Amelia",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Lidia",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Mirella",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Fiorella",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Marcella",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Ornella",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Loretta",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Letizia",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Rosanna",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Raffaella",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Placeholder 100",
+      "aliases": []
+    }
+  ]
+}

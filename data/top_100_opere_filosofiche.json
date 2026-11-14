@@ -1,0 +1,726 @@
+{
+  "categoryId": "opere_filosofiche",
+  "title": "Le 100 opere filosofiche più studiate e citate",
+  "description": "Indovina i 100 saggi e testi filosofici più influenti della storia occidentale.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Repubblica",
+      "aliases": [
+        "Platone"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Etica Nicomachea",
+      "aliases": [
+        "Aristotele"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Metafisica",
+      "aliases": [
+        "Aristotele"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Apologia di Socrate",
+      "aliases": [
+        "Platone"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Simposio",
+      "aliases": [
+        "Platone"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Critica della ragion pura",
+      "aliases": [
+        "Kant"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Leviatano",
+      "aliases": [
+        "Hobbes"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Il Principe",
+      "aliases": [
+        "Machiavelli"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Discorso sul metodo",
+      "aliases": [
+        "Cartesio"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Meditazioni metafisiche",
+      "aliases": [
+        "Cartesio"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Così parlò Zarathustra",
+      "aliases": [
+        "Nietzsche"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Al di là del bene e del male",
+      "aliases": [
+        "Nietzsche"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Genealogia della morale",
+      "aliases": [
+        "Nietzsche"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Critica della ragion pratica",
+      "aliases": [
+        "Kant"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Critica del giudizio",
+      "aliases": [
+        "Kant"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Il capitale",
+      "aliases": [
+        "Marx"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Manifesto del Partito Comunista",
+      "aliases": [
+        "Marx",
+        "Engels"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Il mondo come volontà e rappresentazione",
+      "aliases": [
+        "Schopenhauer"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "Fenomenologia dello spirito",
+      "aliases": [
+        "Hegel"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Lineamenti di filosofia del diritto",
+      "aliases": [
+        "Hegel"
+      ]
+    },
+    {
+      "rank": 21,
+      "answer": "Essere e tempo",
+      "aliases": [
+        "Heidegger"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "L'essere e il nulla",
+      "aliases": [
+        "Sartre"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Tractatus logico-philosophicus",
+      "aliases": [
+        "Wittgenstein"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Ricerche filosofiche",
+      "aliases": [
+        "Wittgenstein"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Saggio sull'intelletto umano",
+      "aliases": [
+        "Locke"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "Due trattati sul governo",
+      "aliases": [
+        "Locke"
+      ]
+    },
+    {
+      "rank": 27,
+      "answer": "Trattato sulla natura umana",
+      "aliases": [
+        "Hume"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Ricerche sull'intelletto umano",
+      "aliases": [
+        "Hume"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Il contratto sociale",
+      "aliases": [
+        "Rousseau"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "Emilio o dell'educazione",
+      "aliases": [
+        "Rousseau"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "Discorso sull'origine della disuguaglianza",
+      "aliases": [
+        "Rousseau"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Etica",
+      "aliases": [
+        "Spinoza"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "Trattato teologico-politico",
+      "aliases": [
+        "Spinoza"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Monadologia",
+      "aliases": [
+        "Leibniz"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Nuovi saggi sull'intelletto umano",
+      "aliases": [
+        "Leibniz"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Pensieri",
+      "aliases": [
+        "Pascal"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "De rerum natura",
+      "aliases": [
+        "Lucrezio"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Lettere a Lucilio",
+      "aliases": [
+        "Seneca"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "Pensieri (Marco Aurelio)",
+      "aliases": [
+        "Marco Aurelio",
+        "Ricordi",
+        "Colloqui con se stesso"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "Confessioni",
+      "aliases": [
+        "Agostino",
+        "Sant'Agostino"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "La città di Dio",
+      "aliases": [
+        "Agostino",
+        "Sant'Agostino"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Somma teologica",
+      "aliases": [
+        "Tommaso d'Aquino",
+        "San Tommaso"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Consolazione della filosofia",
+      "aliases": [
+        "Boezio"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "Utopia",
+      "aliases": [
+        "Tommaso Moro",
+        "Thomas More"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Elogio della follia",
+      "aliases": [
+        "Erasmo da Rotterdam"
+      ]
+    },
+    {
+      "rank": 46,
+      "answer": "Novum Organum",
+      "aliases": [
+        "Bacone",
+        "Francis Bacon"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "Saggi",
+      "aliases": [
+        "Montaigne"
+      ]
+    },
+    {
+      "rank": 48,
+      "answer": "Dialogo sopra i due massimi sistemi del mondo",
+      "aliases": [
+        "Galilei"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Principi matematici della filosofia naturale",
+      "aliases": [
+        "Newton"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Saggio sulla libertà",
+      "aliases": [
+        "Mill",
+        "John Stuart Mill"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "L'utilitarismo",
+      "aliases": [
+        "Mill",
+        "John Stuart Mill"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "La ricchezza delle nazioni",
+      "aliases": [
+        "Adam Smith"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Teoria dei sentimenti morali",
+      "aliases": [
+        "Adam Smith"
+      ]
+    },
+    {
+      "rank": 54,
+      "answer": "Democrazia in America",
+      "aliases": [
+        "Tocqueville"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Il mito di Sisifo",
+      "aliases": [
+        "Camus"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "L'uomo in rivolta",
+      "aliases": [
+        "Camus"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "La tentazione di esistere",
+      "aliases": [
+        "Cioran"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "Sommario di decomposizione",
+      "aliases": [
+        "Cioran"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "Aut-Aut",
+      "aliases": [
+        "Kierkegaard"
+      ]
+    },
+    {
+      "rank": 60,
+      "answer": "Timore e tremore",
+      "aliases": [
+        "Kierkegaard"
+      ]
+    },
+    {
+      "rank": 61,
+      "answer": "Il concetto dell'angoscia",
+      "aliases": [
+        "Kierkegaard"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "La malattia per la morte",
+      "aliases": [
+        "Kierkegaard"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "La gaia scienza",
+      "aliases": [
+        "Nietzsche"
+      ]
+    },
+    {
+      "rank": 64,
+      "answer": "Ecce Homo",
+      "aliases": [
+        "Nietzsche"
+      ]
+    },
+    {
+      "rank": 65,
+      "answer": "Crepuscolo degli idoli",
+      "aliases": [
+        "Nietzsche"
+      ]
+    },
+    {
+      "rank": 66,
+      "answer": "Umano, troppo umano",
+      "aliases": [
+        "Nietzsche"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "L'Anticristo",
+      "aliases": [
+        "Nietzsche"
+      ]
+    },
+    {
+      "rank": 68,
+      "answer": "Volontà di potenza",
+      "aliases": [
+        "Nietzsche"
+      ]
+    },
+    {
+      "rank": 69,
+      "answer": "Verità e metodo",
+      "aliases": [
+        "Gadamer"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "Totalità e infinito",
+      "aliases": [
+        "Lévinas"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "Il secondo sesso",
+      "aliases": [
+        "De Beauvoir",
+        "Simone de Beauvoir"
+      ]
+    },
+    {
+      "rank": 72,
+      "answer": "Le origini del totalitarismo",
+      "aliases": [
+        "Arendt",
+        "Hannah Arendt"
+      ]
+    },
+    {
+      "rank": 73,
+      "answer": "Vita activa",
+      "aliases": [
+        "Arendt",
+        "Hannah Arendt"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "La banalità del male",
+      "aliases": [
+        "Arendt",
+        "Hannah Arendt"
+      ]
+    },
+    {
+      "rank": 75,
+      "answer": "Sorvegliare e punire",
+      "aliases": [
+        "Foucault"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "Storia della follia nell'età classica",
+      "aliases": [
+        "Foucault"
+      ]
+    },
+    {
+      "rank": 77,
+      "answer": "Le parole e le cose",
+      "aliases": [
+        "Foucault"
+      ]
+    },
+    {
+      "rank": 78,
+      "answer": "La società dello spettacolo",
+      "aliases": [
+        "Debord",
+        "Guy Debord"
+      ]
+    },
+    {
+      "rank": 79,
+      "answer": "L'opera d'arte nell'epoca della sua riproducibilità tecnica",
+      "aliases": [
+        "Benjamin",
+        "Walter Benjamin"
+      ]
+    },
+    {
+      "rank": 80,
+      "answer": "Tesi di filosofia della storia",
+      "aliases": [
+        "Benjamin",
+        "Walter Benjamin"
+      ]
+    },
+    {
+      "rank": 81,
+      "answer": "Dialettica dell'illuminismo",
+      "aliases": [
+        "Adorno",
+        "Horkheimer"
+      ]
+    },
+    {
+      "rank": 82,
+      "answer": "Minima moralia",
+      "aliases": [
+        "Adorno"
+      ]
+    },
+    {
+      "rank": 83,
+      "answer": "La società aperta e i suoi nemici",
+      "aliases": [
+        "Popper",
+        "Karl Popper"
+      ]
+    },
+    {
+      "rank": 84,
+      "answer": "Logica della scoperta scientifica",
+      "aliases": [
+        "Popper",
+        "Karl Popper"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "La struttura delle rivoluzioni scientifiche",
+      "aliases": [
+        "Kuhn",
+        "Thomas Kuhn"
+      ]
+    },
+    {
+      "rank": 86,
+      "answer": "Contro il metodo",
+      "aliases": [
+        "Feyerabend"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "Teoria della giustizia",
+      "aliases": [
+        "Rawls",
+        "John Rawls"
+      ]
+    },
+    {
+      "rank": 88,
+      "answer": "Anarchia, stato e utopia",
+      "aliases": [
+        "Nozick",
+        "Robert Nozick"
+      ]
+    },
+    {
+      "rank": 89,
+      "answer": "Saggio sul dono",
+      "aliases": [
+        "Mauss",
+        "Marcel Mauss"
+      ]
+    },
+    {
+      "rank": 90,
+      "answer": "La distinzione",
+      "aliases": [
+        "Bourdieu",
+        "Pierre Bourdieu"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "Mito e significato",
+      "aliases": [
+        "Lévi-Strauss"
+      ]
+    },
+    {
+      "rank": 92,
+      "answer": "Tristi tropici",
+      "aliases": [
+        "Lévi-Strauss"
+      ]
+    },
+    {
+      "rank": 93,
+      "answer": "L'idiota della famiglia",
+      "aliases": [
+        "Sartre"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "Critica della ragione dialettica",
+      "aliases": [
+        "Sartre"
+      ]
+    },
+    {
+      "rank": 95,
+      "answer": "L'esistenzialismo è un umanismo",
+      "aliases": [
+        "Sartre"
+      ]
+    },
+    {
+      "rank": 96,
+      "answer": "La nausea",
+      "aliases": [
+        "Sartre"
+      ]
+    },
+    {
+      "rank": 97,
+      "answer": "I quaderni del carcere",
+      "aliases": [
+        "Gramsci",
+        "Antonio Gramsci"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "La rivoluzione tradita",
+      "aliases": [
+        "Trotskij"
+      ]
+    },
+    {
+      "rank": 99,
+      "answer": "Stato e rivoluzione",
+      "aliases": [
+        "Lenin"
+      ]
+    }
+  ]
+}

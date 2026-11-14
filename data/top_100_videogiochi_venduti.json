@@ -1,0 +1,656 @@
+{
+  "categoryId": "videogiochi_venduti",
+  "title": "I 100 videogiochi più venduti di sempre",
+  "description": "Indovina i 100 titoli videoludici che hanno registrato il maggior numero di copie vendute nella storia.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Minecraft",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Grand Theft Auto V",
+      "aliases": [
+        "GTA V",
+        "GTA 5"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Tetris",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Wii Sports",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "PUBG: Battlegrounds",
+      "aliases": [
+        "PUBG",
+        "PlayerUnknown's Battlegrounds"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Mario Kart 8",
+      "aliases": [
+        "Mario Kart 8 Deluxe"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Red Dead Redemption 2",
+      "aliases": [
+        "RDR2"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Super Mario Bros.",
+      "aliases": [
+        "Super Mario Bros"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Overwatch",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "The Witcher 3: Wild Hunt",
+      "aliases": [
+        "The Witcher 3"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Pokémon Rosso / Blu / Verde",
+      "aliases": [
+        "Pokémon Rosso",
+        "Pokémon Blu"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Animal Crossing: New Horizons",
+      "aliases": [
+        "ACNH",
+        "Animal Crossing"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Pac-Man",
+      "aliases": [
+        "Pacman"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Mario Kart Wii",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Terraria",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Wii Fit",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Pokémon Oro / Argento",
+      "aliases": [
+        "Pokémon Oro",
+        "Pokémon Argento"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Super Smash Bros. Ultimate",
+      "aliases": [
+        "Smash Bros Ultimate",
+        "Smash Bros"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "The Legend of Zelda: Breath of the Wild",
+      "aliases": [
+        "Zelda Breath of the Wild",
+        "BOTW"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Grand Theft Auto: San Andreas",
+      "aliases": [
+        "GTA San Andreas"
+      ]
+    },
+    {
+      "rank": 21,
+      "answer": "Super Mario World",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Call of Duty: Modern Warfare 3",
+      "aliases": [
+        "MW3",
+        "CoD MW3"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Call of Duty: Black Ops",
+      "aliases": [
+        "Black Ops",
+        "CoD Black Ops"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Diablo III",
+      "aliases": [
+        "Diablo 3"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Pokémon Rubino / Zaffiro",
+      "aliases": [
+        "Pokémon Rubino",
+        "Pokémon Zaffiro"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "Super Mario Odyssey",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Borderlands 2",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Super Mario 64",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Sonic the Hedgehog",
+      "aliases": [
+        "Sonic"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "Call of Duty: Black Ops II",
+      "aliases": [
+        "Black Ops 2",
+        "BO2"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "FIFA 18",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Pokémon Sole / Luna",
+      "aliases": [
+        "Pokémon Sole",
+        "Pokémon Luna"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "Pokémon Diamante / Perla",
+      "aliases": [
+        "Pokémon Diamante",
+        "Pokémon Perla"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Cyberpunk 2077",
+      "aliases": [
+        "Cyberpunk"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Super Mario Bros. 3",
+      "aliases": [
+        "Super Mario Bros 3"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Call of Duty: Modern Warfare",
+      "aliases": [
+        "CoD Modern Warfare"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "New Super Mario Bros.",
+      "aliases": [
+        "New Super Mario Bros DS"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Call of Duty: Black Ops III",
+      "aliases": [
+        "Black Ops 3",
+        "BO3"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "New Super Mario Bros. Wii",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Mario Kart DS",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Halo 3",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Nintendogs",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Pokémon Spada / Scudo",
+      "aliases": [
+        "Pokémon Spada",
+        "Pokémon Scudo"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "Super Smash Bros. Brawl",
+      "aliases": [
+        "Smash Bros Brawl"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Super Mario Land",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Gran Turismo 3: A-Spec",
+      "aliases": [
+        "Gran Turismo 3",
+        "GT3"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "Grand Theft Auto: Vice City",
+      "aliases": [
+        "GTA Vice City"
+      ]
+    },
+    {
+      "rank": 48,
+      "answer": "Grand Theft Auto IV",
+      "aliases": [
+        "GTA 4",
+        "GTA IV"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "FIFA 19",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "The Last of Us",
+      "aliases": [
+        "TLOU"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "Brain Training",
+      "aliases": [
+        "Dr Kawashima"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "The Elder Scrolls V: Skyrim",
+      "aliases": [
+        "Skyrim",
+        "The Elder Scrolls V"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Super Mario Galaxy",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "The Legend of Zelda: Ocarina of Time",
+      "aliases": [
+        "Ocarina of Time",
+        "Zelda Ocarina of Time"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Pokémon X / Y",
+      "aliases": [
+        "Pokémon X",
+        "Pokémon Y"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Halo 2",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Super Mario 3D Land",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Gran Turismo 4",
+      "aliases": [
+        "GT4"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "Call of Duty: Ghosts",
+      "aliases": [
+        "CoD Ghosts"
+      ]
+    },
+    {
+      "rank": 60,
+      "answer": "Mario Kart 7",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Pokémon Bianco / Nero",
+      "aliases": [
+        "Pokémon Bianco",
+        "Pokémon Nero"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "Street Fighter II",
+      "aliases": [
+        "Street Fighter 2"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "The Sims 2",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "The Sims",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Fallout 4",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Halo 4",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Need for Speed: Most Wanted",
+      "aliases": [
+        "NFS Most Wanted"
+      ]
+    },
+    {
+      "rank": 68,
+      "answer": "Tomb Raider",
+      "aliases": [
+        "Tomb Raider 2013"
+      ]
+    },
+    {
+      "rank": 69,
+      "answer": "Super Smash Bros. Melee",
+      "aliases": [
+        "Smash Bros Melee"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "The Legend of Zelda: Twilight Princess",
+      "aliases": [
+        "Twilight Princess",
+        "Zelda Twilight Princess"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "FIFA 13",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Marvel's Spider-Man",
+      "aliases": [
+        "Spider-Man PS4",
+        "Spider-Man"
+      ]
+    },
+    {
+      "rank": 73,
+      "answer": "Monster Hunter: World",
+      "aliases": [
+        "Monster Hunter World"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "Elden Ring",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "The Last of Us Parte II",
+      "aliases": [
+        "The Last of Us 2",
+        "TLOU 2"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "God of War",
+      "aliases": [
+        "God of War 2018"
+      ]
+    },
+    {
+      "rank": 77,
+      "answer": "Horizon Zero Dawn",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Uncharted 4: Fine di un ladro",
+      "aliases": [
+        "Uncharted 4"
+      ]
+    },
+    {
+      "rank": 79,
+      "answer": "Ghost of Tsushima",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "The Sims 3",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Half-Life 2",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Portal 2",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Left 4 Dead 2",
+      "aliases": [
+        "L4D2"
+      ]
+    },
+    {
+      "rank": 84,
+      "answer": "Counter-Strike: Global Offensive",
+      "aliases": [
+        "CS:GO",
+        "CSGO",
+        "Counter Strike"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Final Fantasy VII",
+      "aliases": [
+        "FF7",
+        "Final Fantasy 7"
+      ]
+    },
+    {
+      "rank": 86,
+      "answer": "Final Fantasy X",
+      "aliases": [
+        "FF10",
+        "Final Fantasy 10"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "Final Fantasy XIV",
+      "aliases": [
+        "FF14",
+        "Final Fantasy 14"
+      ]
+    },
+    {
+      "rank": 88,
+      "answer": "World of Warcraft",
+      "aliases": [
+        "WoW"
+      ]
+    },
+    {
+      "rank": 89,
+      "answer": "StarCraft",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Diablo II",
+      "aliases": [
+        "Diablo 2"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "The Witcher 2: Assassins of Kings",
+      "aliases": [
+        "The Witcher 2"
+      ]
+    },
+    {
+      "rank": 92,
+      "answer": "Destiny",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Destiny 2",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Halo 5: Guardians",
+      "aliases": [
+        "Halo 5"
+      ]
+    },
+    {
+      "rank": 95,
+      "answer": "Gears of War",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Gears of War 2",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Gears of War 3",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Assassin's Creed II",
+      "aliases": [
+        "Assassin's Creed 2"
+      ]
+    },
+    {
+      "rank": 99,
+      "answer": "Assassin's Creed Valhalla",
+      "aliases": [
+        "AC Valhalla"
+      ]
+    },
+    {
+      "rank": 100,
+      "answer": "Far Cry 5",
+      "aliases": []
+    }
+  ]
+}

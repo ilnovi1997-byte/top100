@@ -1,0 +1,707 @@
+{
+  "categoryId": "tormentoni_estivi",
+  "title": "I 100 'tormentoni' estivi italiani degli ultimi anni",
+  "description": "Indovina le canzoni e le hit estive che hanno fatto ballare di più l'Italia.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Roma-Bangkok",
+      "aliases": [
+        "Baby K, Giusy Ferreri"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Riccione",
+      "aliases": [
+        "Thegiornalisti"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Mille",
+      "aliases": [
+        "Fedez, Achille Lauro, Orietta Berti"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "La dolce vita",
+      "aliases": [
+        "Fedez, Tananai, Mara Sattei"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Italodisco",
+      "aliases": [
+        "The Kolors"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Karaoke",
+      "aliases": [
+        "Boomdabash, Alessandra Amoroso"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Mambo Salentino",
+      "aliases": [
+        "Boomdabash, Alessandra Amoroso"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Ostia Lido",
+      "aliases": [
+        "J-Ax"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Italiana",
+      "aliases": [
+        "J-Ax, Fedez"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Senza pagare",
+      "aliases": [
+        "J-Ax, Fedez"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Vorrei ma non posto",
+      "aliases": [
+        "J-Ax, Fedez"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Pamplona",
+      "aliases": [
+        "Fabri Fibra, Thegiornalisti"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Voglio ballare con te",
+      "aliases": [
+        "Baby K"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Da zero a cento",
+      "aliases": [
+        "Baby K"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Playa",
+      "aliases": [
+        "Baby K"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Makumba",
+      "aliases": [
+        "Carl Brave, Noemi"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Dove e quando",
+      "aliases": [
+        "Benji & Fede"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Non ti dico no",
+      "aliases": [
+        "Boomdabash, Loredana Bertè"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "Jambo",
+      "aliases": [
+        "Takagi & Ketra"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "L'esercito del selfie",
+      "aliases": [
+        "Takagi & Ketra"
+      ]
+    },
+    {
+      "rank": 21,
+      "answer": "Tropicana",
+      "aliases": [
+        "Boomdabash, Annalisa"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "Disco Paradise",
+      "aliases": [
+        "Fedez, Annalisa, Articolo 31"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Bellissima",
+      "aliases": [
+        "Annalisa"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Mon Amour",
+      "aliases": [
+        "Annalisa"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Sesso e samba",
+      "aliases": [
+        "Tony Effe, Gaia"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "Danza Kuduro",
+      "aliases": [
+        "Don Omar"
+      ]
+    },
+    {
+      "rank": 27,
+      "answer": "Waka Waka",
+      "aliases": [
+        "Shakira"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Despacito",
+      "aliases": [
+        "Luis Fonsi, Daddy Yankee"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Sofia",
+      "aliases": [
+        "Alvaro Soler"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "El Mismo Sol",
+      "aliases": [
+        "Alvaro Soler"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "La Cintura",
+      "aliases": [
+        "Alvaro Soler"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Andiamo a comandare",
+      "aliases": [
+        "Fabio Rovazzi"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "Volare",
+      "aliases": [
+        "Fabio Rovazzi"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Tutto molto interessante",
+      "aliases": [
+        "Fabio Rovazzi"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Faccio quello che voglio",
+      "aliases": [
+        "Fabio Rovazzi"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Caramello",
+      "aliases": [
+        "Rocco Hunt, Elettra Lamborghini"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "A un passo dalla luna",
+      "aliases": [
+        "Rocco Hunt, Ana Mena"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Un bacio all'improvviso",
+      "aliases": [
+        "Rocco Hunt, Ana Mena"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "Ti volevo dedicare",
+      "aliases": [
+        "Rocco Hunt"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "Pistolero",
+      "aliases": [
+        "Elettra Lamborghini"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Musica",
+      "aliases": [
+        "e il resto scompare"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "La Isla",
+      "aliases": [
+        "Giusy Ferreri, Elettra Lamborghini"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "L'estate sta finendo",
+      "aliases": [
+        "Righeira"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "50 Special",
+      "aliases": [
+        "Lunapop"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Estate",
+      "aliases": [
+        "Negramaro"
+      ]
+    },
+    {
+      "rank": 46,
+      "answer": "Parlami d'amore",
+      "aliases": [
+        "Negramaro"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "Nuvole e lenzuola",
+      "aliases": [
+        "Negramaro"
+      ]
+    },
+    {
+      "rank": 48,
+      "answer": "Marmellata #25",
+      "aliases": [
+        "Cesare Cremonini"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Dicono di me",
+      "aliases": [
+        "Cesare Cremonini"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Buon viaggio",
+      "aliases": [
+        "Cesare Cremonini"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "Ti scatterò una foto",
+      "aliases": [
+        "Tiziano Ferro"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "Sere nere",
+      "aliases": [
+        "Tiziano Ferro"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Il più grande spettacolo dopo il Big Bang",
+      "aliases": [
+        "Jovanotti"
+      ]
+    },
+    {
+      "rank": 54,
+      "answer": "L'ombelico del mondo",
+      "aliases": [
+        "Jovanotti"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Estate 1992",
+      "aliases": [
+        "Jovanotti"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Margarita",
+      "aliases": [
+        "Elodie, Marracash"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "Guaranà",
+      "aliases": [
+        "Elodie"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "Ciclone",
+      "aliases": [
+        "Takagi & Ketra, Elodie"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "Tribale",
+      "aliases": [
+        "Elodie"
+      ]
+    },
+    {
+      "rank": 60,
+      "answer": "Pazza Musica",
+      "aliases": [
+        "Marco Mengoni, Elodie"
+      ]
+    },
+    {
+      "rank": 61,
+      "answer": "Nera",
+      "aliases": [
+        "Irama"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "Arrogante",
+      "aliases": [
+        "Irama"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "Mediterranea",
+      "aliases": [
+        "Irama"
+      ]
+    },
+    {
+      "rank": 64,
+      "answer": "Crepe",
+      "aliases": [
+        "Irama"
+      ]
+    },
+    {
+      "rank": 65,
+      "answer": "Felicità puttana",
+      "aliases": [
+        "Thegiornalisti"
+      ]
+    },
+    {
+      "rank": 66,
+      "answer": "Maradona y Pelé",
+      "aliases": [
+        "Thegiornalisti"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "Musica leggerissima",
+      "aliases": [
+        "Colapesce, Dimartino"
+      ]
+    },
+    {
+      "rank": 68,
+      "answer": "Splash",
+      "aliases": [
+        "Colapesce, Dimartino"
+      ]
+    },
+    {
+      "rank": 69,
+      "answer": "Brividi",
+      "aliases": [
+        "Mahmood, Blanco"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "Soldi",
+      "aliases": [
+        "Mahmood"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "Calipso",
+      "aliases": [
+        "Charlie Charles, Sfera Ebbasta, Mahmood"
+      ]
+    },
+    {
+      "rank": 72,
+      "answer": "Dorado",
+      "aliases": [
+        "Mahmood, Sfera Ebbasta"
+      ]
+    },
+    {
+      "rank": 73,
+      "answer": "Farfalle",
+      "aliases": [
+        "Sangiovanni"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "Malibu",
+      "aliases": [
+        "Sangiovanni"
+      ]
+    },
+    {
+      "rank": 75,
+      "answer": "La coda del diavolo",
+      "aliases": [
+        "Rkomi, Elodie"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "Insuperabile",
+      "aliases": [
+        "Rkomi"
+      ]
+    },
+    {
+      "rank": 77,
+      "answer": "Mi fai impazzire",
+      "aliases": [
+        "Blanco, Sfera Ebbasta"
+      ]
+    },
+    {
+      "rank": 78,
+      "answer": "Notti in bianco",
+      "aliases": [
+        "Blanco"
+      ]
+    },
+    {
+      "rank": 79,
+      "answer": "La canzone nostra",
+      "aliases": [
+        "Mace, Blanco, Salmo"
+      ]
+    },
+    {
+      "rank": 80,
+      "answer": "Tran Tran",
+      "aliases": [
+        "Sfera Ebbasta"
+      ]
+    },
+    {
+      "rank": 81,
+      "answer": "Peace & Love",
+      "aliases": [
+        "Charlie Charles, Sfera, Ghali"
+      ]
+    },
+    {
+      "rank": 82,
+      "answer": "Cara Italia",
+      "aliases": [
+        "Ghali"
+      ]
+    },
+    {
+      "rank": 83,
+      "answer": "Good Times",
+      "aliases": [
+        "Ghali"
+      ]
+    },
+    {
+      "rank": 84,
+      "answer": "Casa mia",
+      "aliases": [
+        "Ghali"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Storie brevi",
+      "aliases": [
+        "Tananai, Annalisa"
+      ]
+    },
+    {
+      "rank": 86,
+      "answer": "Baby Goddamn",
+      "aliases": [
+        "Tananai"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "Che t'o dico a fa'",
+      "aliases": [
+        "Angelina Mango"
+      ]
+    },
+    {
+      "rank": 88,
+      "answer": "Ci pensiamo domani",
+      "aliases": [
+        "Angelina Mango"
+      ]
+    },
+    {
+      "rank": 89,
+      "answer": "La noia",
+      "aliases": [
+        "Angelina Mango"
+      ]
+    },
+    {
+      "rank": 90,
+      "answer": "Un ragazzo una ragazza",
+      "aliases": [
+        "The Kolors"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "Dragostea Din Tei",
+      "aliases": [
+        "O-Zone"
+      ]
+    },
+    {
+      "rank": 92,
+      "answer": "Bailando",
+      "aliases": [
+        "Enrique Iglesias"
+      ]
+    },
+    {
+      "rank": 93,
+      "answer": "El Perdon",
+      "aliases": [
+        "Nicky Jam, Enrique Iglesias"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "Calma",
+      "aliases": [
+        "Pedro Capó"
+      ]
+    },
+    {
+      "rank": 95,
+      "answer": "Con Calma",
+      "aliases": [
+        "Daddy Yankee"
+      ]
+    },
+    {
+      "rank": 96,
+      "answer": "Asereje",
+      "aliases": [
+        "Las Ketchup"
+      ]
+    },
+    {
+      "rank": 97,
+      "answer": "Maria Salvador",
+      "aliases": [
+        "J-Ax, Il Cile"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Amore e Capoeira",
+      "aliases": [
+        "Takagi & Ketra, Giusy Ferreri"
+      ]
+    },
+    {
+      "rank": 99,
+      "answer": "Tre parole",
+      "aliases": [
+        "Valeria Rossi"
+      ]
+    },
+    {
+      "rank": 100,
+      "answer": "Vamos a la playa",
+      "aliases": [
+        "Righeira"
+      ]
+    }
+  ]
+}

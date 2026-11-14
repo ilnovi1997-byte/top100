@@ -1,0 +1,523 @@
+{
+  "categoryId": "parole_italiane",
+  "title": "Le 100 parole più usate nella lingua italiana",
+  "description": "Indovina le parole più frequenti (inclusi verbi, preposizioni e pronomi).",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "non",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "di",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "e",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "il",
+      "aliases": [
+        "lo/la/i/gli/le"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "che",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "un",
+      "aliases": [
+        "uno/una/un'"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "a",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "per",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "essere",
+      "aliases": [
+        "è/sono/sei/era"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "in",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "mi",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "si",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "avere",
+      "aliases": [
+        "ho/ha/hai/hanno"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "ma",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "cosa",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "con",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "ti",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "se",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "no",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "da",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "come",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "ci",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "io",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "questo",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "bene",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "qui",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "del",
+      "aliases": [
+        "dello/della/dei/degli/delle"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "tu",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "solo",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "me",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "mio",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "tutto",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "te",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "fare",
+      "aliases": [
+        "fatto/faccio/fa"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "lei",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "mia",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "so",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "quando",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "ora",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "al",
+      "aliases": [
+        "allo/alla/ai/agli/alle"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "voglio",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "o",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "molto",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "perché",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "mai",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "dire",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "anche",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "quello",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "due",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "sai",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "chi",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "tempo",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "vita",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "vi",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "via",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "dal",
+      "aliases": [
+        "dallo/dalla/dai/dagli/dalle"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "sempre",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "dove",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "sì",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "giorno",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "anni",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "po'",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "niente",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "ancora",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "allora",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "davvero",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "su",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "lavoro",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "parte",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "mondo",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "prima",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "poi",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "uomo",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "donna",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "oggi",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Dio",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "grazie",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "amore",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "tanto",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "vero",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "nuovo",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "casa",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "volta",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "altro",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "senza",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "stesso",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "ciao",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "forza",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "quale",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "sotto",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "certo",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "grande",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "ecco",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "male",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "storia",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "signore",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "magari",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "c'è",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "amico",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Placeholder 100",
+      "aliases": []
+    }
+  ]
+}

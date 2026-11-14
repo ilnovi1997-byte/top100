@@ -1,0 +1,630 @@
+{
+  "categoryId": "franchise_valore",
+  "title": "I 100 franchise dell'intrattenimento di maggior valore",
+  "description": "Indovina i 100 franchise (media, videogiochi, merchandise) che hanno generato i maggiori ricavi storici.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Pokémon",
+      "aliases": [
+        "Pokemon"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Hello Kitty",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Mickey Mouse & Friends",
+      "aliases": [
+        "Mickey Mouse",
+        "Topolino"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Winnie the Pooh",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Star Wars",
+      "aliases": [
+        "Guerre Stellari"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Mario",
+      "aliases": [
+        "Super Mario",
+        "Super Mario Bros"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Disney Princess",
+      "aliases": [
+        "Principesse Disney"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Anpanman",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Marvel Cinematic Universe",
+      "aliases": [
+        "MCU",
+        "Marvel"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Harry Potter",
+      "aliases": [
+        "Wizarding World"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Barbie",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Spider-Man",
+      "aliases": [
+        "Uomo Ragno"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Call of Duty",
+      "aliases": [
+        "CoD"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Batman",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Peanuts",
+      "aliases": [
+        "Snoopy"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Dragon Ball",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Gundam",
+      "aliases": [
+        "Mobile Suit Gundam"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Transformers",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Grand Theft Auto",
+      "aliases": [
+        "GTA"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "One Piece",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "League of Legends",
+      "aliases": [
+        "LoL"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "Yu-Gi-Oh!",
+      "aliases": [
+        "Yugioh"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "SpongeBob SquarePants",
+      "aliases": [
+        "Spongebob"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Toy Story",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Minecraft",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "The Lord of the Rings",
+      "aliases": [
+        "Il Signore degli Anelli",
+        "LOTR"
+      ]
+    },
+    {
+      "rank": 27,
+      "answer": "FIFA",
+      "aliases": [
+        "EA Sports FC"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Naruto",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "James Bond",
+      "aliases": [
+        "007"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "Peppa Pig",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Dora the Explorer",
+      "aliases": [
+        "Dora l'esploratrice"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "The Simpsons",
+      "aliases": [
+        "I Simpson"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "Pac-Man",
+      "aliases": [
+        "Pacman"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Dungeon & Fighter",
+      "aliases": [
+        "DNF"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Lion King",
+      "aliases": [
+        "Il Re Leone"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Frozen",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Space Invaders",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Madden NFL",
+      "aliases": [
+        "Madden"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "Street Fighter",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "World of Warcraft",
+      "aliases": [
+        "WoW"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Final Fantasy",
+      "aliases": [
+        "FF"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Sonic the Hedgehog",
+      "aliases": [
+        "Sonic"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Avengers",
+      "aliases": [
+        "The Avengers"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "Teenage Mutant Ninja Turtles",
+      "aliases": [
+        "TMNT",
+        "Tartarughe Ninja"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "X-Men",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Star Trek",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Halo",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Despicable Me",
+      "aliases": [
+        "Cattivissimo Me",
+        "Minions"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Mortal Kombat",
+      "aliases": [
+        "MK"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Assassin's Creed",
+      "aliases": [
+        "AC"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "Tomb Raider",
+      "aliases": [
+        "Lara Croft"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "Resident Evil",
+      "aliases": [
+        "Biohazard",
+        "RE"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Need for Speed",
+      "aliases": [
+        "NFS"
+      ]
+    },
+    {
+      "rank": 54,
+      "answer": "Angry Birds",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "The Legend of Zelda",
+      "aliases": [
+        "Zelda"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Super Smash Bros.",
+      "aliases": [
+        "Smash Bros"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "Gran Turismo",
+      "aliases": [
+        "GT"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "The Sims",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Animal Crossing",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Monster Hunter",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Dragon Quest",
+      "aliases": [
+        "DQ"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "PUBG",
+      "aliases": [
+        "PlayerUnknown's Battlegrounds"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "The Witcher",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Doraemon",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Sailor Moon",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Neon Genesis Evangelion",
+      "aliases": [
+        "Evangelion",
+        "EVA"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "Ultraman",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Kamen Rider",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Super Sentai",
+      "aliases": [
+        "Power Rangers"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "Jurassic Park",
+      "aliases": [
+        "Jurassic World"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "Fast & Furious",
+      "aliases": [
+        "The Fast Saga"
+      ]
+    },
+    {
+      "rank": 72,
+      "answer": "Indiana Jones",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Mission: Impossible",
+      "aliases": [
+        "MI"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "The Hunger Games",
+      "aliases": [
+        "Hunger Games"
+      ]
+    },
+    {
+      "rank": 75,
+      "answer": "Twilight",
+      "aliases": [
+        "The Twilight Saga"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "Shrek",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Ice Age",
+      "aliases": [
+        "L'era glaciale"
+      ]
+    },
+    {
+      "rank": 78,
+      "answer": "Pirates of the Caribbean",
+      "aliases": [
+        "Pirati dei Caraibi"
+      ]
+    },
+    {
+      "rank": 79,
+      "answer": "Transformers (Film)",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "The Matrix",
+      "aliases": [
+        "Matrix"
+      ]
+    },
+    {
+      "rank": 81,
+      "answer": "Superman",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "My Little Pony",
+      "aliases": [
+        "MLP"
+      ]
+    },
+    {
+      "rank": 83,
+      "answer": "Sesame Street",
+      "aliases": [
+        "Sesamo Apriti"
+      ]
+    },
+    {
+      "rank": 84,
+      "answer": "Thomas & Friends",
+      "aliases": [
+        "Il trenino Thomas"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Power Rangers",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Ben 10",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Paw Patrol",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Bratz",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Monster High",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Lego",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Hot Wheels",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Nerf",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Play-Doh",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Magic: The Gathering",
+      "aliases": [
+        "MTG"
+      ]
+    },
+    {
+      "rank": 95,
+      "answer": "Dungeons & Dragons",
+      "aliases": [
+        "D&D"
+      ]
+    },
+    {
+      "rank": 96,
+      "answer": "Warhammer",
+      "aliases": [
+        "Warhammer 40k",
+        "Warhammer 40,000"
+      ]
+    },
+    {
+      "rank": 97,
+      "answer": "Catan",
+      "aliases": [
+        "I Coloni di Catan"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Monopoly",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Uno",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Scrabble",
+      "aliases": []
+    }
+  ]
+}

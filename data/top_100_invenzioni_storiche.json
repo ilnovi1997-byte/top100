@@ -1,0 +1,517 @@
+{
+  "categoryId": "invenzioni_storiche",
+  "title": "Le 100 invenzioni più importanti della storia",
+  "description": "Indovina le invenzioni e scoperte umane che hanno avuto il maggiore impatto sulla civiltà.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Ruota",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Fuoco controllato",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Agricoltura",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Scrittura",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Carta",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Bussola",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Polvere da sparo",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Stampa",
+      "aliases": [
+        "Stampa a caratteri mobili"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Lente d'ingrandimento",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Orologio meccanico",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Telescopio",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Microscopio",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Macchina a vapore",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Telaio meccanico",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Elettricità",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Batteria",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Telegrafo",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Telefono",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Lampadina",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Fotografia",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Cinematografo",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Radio",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Aeroplano",
+      "aliases": [
+        "Aereo"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Motore a scoppio",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Automobile",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Frigorifero",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Penicillina",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Vaccino",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Anestesia",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Raggi X",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Plastica",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Computer",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Transistor",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Internet",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "World Wide Web",
+      "aliases": [
+        "WWW"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Smartphone",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Intelligenza Artificiale",
+      "aliases": [
+        "AI"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Laser",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Fibra ottica",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "GPS",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Satelliti artificiali",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Energia nucleare",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Radar",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Sonar",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Microprocessore",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Codice a barre",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "LED",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Carta di credito",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Ascensore",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Aria condizionata",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Dinamite",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Cemento armato",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Fiammifero",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Bicicletta",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Macchina da scrivere",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Calcolatrice",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Motore elettrico",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Elicottero",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Sottomarino",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Microscopio elettronico",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Risonanza magnetica",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "TAC",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Elettrocardiogramma",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Pacemaker",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Defibrillatore",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Pillola anticoncezionale",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Fecondazione in vitro",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Clonazione",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Sequenziamento del DNA",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Forno a microonde",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Lavatrice",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Lavastoviglie",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Aspirapolvere",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Televisore",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Videoregistratore",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "CD",
+      "aliases": [
+        "Compact Disc"
+      ]
+    },
+    {
+      "rank": 77,
+      "answer": "DVD",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "MP3",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Fotocamera digitale",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Stampa 3D",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Droni",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Blockchain",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Criptovalute",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Motore a reazione",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Razzo spaziale",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Telescopio spaziale",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Stazione spaziale",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Navigatore satellitare",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Codice QR",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Touchscreen",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Bluetooth",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Wi-Fi",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Batteria al litio",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Pannello solare",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Turbina eolica",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Pila a combustibile",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Fusione nucleare",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Nanotecnologia",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "CRISPR",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Fibra di carbonio",
+      "aliases": []
+    }
+  ]
+}

@@ -1,0 +1,610 @@
+{
+  "categoryId": "film_oscar",
+  "title": "I 100 film vincitori di più premi Oscar",
+  "description": "Indovina i 100 film che hanno conquistato il maggior numero di statuette agli Academy Awards.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Titanic",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Ben-Hur",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Il Signore degli Anelli - Il ritorno del re",
+      "aliases": [
+        "Il ritorno del re",
+        "LOTR 3"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "West Side Story",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Gigi",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "L'ultimo imperatore",
+      "aliases": [
+        "The Last Emperor"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Il paziente inglese",
+      "aliases": [
+        "The English Patient"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Via col vento",
+      "aliases": [
+        "Gone with the Wind"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Da qui all'eternità",
+      "aliases": [
+        "From Here to Eternity"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Fronte del porto",
+      "aliases": [
+        "On the Waterfront"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "My Fair Lady",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Cabaret",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Gandhi",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Amadeus",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "The Millionaire",
+      "aliases": [
+        "Slumdog Millionaire"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "La mia via",
+      "aliases": [
+        "Going My Way"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "I migliori anni della nostra vita",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Il ponte sul fiume Kwai",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Lawrence d'Arabia",
+      "aliases": [
+        "Lawrence of Arabia"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Patton, generale d'acciaio",
+      "aliases": [
+        "Patton"
+      ]
+    },
+    {
+      "rank": 21,
+      "answer": "La stangata",
+      "aliases": [
+        "The Sting"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "La mia Africa",
+      "aliases": [
+        "Out of Africa"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Balla coi lupi",
+      "aliases": [
+        "Dances with Wolves"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Schindler's List",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Shakespeare in Love",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Gravity",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Oppenheimer",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Everything Everywhere All at Once",
+      "aliases": [
+        "EEAAO"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "La signora Miniver",
+      "aliases": [
+        "Mrs Miniver"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "Eva contro Eva",
+      "aliases": [
+        "All About Eve"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "Un americano a Parigi",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Un posto al sole",
+      "aliases": [
+        "A Place in the Sun"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "Un uomo per tutte le stagioni",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Il padrino - Parte II",
+      "aliases": [
+        "Il Padrino 2",
+        "The Godfather Part II"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Forrest Gump",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Chicago",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "The Hurt Locker",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Mad Max: Fury Road",
+      "aliases": [
+        "Mad Max",
+        "Fury Road"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "La La Land",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Dune",
+      "aliases": [
+        "Dune Parte 1"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Accadde una notte",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Com'era verde la mia valle",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Mary Poppins",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Tutti insieme appassionatamente",
+      "aliases": [
+        "The Sound of Music"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Il dottor Zivago",
+      "aliases": [
+        "Doctor Zhivago"
+      ]
+    },
+    {
+      "rank": 46,
+      "answer": "Chi ha paura di Virginia Woolf?",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Nel calore della notte",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Il braccio violento della legge",
+      "aliases": [
+        "The French Connection"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Qualcuno volò sul nido del cuculo",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Kramer contro Kramer",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Voglia di tenerezza",
+      "aliases": [
+        "Terms of Endearment"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "Il silenzio degli innocenti",
+      "aliases": [
+        "The Silence of the Lambs"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Braveheart",
+      "aliases": [
+        "Braveheart - Cuore impavido"
+      ]
+    },
+    {
+      "rank": 54,
+      "answer": "Salvate il soldato Ryan",
+      "aliases": [
+        "Saving Private Ryan"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "American Beauty",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Il gladiatore",
+      "aliases": [
+        "Gladiator"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "The Aviator",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Hugo Cabret",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "The Artist",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Vita di Pi",
+      "aliases": [
+        "Life of Pi"
+      ]
+    },
+    {
+      "rank": 61,
+      "answer": "Povere creature!",
+      "aliases": [
+        "Poor Things"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "Il giro del mondo in 80 giorni",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Tom Jones",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Spartacus",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "I predatori dell'arca perduta",
+      "aliases": [
+        "Indiana Jones 1"
+      ]
+    },
+    {
+      "rank": 66,
+      "answer": "Momenti di gloria",
+      "aliases": [
+        "Chariots of Fire"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "E.T. l'extra-terrestre",
+      "aliases": [
+        "ET",
+        "E.T."
+      ]
+    },
+    {
+      "rank": 68,
+      "answer": "Fanny e Alexander",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Uomini veri",
+      "aliases": [
+        "The Right Stuff"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "Rain Man",
+      "aliases": [
+        "Rain Man - L'uomo della pioggia"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "A spasso con Daisy",
+      "aliases": [
+        "Driving Miss Daisy"
+      ]
+    },
+    {
+      "rank": 72,
+      "answer": "Niente di nuovo sul fronte occidentale",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Gli spietati",
+      "aliases": [
+        "Unforgiven"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "Terminator 2 - Il giorno del giudizio",
+      "aliases": [
+        "Terminator 2",
+        "T2"
+      ]
+    },
+    {
+      "rank": 75,
+      "answer": "Matrix",
+      "aliases": [
+        "The Matrix"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "Il Signore degli Anelli - La Compagnia dell'Anello",
+      "aliases": [
+        "La compagnia dell'anello"
+      ]
+    },
+    {
+      "rank": 77,
+      "answer": "Traffic",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Million Dollar Baby",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Non è un paese per vecchi",
+      "aliases": [
+        "No Country for Old Men"
+      ]
+    },
+    {
+      "rank": 80,
+      "answer": "Il discorso del re",
+      "aliases": [
+        "The King's Speech"
+      ]
+    },
+    {
+      "rank": 81,
+      "answer": "Inception",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Birdman",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Grand Budapest Hotel",
+      "aliases": [
+        "The Grand Budapest Hotel"
+      ]
+    },
+    {
+      "rank": 84,
+      "answer": "Parasite",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Bohemian Rhapsody",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Il padrino",
+      "aliases": [
+        "The Godfather"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "Casablanca",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Rocky",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Il cacciatore",
+      "aliases": [
+        "The Deer Hunter"
+      ]
+    },
+    {
+      "rank": 90,
+      "answer": "Platoon",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "L'ultimo dei Mohicani",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Jurassic Park",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Lezioni di piano",
+      "aliases": [
+        "The Piano"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "Avatar",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Dallas Buyers Club",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "1917",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "I segreti di Brokeback Mountain",
+      "aliases": [
+        "Brokeback Mountain"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Memorie di una geisha",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Il labirinto del fauno",
+      "aliases": [
+        "Pan's Labyrinth"
+      ]
+    },
+    {
+      "rank": 100,
+      "answer": "La vita è bella",
+      "aliases": [
+        "Life is Beautiful"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "categoryId": "nomi_maschili",
+  "title": "I 100 nomi propri maschili più diffusi in Italia",
+  "description": "Indovina i nomi maschili italiani con il maggior numero di residenti storici.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Giuseppe",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Giovanni",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Antonio",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Mario",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Luigi",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Francesco",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Angelo",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Vincenzo",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Pietro",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Salvatore",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Carlo",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Franco",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Domenico",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Andrea",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Roberto",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Alessandro",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Michele",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Enrico",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Lorenzo",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Paolo",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Stefano",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Gianfranco",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Pasquale",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Gaetano",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Nicola",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Giorgio",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Maurizio",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Marco",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Massimo",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Claudio",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Aldo",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Carmelo",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Sergio",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Bruno",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Luca",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Filippo",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Riccardo",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Umberto",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Matteo",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Guido",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Gabriele",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Renato",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Giulio",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Rosario",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Fabio",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Leonardo",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Valerio",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Marcello",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Raffaele",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Emanuele",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Giacomo",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Luciano",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Piero",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Vittorio",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Federico",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Daniele",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Christian",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Edoardo",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Gennaro",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Simone",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Mattia",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Tommaso",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Alessio",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Davide",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Diego",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Enzo",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Rocco",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Gino",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Ezio",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Cesare",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Silvio",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Dario",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Samuele",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Pino",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Corrado",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Elio",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Armando",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Giancarlo",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Giammarco",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Jacopo",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Nicolò",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Ruggiero",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Manuel",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Amedeo",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Guglielmo",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Eugenio",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Loris",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Pio",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Ugo",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Romolo",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Oreste",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Fausto",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Ermanno",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Agostino",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Biagio",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Ettore",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Mauro",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Ivano",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Fiorenzo",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Vito",
+      "aliases": []
+    }
+  ]
+}

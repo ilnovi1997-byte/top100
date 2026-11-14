@@ -1,0 +1,531 @@
+{
+  "categoryId": "personaggi_storici",
+  "title": "I 100 personaggi storici e leader più influenti",
+  "description": "Indovina le figure storiche che hanno maggiormente plasmato la storia, la scienza e la cultura mondiale.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Maometto",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Gesù",
+      "aliases": [
+        "Gesù Cristo"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Buddha",
+      "aliases": [
+        "Siddhartha Gautama"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Confucio",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Isaac Newton",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Albert Einstein",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Cristoforo Colombo",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Johannes Gutenberg",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Galileo Galilei",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Aristotele",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Platone",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Socrate",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Giulio Cesare",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Augusto",
+      "aliases": [
+        "Ottaviano"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Costantino",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Carlo Magno",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Alessandro Magno",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Napoleone Bonaparte",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "George Washington",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Abraham Lincoln",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Martin Luther King",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Mahatma Gandhi",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Nelson Mandela",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Winston Churchill",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Franklin D. Roosevelt",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Iosif Stalin",
+      "aliases": [
+        "Stalin"
+      ]
+    },
+    {
+      "rank": 27,
+      "answer": "Vladimir Lenin",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Karl Marx",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Leonardo da Vinci",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Michelangelo Buonarroti",
+      "aliases": [
+        "Michelangelo"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "William Shakespeare",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Dante Alighieri",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Wolfgang Amadeus Mozart",
+      "aliases": [
+        "Mozart"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Ludwig van Beethoven",
+      "aliases": [
+        "Beethoven"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Charles Darwin",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Louis Pasteur",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Thomas Edison",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Nikola Tesla",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Marie Curie",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Sigmund Freud",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Gengis Khan",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Cleopatra",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Elisabetta I",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Regina Vittoria",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Giovanna d'Arco",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Madre Teresa di Calcutta",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Francesco d'Assisi",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Martin Lutero",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Giovanni Calvino",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Thomas Jefferson",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Simon Bolivar",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Mao Zedong",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Ho Chi Minh",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Fidel Castro",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Che Guevara",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Sun Yat-sen",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Imperatore Meiji",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Mustafa Kemal Ataturk",
+      "aliases": [
+        "Ataturk"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "David Ben-Gurion",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Yasser Arafat",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Desmond Tutu",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Dalai Lama",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Papa Giovanni Paolo II",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Papa Francesco",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Guglielmo il Conquistatore",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Riccardo Cuor di Leone",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Saladino",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Solimano il Magnifico",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Pietro il Grande",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Caterina di Russia",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Luigi XIV",
+      "aliases": [
+        "Re Sole"
+      ]
+    },
+    {
+      "rank": 72,
+      "answer": "Maximilien Robespierre",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Georges Danton",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Jean-Paul Marat",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Otto von Bismarck",
+      "aliases": [
+        "Bismarck"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "Camillo Benso conte di Cavour",
+      "aliases": [
+        "Cavour"
+      ]
+    },
+    {
+      "rank": 77,
+      "answer": "Giuseppe Garibaldi",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Giuseppe Mazzini",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Vittorio Emanuele II",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Benito Mussolini",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Adolf Hitler",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Francisco Franco",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Charles de Gaulle",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Dwight D. Eisenhower",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "John F. Kennedy",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Richard Nixon",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Ronald Reagan",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Michail Gorbaciov",
+      "aliases": [
+        "Gorbaciov"
+      ]
+    },
+    {
+      "rank": 89,
+      "answer": "Margaret Thatcher",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Indira Gandhi",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Golda Meir",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Benazir Bhutto",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Angela Merkel",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Barack Obama",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Bill Gates",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Steve Jobs",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Placeholder 97",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Placeholder 98",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Placeholder 99",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Placeholder 100",
+      "aliases": []
+    }
+  ]
+}

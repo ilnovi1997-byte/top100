@@ -1,0 +1,529 @@
+{
+  "categoryId": "professioni_cercate",
+  "title": "I 100 mestieri e professioni più cercate online",
+  "description": "Indovina i lavori, le carriere e i mestieri più ricercati su internet.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Sviluppatore Web",
+      "aliases": [
+        "Web Developer"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Ingegnere del Software",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Ingegnere Civile",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Medico",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Avvocato",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Commercialista",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Social Media Manager",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Insegnante",
+      "aliases": [
+        "Professore"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Infermiere",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Architetto",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Fisioterapista",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Psicologo",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Farmacista",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Giornalista",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Cuoco",
+      "aliases": [
+        "Chef"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Cameriere",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Barman",
+      "aliases": [
+        "Bartender"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Elettricista",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Idraulico",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Meccanico",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Falegname",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Muratore",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Estetista",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Parrucchiere",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Truccatore",
+      "aliases": [
+        "Make-up Artist"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "Pilota",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Assistente di Volo",
+      "aliases": [
+        "Hostess"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Autista",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Corriere",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Magazziniere",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Addetto alle Vendite",
+      "aliases": [
+        "Commesso"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Segretaria",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Grafico",
+      "aliases": [
+        "Graphic Designer"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Copywriter",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "SEO Specialist",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Data Analyst",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Data Scientist",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Amministratore di Sistema",
+      "aliases": [
+        "Sysadmin"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "Hacker Etico",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Fotografo",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Videomaker",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Influencer",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Youtuber",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Streamer",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Attore",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Cantante",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Musicista",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Ballerino",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "DJ",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Agente Immobiliare",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Agente di Commercio",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Operatore Socio-Sanitario",
+      "aliases": [
+        "OSS"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Educatore",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Babysitter",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Badante",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Veterinario",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Biologo",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Chimico",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Ricercatore",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Geologo",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Agronomo",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Enologo",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Sommelier",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Pasticcere",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Gelataio",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Panettiere",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Macellaio",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Pescivendolo",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Sarto",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Stilista",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Modello",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Operatore Call Center",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "HR Manager",
+      "aliases": [
+        "Responsabile Risorse Umane"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "Recruiter",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Project Manager",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Product Manager",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "UX/UI Designer",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Game Developer",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "3D Artist",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Animatore Turistico",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Personal Trainer",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Istruttore di Yoga",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Nutrizionista",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Dietista",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Ginecologo",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Pediatra",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Chirurgo",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Dentista",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Igienista Dentale",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Oculista",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Optometrista",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Logopedista",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Notaio",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Magistrato",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Poliziotto",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Carabiniere",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Vigile del Fuoco",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Guardia Giurata",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Bagnino",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Guida Turistica",
+      "aliases": []
+    }
+  ]
+}

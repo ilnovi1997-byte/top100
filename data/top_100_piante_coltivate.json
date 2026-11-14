@@ -1,0 +1,661 @@
+{
+  "categoryId": "piante_coltivate",
+  "title": "Le 100 piante e alberi più coltivati",
+  "description": "Indovina le 100 specie vegetali più diffuse per l'agricoltura e l'uso umano.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Mais",
+      "aliases": [
+        "Corn",
+        "Granoturco"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Grano",
+      "aliases": [
+        "Frumento",
+        "Wheat"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Riso",
+      "aliases": [
+        "Rice"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Soia",
+      "aliases": [
+        "Soy",
+        "Soybean"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Patata",
+      "aliases": [
+        "Potato"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Canna da zucchero",
+      "aliases": [
+        "Sugarcane"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Pomodoro",
+      "aliases": [
+        "Tomato"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Cipolla",
+      "aliases": [
+        "Onion"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Mela",
+      "aliases": [
+        "Apple",
+        "Melo"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Arancia",
+      "aliases": [
+        "Orange",
+        "Arancio"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Banana",
+      "aliases": [
+        "Banano"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Cotone",
+      "aliases": [
+        "Cotton"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Vite",
+      "aliases": [
+        "Uva",
+        "Grape"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Olivo",
+      "aliases": [
+        "Ulivo",
+        "Olive"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Caffè",
+      "aliases": [
+        "Coffee"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Cacao",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Tè",
+      "aliases": [
+        "Tea",
+        "The"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Tabacco",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Palma da olio",
+      "aliases": [
+        "Olio di palma"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Cocco",
+      "aliases": [
+        "Palma da cocco"
+      ]
+    },
+    {
+      "rank": 21,
+      "answer": "Arachide",
+      "aliases": [
+        "Spagnoletta",
+        "Peanut"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "Mandorlo",
+      "aliases": [
+        "Mandorla"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Nocciolo",
+      "aliases": [
+        "Nocciola"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Castagno",
+      "aliases": [
+        "Castagna"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Noce",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Limone",
+      "aliases": [
+        "Lemon"
+      ]
+    },
+    {
+      "rank": 27,
+      "answer": "Pesco",
+      "aliases": [
+        "Pesca"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Ciliegio",
+      "aliases": [
+        "Ciliegia"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Susino",
+      "aliases": [
+        "Prugna",
+        "Susina"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "Pero",
+      "aliases": [
+        "Pera"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "Fico",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Mango",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Ananas",
+      "aliases": [
+        "Pineapple"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Papaya",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Melone",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Anguria",
+      "aliases": [
+        "Cocomero",
+        "Watermelon"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "Fragola",
+      "aliases": [
+        "Strawberry"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Mirtillo",
+      "aliases": [
+        "Blueberry"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "Lampone",
+      "aliases": [
+        "Raspberry"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "Mora",
+      "aliases": [
+        "Rovo"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Rapa",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Carota",
+      "aliases": [
+        "Carrot"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Cavolo",
+      "aliases": [
+        "Verza",
+        "Cavolfiore"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "Lattuga",
+      "aliases": [
+        "Insalata",
+        "Lettuce"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Spinacio",
+      "aliases": [
+        "Spinaci"
+      ]
+    },
+    {
+      "rank": 46,
+      "answer": "Zucchina",
+      "aliases": [
+        "Zucchine",
+        "Zucchini"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "Melanzana",
+      "aliases": [
+        "Eggplant"
+      ]
+    },
+    {
+      "rank": 48,
+      "answer": "Peperone",
+      "aliases": [
+        "Pepper"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Aglio",
+      "aliases": [
+        "Garlic"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Fagiolo",
+      "aliases": [
+        "Fagioli",
+        "Bean"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "Pisello",
+      "aliases": [
+        "Piselli",
+        "Pea"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "Cece",
+      "aliases": [
+        "Ceci"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Lenticchia",
+      "aliases": [
+        "Lenticchie"
+      ]
+    },
+    {
+      "rank": 54,
+      "answer": "Fava",
+      "aliases": [
+        "Fave"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Avena",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Orzo",
+      "aliases": [
+        "Barley"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "Segale",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Sorgo",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Miglio",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Girasole",
+      "aliases": [
+        "Sunflower"
+      ]
+    },
+    {
+      "rank": 61,
+      "answer": "Colza",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Lino",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Canapa",
+      "aliases": [
+        "Hemp",
+        "Marijuana"
+      ]
+    },
+    {
+      "rank": 64,
+      "answer": "Gomma",
+      "aliases": [
+        "Albero della gomma",
+        "Caucciù"
+      ]
+    },
+    {
+      "rank": 65,
+      "answer": "Eucalipto",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Pino",
+      "aliases": [
+        "Pine"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "Quercia",
+      "aliases": [
+        "Oak"
+      ]
+    },
+    {
+      "rank": 68,
+      "answer": "Abete",
+      "aliases": [
+        "Fir"
+      ]
+    },
+    {
+      "rank": 69,
+      "answer": "Faggio",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Betulla",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Pioppo",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Salice",
+      "aliases": [
+        "Salice piangente"
+      ]
+    },
+    {
+      "rank": 73,
+      "answer": "Acero",
+      "aliases": [
+        "Maple"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "Frassino",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Cedro",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Cipresso",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Larice",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Mogano",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Teak",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Bambù",
+      "aliases": [
+        "Bamboo"
+      ]
+    },
+    {
+      "rank": 81,
+      "answer": "Palissandro",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Ebano",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Sandalo",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Baobab",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Sequoia",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Ginkgo",
+      "aliases": [
+        "Ginkgo biloba"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "Magnolia",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Rododendro",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Rosa",
+      "aliases": [
+        "Rose"
+      ]
+    },
+    {
+      "rank": 90,
+      "answer": "Tulipano",
+      "aliases": [
+        "Tulip"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "Orchidea",
+      "aliases": [
+        "Orchid"
+      ]
+    },
+    {
+      "rank": 92,
+      "answer": "Crisantemo",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Lavanda",
+      "aliases": [
+        "Lavender"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "Rosmarino",
+      "aliases": [
+        "Rosemary"
+      ]
+    },
+    {
+      "rank": 95,
+      "answer": "Basilico",
+      "aliases": [
+        "Basil"
+      ]
+    },
+    {
+      "rank": 96,
+      "answer": "Salvia",
+      "aliases": [
+        "Sage"
+      ]
+    },
+    {
+      "rank": 97,
+      "answer": "Menta",
+      "aliases": [
+        "Mint"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Origano",
+      "aliases": [
+        "Oregano"
+      ]
+    },
+    {
+      "rank": 99,
+      "answer": "Timo",
+      "aliases": [
+        "Thyme"
+      ]
+    },
+    {
+      "rank": 100,
+      "answer": "Zenzero",
+      "aliases": [
+        "Ginger"
+      ]
+    }
+  ]
+}
