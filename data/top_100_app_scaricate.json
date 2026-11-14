@@ -1,0 +1,545 @@
+{
+  "categoryId": "app_scaricate",
+  "title": "Le 100 app mobile più scaricate del decennio",
+  "description": "Indovina le applicazioni per smartphone con il maggior numero di download globali.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "TikTok",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Instagram",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Facebook",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "WhatsApp",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Telegram",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "CapCut",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Snapchat",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Zoom",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Spotify",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Messenger",
+      "aliases": [
+        "Facebook Messenger"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "YouTube",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Netflix",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "X",
+      "aliases": [
+        "Twitter"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Amazon",
+      "aliases": [
+        "Amazon Shopping"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Shein",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Temu",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Google Maps",
+      "aliases": [
+        "Maps"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Uber",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Tinder",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Pinterest",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Microsoft Teams",
+      "aliases": [
+        "Teams"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "Gmail",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Google Chrome",
+      "aliases": [
+        "Chrome"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Google Drive",
+      "aliases": [
+        "Drive"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Reddit",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Discord",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Candy Crush Saga",
+      "aliases": [
+        "Candy Crush"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Subway Surfers",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Roblox",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Free Fire",
+      "aliases": [
+        "Garena Free Fire"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "PUBG Mobile",
+      "aliases": [
+        "PUBG"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Ludo King",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Duolingo",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Canva",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Shopee",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Microsoft Word",
+      "aliases": [
+        "Word"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "Google Meet",
+      "aliases": [
+        "Meet"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Skype",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Truecaller",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "SHAREit",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "PicsArt",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "AliBaba",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "AliExpress",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Waze",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "SoundCloud",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Pandora",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Airbnb",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Booking.com",
+      "aliases": [
+        "Booking"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Twitch",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Bigo Live",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Likee",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Vudu",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Hulu",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Disney+",
+      "aliases": [
+        "Disney Plus"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Max",
+      "aliases": [
+        "HBO Max"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Paramount+",
+      "aliases": [
+        "Paramount Plus"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "Amazon Prime Video",
+      "aliases": [
+        "Prime Video"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "Google Earth",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Samsung Health",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Google Fit",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Strava",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "MyFitnessPal",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Shazam",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Uber Eats",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "DoorDash",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Glovo",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Deliveroo",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "WhatsApp Business",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Slack",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Trello",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Asana",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Notion",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Evernote",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Wattpad",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Google Translate",
+      "aliases": [
+        "Google Traduttore"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "YouTube Music",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Apple Music",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Audible",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Kindle",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "WeChat",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Line",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Viber",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "KakaoTalk",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Zalo",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Imo",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Bilibili",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Kwai",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Meitu",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "FaceApp",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "BeautyPlus",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "YouCam Makeup",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Clash of Clans",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Clash Royale",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Brawl Stars",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Genshin Impact",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Among Us",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Pokémon GO",
+      "aliases": [
+        "Pokemon GO"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Minecraft",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "VLC",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Placeholder 100",
+      "aliases": []
+    }
+  ]
+}

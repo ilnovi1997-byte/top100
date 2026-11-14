@@ -1,0 +1,642 @@
+{
+  "categoryId": "animazione_incassi",
+  "title": "I 100 film d'animazione con maggiori incassi",
+  "description": "Indovina i 100 film d'animazione che hanno incassato di più al botteghino globale.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Frozen II - Il segreto di Arendelle",
+      "aliases": [
+        "Frozen 2"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Super Mario Bros. - Il film",
+      "aliases": [
+        "Super Mario"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Frozen - Il regno di ghiaccio",
+      "aliases": [
+        "Frozen"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Gli Incredibili 2",
+      "aliases": [
+        "Incredibles 2"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Minions",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Toy Story 4",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Toy Story 3 - La grande fuga",
+      "aliases": [
+        "Toy Story 3"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Cattivissimo me 3",
+      "aliases": [
+        "Despicable Me 3"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Alla ricerca di Dory",
+      "aliases": [
+        "Finding Dory"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Zootropolis",
+      "aliases": [
+        "Zootopia"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Cattivissimo me 2",
+      "aliases": [
+        "Despicable Me 2"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Minions 2 - Come Gru diventa cattivissimo",
+      "aliases": [
+        "Minions 2"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "L'era glaciale 3 - L'alba dei dinosauri",
+      "aliases": [
+        "L'era glaciale 3"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "L'era glaciale 4 - Continenti alla deriva",
+      "aliases": [
+        "L'era glaciale 4"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Inside Out",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Alla ricerca di Nemo",
+      "aliases": [
+        "Finding Nemo"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Cattivissimo me 4",
+      "aliases": [
+        "Despicable Me 4"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Shrek 2",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Madagascar 3 - Ricercati in Europa",
+      "aliases": [
+        "Madagascar 3"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Inside Out 2",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Pets - Vita da animali",
+      "aliases": [
+        "Pets",
+        "The Secret Life of Pets"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "Shrek terzo",
+      "aliases": [
+        "Shrek 3"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Spider-Man: Across the Spider-Verse",
+      "aliases": [
+        "Across the Spider-Verse"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Up",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Kung Fu Panda",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Big Hero 6",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "L'era glaciale 2 - Il disgelo",
+      "aliases": [
+        "L'era glaciale 2"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Gli Incredibili - Una \"normale\" famiglia di supereroi",
+      "aliases": [
+        "Gli Incredibili"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Ratatouille",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Kung Fu Panda 2",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Dragon Trainer 2",
+      "aliases": [
+        "How to Train Your Dragon 2"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Sing",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Mostri contro alieni",
+      "aliases": [
+        "Monsters vs Aliens"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Wall-E",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Oceania",
+      "aliases": [
+        "Moana"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Pets 2 - Vita da animali",
+      "aliases": [
+        "Pets 2"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "I Croods",
+      "aliases": [
+        "The Croods"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Coco",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Ralph Spaccatutto",
+      "aliases": [
+        "Wreck-It Ralph"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "I Simpson - Il film",
+      "aliases": [
+        "The Simpsons Movie"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Baby Boss",
+      "aliases": [
+        "The Boss Baby"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Cattivissimo me",
+      "aliases": [
+        "Despicable Me"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Il Gatto con gli Stivali",
+      "aliases": [
+        "Puss in Boots"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "Brave - Ribelle",
+      "aliases": [
+        "Brave"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Monsters University",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Madagascar 2",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Cars 2",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Rapunzel - L'intreccio della torre",
+      "aliases": [
+        "Tangled",
+        "Rapunzel"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Hotel Transylvania 3 - Una vacanza mostruosa",
+      "aliases": [
+        "Hotel Transylvania 3"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Kung Fu Panda 3",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Aladdin (1992)",
+      "aliases": [
+        "Aladdin"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "Shrek e vissero felici e contenti",
+      "aliases": [
+        "Shrek 4"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Monsters & Co.",
+      "aliases": [
+        "Monsters Inc"
+      ]
+    },
+    {
+      "rank": 54,
+      "answer": "Dragon Trainer",
+      "aliases": [
+        "How to Train Your Dragon"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "L'era glaciale",
+      "aliases": [
+        "Ice Age"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Cars - Motori ruggenti",
+      "aliases": [
+        "Cars",
+        "Cars 1"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "Spider-Man - Un nuovo universo",
+      "aliases": [
+        "Into the Spider-Verse"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "Il re leone (1994)",
+      "aliases": [
+        "Il re leone",
+        "The Lion King"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "Madagascar",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Tarzan",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Hotel Transylvania 2",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Ralph spacca Internet",
+      "aliases": [
+        "Ralph 2"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "Sing 2",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "La bella e la bestia (1991)",
+      "aliases": [
+        "La bella e la bestia"
+      ]
+    },
+    {
+      "rank": 65,
+      "answer": "Toy Story 2 - Woody e Buzz alla riscossa",
+      "aliases": [
+        "Toy Story 2"
+      ]
+    },
+    {
+      "rank": 66,
+      "answer": "Dragon Trainer - Il mondo nascosto",
+      "aliases": [
+        "Dragon Trainer 3"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "Pocahontas",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "L'era glaciale - In rotta di collisione",
+      "aliases": [
+        "L'era glaciale 5"
+      ]
+    },
+    {
+      "rank": 69,
+      "answer": "Hotel Transylvania",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Il Gatto con gli Stivali 2 - L'ultimo desiderio",
+      "aliases": [
+        "Il gatto con gli stivali 2"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "La sirenetta (1989)",
+      "aliases": [
+        "La sirenetta"
+      ]
+    },
+    {
+      "rank": 72,
+      "answer": "Mulan (1998)",
+      "aliases": [
+        "Mulan"
+      ]
+    },
+    {
+      "rank": 73,
+      "answer": "Toy Story - Il mondo dei giocattoli",
+      "aliases": [
+        "Toy Story",
+        "Toy Story 1"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "Il gobbo di Notre Dame",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Dinosaur",
+      "aliases": [
+        "Dinosauri"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "Lilo & Stitch",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Hercules",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "A Bug's Life - Megaminimondo",
+      "aliases": [
+        "A Bug's Life"
+      ]
+    },
+    {
+      "rank": 79,
+      "answer": "Cars 3",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Il libro della giungla (1967)",
+      "aliases": [
+        "Il libro della giungla"
+      ]
+    },
+    {
+      "rank": 81,
+      "answer": "Bambi",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Cenerentola",
+      "aliases": [
+        "Cinderella"
+      ]
+    },
+    {
+      "rank": 83,
+      "answer": "Pinocchio",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Biancaneve e i sette nani",
+      "aliases": [
+        "Biancaneve"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Peter Pan",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "La carica dei 101",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Lilli e il vagabondo",
+      "aliases": [
+        "Lady and the Tramp"
+      ]
+    },
+    {
+      "rank": 88,
+      "answer": "Gli Aristogatti",
+      "aliases": [
+        "The Aristocats"
+      ]
+    },
+    {
+      "rank": 89,
+      "answer": "Robin Hood (1973)",
+      "aliases": [
+        "Robin Hood"
+      ]
+    },
+    {
+      "rank": 90,
+      "answer": "Alice nel Paese delle Meraviglie",
+      "aliases": [
+        "Alice in Wonderland"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "Dumbo",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "La spada nella roccia",
+      "aliases": [
+        "The Sword in the Stone"
+      ]
+    },
+    {
+      "rank": 93,
+      "answer": "Red",
+      "aliases": [
+        "Turning Red"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "Soul",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Onward - Oltre la magia",
+      "aliases": [
+        "Onward"
+      ]
+    },
+    {
+      "rank": 96,
+      "answer": "Luca",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Encanto",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Raya e l'ultimo drago",
+      "aliases": [
+        "Raya"
+      ]
+    },
+    {
+      "rank": 99,
+      "answer": "Spirit - Cavallo selvaggio",
+      "aliases": [
+        "Spirit"
+      ]
+    },
+    {
+      "rank": 100,
+      "answer": "Il principe d'Egitto",
+      "aliases": [
+        "The Prince of Egypt"
+      ]
+    }
+  ]
+}

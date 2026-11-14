@@ -1,0 +1,554 @@
+{
+  "categoryId": "animali_veloci",
+  "title": "I 100 animali più veloci (terra, acqua, aria)",
+  "description": "Indovina i 100 animali in grado di raggiungere le velocità più elevate in natura.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Falco pellegrino",
+      "aliases": [
+        "Falco"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Aquila reale",
+      "aliases": [
+        "Aquila"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Rondone codaspinosa",
+      "aliases": [
+        "Rondone"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Fregata",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Ghepardo",
+      "aliases": [
+        "Cheetah"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Marlin nero",
+      "aliases": [
+        "Marlin"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Pesce vela",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Antilocapra",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Gheppio",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Pesce spada",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Gazzella di Thomson",
+      "aliases": [
+        "Gazzella"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Albatros",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Springbok",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Leone",
+      "aliases": [
+        "Lion"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Gnu",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Struzzo",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Mako",
+      "aliases": [
+        "Squalo mako"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Colibrì",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Tonno rosso",
+      "aliases": [
+        "Tonno"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Lepre",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Quarter Horse",
+      "aliases": [
+        "Cavallo"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "Levriero",
+      "aliases": [
+        "Cane levriero",
+        "Greyhound"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Canguro",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Coyote",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Zebra",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Tigre",
+      "aliases": [
+        "Tiger"
+      ]
+    },
+    {
+      "rank": 27,
+      "answer": "Falco sacro",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Delfino",
+      "aliases": [
+        "Tursiope"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Iena",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Orso bruno",
+      "aliases": [
+        "Grizzly"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "Alce",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Giraffa",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Orca",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Squalo bianco",
+      "aliases": [
+        "Squalo"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Pinguino imperatore",
+      "aliases": [
+        "Pinguino"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Puma",
+      "aliases": [
+        "Coguaro"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "Leopardo",
+      "aliases": [
+        "Pantera"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Giaguaro",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Lupo",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Volpe",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Cervo",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Capriolo",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Camoscio",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Stambecco",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Muflone",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Ippopotamo",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Rinoceronte",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Elefante africano",
+      "aliases": [
+        "Elefante"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Cinghiale",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Gatto domestico",
+      "aliases": [
+        "Gatto"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "Cane",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Lepre artica",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Lince",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Orso polare",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Gorilla",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Scimpanzé",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Bisonte",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Bufalo",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Alpaca",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Lama",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Mamba nero",
+      "aliases": [
+        "Mamba"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "Canguro rosso",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Wallaby",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Tasso",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Castoro",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Lontra",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Foca",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Leone marino",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Tricheco",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Balenottera azzurra",
+      "aliases": [
+        "Balena"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "Capodoglio",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Narvalo",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Beluga",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Pesce volante",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Barracuda",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Salmone",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Trota",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Luccio",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Carpa",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Anguilla",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Murena",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Razza",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Manta",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Polpo",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Calamaro",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Granchio",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Aragosta",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Astice",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Tartaruga marina",
+      "aliases": [
+        "Tartaruga"
+      ]
+    },
+    {
+      "rank": 90,
+      "answer": "Iguana",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Drago di Komodo",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Coccodrillo",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Alligatore",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Varano",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Libellula",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Ape",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Vespa",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Calabrone",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Farfalla",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Cigno",
+      "aliases": []
+    }
+  ]
+}

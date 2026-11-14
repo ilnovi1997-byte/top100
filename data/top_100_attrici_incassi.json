@@ -1,0 +1,511 @@
+{
+  "categoryId": "attrici_incassi",
+  "title": "Le 100 attrici con i maggiori incassi al botteghino",
+  "description": "Indovina le 100 attrici (donne) i cui film hanno generato i maggiori incassi mondiali.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Scarlett Johansson",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Zoe Saldaña",
+      "aliases": [
+        "Zoe Saldana"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Emma Watson",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Jennifer Lawrence",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Margot Robbie",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Brie Larson",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Gwyneth Paltrow",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Letitia Wright",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Michelle Rodriguez",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Gal Gadot",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Daisy Ridley",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Cate Blanchett",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Lupita Nyong'o",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Tessa Thompson",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Natalie Portman",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Emma Stone",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Julia Roberts",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Sandra Bullock",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Anne Hathaway",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Cameron Diaz",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Charlize Theron",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Angelina Jolie",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Meryl Streep",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Carrie Fisher",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Helena Bonham Carter",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Karen Gillan",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Evangeline Lilly",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Pom Klementieff",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Elizabeth Olsen",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Zendaya",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Sigourney Weaver",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Bryce Dallas Howard",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Keira Knightley",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Kristen Stewart",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Danai Gurira",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Rachel McAdams",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Amy Adams",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Emily Blunt",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Anya Taylor-Joy",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Florence Pugh",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Jodie Foster",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Kate Winslet",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Nicole Kidman",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Halle Berry",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Salma Hayek",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Penélope Cruz",
+      "aliases": [
+        "Penelope Cruz"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "Milla Jovovich",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Naomi Watts",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Reese Witherspoon",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Jennifer Aniston",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Drew Barrymore",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Meg Ryan",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Michelle Pfeiffer",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Sharon Stone",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Demi Moore",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Whoopi Goldberg",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Shirley MacLaine",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Jane Fonda",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Diane Keaton",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Faye Dunaway",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Barbra Streisand",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Julie Andrews",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Audrey Hepburn",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Elizabeth Taylor",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Marilyn Monroe",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Grace Kelly",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Vivien Leigh",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Ingrid Bergman",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Katharine Hepburn",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Bette Davis",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Joan Crawford",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Judy Garland",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Rita Hayworth",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Lauren Bacall",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Marlene Dietrich",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Greta Garbo",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Mary Pickford",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Lillian Gish",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Mae West",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Shirley Temple",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Myrna Loy",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Jean Harlow",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Ginger Rogers",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Olivia de Havilland",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Sophia Loren",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Gina Lollobrigida",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Claudia Cardinale",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Monica Bellucci",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Isabella Rossellini",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Judi Dench",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Maggie Smith",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Helen Mirren",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Emma Thompson",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Tilda Swinton",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Helena Christensen",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Marion Cotillard",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Léa Seydoux",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Audrey Tautou",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Juliette Binoche",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Catherine Deneuve",
+      "aliases": []
+    }
+  ]
+}

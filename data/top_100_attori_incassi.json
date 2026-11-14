@@ -1,0 +1,522 @@
+{
+  "categoryId": "attori_incassi",
+  "title": "I 100 attori con i maggiori incassi al botteghino",
+  "description": "Indovina i 100 attori (uomini) i cui film hanno generato i maggiori incassi mondiali.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Samuel L. Jackson",
+      "aliases": [
+        "Samuel Jackson"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Robert Downey Jr.",
+      "aliases": [
+        "RDJ",
+        "Robert Downey Jr"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Chris Pratt",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Tom Cruise",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Chris Hemsworth",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Harrison Ford",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Tom Hanks",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Bradley Cooper",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Vin Diesel",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Dwayne Johnson",
+      "aliases": [
+        "The Rock"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Chris Evans",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Morgan Freeman",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Johnny Depp",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Will Smith",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Leonardo DiCaprio",
+      "aliases": [
+        "DiCaprio"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Bruce Willis",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Matt Damon",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Mark Wahlberg",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Sylvester Stallone",
+      "aliases": [
+        "Stallone"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Brad Pitt",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Keanu Reeves",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Hugh Jackman",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Ryan Reynolds",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Tom Holland",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Gary Oldman",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Ian McKellen",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Liam Neeson",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Christian Bale",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Michael Caine",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Andy Serkis",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Don Cheadle",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Woody Harrelson",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Ben Stiller",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Adam Sandler",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Steve Carell",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Daniel Radcliffe",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Rupert Grint",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Mark Ruffalo",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Paul Rudd",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Josh Brolin",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Jack Black",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Simon Pegg",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Anthony Daniels",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Jon Favreau",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Jeremy Renner",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Orlando Bloom",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Elijah Wood",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Kevin Hart",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Jason Momoa",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Ben Affleck",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Jason Statham",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Daniel Craig",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Pierce Brosnan",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Sean Connery",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Arnold Schwarzenegger",
+      "aliases": [
+        "Schwarzenegger"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Mel Gibson",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Denzel Washington",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "John Travolta",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Nicolas Cage",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Jim Carrey",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Eddie Murphy",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Robin Williams",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Clint Eastwood",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Al Pacino",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Robert De Niro",
+      "aliases": [
+        "De Niro"
+      ]
+    },
+    {
+      "rank": 66,
+      "answer": "Tom Hardy",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Colin Firth",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Javier Bardem",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Russell Crowe",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Joaquin Phoenix",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Matthew McConaughey",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Ryan Gosling",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Jake Gyllenhaal",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Chris Pine",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Michael Fassbender",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "James McAvoy",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Channing Tatum",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Jonah Hill",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Seth Rogen",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Will Ferrell",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Owen Wilson",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Luke Wilson",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Vince Vaughn",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Paul Walker",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Antonio Banderas",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Ewan McGregor",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Hayden Christensen",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Oscar Isaac",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "John Boyega",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Mark Hamill",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Willem Dafoe",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Tobey Maguire",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Andrew Garfield",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Jason Bateman",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "George Clooney",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Anthony Hopkins",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Ralph Fiennes",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Alan Rickman",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Jason Sudeikis",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Jared Leto",
+      "aliases": []
+    }
+  ]
+}

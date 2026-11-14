@@ -1,0 +1,555 @@
+{
+  "categoryId": "artisti_musicali_venduti",
+  "title": "Gli 100 artisti musicali con più dischi venduti",
+  "description": "Indovina i cantanti e le band che hanno venduto più dischi fisici e digitali nella storia.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "The Beatles",
+      "aliases": [
+        "Beatles"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Elvis Presley",
+      "aliases": [
+        "Elvis"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Michael Jackson",
+      "aliases": [
+        "MJ",
+        "Jacko"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Elton John",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Queen",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Madonna",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Led Zeppelin",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Rihanna",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Pink Floyd",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Eminem",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Mariah Carey",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Taylor Swift",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Beyoncé",
+      "aliases": [
+        "Beyonce"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Whitney Houston",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Eagles",
+      "aliases": [
+        "The Eagles"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Celine Dion",
+      "aliases": [
+        "Céline Dion"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "AC/DC",
+      "aliases": [
+        "AC DC"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "The Rolling Stones",
+      "aliases": [
+        "Rolling Stones"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "Drake",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Garth Brooks",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Justin Bieber",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Ed Sheeran",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Billy Joel",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "U2",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Aerosmith",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Phil Collins",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Barbra Streisand",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "ABBA",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Frank Sinatra",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Katy Perry",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Kanye West",
+      "aliases": [
+        "Ye"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Bruce Springsteen",
+      "aliases": [
+        "The Boss"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "Bruno Mars",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Lady Gaga",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Metallica",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Jay-Z",
+      "aliases": [
+        "Jay Z"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "Dire Straits",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Fleetwood Mac",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Bob Marley",
+      "aliases": [
+        "Bob Marley & The Wailers"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "David Bowie",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Guns N' Roses",
+      "aliases": [
+        "Guns N Roses"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Prince",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "The Doors",
+      "aliases": [
+        "Doors"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "Nirvana",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Bob Dylan",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Bon Jovi",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Coldplay",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Linkin Park",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Adele",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Red Hot Chili Peppers",
+      "aliases": [
+        "RHCP"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "The Police",
+      "aliases": [
+        "Police"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "George Michael",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Bryan Adams",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Def Leppard",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Oasis",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Simon & Garfunkel",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "The Who",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Pearl Jam",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Journey",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Green Day",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Shania Twain",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Santana",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Backstreet Boys",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Britney Spears",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Enya",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Tupac Shakur",
+      "aliases": [
+        "2Pac",
+        "Tupac"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "Barry White",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "The Carpenters",
+      "aliases": [
+        "Carpenters"
+      ]
+    },
+    {
+      "rank": 69,
+      "answer": "Johnny Cash",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Cher",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Genesis",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Janet Jackson",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Paul McCartney",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Meat Loaf",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "George Strait",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Tina Turner",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Van Halen",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Stevie Wonder",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "The Beach Boys",
+      "aliases": [
+        "Beach Boys"
+      ]
+    },
+    {
+      "rank": 80,
+      "answer": "Black Sabbath",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Chicago",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Deep Purple",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Iron Maiden",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Kiss",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Bob Seger",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Rod Stewart",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "The Supremes",
+      "aliases": [
+        "Supremes"
+      ]
+    },
+    {
+      "rank": 88,
+      "answer": "Aretha Franklin",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Neil Diamond",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Lionel Richie",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "John Denver",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Marvin Gaye",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "The Jackson 5",
+      "aliases": [
+        "Jackson 5"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "R.E.M.",
+      "aliases": [
+        "REM"
+      ]
+    },
+    {
+      "rank": 95,
+      "answer": "Tom Petty",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "The Cure",
+      "aliases": [
+        "Cure"
+      ]
+    },
+    {
+      "rank": 97,
+      "answer": "Radiohead",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Blur",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Spice Girls",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Enrique Iglesias",
+      "aliases": []
+    }
+  ]
+}
