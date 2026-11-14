@@ -1,0 +1,598 @@
+{
+  "categoryId": "serie_tv_top",
+  "title": "Le 100 serie TV con la valutazione più alta",
+  "description": "Indovina le 100 serie TV e docuserie più amate di sempre dalla critica e dal pubblico.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Breaking Bad",
+      "aliases": [
+        "BB"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Il Trono di Spade",
+      "aliases": [
+        "Game of Thrones",
+        "GOT"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "I Soprano",
+      "aliases": [
+        "The Sopranos"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "The Wire",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Chernobyl",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Band of Brothers",
+      "aliases": [
+        "Fratelli al fronte"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Planet Earth II",
+      "aliases": [
+        "Planet Earth 2"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Avatar - La leggenda di Aang",
+      "aliases": [
+        "Avatar The Last Airbender",
+        "Avatar"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Rick and Morty",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Fullmetal Alchemist: Brotherhood",
+      "aliases": [
+        "FMA",
+        "FMAB",
+        "Fullmetal Alchemist"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "The Office",
+      "aliases": [
+        "The Office US"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Sherlock",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "L'attacco dei giganti",
+      "aliases": [
+        "Attack on Titan",
+        "AOT"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "True Detective",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Arcane",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Ai confini della realtà",
+      "aliases": [
+        "The Twilight Zone"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Batman: The Animated Series",
+      "aliases": [
+        "Batman TAS",
+        "Batman la serie animata"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Peaky Blinders",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Black Mirror",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Stranger Things",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Dark",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Better Call Saul",
+      "aliases": [
+        "BCS"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Fargo",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Friends",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Succession",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "The Last Dance",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Death Note",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "The Boys",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Mad Men",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "South Park",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "I Simpson",
+      "aliases": [
+        "The Simpsons"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Dr. House",
+      "aliases": [
+        "House MD",
+        "House",
+        "Dr House"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "It's Always Sunny in Philadelphia",
+      "aliases": [
+        "Always Sunny"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "The Mandalorian",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Doctor Who",
+      "aliases": [
+        "Dr Who"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Six Feet Under",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "The Crown",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Fleabag",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Scissione",
+      "aliases": [
+        "Severance"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "Mindhunter",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "BoJack Horseman",
+      "aliases": [
+        "Bojack"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Parks and Recreation",
+      "aliases": [
+        "Parks and Rec"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Dexter",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Arrested Development",
+      "aliases": [
+        "Ti presento i miei"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Ted Lasso",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Cosmos",
+      "aliases": [
+        "Odissea nello spazio"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "X-Files",
+      "aliases": [
+        "The X-Files"
+      ]
+    },
+    {
+      "rank": 48,
+      "answer": "Battlestar Galactica",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Narcos",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Yellowstone",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Lost",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "La regina degli scacchi",
+      "aliases": [
+        "The Queen's Gambit"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Prison Break",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "The Walking Dead",
+      "aliases": [
+        "TWD"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Hannibal",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "24",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Mr. Robot",
+      "aliases": [
+        "Mr Robot"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "Fringe",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Person of Interest",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Suits",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "White Collar",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "The Big Bang Theory",
+      "aliases": [
+        "TBBT",
+        "Big Bang Theory"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "How I Met Your Mother",
+      "aliases": [
+        "HIMYM"
+      ]
+    },
+    {
+      "rank": 64,
+      "answer": "Scrubs",
+      "aliases": [
+        "Scrubs Medici ai primi ferri"
+      ]
+    },
+    {
+      "rank": 65,
+      "answer": "Brooklyn Nine-Nine",
+      "aliases": [
+        "B99",
+        "Brooklyn 99"
+      ]
+    },
+    {
+      "rank": 66,
+      "answer": "The Good Place",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Modern Family",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "The Shield",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Sons of Anarchy",
+      "aliases": [
+        "SOA"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "Westworld",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Boardwalk Empire",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Roma",
+      "aliases": [
+        "Rome"
+      ]
+    },
+    {
+      "rank": 73,
+      "answer": "Spartacus",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Vikings",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "The Last Kingdom",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Peacemaker",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Loki",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "WandaVision",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "The Flash",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Arrow",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Daredevil",
+      "aliases": [
+        "Marvel's Daredevil"
+      ]
+    },
+    {
+      "rank": 82,
+      "answer": "The Punisher",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Supernatural",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "The Vampire Diaries",
+      "aliases": [
+        "TVD"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Buffy l'ammazzavampiri",
+      "aliases": [
+        "Buffy",
+        "Buffy the Vampire Slayer"
+      ]
+    },
+    {
+      "rank": 86,
+      "answer": "Streghe",
+      "aliases": [
+        "Charmed"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "Xena",
+      "aliases": [
+        "Xena Principessa guerriera"
+      ]
+    },
+    {
+      "rank": 88,
+      "answer": "Teen Wolf",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Gossip Girl",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "The O.C.",
+      "aliases": [
+        "The OC"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "One Tree Hill",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Dawson's Creek",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Twin Peaks",
+      "aliases": [
+        "I segreti di Twin Peaks"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "Black Sails",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Outlander",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Il racconto dell'ancella",
+      "aliases": [
+        "The Handmaid's Tale"
+      ]
+    },
+    {
+      "rank": 97,
+      "answer": "Euphoria",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "The Bear",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "The Last of Us",
+      "aliases": [
+        "TLOU"
+      ]
+    },
+    {
+      "rank": 100,
+      "answer": "Squid Game",
+      "aliases": []
+    }
+  ]
+}
