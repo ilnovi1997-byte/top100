@@ -1,0 +1,523 @@
+{
+  "categoryId": "oggetti_persi",
+  "title": "Gli oggetti che si perdono più facilmente in casa",
+  "description": "Indovina le piccole cose di tutti i giorni che scompaiono misteriosamente tra le mura domestiche.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Chiavi",
+      "aliases": [
+        "Chiavi di casa"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Telecomando",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Calzini",
+      "aliases": [
+        "Spaiati"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Occhiali",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Telefono",
+      "aliases": [
+        "Cellulare"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Caricabatterie",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Penne",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Elastici per capelli",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Forbici",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Accendino",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Burrocacao",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Cuffiette",
+      "aliases": [
+        "Auricolari"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Portafoglio",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Monete",
+      "aliases": [
+        "Spiccioli"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Documenti",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Bollette",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Scontrini",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Tessera sanitaria",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Carte di credito",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Patente",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Abbonamento mezzi",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Libretto istruzioni",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Garanzie",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Ricette mediche",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Cavo USB",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Pendrive",
+      "aliases": [
+        "Chiavetta USB"
+      ]
+    },
+    {
+      "rank": 27,
+      "answer": "Orologio",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Anelli",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Orecchini",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Collane",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Pinzette",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Tagliaunghie",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Lima per unghie",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Spazzola",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Pettine",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Dentifricio",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Tappo della penna",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Tappo del tubetto",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Cacciavite",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Nastro adesivo",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Metro a nastro",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Batterie",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Lampadine di ricambio",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Mollette da bucato",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Ago e filo",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Bottoni",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Spille da balia",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Ombrello",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Guanti",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Cappello",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Sciarpa",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Fazzoletti",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Mascherina",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Biglietti da visita",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Appunti",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Post-it",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Chiavi della cantina",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Tessere fedeltà",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Dadi da gioco",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Pedine",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Carte da gioco",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Pezzi di puzzle",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "LEGO",
+      "aliases": [
+        "Mattoncini"
+      ]
+    },
+    {
+      "rank": 64,
+      "answer": "Telecomando cancello",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Chiavi dell'auto",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Chiavi di riserva",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Tappi per orecchie",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Mascherina per dormire",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Cerotti",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Disinfettante",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Pillole",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Ricettario",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Occhiali da sole",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Custodia occhiali",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Panno per occhiali",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Lenti a contatto",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Portalenti",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Collirio",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Spray nasale",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Fiammiferi",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Candele",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Cavi vari",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Adattatori",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Spina multipla",
+      "aliases": [
+        "Ciabatta"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Chiavetta internet",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Mouse",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Tappetino mouse",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "CD/DVD",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Custodie vuote",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Libri in lettura",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Segnalibro",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Quaderni",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Agende",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Calendario",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Sottobicchieri",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Apribottiglie",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Cavatappi",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Tappi di sughero",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Accendigas",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Guanti da forno",
+      "aliases": []
+    }
+  ]
+}

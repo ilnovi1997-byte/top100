@@ -1,0 +1,509 @@
+{
+  "categoryId": "parole_stranieri",
+  "title": "Le parole italiane che gli stranieri imparano per prime",
+  "description": "Indovina i termini italiani (dal cibo ai saluti) più conosciuti all'estero.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Ciao",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Pizza",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Pasta",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Grazie",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Prego",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Buongiorno",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Arrivederci",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Mamma",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Bella",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Ragazzo",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Ragazza",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Buonasera",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Buonanotte",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Ti amo",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Amore",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Scusa",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Per favore",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Si",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "No",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Bene",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Molto bene",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Gelato",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Cappuccino",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Espresso",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Tiramisù",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Macchiato",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Birra",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Vino",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Acqua",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Pane",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Formaggio",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Pomodoro",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Prosciutto",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Mozzarella",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Parmigiano",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Salame",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Dolce",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Caffè",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Ristorante",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Trattoria",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Pizzeria",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Menù",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Conto",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Bagno",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Dov'è",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Quanto costa",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Che ora è",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Destra",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Sinistra",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Dritto",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Fermata",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Treno",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Stazione",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Biglietto",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Aeroporto",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Taxi",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Autobus",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Albergo",
+      "aliases": [
+        "Hotel"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "Camera",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Chiave",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Mare",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Sole",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Spiaggia",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Montagna",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Città",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Centro",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Piazza",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Via",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Chiesa",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Duomo",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Museo",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Ponte",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Castello",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Bello",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Brutto",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Grande",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Piccolo",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Caldo",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Freddo",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Oggi",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Domani",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Ieri",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Adesso",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Subito",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Dopo",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Sempre",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Mai",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Uno",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Due",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Tre",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Quattro",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Cinque",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Sei",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Sette",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Otto",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Nove",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Dieci",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Mamma mia",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Bravo",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Basta",
+      "aliases": []
+    }
+  ]
+}

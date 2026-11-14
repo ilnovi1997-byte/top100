@@ -1,0 +1,547 @@
+{
+  "categoryId": "superstizioni",
+  "title": "Le superstizioni italiane e mondiali più comuni",
+  "description": "Indovina i gesti scaramantici, i riti e le credenze popolari legati alla sfortuna o alla fortuna.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Gatto nero",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Passare sotto la scala",
+      "aliases": [
+        "Scala"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Specchio rotto",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Sale versato",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Olio versato",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Ombrello aperto in casa",
+      "aliases": [
+        "Ombrello"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Numero 13",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Numero 17",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Venerdì 13",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Venerdì 17",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Toccare ferro",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Toccare legno",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Fare le corna",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Incrociare le dita",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Trovare un quadrifoglio",
+      "aliases": [
+        "Quadrifoglio"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Ferro di cavallo",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Coccinella",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Moneta trovata a terra",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Buttare il sale dietro la schiena",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Cappello sul letto",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Letto fatto in tre",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Tredici a tavola",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Brindare con l'acqua",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Incrociare i bicchieri",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Posare il pane capovolto",
+      "aliases": [
+        "Pane capovolto"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "Forbici che cadono",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Pettine che cade",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Spilla da balia regalata",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Fazzoletto regalato",
+      "aliases": [
+        "Porta lacrime"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "Regalo di perle",
+      "aliases": [
+        "Lacrime"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "Spazzare sui piedi",
+      "aliases": [
+        "Non ti sposi"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Sedersi all'angolo del tavolo",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Prurito alla mano",
+      "aliases": [
+        "Soldi in arrivo"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Prurito al naso",
+      "aliases": [
+        "Baci o schiaffi"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Orecchio che fischia",
+      "aliases": [
+        "Qualcuno parla di te"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Singhiozzo",
+      "aliases": [
+        "Qualcuno ti pensa"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "Occhio che balla",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Versare il vino al contrario",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Rompere un bicchiere",
+      "aliases": [
+        "Augurio"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "Regalare portafoglio vuoto",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Scarpe nuove sul letto",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Piedi verso la porta",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Incontrare un carro funebre",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Sognare i morti",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Sognare i denti che cadono",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Corvo che gracchia",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Civetta che canta",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Ululato del cane",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Calpestare una cacca",
+      "aliases": [
+        "Porta fortuna"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Stella cadente",
+      "aliases": [
+        "Esprimere desiderio"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "Soffiare candeline",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Moneta nella fontana",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Fontana di Trevi",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Lucchetto dell'amore",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Ferro di cavallo verso l'alto",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Aglio contro i vampiri",
+      "aliases": [
+        "Malocchio"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "Cornetto rosso",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Gobbo",
+      "aliases": [
+        "Toccare la gobba"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "Zampa di coniglio",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Piede sinistro scendendo dal letto",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Alzarsi col piede sbagliato",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Vestito al contrario",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Bottone sbagliato",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Maglia a rovescio",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Incontrare uno spazzacamino",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Dente caduto sotto il cuscino",
+      "aliases": [
+        "Fatina"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "Incrociare lo sguardo in un brindisi",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Battesimo della nave",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Spostare il letto di venerdì",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Non sposarsi di martedì",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Non sposarsi di venerdì",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Pioggia il giorno del matrimonio",
+      "aliases": [
+        "Sposa bagnata"
+      ]
+    },
+    {
+      "rank": 73,
+      "answer": "Sposa che non si specchia intera",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Lo sposo non vede il vestito",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Qualcosa di vecchio",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Qualcosa di nuovo",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Qualcosa di prestato",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Qualcosa di blu",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Lanciare il riso",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Bouquet della sposa",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Giarrettiera",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Bacio sotto il vischio",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Baciare la pietra di Blarney",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Trovare ragno di sera",
+      "aliases": [
+        "Speranza"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Uccellino che entra in casa",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Quadro che cade da solo",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Lettera d'addio",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Evitare il piano 13",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Evitare la stanza 4",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Colori portafortuna",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Tagliarsi i capelli con la luna crescente",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Semina con la luna",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Malocchio",
+      "aliases": [
+        "Fascinazione"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "Gettare acqua sporca",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Sale sugli sposi",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Moneta nella scarpa della sposa",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Placeholder 97",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Placeholder 98",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Placeholder 99",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Placeholder 100",
+      "aliases": []
+    }
+  ]
+}

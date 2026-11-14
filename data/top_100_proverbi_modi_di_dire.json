@@ -1,0 +1,507 @@
+{
+  "categoryId": "proverbi_modi_di_dire",
+  "title": "I proverbi e modi di dire italiani più citati",
+  "description": "Indovina le frasi fatte, i proverbi e le espressioni popolari più celebri della lingua italiana.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Rosso di sera bel tempo si spera",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Chi dorme non piglia pesci",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "A buon intenditor poche parole",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Can che abbaia non morde",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Il lupo perde il pelo ma non il vizio",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "L'abito non fa il monaco",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Meglio tardi che mai",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Occhio non vede cuore non duole",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Chi la fa l'aspetti",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Tra i due litiganti il terzo gode",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Chi trova un amico trova un tesoro",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "La gatta frettolosa ha fatto i gattini ciechi",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Non è tutto oro quello che luccica",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Chi va piano va sano e va lontano",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Ride bene chi ride ultimo",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Il buongiorno si vede dal mattino",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "L'erba del vicino è sempre più verde",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Mal comune mezzo gaudio",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Una mela al giorno toglie il medico di torno",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Chi rompe paga e i cocci sono suoi",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Moglie e buoi dei paesi tuoi",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Tanto va la gatta al lardo che ci lascia lo zampino",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Chi di spada ferisce di spada perisce",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Aiutati che il ciel ti aiuta",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "L'appetito vien mangiando",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Bacco tabacco e Venere riducono l'uomo in cenere",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Chi si loda s'imbroda",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Chi tace acconsente",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Non c'è due senza tre",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Il diavolo fa le pentole ma non i coperchi",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "In bocca al lupo",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Crepi il lupo",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Acqua in bocca",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Essere al verde",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Prendere due piccioni con una fava",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "A caval donato non si guarda in bocca",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Far di tutta l'erba un fascio",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Non avere peli sulla lingua",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Avere le braccine corte",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Essere fuori come un balcone",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Piove sul bagnato",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Mettere la mano sul fuoco",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Rompere il ghiaccio",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Cercare il pelo nell'uovo",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Essere un libro aperto",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Gettare la spugna",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Arrampicarsi sugli specchi",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Tirare acqua al proprio mulino",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Essere in alto mare",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Cavarsela per il rotto della cuffia",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Fare orecchie da mercante",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Avere un asso nella manica",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Dalle stelle alle stalle",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Cadere dalle nuvole",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Fare un buco nell'acqua",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Battere il ferro finché è caldo",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Essere l'ultima ruota del carro",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Capitare a fagiolo",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Costare un occhio della testa",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Non sapere che pesci pigliare",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Chiusa una porta si apre un portone",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "La speranza è l'ultima a morire",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "A mali estremi estremi rimedi",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Chi non risica non rosica",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Chi troppo vuole nulla stringe",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Chi ha tempo non aspetti tempo",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Finché c'è vita c'è speranza",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "L'occasione fa l'uomo ladro",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Le bugie hanno le gambe corte",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Paese che vai usanze che trovi",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Patti chiari amicizia lunga",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Poca brigata vita beata",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Prevenire è meglio che curare",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Quando il gatto non c'è i topi ballano",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Tutte le strade portano a Roma",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Tra il dire e il fare c'è di mezzo il mare",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Volere è potere",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Sbagliando s'impara",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Meglio un uovo oggi che una gallina domani",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Nessuna nuova buona nuova",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "O bere o affogare",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Fare i conti senza l'oste",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Chi si accontenta gode",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Morto un papa se ne fa un altro",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "L'unione fa la forza",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Chi si ferma è perduto",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Il gioco non vale la candela",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Acqua passata non macina più",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Chi nasce tondo non muore quadrato",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Ogni promessa è debito",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Il mondo è fatto a scale",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "La pazienza è la virtù dei forti",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Nessuno nasce imparato",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Uomo avvisato mezzo salvato",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Troppi cuochi guastano la cucina",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Al cuore non si comanda",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Tutti i nodi vengono al pettine",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Chi disprezza compra",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Dopo la tempesta arriva sempre il sereno",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "La fortuna aiuta gli audaci",
+      "aliases": []
+    }
+  ]
+}

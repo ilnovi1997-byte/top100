@@ -1,0 +1,559 @@
+{
+  "categoryId": "borsa_donna",
+  "title": "Le cose che non mancano mai nella borsa di una donna",
+  "description": "Indovina gli oggetti di uso quotidiano, di sopravvivenza o di bellezza che si trovano nelle borse femminili.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Portafoglio",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Chiavi",
+      "aliases": [
+        "Chiavi di casa"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Chiavi dell'auto",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Telefono",
+      "aliases": [
+        "Cellulare"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Caricabatterie",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Power bank",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Burrocacao",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Rossetto",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Specchietto",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Trucchi",
+      "aliases": [
+        "Trousse"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Fazzoletti",
+      "aliases": [
+        "Fazzoletti di carta"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Salviettine umidificate",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Disinfettante mani",
+      "aliases": [
+        "Amuchina"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Mascherina",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Assorbenti",
+      "aliases": [
+        "Salvaslip"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Spazzola",
+      "aliases": [
+        "Pettine"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Elastici per capelli",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Mollette",
+      "aliases": [
+        "Forcine"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "Crema mani",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Profumo",
+      "aliases": [
+        "Campioncino"
+      ]
+    },
+    {
+      "rank": 21,
+      "answer": "Deodorante",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Occhiali da sole",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Occhiali da vista",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Custodia occhiali",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Lenti a contatto",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Collirio",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Gomme da masticare",
+      "aliases": [
+        "Cicles"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Caramelle",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Mentine",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Bottiglietta d'acqua",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Snack",
+      "aliases": [
+        "Barretta"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Penna",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Agenda",
+      "aliases": [
+        "Taccuino"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Scontrini",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Tessera sanitaria",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Patente",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Carte di credito",
+      "aliases": [
+        "Bancomat"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Tessere fedeltà",
+      "aliases": [
+        "Carta supermercato"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "Abbonamento mezzi",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Monete",
+      "aliases": [
+        "Spiccioli"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Cuffiette",
+      "aliases": [
+        "Auricolari"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Libretto assegni",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Biglietti da visita",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Cerotti",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Antidolorifici",
+      "aliases": [
+        "Moment"
+      ]
+    },
+    {
+      "rank": 46,
+      "answer": "Pillola anticoncezionale",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Lima per unghie",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Tagliaunghie",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Pinzette",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Filo interdentale",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Spazzolino da viaggio",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Dentifricio da viaggio",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Cavo USB",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Pendrive",
+      "aliases": [
+        "Chiavetta USB"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Libro",
+      "aliases": [
+        "E-reader"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Chiavetta internet",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Ombrello",
+      "aliases": [
+        "Ombrello pieghevole"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "Guanti",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Sciarpa",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Buste per la spesa",
+      "aliases": [
+        "Shopper in tessuto"
+      ]
+    },
+    {
+      "rank": 61,
+      "answer": "Sacchetti igienici",
+      "aliases": [
+        "per cani"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "Guinzaglio",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Accendino",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Sigarette",
+      "aliases": [
+        "Sigaretta elettronica"
+      ]
+    },
+    {
+      "rank": 65,
+      "answer": "Portacenere portatile",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Mappa",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Spilla da balia",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Bottoni di ricambio",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Ago e filo",
+      "aliases": [
+        "Set cucito"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "Macchina fotografica",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Sottobicchiere",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Gancio per borsa",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Token banca",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Tesserino lavoro",
+      "aliases": [
+        "Badge"
+      ]
+    },
+    {
+      "rank": 75,
+      "answer": "Passaporto",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Portamonete",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Portadocumenti",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Ricette mediche",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Bollette da pagare",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Lettere da spedire",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Fiammiferi",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Calze di ricambio",
+      "aliases": [
+        "Collant"
+      ]
+    },
+    {
+      "rank": 83,
+      "answer": "Smalto",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Solvente",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Burro corpo",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Olio essenziale",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Ventaglio",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Maschera viso",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Crema solare",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Igienizzante spray",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Chiavi dell'ufficio",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Burro di karité",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Lip gloss",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Cipria",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Correttore",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Mascara",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Matita occhi",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Pinza per capelli",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Placeholder 99",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Placeholder 100",
+      "aliases": []
+    }
+  ]
+}

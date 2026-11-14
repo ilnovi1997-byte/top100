@@ -1,0 +1,537 @@
+{
+  "categoryId": "mestieri_bambini",
+  "title": "I mestieri che i bambini sognano di fare da grandi",
+  "description": "Indovina le professioni più gettonate e sognate dai più piccoli.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Astronauta",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Calciatore",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Ballerina",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Poliziotto",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Pompiere",
+      "aliases": [
+        "Vigile del Fuoco"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Medico",
+      "aliases": [
+        "Dottore"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Veterinario",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Maestra",
+      "aliases": [
+        "Insegnante"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Cantante",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Attore",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Principessa",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Pilota di aerei",
+      "aliases": [
+        "Pilota"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Pilota di Formula 1",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Esploratore",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Scienziato",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Inventore",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Cuoco",
+      "aliases": [
+        "Chef"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "YouTuber",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Influencer",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Supereroe",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Mago",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Sirena",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Pirata",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Cowboy",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Cavaliere",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Ninja",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Archeologo",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Paleontologo",
+      "aliases": [
+        "Scopritore di dinosauri"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Zookeeper",
+      "aliases": [
+        "Guardiano dello zoo"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "Investigatore",
+      "aliases": [
+        "Detective"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "Modella",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Parrucchiera",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Truccatrice",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Stilista",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Pittore",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Scrittore",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Fumettista",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Meccanico",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Camionista",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Macchinista",
+      "aliases": [
+        "Treni"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Rockstar",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Chitarrista",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Batterista",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Presidente",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Sindaco",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Re",
+      "aliases": [
+        "Regina"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "Biologo marino",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Subacqueo",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Marinaio",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Capitano",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Spia",
+      "aliases": [
+        "Agente segreto"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "Ginnasta",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Pattinatrice",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Nuotatore",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Surfista",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Campione di wrestling",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Pugile",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Fattore",
+      "aliases": [
+        "Agricoltore"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "Allevatore",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Architetto",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Costruttore",
+      "aliases": [
+        "Muratore"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "Ingegnere",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Robotico",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Programmatore",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Creatore di videogiochi",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Hacker",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Domatore",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Acrobata",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Clown",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Presentatore TV",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Giornalista",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Fotografo",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Videomaker",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Sarto",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Addestratore di cani",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Falconiere",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Cacciatore",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Pasticcere",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Gelataio",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Panettiere",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Pizzaiolo",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Fioraio",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Infermiere",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Dentista",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Farmacista",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Ostetrica",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Assistente di volo",
+      "aliases": [
+        "Hostess"
+      ]
+    },
+    {
+      "rank": 88,
+      "answer": "Barista",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Cameriera",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "DJ",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Speaker radiofonico",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Sacerdote",
+      "aliases": [
+        "Prete/Suora"
+      ]
+    },
+    {
+      "rank": 93,
+      "answer": "Papa",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Guardia forestale",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Pilota di rally",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Cantante d'opera",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Ballerino hip hop",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Astronauta della NASA",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Pasticciere di torte",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Ginecologo",
+      "aliases": []
+    }
+  ]
+}

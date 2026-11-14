@@ -1,0 +1,523 @@
+{
+  "categoryId": "animali_pericolosi",
+  "title": "Gli animali considerati più pericolosi o letali per l'uomo",
+  "description": "Indovina le specie animali note per causare incidenti o essere molto letali in natura.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Zanzara",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Serpente",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Cane",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Lumaca d'acqua dolce",
+      "aliases": [
+        "Schistosoma"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Cimice baciatrice",
+      "aliases": [
+        "Malattia di Chagas"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Mosca tse-tse",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Ascaride",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Coccodrillo",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Tenia",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Ippopotamo",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Elefante",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Leone",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Lupo",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Squalo",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Tigre",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Medusa",
+      "aliases": [
+        "Vespa di mare"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Ape",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Vespa",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Calabrone",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Scorpione",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Ragno",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Formica bulldog",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Formica proiettile",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Formica di fuoco",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Leopardo",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Giaguaro",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Orso",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Bufalo cafro",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Rinoceronte",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Drago di Komodo",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Vipera",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Cobra",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Mamba nero",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Taipan",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Serpente a sonagli",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Pitone",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Anaconda",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Rana freccia avvelenata",
+      "aliases": [
+        "Dendrobate"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "Pesce palla",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Pesce pietra",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Trigone",
+      "aliases": [
+        "Razza"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Polpo a anelli blu",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Lumaca cono",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Zecca",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Pulce",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Sanguisuga",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Piranha",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Cinghiale",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Alce",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Cervo",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Canguro",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Casuario",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Struzzo",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Aquila",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Falco",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Avvoltoio",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Iena",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Licaone",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Dingo",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Coyote",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Volpe",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Ghiottone",
+      "aliases": [
+        "Wolverine"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "Tasso del miele",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Puzzola",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Foca leopardo",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Leone marino",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Tricheco",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Balena",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Orca",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Delfino",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Centopiedi gigante",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Scolopendra",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Mantide religiosa",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Vedova nera",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Ragno eremita marrone",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Tarantola",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Scimpanzé",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Gorilla",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Babbuino",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Macaco",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Pipistrello",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Cammello",
+      "aliases": [
+        "Dromedario"
+      ]
+    },
+    {
+      "rank": 83,
+      "answer": "Cavallo",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Mucca",
+      "aliases": [
+        "Toro"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Maiale",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Cigno",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Oca",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Gabbiano",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Cassiopea",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Caravella portoghese",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Riccio di mare",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Stella marina corona di spine",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Anemone di mare",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Corallo di fuoco",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Verme setoloso",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Mostro di Gila",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Iguana",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Varano",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Boa constrictor",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Alligatore",
+      "aliases": []
+    }
+  ]
+}

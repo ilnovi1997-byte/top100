@@ -1,0 +1,519 @@
+{
+  "categoryId": "comici_italiani",
+  "title": "Gli attori e attrici comici italiani più amati",
+  "description": "Indovina i maestri della risata italiana tra cinema, TV e teatro.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Totò",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Alberto Sordi",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Roberto Benigni",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Massimo Troisi",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Paolo Villaggio",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Carlo Verdone",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Aldo Baglio",
+      "aliases": [
+        "Aldo"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Giovanni Storti",
+      "aliases": [
+        "Giovanni"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Giacomo Poretti",
+      "aliases": [
+        "Giacomo"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Christian De Sica",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Massimo Boldi",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Lino Banfi",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Diego Abatantuono",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Renato Pozzetto",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Enrico Montesano",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Checco Zalone",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Nino Manfredi",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Ugo Tognazzi",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Vittorio Gassman",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Peppino De Filippo",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Franco Franchi",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Ciccio Ingrassia",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Vincenzo Salemme",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Alessandro Siani",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Carlo Buccirosso",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Maurizio Battista",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Enrico Brignano",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Gigi Proietti",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Beppe Grillo",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Ezio Greggio",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Enzo Iacchetti",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Claudio Bisio",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Luciana Littizzetto",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Paola Cortellesi",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Virginia Raffaele",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Geppi Cucciari",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Anna Marchesini",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Tullio Solenghi",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Massimo Lopez",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Teresa Mannino",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Ficarra",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Picone",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Ale",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Franz",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Luca Bizzarri",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Paolo Kessisoglu",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Maccio Capatonda",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Herbert Ballerina",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Lillo",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Greg",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Neri Marcorè",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Corrado Guzzanti",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Sabina Guzzanti",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Caterina Guzzanti",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Antonio Albanese",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Fabio De Luigi",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Mago Forest",
+      "aliases": [
+        "Michele Foresta"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "Nino Frassica",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Teo Teocoli",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Massimo Ceccherini",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Leonardo Pieraccioni",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Giorgio Panariello",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Francesco Nuti",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Carlo Giuffrè",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Aldo Fabrizi",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Macario",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Walter Chiari",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Raimondo Vianello",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Sandra Mondaini",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Franca Valeri",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Gino Bramieri",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Pippo Franco",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Jerry Calà",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Enzo Salvi",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Biagio Izzo",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Ricky Memphis",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Maurizio Mattioli",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Max Tortora",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Antonio Giuliani",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Andrea Pucci",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Pintus",
+      "aliases": [
+        "Angelo Pintus"
+      ]
+    },
+    {
+      "rank": 82,
+      "answer": "Giorgio Bracardi",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Maurizio Crozza",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Gene Gnocchi",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Teo Mammucari",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Gabriele Cirilli",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Dado",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Paolo Rossi",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Gioele Dix",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Natalino Balasso",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Giuseppe Giacobazzi",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Raul Cremona",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "I Fichi d'India",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Max Pisu",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Stefano Chiodaroli",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Marco Della Noce",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Anna Maria Barbera",
+      "aliases": [
+        "Sconsolata"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Katia Follesa",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Valeria Graci",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Debora Villa",
+      "aliases": []
+    }
+  ]
+}

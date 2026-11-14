@@ -1,0 +1,517 @@
+{
+  "categoryId": "scuse_ritardo",
+  "title": "Le scuse più usate per giustificare un ritardo",
+  "description": "Indovina le bugie e le scuse classiche utilizzate per giustificare un arrivo in ritardo.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Traffico",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "answer": "Sveglia non suonata",
+      "aliases": [
+        "Sveglia"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Autobus in ritardo",
+      "aliases": [
+        "Bus"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Treno in ritardo",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Sciopero mezzi",
+      "aliases": [
+        "Sciopero"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Problemi con l'auto",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Gomma bucata",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Non trovavo parcheggio",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Incidente",
+      "aliases": [
+        "per strada"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Coda al semaforo",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Malore improvviso",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Mal di pancia",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Mal di testa",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Incontro inaspettato",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Ho perso le chiavi",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Non trovavo il portafoglio",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Animale domestico stava male",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Cane è scappato",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Gatto ha vomitato",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Bambino faceva capricci",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Bambino stava male",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Problemi all'asilo",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Emergenza in casa",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Tubo rotto",
+      "aliases": [
+        "Allagamento"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Niente acqua calda",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Corrente saltata",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Problemi con internet",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Chiamata urgente",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Telefono scarico",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Ho sbagliato strada",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Navigatore bloccato",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Ho perso la fermata",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Mi sono addormentato in treno",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Non passava il taxi",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Ascensore bloccato",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Vicino di casa chiacchierone",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Dimenticato qualcosa a casa",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Sono dovuto tornare indietro",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Vestito macchiato",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Scarpa rotta",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Bottone saltato",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Pantaloni strappati",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Chiave rotta nella toppa",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Porta bloccata",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Cancello elettrico guasto",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Allarme di casa suonava",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Visita inaspettata",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Non mi sentivo bene",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Causa forza maggiore",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Sciopero treni",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Maltempo",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Pioggia forte",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Neve",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Strada allagata",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Lavori in corso",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Strada chiusa",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Deviazione stradale",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Controllo polizia",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Tamponamento",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Sospetto Covid",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Tampone",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Certificato medico",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Emergenza familiare",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Lutto",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Parente in ospedale",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Non mi è suonato il telefono",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Batteria morta",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Aggiornamento del telefono",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Computer bloccato",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Call di lavoro prolungata",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Riunione infinita",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Il capo mi ha trattenuto",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Consegna urgente",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Problema in ufficio",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Server down",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Password persa",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Errore di fuso orario",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Ho letto male l'orario",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Pensavo fosse domani",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Giorno sbagliato",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Indirizzo sbagliato",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Mi sono perso",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Mappa non caricava",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Uber cancellato",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Autista si è perso",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Ritardo volo",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Bagaglio smarrito",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Controlli sicurezza lunghi",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Non trovavo i vestiti",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Lavatrice rotta",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Non trovavo gli occhiali",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Macchina non partiva",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Batteria auto scarica",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Benzina finita",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Multa",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Carro attrezzi",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Smarrito abbonamento",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Cane ha mangiato le chiavi",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Visita medica",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Ho perso il portafoglio",
+      "aliases": []
+    }
+  ]
+}

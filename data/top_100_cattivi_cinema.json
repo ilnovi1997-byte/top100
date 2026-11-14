@@ -1,0 +1,553 @@
+{
+  "categoryId": "cattivi_cinema",
+  "title": "I cattivi (villain) più celebri del cinema",
+  "description": "Indovina gli antagonisti e i mostri più famosi del grande schermo.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Darth Vader",
+      "aliases": [
+        "Fener"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Joker",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Voldemort",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Thanos",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Hannibal Lecter",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Sauron",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Magneto",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Loki",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Freddy Krueger",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Jason Voorhees",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Michael Myers",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Pennywise",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Norman Bates",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Jack Torrance",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Agent Smith",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Terminator",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "T-1000",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Palpatine",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Hans Landa",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Anton Chigurh",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Gollum",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Scar",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Maleficent",
+      "aliases": [
+        "Malefica"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Cruella de Vil",
+      "aliases": [
+        "Crudelia De Mon"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Ursula",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Jafar",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Hades",
+      "aliases": [
+        "Ade"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Gaston",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Queen of Hearts",
+      "aliases": [
+        "Regina di Cuori"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "Captain Hook",
+      "aliases": [
+        "Capitan Uncino"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "Evil Queen",
+      "aliases": [
+        "Regina Cattiva"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Bellatrix Lestrange",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Lucius Malfoy",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Saruman",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Count Dracula",
+      "aliases": [
+        "Dracula"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Frankenstein's Monster",
+      "aliases": [
+        "Mostro di Frankenstein"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "The Mummy",
+      "aliases": [
+        "La Mummia"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Chucky",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Leatherface",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Pinhead",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Ghostface",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Jigsaw",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Green Goblin",
+      "aliases": [
+        "Goblin"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "Doc Ock",
+      "aliases": [
+        "Dottor Octopus"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Venom",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Bane",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Riddler",
+      "aliases": [
+        "Enigmista"
+      ]
+    },
+    {
+      "rank": 48,
+      "answer": "Penguin",
+      "aliases": [
+        "Pinguino"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Two-Face",
+      "aliases": [
+        "Due Facce"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Lex Luthor",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "General Zod",
+      "aliases": [
+        "Zod"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "Steppenwolf",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Darkseid",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Kylo Ren",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Biff Tannen",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Lord Farquaad",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Syndrome",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Lotso",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Hopper",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Randall Boggs",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Davy Jones",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Captain Barbossa",
+      "aliases": [
+        "Barbossa"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "King Kong",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Godzilla",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Predator",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Alien",
+      "aliases": [
+        "Xenomorfo"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "The Thing",
+      "aliases": [
+        "La Cosa"
+      ]
+    },
+    {
+      "rank": 68,
+      "answer": "T-Rex",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Indominus Rex",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Scarface",
+      "aliases": [
+        "Tony Montana"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "Ivan Drago",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Apollo Creed",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Clubber Lang",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Tommy DeVito",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Bill the Butcher",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Hans Gruber",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Roy Batty",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Hal 9000",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Wicked Witch of the West",
+      "aliases": [
+        "Strega dell'Ovest"
+      ]
+    },
+    {
+      "rank": 80,
+      "answer": "Nurse Ratched",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Annie Wilkes",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Miranda Priestly",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Gordon Gekko",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Patrick Bateman",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Tyler Durden",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "John Doe",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Kaiser Soze",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Alonzo Harris",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Amon Goeth",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Commodus",
+      "aliases": [
+        "Commodo"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "Calvin Candie",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Colonel Kurtz",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Max Cady",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Dr. Evil",
+      "aliases": [
+        "Dottor Male"
+      ]
+    },
+    {
+      "rank": 95,
+      "answer": "Balthazar Bratt",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Vector",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Gru",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Megamind",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Imhotep",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Placeholder 100",
+      "aliases": []
+    }
+  ]
+}

@@ -1,0 +1,539 @@
+{
+  "categoryId": "rumori_fastidiosi",
+  "title": "I rumori più fastidiosi della vita quotidiana",
+  "description": "Indovina i suoni e i rumori molesti che irritano di più le persone.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Zanzara",
+      "aliases": [
+        "Ronzio"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Unghie sulla lavagna",
+      "aliases": []
+    },
+    {
+      "rank": 3,
+      "answer": "Gesso sulla lavagna",
+      "aliases": []
+    },
+    {
+      "rank": 4,
+      "answer": "Allarme auto",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Antifurto",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Sveglia",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Trapano",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Martello pneumatico",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Sirena",
+      "aliases": [
+        "Ambulanza/Polizia"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Cane che abbaia",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Bambino che piange",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Neonato che urla",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Clacson",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Frenata di treno",
+      "aliases": []
+    },
+    {
+      "rank": 15,
+      "answer": "Goccia dal rubinetto",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Masticare a bocca aperta",
+      "aliases": [
+        "Gomma da masticare"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Risucchio del brodo",
+      "aliases": []
+    },
+    {
+      "rank": 18,
+      "answer": "Russare",
+      "aliases": []
+    },
+    {
+      "rank": 19,
+      "answer": "Tosse persistente",
+      "aliases": []
+    },
+    {
+      "rank": 20,
+      "answer": "Starnuto rumoroso",
+      "aliases": []
+    },
+    {
+      "rank": 21,
+      "answer": "Persiane che sbattono",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Vento che fischia",
+      "aliases": []
+    },
+    {
+      "rank": 23,
+      "answer": "Porta che cigola",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Sedia strisciata sul pavimento",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Posate sul piatto",
+      "aliases": []
+    },
+    {
+      "rank": 26,
+      "answer": "Forchetta sui denti",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Piatti che sbattono",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Ticchettio dell'orologio",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Tastiera del computer",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Clic del mouse",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Penna a scatto",
+      "aliases": [
+        "Tic tic"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Stampante",
+      "aliases": []
+    },
+    {
+      "rank": 33,
+      "answer": "Fax",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Asciugacapelli",
+      "aliases": [
+        "Phon"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Aspirapolvere",
+      "aliases": []
+    },
+    {
+      "rank": 36,
+      "answer": "Frullatore",
+      "aliases": []
+    },
+    {
+      "rank": 37,
+      "answer": "Lavatrice in centrifuga",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Lavastoviglie",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Tagliaerba",
+      "aliases": []
+    },
+    {
+      "rank": 40,
+      "answer": "Soffiatore per foglie",
+      "aliases": []
+    },
+    {
+      "rank": 41,
+      "answer": "Motore truccato",
+      "aliases": [
+        "Marmitta"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Moto smarmittata",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Aereo che passa",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Elicottero",
+      "aliases": []
+    },
+    {
+      "rank": 45,
+      "answer": "Treno in transito",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Metropolitana",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Camion della spazzatura",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Camion in retromarcia",
+      "aliases": [
+        "Bip bip"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Campane",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Ascensore",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Cancello automatico",
+      "aliases": []
+    },
+    {
+      "rank": 52,
+      "answer": "Vicino con i tacchi",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Mobili spostati dal piano di sopra",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Musica ad alto volume",
+      "aliases": [
+        "Tamarro"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Bassi della musica",
+      "aliases": [
+        "Tunz tunz"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Televisione ad alto volume",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Parlare a voce alta al telefono",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Urla",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Litigio dei vicini",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Gatto in calore",
+      "aliases": []
+    },
+    {
+      "rank": 61,
+      "answer": "Gabbiani",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Piccione",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Mosca contro il vetro",
+      "aliases": []
+    },
+    {
+      "rank": 64,
+      "answer": "Stridore dei freni",
+      "aliases": [
+        "Auto"
+      ]
+    },
+    {
+      "rank": 65,
+      "answer": "Dita che schioccano",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Nocche che scricchiolano",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Respirazione pesante",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Fischio nel microfono",
+      "aliases": [
+        "Larsen"
+      ]
+    },
+    {
+      "rank": 69,
+      "answer": "Microfono che gracchia",
+      "aliases": []
+    },
+    {
+      "rank": 70,
+      "answer": "Radio fuori sintonizzazione",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Interferenza cellulare",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Grattare il polistirolo",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Palloncino che scoppia",
+      "aliases": []
+    },
+    {
+      "rank": 74,
+      "answer": "Palloncino strofinato",
+      "aliases": []
+    },
+    {
+      "rank": 75,
+      "answer": "Carta stropicciata",
+      "aliases": []
+    },
+    {
+      "rank": 76,
+      "answer": "Busta di plastica",
+      "aliases": []
+    },
+    {
+      "rank": 77,
+      "answer": "Suoneria del telefono",
+      "aliases": []
+    },
+    {
+      "rank": 78,
+      "answer": "Notifiche continue",
+      "aliases": [
+        "WhatsApp"
+      ]
+    },
+    {
+      "rank": 79,
+      "answer": "Messaggio vocale senza cuffie",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Video su TikTok in pubblico",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Tosse grassa",
+      "aliases": []
+    },
+    {
+      "rank": 82,
+      "answer": "Tirare su col naso",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Starnuti continui",
+      "aliases": []
+    },
+    {
+      "rank": 84,
+      "answer": "Gola schiarita continuamente",
+      "aliases": []
+    },
+    {
+      "rank": 85,
+      "answer": "Spingere il carrello",
+      "aliases": [
+        "Ruota rotta"
+      ]
+    },
+    {
+      "rank": 86,
+      "answer": "Grattare un cartone",
+      "aliases": []
+    },
+    {
+      "rank": 87,
+      "answer": "Sirena antiaerea",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Taglio col polistirolo",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "Fogli di carta strappati",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Gessetto",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Rumore del dentista",
+      "aliases": [
+        "Trapano"
+      ]
+    },
+    {
+      "rank": 92,
+      "answer": "Limetta per unghie",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Smalto sui denti",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Stridore del coltello",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Denti digrignati",
+      "aliases": [
+        "Bruxismo"
+      ]
+    },
+    {
+      "rank": 96,
+      "answer": "Fischietto",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Fischio nelle orecchie",
+      "aliases": [
+        "Acufene"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Baci rumorosi",
+      "aliases": []
+    },
+    {
+      "rank": 99,
+      "answer": "Singhiozzo",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Placeholder 100",
+      "aliases": []
+    }
+  ]
+}

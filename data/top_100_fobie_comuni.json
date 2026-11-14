@@ -1,0 +1,707 @@
+{
+  "categoryId": "fobie_comuni",
+  "title": "Le fobie (paure) umane più diffuse",
+  "description": "Indovina le fobie più conosciute, comuni o bizzarre dell'essere umano.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Aracnofobia",
+      "aliases": [
+        "Ragni"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Acrofobia",
+      "aliases": [
+        "Altezze"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Agorafobia",
+      "aliases": [
+        "Spazi aperti"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Claustrofobia",
+      "aliases": [
+        "Spazi chiusi"
+      ]
+    },
+    {
+      "rank": 5,
+      "answer": "Cinofobia",
+      "aliases": [
+        "Cani"
+      ]
+    },
+    {
+      "rank": 6,
+      "answer": "Astrafobia",
+      "aliases": [
+        "Tuoni"
+      ]
+    },
+    {
+      "rank": 7,
+      "answer": "Tripofobia",
+      "aliases": [
+        "Buchi"
+      ]
+    },
+    {
+      "rank": 8,
+      "answer": "Socialfobia",
+      "aliases": [
+        "Fobia sociale"
+      ]
+    },
+    {
+      "rank": 9,
+      "answer": "Pteromeranofobia",
+      "aliases": [
+        "Volare"
+      ]
+    },
+    {
+      "rank": 10,
+      "answer": "Misofobia",
+      "aliases": [
+        "Germi"
+      ]
+    },
+    {
+      "rank": 11,
+      "answer": "Ofidiofobia",
+      "aliases": [
+        "Serpenti"
+      ]
+    },
+    {
+      "rank": 12,
+      "answer": "Nictofobia",
+      "aliases": [
+        "Buio"
+      ]
+    },
+    {
+      "rank": 13,
+      "answer": "Nosocomefobia",
+      "aliases": [
+        "Ospedali"
+      ]
+    },
+    {
+      "rank": 14,
+      "answer": "Dentofobia",
+      "aliases": [
+        "Dentista"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Emofobia",
+      "aliases": [
+        "Sangue"
+      ]
+    },
+    {
+      "rank": 16,
+      "answer": "Aicmofobia",
+      "aliases": [
+        "Aghi"
+      ]
+    },
+    {
+      "rank": 17,
+      "answer": "Necrofobia",
+      "aliases": [
+        "Morte"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Coulrofobia",
+      "aliases": [
+        "Pagliacci"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "Entomofobia",
+      "aliases": [
+        "Insetti"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Ornitofobia",
+      "aliases": [
+        "Uccelli"
+      ]
+    },
+    {
+      "rank": 21,
+      "answer": "Ictiofobia",
+      "aliases": [
+        "Pesci"
+      ]
+    },
+    {
+      "rank": 22,
+      "answer": "Musofobia",
+      "aliases": [
+        "Topi"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Ailurofobia",
+      "aliases": [
+        "Gatti"
+      ]
+    },
+    {
+      "rank": 24,
+      "answer": "Equinofobia",
+      "aliases": [
+        "Cavalli"
+      ]
+    },
+    {
+      "rank": 25,
+      "answer": "Batracofobia",
+      "aliases": [
+        "Rane"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "Talassofobia",
+      "aliases": [
+        "Oceano"
+      ]
+    },
+    {
+      "rank": 27,
+      "answer": "Idrofobia",
+      "aliases": [
+        "Acqua"
+      ]
+    },
+    {
+      "rank": 28,
+      "answer": "Pirofobia",
+      "aliases": [
+        "Fuoco"
+      ]
+    },
+    {
+      "rank": 29,
+      "answer": "Brontofobia",
+      "aliases": [
+        "Temporali"
+      ]
+    },
+    {
+      "rank": 30,
+      "answer": "Anemofobia",
+      "aliases": [
+        "Vento"
+      ]
+    },
+    {
+      "rank": 31,
+      "answer": "Criofobia",
+      "aliases": [
+        "Freddo"
+      ]
+    },
+    {
+      "rank": 32,
+      "answer": "Eliofobia",
+      "aliases": [
+        "Sole"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "Elettrofobia",
+      "aliases": [
+        "Elettricità"
+      ]
+    },
+    {
+      "rank": 34,
+      "answer": "Tecnofobia",
+      "aliases": [
+        "Tecnologia"
+      ]
+    },
+    {
+      "rank": 35,
+      "answer": "Nomofobia",
+      "aliases": [
+        "Senza cellulare"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Cibofobia",
+      "aliases": [
+        "Cibo"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "Emetofobia",
+      "aliases": [
+        "Vomitare"
+      ]
+    },
+    {
+      "rank": 38,
+      "answer": "Aticifobia",
+      "aliases": [
+        "Fallimento"
+      ]
+    },
+    {
+      "rank": 39,
+      "answer": "Gelotofobia",
+      "aliases": [
+        "Essere derisi"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "Ginnofobia",
+      "aliases": [
+        "Nudità"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Filofobia",
+      "aliases": [
+        "Innamorarsi"
+      ]
+    },
+    {
+      "rank": 42,
+      "answer": "Gamofobia",
+      "aliases": [
+        "Matrimonio"
+      ]
+    },
+    {
+      "rank": 43,
+      "answer": "Androfobia",
+      "aliases": [
+        "Uomini"
+      ]
+    },
+    {
+      "rank": 44,
+      "answer": "Ginofobia",
+      "aliases": [
+        "Donne"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Pedofobia",
+      "aliases": [
+        "Bambini"
+      ]
+    },
+    {
+      "rank": 46,
+      "answer": "Gerontofobia",
+      "aliases": [
+        "Anziani"
+      ]
+    },
+    {
+      "rank": 47,
+      "answer": "Xenofobia",
+      "aliases": [
+        "Stranieri"
+      ]
+    },
+    {
+      "rank": 48,
+      "answer": "Neofobia",
+      "aliases": [
+        "Novità"
+      ]
+    },
+    {
+      "rank": 49,
+      "answer": "Cronofobia",
+      "aliases": [
+        "Tempo"
+      ]
+    },
+    {
+      "rank": 50,
+      "answer": "Somnifobia",
+      "aliases": [
+        "Dormire"
+      ]
+    },
+    {
+      "rank": 51,
+      "answer": "Clinofobia",
+      "aliases": [
+        "Andare a letto"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "Ergofobia",
+      "aliases": [
+        "Lavoro"
+      ]
+    },
+    {
+      "rank": 53,
+      "answer": "Scolionofobia",
+      "aliases": [
+        "Scuola"
+      ]
+    },
+    {
+      "rank": 54,
+      "answer": "Amatofobia",
+      "aliases": [
+        "Polvere"
+      ]
+    },
+    {
+      "rank": 55,
+      "answer": "Autofobia",
+      "aliases": [
+        "Restare soli"
+      ]
+    },
+    {
+      "rank": 56,
+      "answer": "Monofobia",
+      "aliases": [
+        "Solitudine"
+      ]
+    },
+    {
+      "rank": 57,
+      "answer": "Eremofobia",
+      "aliases": [
+        "Essere soli"
+      ]
+    },
+    {
+      "rank": 58,
+      "answer": "Agirafobia",
+      "aliases": [
+        "Attraversare la strada"
+      ]
+    },
+    {
+      "rank": 59,
+      "answer": "Amaxofobia",
+      "aliases": [
+        "Guidare"
+      ]
+    },
+    {
+      "rank": 60,
+      "answer": "Gefirofobia",
+      "aliases": [
+        "Ponti"
+      ]
+    },
+    {
+      "rank": 61,
+      "answer": "Hodofobia",
+      "aliases": [
+        "Viaggiare"
+      ]
+    },
+    {
+      "rank": 62,
+      "answer": "Oicofobia",
+      "aliases": [
+        "Casa"
+      ]
+    },
+    {
+      "rank": 63,
+      "answer": "Agliiofobia",
+      "aliases": [
+        "Dolore"
+      ]
+    },
+    {
+      "rank": 64,
+      "answer": "Eremofobia",
+      "aliases": [
+        "Luoghi deserti"
+      ]
+    },
+    {
+      "rank": 65,
+      "answer": "Peniaphobia",
+      "aliases": [
+        "Povertà"
+      ]
+    },
+    {
+      "rank": 66,
+      "answer": "Plutosfobia",
+      "aliases": [
+        "Ricchezza"
+      ]
+    },
+    {
+      "rank": 67,
+      "answer": "Cromofobia",
+      "aliases": [
+        "Colori"
+      ]
+    },
+    {
+      "rank": 68,
+      "answer": "Xantofobia",
+      "aliases": [
+        "Giallo"
+      ]
+    },
+    {
+      "rank": 69,
+      "answer": "Melanofobia",
+      "aliases": [
+        "Nero"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "Leucofobia",
+      "aliases": [
+        "Bianco"
+      ]
+    },
+    {
+      "rank": 71,
+      "answer": "Triskaidekafobia",
+      "aliases": [
+        "Numero 13"
+      ]
+    },
+    {
+      "rank": 72,
+      "answer": "Tetrafobia",
+      "aliases": [
+        "Numero 4"
+      ]
+    },
+    {
+      "rank": 73,
+      "answer": "Hexakosioihexekontahexafobia",
+      "aliases": [
+        "Numero 666"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "Numerofobia",
+      "aliases": [
+        "Numeri"
+      ]
+    },
+    {
+      "rank": 75,
+      "answer": "Simmetrofobia",
+      "aliases": [
+        "Simmetria"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "Asimmetrofobia",
+      "aliases": [
+        "Asimmetria"
+      ]
+    },
+    {
+      "rank": 77,
+      "answer": "Ataxofobia",
+      "aliases": [
+        "Disordine"
+      ]
+    },
+    {
+      "rank": 78,
+      "answer": "Megalofobia",
+      "aliases": [
+        "Oggetti grandi"
+      ]
+    },
+    {
+      "rank": 79,
+      "answer": "Microfobia",
+      "aliases": [
+        "Oggetti piccoli"
+      ]
+    },
+    {
+      "rank": 80,
+      "answer": "Globofobia",
+      "aliases": [
+        "Palloncini"
+      ]
+    },
+    {
+      "rank": 81,
+      "answer": "Papirofobia",
+      "aliases": [
+        "Carta"
+      ]
+    },
+    {
+      "rank": 82,
+      "answer": "Bibliofobia",
+      "aliases": [
+        "Libri"
+      ]
+    },
+    {
+      "rank": 83,
+      "answer": "Verbofobia",
+      "aliases": [
+        "Parole"
+      ]
+    },
+    {
+      "rank": 84,
+      "answer": "Sesquipedalofobia",
+      "aliases": [
+        "Parole lunghe"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Francofobia",
+      "aliases": [
+        "Francesi"
+      ]
+    },
+    {
+      "rank": 86,
+      "answer": "Anglofobia",
+      "aliases": [
+        "Inglesi"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "Omofobia",
+      "aliases": [
+        "Omosessuali"
+      ]
+    },
+    {
+      "rank": 88,
+      "answer": "Transfobia",
+      "aliases": [
+        "Transessuali"
+      ]
+    },
+    {
+      "rank": 89,
+      "answer": "Islamofobia",
+      "aliases": [
+        "Musulmani"
+      ]
+    },
+    {
+      "rank": 90,
+      "answer": "Cristofobia",
+      "aliases": [
+        "Cristiani"
+      ]
+    },
+    {
+      "rank": 91,
+      "answer": "Giudeofobia",
+      "aliases": [
+        "Ebrei"
+      ]
+    },
+    {
+      "rank": 92,
+      "answer": "Ateofobia",
+      "aliases": [
+        "Atei"
+      ]
+    },
+    {
+      "rank": 93,
+      "answer": "Venustrafobia",
+      "aliases": [
+        "Donne belle"
+      ]
+    },
+    {
+      "rank": 94,
+      "answer": "Caliginefobia",
+      "aliases": [
+        "Donne belle 2"
+      ]
+    },
+    {
+      "rank": 95,
+      "answer": "Cacofobia",
+      "aliases": [
+        "Bruttezza"
+      ]
+    },
+    {
+      "rank": 96,
+      "answer": "Teratofobia",
+      "aliases": [
+        "Mostri"
+      ]
+    },
+    {
+      "rank": 97,
+      "answer": "Fasmofobia",
+      "aliases": [
+        "Fantasmi"
+      ]
+    },
+    {
+      "rank": 98,
+      "answer": "Demonofobia",
+      "aliases": [
+        "Demoni"
+      ]
+    },
+    {
+      "rank": 99,
+      "answer": "Satanofobia",
+      "aliases": [
+        "Satana"
+      ]
+    },
+    {
+      "rank": 100,
+      "answer": "Deipnofobia",
+      "aliases": [
+        "Cenare con altri"
+      ]
+    }
+  ]
+}

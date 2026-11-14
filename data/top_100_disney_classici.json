@@ -1,0 +1,567 @@
+{
+  "categoryId": "disney_classici",
+  "title": "I personaggi Disney classici più famosi",
+  "description": "Indovina gli eroi, principesse e mascotte che hanno fatto la storia dell'animazione Disney.",
+  "items": [
+    {
+      "rank": 1,
+      "answer": "Mickey Mouse",
+      "aliases": [
+        "Topolino"
+      ]
+    },
+    {
+      "rank": 2,
+      "answer": "Donald Duck",
+      "aliases": [
+        "Paperino"
+      ]
+    },
+    {
+      "rank": 3,
+      "answer": "Goofy",
+      "aliases": [
+        "Pippo"
+      ]
+    },
+    {
+      "rank": 4,
+      "answer": "Minnie",
+      "aliases": []
+    },
+    {
+      "rank": 5,
+      "answer": "Pluto",
+      "aliases": []
+    },
+    {
+      "rank": 6,
+      "answer": "Simba",
+      "aliases": []
+    },
+    {
+      "rank": 7,
+      "answer": "Mufasa",
+      "aliases": []
+    },
+    {
+      "rank": 8,
+      "answer": "Scar",
+      "aliases": []
+    },
+    {
+      "rank": 9,
+      "answer": "Ariel",
+      "aliases": []
+    },
+    {
+      "rank": 10,
+      "answer": "Flounder",
+      "aliases": []
+    },
+    {
+      "rank": 11,
+      "answer": "Sebastian",
+      "aliases": []
+    },
+    {
+      "rank": 12,
+      "answer": "Ursula",
+      "aliases": []
+    },
+    {
+      "rank": 13,
+      "answer": "Belle",
+      "aliases": []
+    },
+    {
+      "rank": 14,
+      "answer": "Beast",
+      "aliases": [
+        "Bestia"
+      ]
+    },
+    {
+      "rank": 15,
+      "answer": "Gaston",
+      "aliases": []
+    },
+    {
+      "rank": 16,
+      "answer": "Lumiere",
+      "aliases": []
+    },
+    {
+      "rank": 17,
+      "answer": "Cogsworth",
+      "aliases": [
+        "Tockins"
+      ]
+    },
+    {
+      "rank": 18,
+      "answer": "Mrs. Potts",
+      "aliases": [
+        "Mrs Bric"
+      ]
+    },
+    {
+      "rank": 19,
+      "answer": "Cinderella",
+      "aliases": [
+        "Cenerentola"
+      ]
+    },
+    {
+      "rank": 20,
+      "answer": "Snow White",
+      "aliases": [
+        "Biancaneve"
+      ]
+    },
+    {
+      "rank": 21,
+      "answer": "Aurora",
+      "aliases": []
+    },
+    {
+      "rank": 22,
+      "answer": "Maleficent",
+      "aliases": [
+        "Malefica"
+      ]
+    },
+    {
+      "rank": 23,
+      "answer": "Jasmine",
+      "aliases": []
+    },
+    {
+      "rank": 24,
+      "answer": "Aladdin",
+      "aliases": []
+    },
+    {
+      "rank": 25,
+      "answer": "Genie",
+      "aliases": [
+        "Genio"
+      ]
+    },
+    {
+      "rank": 26,
+      "answer": "Jafar",
+      "aliases": []
+    },
+    {
+      "rank": 27,
+      "answer": "Pocahontas",
+      "aliases": []
+    },
+    {
+      "rank": 28,
+      "answer": "Mulan",
+      "aliases": []
+    },
+    {
+      "rank": 29,
+      "answer": "Mushu",
+      "aliases": []
+    },
+    {
+      "rank": 30,
+      "answer": "Tarzan",
+      "aliases": []
+    },
+    {
+      "rank": 31,
+      "answer": "Hercules",
+      "aliases": []
+    },
+    {
+      "rank": 32,
+      "answer": "Hades",
+      "aliases": [
+        "Ade"
+      ]
+    },
+    {
+      "rank": 33,
+      "answer": "Megara",
+      "aliases": []
+    },
+    {
+      "rank": 34,
+      "answer": "Peter Pan",
+      "aliases": []
+    },
+    {
+      "rank": 35,
+      "answer": "Tinkerbell",
+      "aliases": [
+        "Trilli"
+      ]
+    },
+    {
+      "rank": 36,
+      "answer": "Captain Hook",
+      "aliases": [
+        "Capitan Uncino"
+      ]
+    },
+    {
+      "rank": 37,
+      "answer": "Wendy",
+      "aliases": []
+    },
+    {
+      "rank": 38,
+      "answer": "Alice",
+      "aliases": []
+    },
+    {
+      "rank": 39,
+      "answer": "Mad Hatter",
+      "aliases": [
+        "Cappellaio Matto"
+      ]
+    },
+    {
+      "rank": 40,
+      "answer": "Queen of Hearts",
+      "aliases": [
+        "Regina di Cuori"
+      ]
+    },
+    {
+      "rank": 41,
+      "answer": "Dumbo",
+      "aliases": []
+    },
+    {
+      "rank": 42,
+      "answer": "Bambi",
+      "aliases": []
+    },
+    {
+      "rank": 43,
+      "answer": "Pinocchio",
+      "aliases": []
+    },
+    {
+      "rank": 44,
+      "answer": "Jiminy Cricket",
+      "aliases": [
+        "Grillo Parlante"
+      ]
+    },
+    {
+      "rank": 45,
+      "answer": "Geppetto",
+      "aliases": []
+    },
+    {
+      "rank": 46,
+      "answer": "Stitch",
+      "aliases": []
+    },
+    {
+      "rank": 47,
+      "answer": "Lilo",
+      "aliases": []
+    },
+    {
+      "rank": 48,
+      "answer": "Woody",
+      "aliases": []
+    },
+    {
+      "rank": 49,
+      "answer": "Buzz Lightyear",
+      "aliases": []
+    },
+    {
+      "rank": 50,
+      "answer": "Jessie",
+      "aliases": []
+    },
+    {
+      "rank": 51,
+      "answer": "Mr. Potato Head",
+      "aliases": [
+        "Mr Potato"
+      ]
+    },
+    {
+      "rank": 52,
+      "answer": "Rex",
+      "aliases": []
+    },
+    {
+      "rank": 53,
+      "answer": "Slinky",
+      "aliases": []
+    },
+    {
+      "rank": 54,
+      "answer": "Hamm",
+      "aliases": []
+    },
+    {
+      "rank": 55,
+      "answer": "Elsa",
+      "aliases": []
+    },
+    {
+      "rank": 56,
+      "answer": "Anna",
+      "aliases": []
+    },
+    {
+      "rank": 57,
+      "answer": "Olaf",
+      "aliases": []
+    },
+    {
+      "rank": 58,
+      "answer": "Kristoff",
+      "aliases": []
+    },
+    {
+      "rank": 59,
+      "answer": "Sven",
+      "aliases": []
+    },
+    {
+      "rank": 60,
+      "answer": "Moana",
+      "aliases": [
+        "Vaiana"
+      ]
+    },
+    {
+      "rank": 61,
+      "answer": "Maui",
+      "aliases": []
+    },
+    {
+      "rank": 62,
+      "answer": "Rapunzel",
+      "aliases": []
+    },
+    {
+      "rank": 63,
+      "answer": "Flynn Rider",
+      "aliases": [
+        "Eugene"
+      ]
+    },
+    {
+      "rank": 64,
+      "answer": "Tiana",
+      "aliases": []
+    },
+    {
+      "rank": 65,
+      "answer": "Naveen",
+      "aliases": []
+    },
+    {
+      "rank": 66,
+      "answer": "Merida",
+      "aliases": []
+    },
+    {
+      "rank": 67,
+      "answer": "Baymax",
+      "aliases": []
+    },
+    {
+      "rank": 68,
+      "answer": "Hiro",
+      "aliases": []
+    },
+    {
+      "rank": 69,
+      "answer": "Ralph",
+      "aliases": [
+        "Ralph Spaccatutto"
+      ]
+    },
+    {
+      "rank": 70,
+      "answer": "Vanellope",
+      "aliases": []
+    },
+    {
+      "rank": 71,
+      "answer": "Judy Hopps",
+      "aliases": []
+    },
+    {
+      "rank": 72,
+      "answer": "Nick Wilde",
+      "aliases": []
+    },
+    {
+      "rank": 73,
+      "answer": "Joy",
+      "aliases": [
+        "Gioia"
+      ]
+    },
+    {
+      "rank": 74,
+      "answer": "Sadness",
+      "aliases": [
+        "Tristezza"
+      ]
+    },
+    {
+      "rank": 75,
+      "answer": "Anger",
+      "aliases": [
+        "Rabbia"
+      ]
+    },
+    {
+      "rank": 76,
+      "answer": "Fear",
+      "aliases": [
+        "Paura"
+      ]
+    },
+    {
+      "rank": 77,
+      "answer": "Disgust",
+      "aliases": [
+        "Disgusto"
+      ]
+    },
+    {
+      "rank": 78,
+      "answer": "Nemo",
+      "aliases": []
+    },
+    {
+      "rank": 79,
+      "answer": "Dory",
+      "aliases": []
+    },
+    {
+      "rank": 80,
+      "answer": "Marlin",
+      "aliases": []
+    },
+    {
+      "rank": 81,
+      "answer": "Mr. Incredible",
+      "aliases": [
+        "Mr Incredibile"
+      ]
+    },
+    {
+      "rank": 82,
+      "answer": "Elastigirl",
+      "aliases": []
+    },
+    {
+      "rank": 83,
+      "answer": "Dash",
+      "aliases": [
+        "Flash"
+      ]
+    },
+    {
+      "rank": 84,
+      "answer": "Violet",
+      "aliases": [
+        "Violetta"
+      ]
+    },
+    {
+      "rank": 85,
+      "answer": "Jack-Jack",
+      "aliases": []
+    },
+    {
+      "rank": 86,
+      "answer": "Frozone",
+      "aliases": [
+        "Siberiano"
+      ]
+    },
+    {
+      "rank": 87,
+      "answer": "Syndrome",
+      "aliases": []
+    },
+    {
+      "rank": 88,
+      "answer": "Wall-E",
+      "aliases": []
+    },
+    {
+      "rank": 89,
+      "answer": "EVE",
+      "aliases": []
+    },
+    {
+      "rank": 90,
+      "answer": "Remy",
+      "aliases": []
+    },
+    {
+      "rank": 91,
+      "answer": "Linguini",
+      "aliases": []
+    },
+    {
+      "rank": 92,
+      "answer": "Carl Fredricksen",
+      "aliases": []
+    },
+    {
+      "rank": 93,
+      "answer": "Russell",
+      "aliases": []
+    },
+    {
+      "rank": 94,
+      "answer": "Dug",
+      "aliases": []
+    },
+    {
+      "rank": 95,
+      "answer": "Mike Wazowski",
+      "aliases": []
+    },
+    {
+      "rank": 96,
+      "answer": "Sulley",
+      "aliases": []
+    },
+    {
+      "rank": 97,
+      "answer": "Randall",
+      "aliases": []
+    },
+    {
+      "rank": 98,
+      "answer": "Cruella de Vil",
+      "aliases": [
+        "Crudelia De Mon"
+      ]
+    },
+    {
+      "rank": 99,
+      "answer": "Pongo",
+      "aliases": []
+    },
+    {
+      "rank": 100,
+      "answer": "Perdita",
+      "aliases": []
+    }
+  ]
+}
