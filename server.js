@@ -98,7 +98,8 @@ let gameState = {
   ],
   revealed: {},
   showInitials: false,
-  activeEntityIndex: 0, // indice squadra di turno (in TEAMS) o giocatore di turno (in SOLO)
+  typoTolerance: 0.2, // Default 20% di tolleranza errori di digitazione
+  activeEntityIndex: 0,
   turnTimer: { duration: 30, remaining: 30 },
   timer: { duration: 300, remaining: 300, isRunning: false },
   options: {
@@ -251,6 +252,45 @@ function normalizeText(str) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]/g, "");
+}
+
+// Distanza di Levenshtein per tolleranza errori di digitazione
+function getLevenshteinDistance(a, b) {
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+
+  const matrix = Array.from({ length: b.length + 1 }, (_, i) => [i]);
+  for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      const cost = b.charAt(i - 1) === a.charAt(j - 1) ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost,
+      );
+    }
+  }
+  return matrix[b.length][a.length];
+}
+
+// Controlla se la risposta rientra nella percentuale di errore impostata dall'Host
+function isFuzzyMatch(guessNorm, targetRaw, toleranceRatio) {
+  const targetNorm = normalizeText(targetRaw);
+  if (!targetNorm || !guessNorm) return false;
+  if (guessNorm === targetNorm) return true;
+
+  // Se la tolleranza è 0% o la parola è troppo corta (<= 3 lettere), serve il match esatto
+  if (!toleranceRatio || toleranceRatio <= 0 || targetNorm.length <= 3)
+    return false;
+
+  const maxErrors = Math.min(3, Math.floor(targetNorm.length * toleranceRatio));
+  if (maxErrors <= 0) return false;
+
+  if (Math.abs(guessNorm.length - targetNorm.length) > maxErrors) return false;
+
+  return getLevenshteinDistance(guessNorm, targetNorm) <= maxErrors;
 }
 
 function getCategoriesList() {
@@ -438,7 +478,7 @@ io.on("connection", (socket) => {
           .replace(/[\u0300-\u036f]/g, "")
           .replace(/[^a-z0-9]/g, "-")
           .replace(/-+/g, "-")
-          .replace(/^-|-$/g, "") ||
+          .replace(/^-|-\$/g, "") ||
         `cat-${Date.now()}`;
 
       const catObj = {
@@ -512,6 +552,7 @@ io.on("connection", (socket) => {
       turnDuration,
       shuffleTeams,
       options,
+      typoTolerance,
     } = config;
     availableCategories = loadAllCategories();
 
@@ -521,8 +562,10 @@ io.on("connection", (socket) => {
       gameState.categoryTitle = availableCategories[categoryKey].categoryTitle;
     }
 
-    gameState.format = format || "TEAMS"; // 'TEAMS' o 'SOLO'
+    gameState.format = format || "TEAMS";
     gameState.mode = mode || "RUSH";
+    gameState.typoTolerance =
+      typeof typoTolerance === "number" ? typoTolerance : 0.2;
     gameState.options = { ...gameState.options, ...(options || {}) };
 
     const playersArray = Object.values(connectedPlayers);
@@ -550,7 +593,6 @@ io.on("connection", (socket) => {
       }
       gameState.teams = finalTeams;
     } else {
-      // In modalità SOLO azzera i teamId
       playersArray.forEach((p) => (p.teamId = null));
       gameState.teams = [];
     }
@@ -647,7 +689,6 @@ io.on("connection", (socket) => {
     const playerName = player ? player.name : payload.playerName || "Anonimo";
     const activeEntity = getActiveTurnEntity();
 
-    // Controllo turni (singolo o a squadre)
     if (gameState.mode === "TURNS") {
       if (gameState.format === "SOLO" && playerId !== activeEntity.id) {
         socket.emit("guessResult", {
@@ -676,13 +717,32 @@ io.on("connection", (socket) => {
       return;
 
     const currentItems = availableCategories[currentCategoryKey].items;
-    const matched = currentItems.find((item) => {
+
+    // 1. Ricerca prima il Match Esatto (priorità assoluta)
+    let matched = currentItems.find((item) => {
       const matchName = normalizeText(item.name) === cleanGuess;
       const matchAlias =
         item.aliases &&
         item.aliases.some((a) => normalizeText(a) === cleanGuess);
       return matchName || matchAlias;
     });
+
+    // 2. Se non c'è match esatto, applica la tolleranza errori di digitazione (Fuzzy Match)
+    if (!matched && gameState.typoTolerance > 0) {
+      matched = currentItems.find((item) => {
+        const fuzzyName = isFuzzyMatch(
+          cleanGuess,
+          item.name,
+          gameState.typoTolerance,
+        );
+        const fuzzyAlias =
+          item.aliases &&
+          item.aliases.some((a) =>
+            isFuzzyMatch(cleanGuess, a, gameState.typoTolerance),
+          );
+        return fuzzyName || fuzzyAlias;
+      });
+    }
 
     if (!matched) {
       if (player && player.stats) player.stats.wrongGuesses++;
@@ -730,7 +790,6 @@ io.on("connection", (socket) => {
       if (player && player.stats) player.stats.earlyGuesses++;
     }
 
-    // Accredito squadra (se A Squadre)
     let teamColor = player?.color || "#6366f1";
     let teamName = "";
 
@@ -743,7 +802,6 @@ io.on("connection", (socket) => {
       }
     }
 
-    // Accredito al singolo giocatore
     if (player) {
       player.score = Math.max(0, (player.score || 0) + points);
     }
@@ -759,11 +817,11 @@ io.on("connection", (socket) => {
       slotType,
     };
 
-    let resultMessage = `🎉 Preso! Posizione #${matched.rank} (+${points} pt)`;
+    let resultMessage = `🎉 Preso! #${matched.rank} ${matched.name} (+${points} pt)`;
     if (slotType === "GOLDEN")
-      resultMessage = `✨ SLOT DORATO! Posizione #${matched.rank} RADDOPPIATA (+${points} pt)!`;
+      resultMessage = `✨ SLOT DORATO! #${matched.rank} ${matched.name} RADDOPPIATA (+${points} pt)!`;
     if (slotType === "BOMB")
-      resultMessage = `💣 BOOM! Posizione #${matched.rank} era una BOMBA (${points} pt)!`;
+      resultMessage = `💣 BOOM! #${matched.rank} ${matched.name} era una BOMBA (${points} pt)!`;
 
     socket.emit("guessResult", {
       status: "CORRECT",

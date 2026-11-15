@@ -59,54 +59,67 @@
         </div>
       </div>
 
-      <!-- IMPOSTAZIONI, FORMATO & CHICCHE -->
-      <div class="lg:col-span-8 flex flex-col justify-between space-y-3">
+      <!-- IMPOSTAZIONI, FORMATO, TOLLERANZA & CHICCHE -->
+      <div class="lg:col-span-8 flex flex-col justify-between space-y-2.5">
         <div>
           <div class="mb-2">
             <h1 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-500 to-indigo-500">CONFIGURA PARTITA</h1>
-            <p class="text-slate-400 text-xs">Scegli tra sfida a squadre o singolo tutti contro tutti</p>
+            <p class="text-slate-400 text-xs">Scegli formato, regole, tolleranza errori e chicche</p>
           </div>
 
           <!-- FORMATO: SQUADRE VS SINGOLO -->
-          <div class="bg-slate-950 p-2.5 rounded-xl border border-indigo-500/40 mb-2">
-            <label class="text-[10px] font-bold text-indigo-400 block mb-1.5 uppercase tracking-wider">👥 Formato Partecipazione</label>
+          <div class="bg-slate-950 p-2 rounded-xl border border-indigo-500/40 mb-2">
+            <label class="text-[10px] font-bold text-indigo-400 block mb-1 uppercase tracking-wider">👥 Formato Partecipazione</label>
             <div class="grid grid-cols-2 gap-2">
-              <button id="formatTeamsBtn" onclick="setGameFormat('TEAMS')" class="py-2 px-3 rounded-xl border border-indigo-500 bg-indigo-500/20 text-indigo-300 font-black text-xs text-left transition">
+              <button id="formatTeamsBtn" onclick="setGameFormat('TEAMS')" class="py-1.5 px-3 rounded-xl border border-indigo-500 bg-indigo-500/20 text-indigo-300 font-black text-xs text-left transition">
                 <div class="text-xs font-black">👥 A Squadre</div>
                 <div class="text-[9px] font-normal text-slate-300">Punti sommati alla squadra</div>
               </button>
-              <button id="formatSoloBtn" onclick="setGameFormat('SOLO')" class="py-2 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition">
+              <button id="formatSoloBtn" onclick="setGameFormat('SOLO')" class="py-1.5 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition">
                 <div class="text-xs font-black">👤 Singolo (Tutti contro tutti)</div>
                 <div class="text-[9px] font-normal text-slate-400">Ognuno gioca per sé</div>
               </button>
             </div>
           </div>
 
-          <!-- MODALITÀ E TEMPI -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+          <!-- MODALITÀ, TEMPI E TOLLERANZA DIGITAZIONE -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mb-2">
+            <!-- Meccanica -->
             <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
               <label class="text-[10px] font-bold text-slate-400 block mb-1 uppercase tracking-wider">🎮 Meccanica</label>
-              <div class="grid grid-cols-2 gap-1.5">
-                <button id="modeRushBtn" onclick="setGameMode('RUSH')" class="py-1.5 px-2 rounded-lg border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-xs text-left">⚡ Gara Live</button>
-                <button id="modeTurnsBtn" onclick="setGameMode('TURNS')" class="py-1.5 px-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500">🔄 A Turni</button>
+              <div class="grid grid-cols-2 gap-1">
+                <button id="modeRushBtn" onclick="setGameMode('RUSH')" class="py-1.5 px-2 rounded-lg border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-[11px] text-center">⚡ Live</button>
+                <button id="modeTurnsBtn" onclick="setGameMode('TURNS')" class="py-1.5 px-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-400 font-black text-[11px] text-center hover:border-slate-500">🔄 Turni</button>
               </div>
             </div>
 
+            <!-- Tolleranza Errori -->
+            <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
+              <label class="text-[10px] font-bold text-emerald-400 block mb-1 uppercase tracking-wider">✍️ Tolleranza Errori</label>
+              <select id="typoToleranceSelect" class="w-full bg-slate-900 border border-slate-700 text-white font-bold text-[11px] rounded-lg px-2 py-1.5 focus:outline-none focus:border-emerald-400 cursor-pointer">
+                <option value="0">0% (Solo esatte)</option>
+                <option value="0.15">15% (Leggera)</option>
+                <option value="0.20" selected>20% (Consigliata)</option>
+                <option value="0.25">25% (Ampia)</option>
+              </select>
+            </div>
+
+            <!-- Durata Round -->
             <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
               <div class="flex items-center justify-between mb-1">
-                <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">⏳ Durata Round</label>
-                <div class="flex items-center gap-1">
-                  <input type="number" id="customTotalMinutesInput" min="0" max="60" value="5" oninput="onCustomTotalTimeChange()" class="w-10 bg-slate-900 border border-amber-500/80 rounded px-1 text-center text-xs font-mono font-bold text-white">
-                  <span class="text-[10px] text-slate-400">m</span>
-                  <input type="number" id="customTotalSecondsInput" min="0" max="59" value="0" oninput="onCustomTotalTimeChange()" class="w-10 bg-slate-900 border border-amber-500/80 rounded px-1 text-center text-xs font-mono font-bold text-white">
-                  <span class="text-[10px] text-slate-400">s</span>
+                <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">⏳ Durata</label>
+                <div class="flex items-center gap-0.5">
+                  <input type="number" id="customTotalMinutesInput" min="0" max="60" value="5" oninput="onCustomTotalTimeChange()" class="w-9 bg-slate-900 border border-amber-500/80 rounded px-0.5 text-center text-[11px] font-mono font-bold text-white">
+                  <span class="text-[9px] text-slate-400">m</span>
+                  <input type="number" id="customTotalSecondsInput" min="0" max="59" value="0" oninput="onCustomTotalTimeChange()" class="w-9 bg-slate-900 border border-amber-500/80 rounded px-0.5 text-center text-[11px] font-mono font-bold text-white">
+                  <span class="text-[9px] text-slate-400">s</span>
                 </div>
               </div>
               <div class="grid grid-cols-4 gap-1">
-                <button onclick="setTotalPreset(180, this)" class="total-preset-btn py-0.5 rounded text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300">3m</button>
-                <button onclick="setTotalPreset(300, this)" class="total-preset-btn py-0.5 rounded text-[10px] font-bold border border-amber-500 bg-amber-500/20 text-amber-300">5m</button>
-                <button onclick="setTotalPreset(600, this)" class="total-preset-btn py-0.5 rounded text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300">10m</button>
-                <button onclick="setTotalPreset(900, this)" class="total-preset-btn py-0.5 rounded text-[10px] font-bold border border-slate-700 bg-slate-900 text-slate-300">15m</button>
+                <button onclick="setTotalPreset(180, this)" class="total-preset-btn py-0.5 rounded text-[9px] font-bold border border-slate-700 bg-slate-900 text-slate-300">3m</button>
+                <button onclick="setTotalPreset(300, this)" class="total-preset-btn py-0.5 rounded text-[9px] font-bold border border-amber-500 bg-amber-500/20 text-amber-300">5m</button>
+                <button onclick="setTotalPreset(600, this)" class="total-preset-btn py-0.5 rounded text-[9px] font-bold border border-slate-700 bg-slate-900 text-slate-300">10m</button>
+                <button onclick="setTotalPreset(900, this)" class="total-preset-btn py-0.5 rounded text-[9px] font-bold border border-slate-700 bg-slate-900 text-slate-300">15m</button>
               </div>
             </div>
           </div>
@@ -131,30 +144,30 @@
           </div>
 
           <!-- CHICCHE -->
-          <div class="bg-slate-950 p-2.5 rounded-xl border border-amber-500/30 mb-2">
-            <label class="text-[10px] font-black text-amber-400 block mb-1.5 uppercase tracking-wider">✨ Seleziona Chicche di Gioco (ON/OFF)</label>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+          <div class="bg-slate-950 p-2 rounded-xl border border-amber-500/30 mb-2">
+            <label class="text-[10px] font-black text-amber-400 block mb-1 uppercase tracking-wider">✨ Seleziona Chicche di Gioco (ON/OFF)</label>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-1.5">
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
                 <input type="checkbox" id="chkEmoji" checked class="w-3.5 h-3.5 accent-amber-500">
                 <span>💬 Reazioni Emoji TV</span>
               </label>
-              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
                 <input type="checkbox" id="chkSpecial" checked class="w-3.5 h-3.5 accent-amber-500">
                 <span>✨ Slot Oro & 💣 Bomba</span>
               </label>
-              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
                 <input type="checkbox" id="chkFastFlip" checked class="w-3.5 h-3.5 accent-amber-500">
                 <span>🔄 Fast Flip Finale</span>
               </label>
-              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
                 <input type="checkbox" id="chkHaptics" checked class="w-3.5 h-3.5 accent-amber-500">
                 <span>📳 Vibrazione Aptica</span>
               </label>
-              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
                 <input type="checkbox" id="chkAwards" checked class="w-3.5 h-3.5 accent-amber-500">
                 <span>🎖️ Pagelle & Titoli</span>
               </label>
-              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1.5 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
+              <label class="flex items-center gap-2 bg-slate-900 px-2 py-1 rounded-lg border border-slate-800 text-[11px] font-bold cursor-pointer">
                 <input type="checkbox" id="chkFrenzy" checked class="w-3.5 h-3.5 accent-amber-500">
                 <span>🚨 Frenzy Last 60s (x2)</span>
               </label>
@@ -175,12 +188,12 @@
           </div>
 
           <!-- SQUADRE (Visibile solo in modalità TEAMS) -->
-          <div id="teamsConfigSection" class="bg-slate-950 p-3 rounded-2xl border border-slate-800">
-            <div class="flex items-center justify-between mb-2">
+          <div id="teamsConfigSection" class="bg-slate-950 p-2.5 rounded-2xl border border-slate-800">
+            <div class="flex items-center justify-between mb-1.5">
               <label class="text-[11px] font-bold text-slate-300 uppercase tracking-wider">👥 Squadre & Membri Assegnati</label>
               <button onclick="addTeamField()" class="text-xs text-indigo-400 font-bold hover:underline">➕ Aggiungi Squadra</button>
             </div>
-            <div id="teamsContainer" class="space-y-2 max-h-36 overflow-y-auto pr-1"></div>
+            <div id="teamsContainer" class="space-y-2 max-h-32 overflow-y-auto pr-1"></div>
           </div>
 
           <!-- INFO MODALITÀ SINGOLO -->
@@ -388,8 +401,8 @@
     let revealed = {};
     let initialsMap = {};
     let isShowingInitials = false;
-    let selectedFormat = 'TEAMS'; // 'TEAMS' oppure 'SOLO'
-    let selectedMode = 'RUSH';    // 'RUSH' oppure 'TURNS'
+    let selectedFormat = 'TEAMS';
+    let selectedMode = 'RUSH';
     let isTimerRunning = false;
     let selectedTotalSeconds = 300;
     let selectedTurnSeconds = 30;
@@ -408,7 +421,6 @@
       setTimeout(() => floater.remove(), 3200);
     });
 
-    // Selettore Formato: A Squadre vs Singolo
     function setGameFormat(format) {
       selectedFormat = format;
       const teamsBtn = document.getElementById('formatTeamsBtn');
@@ -418,14 +430,14 @@
       const shuffleBtn = document.getElementById('shuffleBtn');
 
       if (format === 'TEAMS') {
-        teamsBtn.className = "py-2 px-3 rounded-xl border border-indigo-500 bg-indigo-500/20 text-indigo-300 font-black text-xs text-left transition";
-        soloBtn.className = "py-2 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition";
+        teamsBtn.className = "py-1.5 px-3 rounded-xl border border-indigo-500 bg-indigo-500/20 text-indigo-300 font-black text-xs text-left transition";
+        soloBtn.className = "py-1.5 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition";
         teamsSection.classList.remove('hidden');
         soloSection.classList.add('hidden');
         shuffleBtn.classList.remove('hidden');
       } else {
-        soloBtn.className = "py-2 px-3 rounded-xl border border-indigo-500 bg-indigo-500/20 text-indigo-300 font-black text-xs text-left transition";
-        teamsBtn.className = "py-2 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition";
+        soloBtn.className = "py-1.5 px-3 rounded-xl border border-indigo-500 bg-indigo-500/20 text-indigo-300 font-black text-xs text-left transition";
+        teamsBtn.className = "py-1.5 px-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500 transition";
         teamsSection.classList.add('hidden');
         soloSection.classList.remove('hidden');
         shuffleBtn.classList.add('hidden');
@@ -439,12 +451,12 @@
       const turnBox = document.getElementById('turnDurationBox');
 
       if (mode === 'RUSH') {
-        rushBtn.className = "py-1.5 px-2 rounded-lg border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-xs text-left";
-        turnsBtn.className = "py-1.5 px-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500";
+        rushBtn.className = "py-1.5 px-2 rounded-lg border border-amber-500 bg-amber-500/20 text-amber-300 font-black text-[11px] text-center";
+        turnsBtn.className = "py-1.5 px-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-400 font-black text-[11px] text-center hover:border-slate-500";
         turnBox.classList.add('hidden');
       } else {
-        turnsBtn.className = "py-1.5 px-2 rounded-lg border border-indigo-500 bg-indigo-500/20 text-indigo-300 font-black text-xs text-left";
-        rushBtn.className = "py-1.5 px-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-400 font-black text-xs text-left hover:border-slate-500";
+        turnsBtn.className = "py-1.5 px-2 rounded-lg border border-indigo-500 bg-indigo-500/20 text-indigo-300 font-black text-[11px] text-center";
+        rushBtn.className = "py-1.5 px-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-400 font-black text-[11px] text-center hover:border-slate-500";
         turnBox.classList.remove('hidden');
       }
     }
@@ -476,9 +488,9 @@
       document.getElementById('customTotalSecondsInput').value = s;
 
       document.querySelectorAll('.total-preset-btn').forEach(b => {
-        b.className = "total-preset-btn py-0.5 rounded text-[10px] font-black border border-slate-700 bg-slate-900 text-slate-300";
+        b.className = "total-preset-btn py-0.5 rounded text-[9px] font-bold border border-slate-700 bg-slate-900 text-slate-300";
       });
-      btn.className = "total-preset-btn py-0.5 rounded text-[10px] font-black border border-amber-500 bg-amber-500/20 text-amber-300";
+      btn.className = "total-preset-btn py-0.5 rounded text-[9px] font-bold border border-amber-500 bg-amber-500/20 text-amber-300";
     }
 
     function onCustomTotalTimeChange() {
@@ -487,7 +499,7 @@
       selectedTotalSeconds = (m * 60) + s;
 
       document.querySelectorAll('.total-preset-btn').forEach(b => {
-        b.className = "total-preset-btn py-0.5 rounded text-[10px] font-black border border-slate-700 bg-slate-900 text-slate-300";
+        b.className = "total-preset-btn py-0.5 rounded text-[9px] font-bold border border-slate-700 bg-slate-900 text-slate-300";
       });
     }
 
@@ -598,7 +610,6 @@
       }
     }
 
-    // Scoreboard in alto: A Squadre o Singolo
     function renderScoreboard() {
       const sb = document.getElementById('scoreboardDisplay');
       
@@ -765,22 +776,22 @@
         const teamMembers = playersList.filter(p => p.teamId === t.id);
 
         return `
-          <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800">
-            <div class="flex items-center gap-2 mb-2">
+          <div class="bg-slate-900 p-2 rounded-xl border border-slate-800">
+            <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">${t.icon}</span>
               <input type="text" value="${t.name}" onchange="updateTeamName(${idx}, this.value)" class="flex-1 bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1 text-xs font-bold text-white focus:outline-none focus:border-indigo-500">
               <input type="color" value="${t.color}" onchange="updateTeamColor(${idx}, this.value)" class="w-7 h-7 rounded cursor-pointer bg-transparent border-0">
               ${teams.length > 2 ? `<button onclick="removeTeamField(${idx})" class="text-rose-400 text-xs p-1">🗑️</button>` : ''}
             </div>
 
-            <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80">
-              <div class="flex items-center justify-between text-[10px] font-bold text-slate-400 mb-1.5">
+            <div class="bg-slate-950/80 p-1.5 rounded-lg border border-slate-800/80">
+              <div class="flex items-center justify-between text-[10px] font-bold text-slate-400 mb-1">
                 <span>MEMBRI ASSEGNATI (${teamMembers.length})</span>
                 <select onchange="assignPlayer(this.value, '${t.id}')" class="bg-slate-900 border border-slate-700 rounded text-[10px] text-indigo-300 px-1.5 py-0.5 focus:outline-none">
                   <option value="">➕ Assegna Giocatore...</option>
                   ${playersList.map(p => `
                     <option value="${p.playerId}" ${p.teamId === t.id ? 'disabled' : ''}>
-                      ${p.name} ${p.teamId ? (p.teamId === t.id ? '(già qui)' : '(in altra squadra)') : '(libero)'}
+                      ${p.name} ${p.isOnline ? '' : '(offline)'} ${p.teamId ? (p.teamId === t.id ? '(già qui)' : '(in altra squadra)') : '(libero)'}
                     </option>
                   `).join('')}
                 </select>
@@ -1021,6 +1032,9 @@
       initialsMap = data.initialsMap || {};
       selectedFormat = data.gameState.format || 'TEAMS';
       setGameFormat(selectedFormat);
+      if (data.gameState.typoTolerance !== undefined) {
+        document.getElementById('typoToleranceSelect').value = data.gameState.typoTolerance.toString();
+      }
       updateInitialsBtnUI();
       applyGameState(data.gameState);
       updatePlayersWaitingUI(data.playersList || []);
@@ -1153,6 +1167,7 @@
       const catKey = document.getElementById('categorySelect').value;
       const totalSec = selectedTotalSeconds > 0 ? selectedTotalSeconds : 300;
       const turnSec = selectedTurnSeconds > 0 ? selectedTurnSeconds : 30;
+      const typoTolerance = parseFloat(document.getElementById('typoToleranceSelect').value);
 
       const options = {
         emojiReactions: document.getElementById('chkEmoji').checked,
@@ -1171,6 +1186,7 @@
         mode: selectedMode,
         turnDuration: turnSec,
         shuffleTeams: shuffleTeams,
+        typoTolerance: isNaN(typoTolerance) ? 0.20 : typoTolerance,
         options: options
       });
       document.getElementById('lobbyModal').classList.add('hidden');
